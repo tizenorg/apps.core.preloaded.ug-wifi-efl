@@ -230,7 +230,7 @@ static void _gl_realized(void *data, Evas_Object *obj, void *event_info)
 		first_item_index = group_index+1;
 	}
 
-	if (first_item_index <= index) {
+	if (first_item_index <= index && first_item_index - last_item_index) {
 		if(index == first_item_index)
 			elm_object_item_signal_emit(item, "elm,state,top", "");
 		else if (index == last_item_index)
