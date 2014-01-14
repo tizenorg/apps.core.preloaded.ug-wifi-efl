@@ -6,7 +6,7 @@
 	<ui-application appid="wifi-efl-ug" exec="/usr/ug/bin/wifi-efl-UG" nodisplay="true" taskmanage="false" multiple="false" type="capp">
 		<label>Wi-Fi</label>
 			<application-service>
-				<operation name="http://tizen.org/appcontrol/operation/ugtest"/>
+				<operation name="http://tizen.org/appcontrol/operation/setting/wifi"/>
 			</application-service>
 	</ui-application>
 </manifest>
