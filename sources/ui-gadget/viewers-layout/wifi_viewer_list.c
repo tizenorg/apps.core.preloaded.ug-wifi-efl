@@ -243,6 +243,7 @@ static void _gl_realized(void *data, Evas_Object *obj, void *event_info)
 		elm_access_info_set(ao, ELM_ACCESS_TYPE, "double tap to connect device");
 		elm_access_info_set(ao, ELM_ACCESS_STATE, "More button");
 	}
+
 }
 
 static void _gl_highlighted(void *data, Evas_Object *obj, void *event_info)
