@@ -1,9 +1,9 @@
 Name:       wifi-efl-ug
 Summary:    Wi-Fi UI Gadget
-Version:    1.0.0_30
+Version:    1.0.0_31
 Release:    1
 Group:      App/Network
-License:    Flora License
+License:    Flora-1.1
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires: cmake
 BuildRequires: pkgconfig(ecore)
