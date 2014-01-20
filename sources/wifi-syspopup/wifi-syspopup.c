@@ -37,7 +37,7 @@
 #include "appcoreWrapper.h"
 #include "wifi-syspopup-engine-callback.h"
 
-#define POPUP_HEAD_AREA 134
+#define POPUP_HEAD_AREA 160
 #define POPUP_BUTTON_AREA 200
 #define MAX_INITIAL_QS_POPUP_LIST_SIZE	8
 
@@ -276,7 +276,7 @@ static int wifi_syspopup_create(void)
 
 	evas_object_event_callback_add(syspopup_app_state->syspopup, EVAS_CALLBACK_KEY_DOWN, __keydown_cb, NULL);
 
-	elm_object_style_set(syspopup_app_state->syspopup,"min_menustyle");
+	elm_object_style_set(syspopup_app_state->syspopup,"content_no_vhpad");
 	elm_object_part_text_set(syspopup_app_state->syspopup, "title,text", sc(PACKAGE, I18N_TYPE_WiFi_network));
 	evas_object_size_hint_weight_set(syspopup_app_state->syspopup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
