@@ -7,6 +7,9 @@ msgstr "Wi-Fi activeren..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Vergeten"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Help"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP-adres"
 
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonieme identiteit"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Identiteit opgeven"
+msgstr "Identiteit opgeven."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Anonieme identiteit opgeven"
+msgstr "Anonieme identiteit opgeven."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Wachtwoord tonen"
@@ -109,8 +112,11 @@ msgstr "Verificatie fase 2"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Verbinden"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Geavanceerd"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Geef SSID in"
+msgstr "Geef SSID in."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Voorziening"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Verborgen netwerk zoeken"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Druk binnen 2 minuten op WPS op uw Wi-Fi-toegangspunt"
+msgstr "Druk binnen 2 minuten op WPS op uw Wi-Fi-toegangspunt."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Melden wanneer een Wi-Fi-netwerk is gevonden"
+msgstr "Melden wanneer een Wi-Fi-netwerk is gevonden."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(ongewijzigd)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Even geduld..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Kan netwerk niet vinden"
+msgstr "Kan netwerk niet vinden."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Wachtwoord onjuist"
+msgstr "Wachtwoord onjuist."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Geef uw wachtwoord in"
+msgstr "Geef uw wachtwoord in."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Geef uw id op"
+msgstr "Geef uw id op."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Schakel Wi-Fi-tethering uit om verbinding te maken met een Wi-Fi-netwerk"
+msgstr "Schakel Wi-Fi-tethering uit om verbinding te maken met een Wi-Fi-netwerk."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Gegevens Wi-Fi-netwerk"
 

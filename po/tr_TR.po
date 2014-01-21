@@ -7,6 +7,9 @@ msgstr "Wi-Fi etkinleştiriliyor..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Unut"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Yardım"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP adresi"
 
@@ -109,6 +112,9 @@ msgstr "Faz 2 yetkilendirmesi"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Bağlan"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Gelişmiş"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
 msgstr "SSID girin"
 
@@ -146,7 +152,7 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Lütfen bekleyin..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Ağ bulunamadı"
+msgstr "Ağ bulunamadı."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "Yanlış şifre"
@@ -158,5 +164,8 @@ msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
 msgstr "ID'nizi girin"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Wi-Fi ağına bağlanmak için Wi-Fi bağlanmayı devre dışı bırakın"
+msgstr "Wi-Fi ağına bağlanmak için Wi-Fi tethering'i devre dışı bırakın"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi ağı bilgisi"
 

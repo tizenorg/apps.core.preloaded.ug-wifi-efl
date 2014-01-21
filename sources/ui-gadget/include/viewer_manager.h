@@ -56,7 +56,7 @@ typedef enum {
 	VIEWER_WINSET_SUB_CONTENTS
 } VIEWER_WINSETS;
 
-Evas_Object *viewer_manager_create(Evas_Object *parent);
+Evas_Object *viewer_manager_create(Evas_Object *parent, Evas_Object *_win_main);
 Eina_Bool viewer_manager_destroy(void);
 Eina_Bool viewer_manager_show(VIEWER_WINSETS winset);
 Eina_Bool viewer_manager_hide(VIEWER_WINSETS winset);

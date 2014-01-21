@@ -7,6 +7,9 @@ msgstr "Wi-Fi-ի ակտիվացում..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Մոռանալ"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Օգնություն"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP հասցե"
 
@@ -59,7 +62,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Ուղեմուտի հասցե"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Մուտքագրեք գաղտնաբառը"
+msgstr "Մուտքագրեք գաղտնաբառը:"
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA վկայական"
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Անանուն ինքնություն"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Մուտքագրել ինքնությունը"
+msgstr "Մուտքագրել ինքնությունը:"
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Մուտքագրել անանուն ինքնությունը"
+msgstr "Մուտքագրել անանուն ինքնությունը:"
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Ցույց տալ գաղտնաբառը"
@@ -109,8 +112,11 @@ msgstr "Փուլ 2 նույնականացում"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Միանալ"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Լրացուցիչ"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Մուտքագրեք SSID-ն"
+msgstr "Մուտքագրեք SSID-ն:"
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Աշխատանքին նախապատրաստում"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Փնտրել թաքնված ցանց"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Սեղմեք Ձեր Wi-Fi մուտքի կետի WPS-ը 2 րոպե"
+msgstr "Սեղմեք Ձեր Wi-Fi մուտքի կետի WPS-ը 2 րոպե:"
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Ծանուցել, երբ Wi-Fi ցանց է գտնվում"
+msgstr "Ծանուցել, երբ Wi-Fi ցանց է գտնվում:"
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(անփոփոխ)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Սպասեք..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Անհնար է ցանց գտնել"
+msgstr "Անհնար է ցանց գտնել:"
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Սխալ գաղտնաբառ"
+msgstr "Սխալ գաղտնաբառ:"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Մուտքագրել նոր գաղտնաբառ"
+msgstr "Մուտքագրել նոր գաղտնաբառ:"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Մուտքագրեք Ձեր ID-ն"
+msgstr "Մուտքագրեք Ձեր ID-ն:"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Կասեցրեք Wi-Fi տեղակապումը՝ Wi-Fi ցանցի միանալու համար"
+msgstr "Կասեցրեք Wi-Fi տեղակապումը՝ Wi-Fi ցանցի միանալու համար:"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Տեղեկ. Wi-Fi ցանցի մասին"
 

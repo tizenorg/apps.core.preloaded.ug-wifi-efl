@@ -50,6 +50,8 @@ typedef struct viewer_manager_object {
 	HEADER_MODES header_mode;
 	Elm_Object_Item *item_header;
 	Elm_Object_Item *item_bottom;
+
+	Evas_Object *ctxpopup;
 } viewer_manager_object;
 
 typedef struct {
@@ -67,6 +69,8 @@ static Elm_Genlist_Item_Class bottom_itc_text;
 static Elm_Genlist_Item_Class bottom_itc_helper_text;
 static Elm_Genlist_Item_Class hidden_button_itc;
 
+static Eina_Bool rotate_flag = EINA_FALSE;
+
 void power_control(void)
 {
 	__COMMON_FUNC_ENTER__;
@@ -79,64 +83,64 @@ void power_control(void)
 	int ret;
 
 	switch (cur_state) {
-	case HEADER_MODE_OFF:
-	case HEADER_MODE_ACTIVATING:
-		ret = wlan_manager_power_on();
-		switch (ret){
-		case WLAN_MANAGER_ERR_NONE:
-			viewer_manager_show(VIEWER_WINSET_SEARCHING);
-			viewer_manager_header_mode_set(HEADER_MODE_ACTIVATING);
+		case HEADER_MODE_OFF:
+		case HEADER_MODE_ACTIVATING:
+			ret = wlan_manager_power_on();
+			switch (ret){
+				case WLAN_MANAGER_ERR_NONE:
+					viewer_manager_show(VIEWER_WINSET_SEARCHING);
+					viewer_manager_header_mode_set(HEADER_MODE_ACTIVATING);
+					break;
+
+				case WLAN_MANAGER_ERR_WIFI_TETHERING_OCCUPIED:
+					winset_popup_mode_set(ug_app_state->popup_manager,
+							POPUP_OPTION_POWER_ON_FAILED_TETHERING_OCCUPIED, NULL);
+					break;
+
+				case WLAN_MANAGER_ERR_IN_PROGRESS:
+					/* Do nothing */
+					break;
+
+				default:
+					viewer_manager_header_mode_set(HEADER_MODE_OFF);
+					INFO_LOG(UG_NAME_NORMAL, "power on failed. ret = %d", ret);
+					break;
+			}
+
 			break;
 
-		case WLAN_MANAGER_ERR_WIFI_TETHERING_OCCUPIED:
-			winset_popup_mode_set(ug_app_state->popup_manager,
-					POPUP_OPTION_POWER_ON_FAILED_TETHERING_OCCUPIED, NULL);
+		case HEADER_MODE_ON:
+		case HEADER_MODE_CONNECTING:
+		case HEADER_MODE_CONNECTED:
+		case HEADER_MODE_SEARCHING:
+			viewer_list_item_clear();
+
+			ret = wlan_manager_power_off();
+			switch (ret) {
+				case WLAN_MANAGER_ERR_NONE:
+					viewer_manager_show(VIEWER_WINSET_SEARCHING);
+					viewer_manager_hide(VIEWER_WINSET_SUB_CONTENTS);
+					viewer_manager_header_mode_set(HEADER_MODE_DEACTIVATING);
+
+					// Lets ignore all the scan updates because we are powering off now.
+					wlan_manager_disable_scan_result_update();
+					break;
+
+				case WLAN_MANAGER_ERR_IN_PROGRESS:
+					/* Do nothing */
+					break;
+
+				default:
+					INFO_LOG(UG_NAME_NORMAL, "power off failed. ret = %d", ret);
+					break;
+			}
+
 			break;
 
-		case WLAN_MANAGER_ERR_IN_PROGRESS:
-			/* Do nothing */
-			break;
-
+		case HEADER_MODE_DEACTIVATING:
 		default:
-			viewer_manager_header_mode_set(HEADER_MODE_OFF);
-			INFO_LOG(UG_NAME_NORMAL, "power on failed. ret = %d", ret);
+			INFO_LOG(UG_NAME_NORMAL, "Powering off in progress. Let it complete. \n");
 			break;
-		}
-
-		break;
-
-	case HEADER_MODE_ON:
-	case HEADER_MODE_CONNECTING:
-	case HEADER_MODE_CONNECTED:
-	case HEADER_MODE_SEARCHING:
-		viewer_list_item_clear();
-
-		ret = wlan_manager_power_off();
-		switch (ret) {
-		case WLAN_MANAGER_ERR_NONE:
-			viewer_manager_show(VIEWER_WINSET_SEARCHING);
-			viewer_manager_hide(VIEWER_WINSET_SUB_CONTENTS);
-			viewer_manager_header_mode_set(HEADER_MODE_DEACTIVATING);
-
-			// Lets ignore all the scan updates because we are powering off now.
-			wlan_manager_disable_scan_result_update();
-			break;
-
-		case WLAN_MANAGER_ERR_IN_PROGRESS:
-			/* Do nothing */
-			break;
-
-		default:
-			INFO_LOG(UG_NAME_NORMAL, "power off failed. ret = %d", ret);
-			break;
-		}
-
-		break;
-
-	case HEADER_MODE_DEACTIVATING:
-	default:
-		INFO_LOG(UG_NAME_NORMAL, "Powering off in progress. Let it complete. \n");
-		break;
 	}
 
 	__COMMON_FUNC_EXIT__;
@@ -149,31 +153,31 @@ static void _hide_finished_cb(void *data, Evas_Object *obj, void *event_info)
 	view_manager_view_type_t top_view_id;
 
 	top_view_id = (view_manager_view_type_t)evas_object_data_get(
-												obj, SCREEN_TYPE_ID_KEY);
+			obj, SCREEN_TYPE_ID_KEY);
 
 	if (data == elm_naviframe_top_item_get(obj)) {
 		/* We are now in main view */
 		evas_object_data_set(obj, SCREEN_TYPE_ID_KEY,
-								(void *)VIEW_MANAGER_VIEW_TYPE_MAIN);
+				(void *)VIEW_MANAGER_VIEW_TYPE_MAIN);
 		top_view_id = VIEW_MANAGER_VIEW_TYPE_MAIN;
 	}
 
 	INFO_LOG(UG_NAME_NORMAL, "top view id = %d", top_view_id);
 
 	switch(top_view_id) {
-	case VIEW_MANAGER_VIEW_TYPE_MAIN:
-		ug_app_state->eap_view = NULL;
+		case VIEW_MANAGER_VIEW_TYPE_MAIN:
+			ug_app_state->eap_view = NULL;
 
-		/* Lets enable the scan updates */
-		wlan_manager_enable_scan_result_update();
-		break;
+			/* Lets enable the scan updates */
+			wlan_manager_enable_scan_result_update();
+			break;
 
-	case VIEW_MANAGER_VIEW_TYPE_DETAIL:
-	case VIEW_MANAGER_VIEW_TYPE_EAP:
-	default:
-		/* Lets disable the scan updates so that the UI is not refreshed */
-		wlan_manager_disable_scan_result_update();
-		break;
+		case VIEW_MANAGER_VIEW_TYPE_DETAIL:
+		case VIEW_MANAGER_VIEW_TYPE_EAP:
+		default:
+			/* Lets disable the scan updates so that the UI is not refreshed */
+			wlan_manager_disable_scan_result_update();
+			break;
 	}
 
 	__COMMON_FUNC_EXIT__;
@@ -238,6 +242,203 @@ static Eina_Bool _back_sk_cb(void *data, Elm_Object_Item *it)
 	return EINA_FALSE;
 }
 
+static void _ctxpopup_item_select_cb(void *data, Evas_Object *obj,
+		void *event_info)
+{
+	const char *label = elm_object_item_text_get((Elm_Object_Item *) event_info);
+	if (label) {
+		SECURE_INFO_LOG(UG_NAME_NORMAL, "text(%s) is clicked\n", label);
+	}
+
+	evas_object_del(manager_object->ctxpopup);
+	manager_object->ctxpopup = NULL;
+
+	if (g_strcmp0(label, sc(PACKAGE, I18N_TYPE_Advanced)) == 0) {
+//		view_advanced();
+	} else if (g_strcmp0(label, sc(PACKAGE, I18N_TYPE_Help)) == 0) {
+//		_launch_help_app();
+	}
+}
+
+static void _ctxpopup_del_cb(void *data,
+		Evas_Object *obj, void *event_info)
+{
+	__COMMON_FUNC_ENTER__;
+
+	if (!manager_object)
+		return;
+
+	evas_object_del(manager_object->ctxpopup);
+	manager_object->ctxpopup = NULL;
+
+	__COMMON_FUNC_EXIT__;
+}
+
+
+static void _ctxpopup_move(Evas_Object *parent)
+{
+	__COMMON_FUNC_ENTER__;
+
+	if (!manager_object)
+		return;
+
+	Evas_Coord y = 0, w = 0, h = 0;
+	int rotate_angle;
+
+	elm_win_screen_size_get(parent, NULL, &y, &w, &h);
+	rotate_angle = elm_win_rotation_get(parent);
+
+	if (0 == rotate_angle || 180 == rotate_angle)
+		evas_object_move(manager_object->ctxpopup, 0, h);
+	else if (90 == rotate_angle)
+		evas_object_move(manager_object->ctxpopup, 0, w);
+	else
+		evas_object_move(manager_object->ctxpopup, h, w);
+
+	__COMMON_FUNC_EXIT__;
+}
+
+static void _ctxpopup_dismissed_cb(void *data, Evas_Object *obj,
+		void *event_info)
+{
+	__COMMON_FUNC_ENTER__;
+
+	if (!manager_object)
+		return;
+
+	Evas_Object *_win_main = data;
+
+	if (!rotate_flag) {
+		evas_object_del(manager_object->ctxpopup);
+		manager_object->ctxpopup = NULL;
+	} else {
+		_ctxpopup_move(_win_main);
+		evas_object_show(manager_object->ctxpopup);
+		rotate_flag = EINA_FALSE;
+	}
+
+	__COMMON_FUNC_EXIT__;
+}
+
+
+static void _ctxpopup_rotate_cb(void *data, Evas_Object *obj, void *event_info)
+{
+
+	__COMMON_FUNC_ENTER__;
+
+	if (!manager_object)
+		return;
+
+	Evas_Object *_win_main = data;
+
+	_ctxpopup_move(_win_main);
+	evas_object_show(manager_object->ctxpopup);
+
+	__COMMON_FUNC_EXIT__;
+}
+
+static void _ctxpopup_resize_cb(void *data, Evas *e, Evas_Object *obj,
+		void *event_info)
+{
+	__COMMON_FUNC_ENTER__;
+
+	if (manager_object->ctxpopup)
+		rotate_flag = EINA_TRUE;
+	else
+		rotate_flag = EINA_FALSE;
+
+	__COMMON_FUNC_EXIT__;
+}
+
+static void _ctxpopup_delete_cb(void *data, Evas *e, Evas_Object *obj,
+		void *event_info)
+{
+	__COMMON_FUNC_ENTER__;
+
+	Evas_Object *navi = (Evas_Object *)data;
+	Evas_Object *ctx = obj;
+
+	if (navi == NULL)
+		return;
+
+	if (ctx == NULL)
+		return;
+
+	evas_object_smart_callback_del(ctx, "dismissed",
+			_ctxpopup_dismissed_cb);
+	evas_object_event_callback_del(navi, EVAS_CALLBACK_RESIZE,
+			_ctxpopup_resize_cb);
+	evas_object_smart_callback_del(elm_object_top_widget_get(ctx),
+			"rotation,changed", _ctxpopup_rotate_cb);
+	evas_object_event_callback_del_full(ctx, EVAS_CALLBACK_DEL,
+			_ctxpopup_delete_cb, navi);
+
+	__COMMON_FUNC_EXIT__;
+
+}
+
+static void _more_button_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Evas_Object *_win_main = (Evas_Object*)data;
+	Evas_Object *parent = manager_object->nav;
+	Evas_Object *icon = NULL;
+
+	if (!parent || !manager_object) {
+		return;
+	}
+
+#if 0
+	// help btn
+	if (viewer_manager_is_wifi_help_app() == true) {
+		common_utils_send_message_to_net_popup(NULL,
+				sc(PACKAGE, I18N_TYPE_Help_invalid_action),
+				"notification", NULL);
+		return;
+	}
+#endif
+
+	if (manager_object->ctxpopup) {
+		evas_object_del(manager_object->ctxpopup);
+	}
+
+	manager_object->ctxpopup = elm_ctxpopup_add(parent);
+	elm_object_style_set(manager_object->ctxpopup, "more/default");
+	ea_object_event_callback_add(manager_object->ctxpopup, EA_CALLBACK_BACK,
+			_ctxpopup_del_cb, NULL);
+	ea_object_event_callback_add(manager_object->ctxpopup, EA_CALLBACK_MORE,
+			_ctxpopup_del_cb, NULL);
+	evas_object_smart_callback_add(manager_object->ctxpopup, "dismissed",
+			_ctxpopup_dismissed_cb, _win_main);
+	evas_object_smart_callback_add(elm_object_top_widget_get(manager_object->ctxpopup),
+			"rotation,changed", _ctxpopup_rotate_cb, _win_main);
+	evas_object_event_callback_add(manager_object->ctxpopup, EVAS_CALLBACK_DEL,
+			_ctxpopup_delete_cb, parent);
+	evas_object_event_callback_add(parent, EVAS_CALLBACK_RESIZE,
+			_ctxpopup_resize_cb, _win_main);
+
+	icon = elm_image_add(manager_object->ctxpopup);
+	elm_image_file_set(icon, CUSTOM_EDITFIELD_PATH, "more_popup_icon_setting.png");
+	elm_ctxpopup_item_append(manager_object->ctxpopup,
+			sc(PACKAGE, I18N_TYPE_Advanced), icon,
+			_ctxpopup_item_select_cb, parent);
+
+#if 0
+	icon = elm_image_add(manager_object->ctxpopup);
+	elm_image_file_set(icon, CUSTOM_EDITFIELD_PATH, "more_popup_icon_help.png");
+	elm_ctxpopup_item_append(manager_object->ctxpopup,
+			sc(PACKAGE, I18N_TYPE_Help), icon,
+			_ctxpopup_item_select_cb, parent);
+#endif
+
+	elm_ctxpopup_direction_priority_set(manager_object->ctxpopup,
+			ELM_CTXPOPUP_DIRECTION_UP, ELM_CTXPOPUP_DIRECTION_UNKNOWN,
+			ELM_CTXPOPUP_DIRECTION_UNKNOWN, ELM_CTXPOPUP_DIRECTION_UNKNOWN);
+
+	_ctxpopup_move(_win_main);
+	evas_object_show(manager_object->ctxpopup);
+}
+
+
 static void __refresh_scan_callback(void *data,
 		Evas_Object *obj, void *event_info)
 {
@@ -248,25 +449,25 @@ static void __refresh_scan_callback(void *data,
 	current_state = viewer_manager_header_mode_get();
 
 	switch (current_state) {
-	case HEADER_MODE_DEACTIVATING:
-	case HEADER_MODE_OFF:
-		power_control();
-		break;
+		case HEADER_MODE_DEACTIVATING:
+		case HEADER_MODE_OFF:
+			power_control();
+			break;
 
-	case HEADER_MODE_ON:
-	case HEADER_MODE_CONNECTED:
-		viewer_manager_show(VIEWER_WINSET_SEARCHING);
-		viewer_manager_header_mode_set(HEADER_MODE_SEARCHING);
+		case HEADER_MODE_ON:
+		case HEADER_MODE_CONNECTED:
+			viewer_manager_show(VIEWER_WINSET_SEARCHING);
+			viewer_manager_header_mode_set(HEADER_MODE_SEARCHING);
 
-		scan_result = wlan_manager_scan();
-		if (scan_result != WLAN_MANAGER_ERR_NONE) {
-			viewer_manager_hide(VIEWER_WINSET_SEARCHING);
-			viewer_manager_header_mode_set(current_state);
-		}
-		break;
+			scan_result = wlan_manager_scan();
+			if (scan_result != WLAN_MANAGER_ERR_NONE) {
+				viewer_manager_hide(VIEWER_WINSET_SEARCHING);
+				viewer_manager_header_mode_set(current_state);
+			}
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 
 	__COMMON_FUNC_EXIT__;
@@ -302,7 +503,7 @@ static void __gl_power_onoff_cb(void *data, Evas_Object *obj, void *event_info)
 	current_mode = viewer_manager_header_mode_get();
 
 	if (current_mode == HEADER_MODE_ACTIVATING ||
-					current_mode == HEADER_MODE_DEACTIVATING) {
+			current_mode == HEADER_MODE_DEACTIVATING) {
 		elm_genlist_item_selected_set(item, EINA_FALSE);
 		__COMMON_FUNC_EXIT__;
 		return;
@@ -340,46 +541,46 @@ static Evas_Object *_gl_header_content_get(void *data,
 
 	if (!strncmp(part, "elm.icon", strlen(part))) {
 		switch (manager_object->header_mode) {
-		case HEADER_MODE_OFF:
-			/* Wi-Fi off indication button */
-			icon = elm_check_add(obj);
-			elm_object_style_set(icon, "on&off");
-			evas_object_propagate_events_set(icon, EINA_FALSE);
-			elm_check_state_set(icon, EINA_FALSE);
-			evas_object_smart_callback_add(icon, "changed",
-					__gl_power_onoff_cb, NULL);
-			evas_object_show(icon);
+			case HEADER_MODE_OFF:
+				/* Wi-Fi off indication button */
+				icon = elm_check_add(obj);
+				elm_object_style_set(icon, "on&off");
+				evas_object_propagate_events_set(icon, EINA_FALSE);
+				elm_check_state_set(icon, EINA_FALSE);
+				evas_object_smart_callback_add(icon, "changed",
+						__gl_power_onoff_cb, NULL);
+				evas_object_show(icon);
 
-			ao = elm_object_item_access_object_get(manager_object->item_header);
-			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
-			elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
-			break;
+				ao = elm_object_item_access_object_get(manager_object->item_header);
+				elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+				elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
+				break;
 
-		case HEADER_MODE_ACTIVATING:
-		case HEADER_MODE_DEACTIVATING:
-			/* Progress animation */
-			icon = elm_progressbar_add(obj);
-			elm_object_style_set(icon, "list_process");
-			evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, 0.5);
-			evas_object_size_hint_weight_set(icon,
-					EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-			elm_progressbar_pulse(icon, TRUE);
-			break;
+			case HEADER_MODE_ACTIVATING:
+			case HEADER_MODE_DEACTIVATING:
+				/* Progress animation */
+				icon = elm_progressbar_add(obj);
+				elm_object_style_set(icon, "list_process");
+				evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, 0.5);
+				evas_object_size_hint_weight_set(icon,
+						EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+				elm_progressbar_pulse(icon, TRUE);
+				break;
 
-		default:
-			/* Wi-Fi on indication button */
-			icon = elm_check_add(obj);
-			elm_object_style_set(icon, "on&off");
-			evas_object_propagate_events_set(icon, EINA_FALSE);
-			elm_check_state_set(icon, EINA_TRUE);
-			evas_object_smart_callback_add(icon, "changed",
-					__gl_power_onoff_cb, NULL);
-			evas_object_show(icon);
+			default:
+				/* Wi-Fi on indication button */
+				icon = elm_check_add(obj);
+				elm_object_style_set(icon, "on&off");
+				evas_object_propagate_events_set(icon, EINA_FALSE);
+				elm_check_state_set(icon, EINA_TRUE);
+				evas_object_smart_callback_add(icon, "changed",
+						__gl_power_onoff_cb, NULL);
+				evas_object_show(icon);
 
-			ao = elm_object_item_access_object_get(manager_object->item_header);
-			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
-			elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
-			break;
+				ao = elm_object_item_access_object_get(manager_object->item_header);
+				elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+				elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
+				break;
 		}
 	}
 
@@ -432,7 +633,7 @@ static void __gl_net_notification_onoff_cb(void *data,
 		Eina_Bool check_enable = elm_check_state_get(obj);
 
 		common_util_set_system_registry(VCONFKEY_WIFI_ENABLE_QS,
-										(int)check_enable);
+				(int)check_enable);
 	} else if (g_strcmp0(object_type, "elm_genlist") == 0) {
 		if (value == VCONFKEY_WIFI_QS_ENABLE)
 			value = VCONFKEY_WIFI_QS_DISABLE;
@@ -468,21 +669,21 @@ static Evas_Object *_gl_bottom_content_get(void *data,
 	ret = common_util_get_system_registry(VCONFKEY_WIFI_ENABLE_QS);
 
 	switch (ret) {
-	case 1:
-		ao = elm_object_item_access_object_get(manager_object->item_bottom);
-		elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
-		elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
-		elm_check_state_set(toggle_btn, EINA_TRUE);
-		break;
-	case 0:
-		ao = elm_object_item_access_object_get(manager_object->item_bottom);
-		elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
-		elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
-		elm_check_state_set(toggle_btn, EINA_FALSE);
-		break;
-	default:
-		ERROR_LOG(COMMON_NAME_ERR, "Setting fail!!");
-		break;
+		case 1:
+			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+			elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
+			elm_check_state_set(toggle_btn, EINA_TRUE);
+			break;
+		case 0:
+			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+			elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
+			elm_check_state_set(toggle_btn, EINA_FALSE);
+			break;
+		default:
+			ERROR_LOG(COMMON_NAME_ERR, "Setting fail!!");
+			break;
 	}
 
 	evas_object_smart_callback_add(toggle_btn, "changed",
@@ -510,15 +711,15 @@ static Evas_Object *_gl_hidden_btn_content_get(void *data, Evas_Object *obj, con
 	elm_object_text_set(find_hidden_ap_btn, sc(PACKAGE, I18N_TYPE_Find_Hidden_Network));
 
 	switch (viewer_manager_header_mode_get()) {
-	case HEADER_MODE_ACTIVATING:
-	case HEADER_MODE_CONNECTING:
-	case HEADER_MODE_DEACTIVATING:
-	case HEADER_MODE_SEARCHING:
-		elm_object_disabled_set(find_hidden_ap_btn, EINA_TRUE);
-		break;
-	default:
-		elm_object_disabled_set(find_hidden_ap_btn, EINA_FALSE);
-		break;
+		case HEADER_MODE_ACTIVATING:
+		case HEADER_MODE_CONNECTING:
+		case HEADER_MODE_DEACTIVATING:
+		case HEADER_MODE_SEARCHING:
+			elm_object_disabled_set(find_hidden_ap_btn, EINA_TRUE);
+			break;
+		default:
+			elm_object_disabled_set(find_hidden_ap_btn, EINA_FALSE);
+			break;
 	}
 
 	return find_hidden_ap_btn;
@@ -615,8 +816,8 @@ static int viewer_manager_hidden_button_create(Evas_Object* genlist)
 	__COMMON_FUNC_ENTER__;
 
 	if (NULL != manager_object->item_sep_above_hidden_button ||
-		NULL != manager_object->item_sep_below_hidden_button ||
-		NULL != manager_object->item_hidden_btn) {
+			NULL != manager_object->item_sep_below_hidden_button ||
+			NULL != manager_object->item_hidden_btn) {
 
 		__COMMON_FUNC_EXIT__;
 		return FALSE;
@@ -666,7 +867,7 @@ static Eina_Bool viewer_manager_scan_button_set(Eina_Bool show_state)
 	return EINA_TRUE;
 }
 
-Evas_Object* viewer_manager_create(Evas_Object* _parent)
+Evas_Object* viewer_manager_create(Evas_Object* _parent, Evas_Object *_win_main)
 {
 	__COMMON_FUNC_ENTER__;
 
@@ -727,11 +928,11 @@ Evas_Object* viewer_manager_create(Evas_Object* _parent)
 		elm_toolbar_select_mode_set(toolbar, ELM_OBJECT_SELECT_MODE_NONE);
 
 		manager_object->prev_button = (Evas_Object *)elm_toolbar_item_append(toolbar, NULL,
-						ug_app_state->lbutton_setup_wizard_prev,
-						_lbutton_click_cb, NULL);
+				ug_app_state->lbutton_setup_wizard_prev,
+				_lbutton_click_cb, NULL);
 		manager_object->next_button = (Evas_Object *)elm_toolbar_item_append(toolbar, NULL,
-						ug_app_state->rbutton_setup_wizard_next,
-						_rbutton_click_cb, NULL);
+				ug_app_state->rbutton_setup_wizard_next,
+				_rbutton_click_cb, NULL);
 
 		elm_object_item_part_content_set(navi_it, "toolbar", toolbar);
 	} else {
@@ -754,6 +955,14 @@ Evas_Object* viewer_manager_create(Evas_Object* _parent)
 		evas_object_smart_callback_add(manager_object->nav,
 				"transition,finished", _hide_finished_cb, navi_it);
 
+		/*Add More Button*/
+		Evas_Object* more_btn = elm_button_add(manager_object->nav);
+		elm_object_style_set(more_btn, "naviframe/more/default");
+		evas_object_smart_callback_add(more_btn, "clicked",
+				_more_button_cb, _win_main);
+		elm_object_item_part_content_set(navi_it, "toolbar_more_btn", more_btn);
+
+		/*Add Toolbar*/
 		Evas_Object* toolbar = elm_toolbar_add(manager_object->nav);
 		elm_object_style_set(toolbar, "default");
 		elm_toolbar_shrink_mode_set(toolbar, ELM_TOOLBAR_SHRINK_EXPAND);
@@ -803,20 +1012,20 @@ Eina_Bool viewer_manager_show(VIEWER_WINSETS winset)
 	assertm_if(NULL == manager_object, "Manager object is NULL");
 
 	switch (winset) {
-	case VIEWER_WINSET_SEARCHING:
-		viewer_manager_scan_button_set(EINA_FALSE);
-		viewer_list_item_disable_all();
-		break;
+		case VIEWER_WINSET_SEARCHING:
+			viewer_manager_scan_button_set(EINA_FALSE);
+			viewer_list_item_disable_all();
+			break;
 
-	case VIEWER_WINSET_SUB_CONTENTS:
-		assertm_if(NULL == manager_object->list, "List is NULL");
+		case VIEWER_WINSET_SUB_CONTENTS:
+			assertm_if(NULL == manager_object->list, "List is NULL");
 
-		viewer_list_title_item_set();
-		viewer_manager_hidden_button_create(manager_object->list);
-		break;
+			viewer_list_title_item_set();
+			viewer_manager_hidden_button_create(manager_object->list);
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 
 	__COMMON_FUNC_EXIT__;
@@ -828,37 +1037,37 @@ Eina_Bool viewer_manager_hide(VIEWER_WINSETS winset)
 	__COMMON_FUNC_ENTER__;
 
 	switch (winset) {
-	case VIEWER_WINSET_SEARCHING:
-		/* searching view */
-		viewer_manager_scan_button_set(EINA_TRUE);
-		viewer_list_item_enable_all();
-		break;
+		case VIEWER_WINSET_SEARCHING:
+			/* searching view */
+			viewer_manager_scan_button_set(EINA_TRUE);
+			viewer_list_item_enable_all();
+			break;
 
-	case VIEWER_WINSET_SUB_CONTENTS:
-		/* hidden AP and WPS PBC */
-		if (ug_app_state->passpopup) {
-			passwd_popup_free(ug_app_state->passpopup);
-			ug_app_state->passpopup = NULL;
-		}
+		case VIEWER_WINSET_SUB_CONTENTS:
+			/* hidden AP and WPS PBC */
+			if (ug_app_state->passpopup) {
+				passwd_popup_free(ug_app_state->passpopup);
+				ug_app_state->passpopup = NULL;
+			}
 
-		if (ug_app_state->eap_view) {
-			eap_connect_data_free(ug_app_state->eap_view);
-			ug_app_state->eap_view = NULL;
-		}
+			if (ug_app_state->eap_view) {
+				eap_connect_data_free(ug_app_state->eap_view);
+				ug_app_state->eap_view = NULL;
+			}
 
-		viewer_list_title_item_del();
+			viewer_list_title_item_del();
 
-		elm_object_item_del(manager_object->item_sep_above_hidden_button);
-		elm_object_item_del(manager_object->item_sep_below_hidden_button);
-		elm_object_item_del(manager_object->item_hidden_btn);
+			elm_object_item_del(manager_object->item_sep_above_hidden_button);
+			elm_object_item_del(manager_object->item_sep_below_hidden_button);
+			elm_object_item_del(manager_object->item_hidden_btn);
 
-		manager_object->item_sep_above_hidden_button = NULL;
-		manager_object->item_sep_below_hidden_button = NULL;
-		manager_object->item_hidden_btn = NULL;
-		break;
+			manager_object->item_sep_above_hidden_button = NULL;
+			manager_object->item_sep_below_hidden_button = NULL;
+			manager_object->item_hidden_btn = NULL;
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 
 	__COMMON_FUNC_EXIT__;
@@ -895,19 +1104,19 @@ void viewer_manager_update_hidden_btn(void)
 static void viewer_manager_setup_wizard_button_controller(HEADER_MODES mode)
 {
 	switch (mode) {
-	case HEADER_MODE_OFF:
-	case HEADER_MODE_ON:
-		if (manager_object->next_button != NULL && ug_app_state->rbutton_setup_wizard_skip != NULL)
-			elm_object_text_set(manager_object->next_button, ug_app_state->rbutton_setup_wizard_skip);
-		break;
+		case HEADER_MODE_OFF:
+		case HEADER_MODE_ON:
+			if (manager_object->next_button != NULL && ug_app_state->rbutton_setup_wizard_skip != NULL)
+				elm_object_text_set(manager_object->next_button, ug_app_state->rbutton_setup_wizard_skip);
+			break;
 
-	case HEADER_MODE_CONNECTED:
-		if (manager_object->next_button != NULL && ug_app_state->rbutton_setup_wizard_next != NULL)
-			elm_object_text_set(manager_object->next_button, ug_app_state->rbutton_setup_wizard_next);
-		break;
+		case HEADER_MODE_CONNECTED:
+			if (manager_object->next_button != NULL && ug_app_state->rbutton_setup_wizard_next != NULL)
+				elm_object_text_set(manager_object->next_button, ug_app_state->rbutton_setup_wizard_next);
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 }
 
@@ -937,28 +1146,28 @@ void viewer_manager_header_mode_set(HEADER_MODES new_mode)
 	}
 
 	switch (new_mode) {
-	case HEADER_MODE_OFF:
-	case HEADER_MODE_ON:
-	case HEADER_MODE_CONNECTED:
-		viewer_manager_scan_button_set(EINA_TRUE);
-		manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Wi_Fi));
-		break;
+		case HEADER_MODE_OFF:
+		case HEADER_MODE_ON:
+		case HEADER_MODE_CONNECTED:
+			viewer_manager_scan_button_set(EINA_TRUE);
+			manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Wi_Fi));
+			break;
 
-	case HEADER_MODE_ACTIVATING:
-		manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Activating_WiFi));
-		break;
+		case HEADER_MODE_ACTIVATING:
+			manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Activating_WiFi));
+			break;
 
-	case HEADER_MODE_DEACTIVATING:
-		manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Deactivating));
-		break;
+		case HEADER_MODE_DEACTIVATING:
+			manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Deactivating));
+			break;
 
-	case HEADER_MODE_CONNECTING:
-	case HEADER_MODE_SEARCHING:
-		manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Wi_Fi));
-		break;
+		case HEADER_MODE_CONNECTING:
+		case HEADER_MODE_SEARCHING:
+			manager_object->header_text = g_strdup(sc(PACKAGE, I18N_TYPE_Wi_Fi));
+			break;
 
-	default:
-		break;
+		default:
+			break;
 	}
 
 	viewer_manager_update_hidden_btn();
@@ -1148,7 +1357,7 @@ Eina_Bool viewer_manager_refresh(void)
 
 		viewer_manager_header_mode_set(HEADER_MODE_CONNECTING);
 		viewer_list_item_radio_mode_set(target_item,
-								VIEWER_ITEM_RADIO_MODE_CONNECTING);
+				VIEWER_ITEM_RADIO_MODE_CONNECTING);
 	} else if (WLAN_MANAGER_CONNECTED == state) {
 		INFO_LOG(UG_NAME_NORMAL, "Wi-Fi is connected");
 
@@ -1157,7 +1366,7 @@ Eina_Bool viewer_manager_refresh(void)
 		target_item = viewer_manager_move_item_to_top(target_item);
 		viewer_manager_header_mode_set(HEADER_MODE_CONNECTED);
 		viewer_list_item_radio_mode_set(target_item,
-								VIEWER_ITEM_RADIO_MODE_CONNECTED);
+				VIEWER_ITEM_RADIO_MODE_CONNECTED);
 	} else {
 		INFO_LOG(UG_NAME_NORMAL, "Wi-Fi state: %d", state);
 
@@ -1196,39 +1405,39 @@ static void hidden_ap_connect_ok_cb (void *data,
 			hidden_ap_data->ssid, hidden_ap_data->sec_mode);
 
 	switch (hidden_ap_data->sec_mode) {
-	case WLAN_SEC_MODE_NONE:
-		INFO_LOG(UG_NAME_NORMAL, "OPEN: event %x; passpopup %x",
-				event_info, ug_app_state->passpopup);
+		case WLAN_SEC_MODE_NONE:
+			INFO_LOG(UG_NAME_NORMAL, "OPEN: event %x; passpopup %x",
+					event_info, ug_app_state->passpopup);
 
-		wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_NONE);
-		evas_object_del(hidden_ap_data->confirmation_popup);
-		hidden_ap_data->confirmation_popup = NULL;
-		break;
+			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_NONE);
+			evas_object_del(hidden_ap_data->confirmation_popup);
+			hidden_ap_data->confirmation_popup = NULL;
+			break;
 
-	case WLAN_SEC_MODE_WEP:
-	case WLAN_SEC_MODE_WPA_PSK:
-	case WLAN_SEC_MODE_WPA2_PSK:
-		szPassword = passwd_popup_get_txt(ug_app_state->passpopup);
+		case WLAN_SEC_MODE_WEP:
+		case WLAN_SEC_MODE_WPA_PSK:
+		case WLAN_SEC_MODE_WPA2_PSK:
+			szPassword = passwd_popup_get_txt(ug_app_state->passpopup);
 
-		if (WLAN_SEC_MODE_WEP == hidden_ap_data->sec_mode)
-			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WEP);
-		else if (WLAN_SEC_MODE_WPA_PSK == hidden_ap_data->sec_mode)
-			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WPA_PSK);
-		else
-			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WPA2_PSK);
+			if (WLAN_SEC_MODE_WEP == hidden_ap_data->sec_mode)
+				wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WEP);
+			else if (WLAN_SEC_MODE_WPA_PSK == hidden_ap_data->sec_mode)
+				wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WPA_PSK);
+			else
+				wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_WPA2_PSK);
 
-		wifi_ap_set_passphrase(ap, szPassword);
-		g_free(szPassword);
+			wifi_ap_set_passphrase(ap, szPassword);
+			g_free(szPassword);
 
-		passwd_popup_free(ug_app_state->passpopup);
-		ug_app_state->passpopup = NULL;
-		break;
+			passwd_popup_free(ug_app_state->passpopup);
+			ug_app_state->passpopup = NULL;
+			break;
 
-	default:
-		INFO_LOG(UG_NAME_NORMAL, "Fatal: Unknown Sec mode: %d",
-				hidden_ap_data->sec_mode);
+		default:
+			INFO_LOG(UG_NAME_NORMAL, "Fatal: Unknown Sec mode: %d",
+					hidden_ap_data->sec_mode);
 
-		goto hidden_ap_connect_end;
+			goto hidden_ap_connect_end;
 	}
 
 	wlan_manager_connect(ap);
@@ -1254,26 +1463,26 @@ static void hidden_ap_connect_cacel_cb(void *data, Evas_Object *obj,
 	}
 
 	switch (hidden_ap_data->sec_mode) {
-	case WLAN_SEC_MODE_NONE:
-		INFO_LOG(UG_NAME_NORMAL, "This hidden AP is Open");
+		case WLAN_SEC_MODE_NONE:
+			INFO_LOG(UG_NAME_NORMAL, "This hidden AP is Open");
 
-		evas_object_del(hidden_ap_data->confirmation_popup);
-		hidden_ap_data->confirmation_popup = NULL;
-		break;
+			evas_object_del(hidden_ap_data->confirmation_popup);
+			hidden_ap_data->confirmation_popup = NULL;
+			break;
 
-	case WLAN_SEC_MODE_WEP:
-	case WLAN_SEC_MODE_WPA_PSK:
-	case WLAN_SEC_MODE_WPA2_PSK:
-		INFO_LOG(UG_NAME_NORMAL, "Hidden AP Secured");
+		case WLAN_SEC_MODE_WEP:
+		case WLAN_SEC_MODE_WPA_PSK:
+		case WLAN_SEC_MODE_WPA2_PSK:
+			INFO_LOG(UG_NAME_NORMAL, "Hidden AP Secured");
 
-		passwd_popup_free(ug_app_state->passpopup);
-		ug_app_state->passpopup = NULL;
-		break;
+			passwd_popup_free(ug_app_state->passpopup);
+			ug_app_state->passpopup = NULL;
+			break;
 
-	default:
-		INFO_LOG(UG_NAME_NORMAL, "Fatal: Unknown Sec mode: %d",
-				hidden_ap_data->sec_mode);
-		break;
+		default:
+			INFO_LOG(UG_NAME_NORMAL, "Fatal: Unknown Sec mode: %d",
+					hidden_ap_data->sec_mode);
+			break;
 	}
 
 	g_free(hidden_ap_data->ssid);
@@ -1329,79 +1538,79 @@ void viewer_manager_specific_scan_response_hlr(
 		/* Only if there is one AP found then we need Users further action */
 
 		switch (sec_mode) {
-		case WLAN_SEC_MODE_NONE:
-			INFO_LOG(UG_NAME_NORMAL, "%s open network found", ssid);
+			case WLAN_SEC_MODE_NONE:
+				INFO_LOG(UG_NAME_NORMAL, "%s open network found", ssid);
 
-			hidden_ap_data = g_new0(hidden_ap_data_t, 1);
-			hidden_ap_data->sec_mode = WLAN_SEC_MODE_NONE;
-			hidden_ap_data->ssid = g_strdup(ssid);
+				hidden_ap_data = g_new0(hidden_ap_data_t, 1);
+				hidden_ap_data->sec_mode = WLAN_SEC_MODE_NONE;
+				hidden_ap_data->ssid = g_strdup(ssid);
 
-			popup_btn_info_t popup_btn_data;
-			memset(&popup_btn_data, 0, sizeof(popup_btn_data));
-			popup_btn_data.info_txt = sc(PACKAGE, I18N_TYPE_TRY_CONNECT);
-			popup_btn_data.btn1_cb = hidden_ap_connect_ok_cb;
-			popup_btn_data.btn2_cb = hidden_ap_connect_cacel_cb;
-			popup_btn_data.btn2_data = popup_btn_data.btn1_data = hidden_ap_data;
-			popup_btn_data.btn1_txt = sc(PACKAGE, I18N_TYPE_Connect);
-			popup_btn_data.btn2_txt = sc(PACKAGE, I18N_TYPE_Cancel);
-			hidden_ap_data->confirmation_popup =
+				popup_btn_info_t popup_btn_data;
+				memset(&popup_btn_data, 0, sizeof(popup_btn_data));
+				popup_btn_data.info_txt = sc(PACKAGE, I18N_TYPE_TRY_CONNECT);
+				popup_btn_data.btn1_cb = hidden_ap_connect_ok_cb;
+				popup_btn_data.btn2_cb = hidden_ap_connect_cacel_cb;
+				popup_btn_data.btn2_data = popup_btn_data.btn1_data = hidden_ap_data;
+				popup_btn_data.btn1_txt = sc(PACKAGE, I18N_TYPE_Connect);
+				popup_btn_data.btn2_txt = sc(PACKAGE, I18N_TYPE_Cancel);
+				hidden_ap_data->confirmation_popup =
 					common_utils_show_info_popup(ug_app_state->layout_main,
 							&popup_btn_data);
-			break;
+				break;
 
-		case WLAN_SEC_MODE_IEEE8021X:
-			INFO_LOG(UG_NAME_NORMAL, "%s IEEE8021X found", ssid);
+			case WLAN_SEC_MODE_IEEE8021X:
+				INFO_LOG(UG_NAME_NORMAL, "%s IEEE8021X found", ssid);
 
-			Evas_Object* navi_frame = viewer_manager_get_naviframe();
-			wifi_device_info_t device_info;
-			wifi_ap_h ap;
+				Evas_Object* navi_frame = viewer_manager_get_naviframe();
+				wifi_device_info_t device_info;
+				wifi_ap_h ap;
 
-			wifi_ap_create(ssid, &ap);
-			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_EAP);
+				wifi_ap_create(ssid, &ap);
+				wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_EAP);
 
-			memset(&device_info, 0, sizeof(device_info));
-			device_info.security_mode = WIFI_SECURITY_TYPE_EAP;
-			device_info.ssid = (char *)ssid;
-			device_info.ap = ap;
-			ug_app_state->eap_view =
+				memset(&device_info, 0, sizeof(device_info));
+				device_info.security_mode = WIFI_SECURITY_TYPE_EAP;
+				device_info.ssid = (char *)ssid;
+				device_info.ap = ap;
+				ug_app_state->eap_view =
 					create_eap_view(ug_app_state->layout_main, navi_frame,
 							PACKAGE, &device_info);
 
-			wifi_ap_destroy(ap);
-			break;
+				wifi_ap_destroy(ap);
+				break;
 
-		case WLAN_SEC_MODE_WEP:
-		case WLAN_SEC_MODE_WPA_PSK:
-		case WLAN_SEC_MODE_WPA2_PSK:
-			INFO_LOG(UG_NAME_NORMAL, "Secured(%d) %s found", sec_mode, ssid);
+			case WLAN_SEC_MODE_WEP:
+			case WLAN_SEC_MODE_WPA_PSK:
+			case WLAN_SEC_MODE_WPA2_PSK:
+				INFO_LOG(UG_NAME_NORMAL, "Secured(%d) %s found", sec_mode, ssid);
 
-			pswd_popup_create_req_data_t popup_info;
+				pswd_popup_create_req_data_t popup_info;
 
-			hidden_ap_data = g_new0(hidden_ap_data_t, 1);
-			hidden_ap_data->sec_mode = sec_mode;
-			hidden_ap_data->ssid = g_strdup(ssid);
+				hidden_ap_data = g_new0(hidden_ap_data_t, 1);
+				hidden_ap_data->sec_mode = sec_mode;
+				hidden_ap_data->ssid = g_strdup(ssid);
 
-			memset(&popup_info, 0, sizeof(pswd_popup_create_req_data_t));
-			popup_info.title = (char *)ssid;
-			popup_info.ok_cb = hidden_ap_connect_ok_cb;
-			popup_info.cancel_cb = hidden_ap_connect_cacel_cb;
-			popup_info.show_wps_btn = FALSE;
-			popup_info.wps_btn_cb = NULL;
-			popup_info.cb_data = hidden_ap_data;
-			popup_info.ap = NULL;
+				memset(&popup_info, 0, sizeof(pswd_popup_create_req_data_t));
+				popup_info.title = (char *)ssid;
+				popup_info.ok_cb = hidden_ap_connect_ok_cb;
+				popup_info.cancel_cb = hidden_ap_connect_cacel_cb;
+				popup_info.show_wps_btn = FALSE;
+				popup_info.wps_btn_cb = NULL;
+				popup_info.cb_data = hidden_ap_data;
+				popup_info.ap = NULL;
 
-			ug_app_state->passpopup =
+				ug_app_state->passpopup =
 					create_passwd_popup(ug_app_state->layout_main,
 							PACKAGE, &popup_info);
 
-			if (ug_app_state->passpopup == NULL)
-				INFO_LOG(UG_NAME_ERR, "Fail to create password popup");
+				if (ug_app_state->passpopup == NULL)
+					INFO_LOG(UG_NAME_ERR, "Fail to create password popup");
 
-			break;
+				break;
 
-		default:
-			INFO_LOG(UG_NAME_NORMAL, "Unknown security mode: %d", sec_mode);
-			break;
+			default:
+				INFO_LOG(UG_NAME_NORMAL, "Unknown security mode: %d", sec_mode);
+				break;
 		}
 	} else if (ap_count == 0) {
 		char *disp_msg = g_strdup_printf("%s : %s",sc(PACKAGE, I18N_TYPE_FIND_FAIL), ssid);

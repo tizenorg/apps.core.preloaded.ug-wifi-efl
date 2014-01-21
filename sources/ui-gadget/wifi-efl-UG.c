@@ -42,6 +42,7 @@ wifi_appdata *ug_app_state = NULL;
 
 struct ug_data {
 	Evas_Object *base;
+	Evas_Object *win_main;
 	ui_gadget_h ug;
 };
 
@@ -160,6 +161,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 	rotation = common_utils_get_rotate_angle(APPCORE_RM_UNKNOWN);
 	elm_win_rotation_with_resize_set(parent_layout, rotation);
 
+	ugd->win_main = ug_get_window();
 	ug_app_state->gadget= ugd;
 	ug_app_state->ug = ug;
 
@@ -171,7 +173,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 
 	memset(&g_pending_call, 0, sizeof(wifi_pending_call_info_t));
 
-	Evas_Object *layout_main = viewer_manager_create(parent_layout);
+	Evas_Object *layout_main = viewer_manager_create(parent_layout, ugd->win_main);
 	if (layout_main == NULL) {
 		INFO_LOG(UG_NAME_ERR, "Failed to create viewer_manager");
 

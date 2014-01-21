@@ -7,6 +7,9 @@ msgstr "Wi-Fiを起動中..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "切断"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "ヘルプ"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IPアドレス"
 
@@ -109,6 +112,9 @@ msgstr "フェーズ2認証"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "接続"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "詳細設定"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
 msgstr "SSIDを入力"
 
@@ -119,7 +125,7 @@ msgid "IDS_WIFI_BODY_WPS_BUTTON_CONNECTION"
 msgstr "WPSボタン接続"
 
 msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
-msgstr "非表示​ネットワーク​を​検索"
+msgstr "非表示ネットワークを検索"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
 msgstr "2分以内にWi-FiアクセスポイントのWPSボタンを押してください。"
@@ -159,4 +165,7 @@ msgstr "IDを入力してください。"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Wi-Fiネットワークに接続するには、Wi-Fiテザリングを無効にしてください。"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fiネットワーク情報"
 

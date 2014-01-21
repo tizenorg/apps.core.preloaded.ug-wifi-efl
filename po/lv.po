@@ -7,6 +7,9 @@ msgstr "Aktivizē Wi-Fi..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Aizmirst"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Palīdzība"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP adrese"
 
@@ -59,7 +62,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Vārtejas adrese"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Ievadiet paroli"
+msgstr "Ievadiet paroli."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA sertifikāts"
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonīma identitāte"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Ievadiet identitāti"
+msgstr "Ievadiet identitāti."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Ievadiet anonīmu identitāti"
+msgstr "Ievadiet anonīmu identitāti."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Rādīt paroli"
@@ -109,8 +112,11 @@ msgstr "2. fāzes autentifikācija"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Savienot"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Papildu"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Ievadiet SSID"
+msgstr "Ievadiet SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Nodrošināšana"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Atrast slēptu tīklu"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "2 minūšu laikā Wi-Fi piekļuves punktā nospiediet WPS"
+msgstr "2 minūšu laikā Wi-Fi piekļuves punktā nospiediet WPS."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Paziņot, kad ir atrasts Wi-Fi tīkls"
+msgstr "Paziņot, kad ir atrasts Wi-Fi tīkls."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(bez izmaiņām)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Lūdzu, uzgaidiet..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Nevar atrast tīklu"
+msgstr "Nevar atrast tīklu."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Nepareiza parole"
+msgstr "Nepareiza parole."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Ievadiet paroli"
+msgstr "Ievadiet paroli."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Ievadiet savu ID kodu"
+msgstr "Ievadiet savu ID kodu."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Deaktivizējiet Wi-Fi piesaisti, lai izveidotu savienojumu ar Wi-Fi tīklu"
+msgstr "Deaktivizējiet Wi-Fi piesaisti, lai izveidotu savienojumu ar Wi-Fi tīklu."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi tīkla informācija"
 

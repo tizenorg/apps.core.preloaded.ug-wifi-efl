@@ -7,6 +7,9 @@ msgstr "Wi-Fi 실행 중..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "저장 안 함"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "도움말"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP 주소"
 
@@ -59,7 +62,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "게이트웨이 주소"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "비밀번호를 입력하세요"
+msgstr "비밀번호를 입력하세요."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA 인증서"
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "익명 ID"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "ID를 입력하세요"
+msgstr "ID를 입력하세요."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "익명 ID를 입력하세요"
+msgstr "익명 ID를 입력하세요."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "비밀번호 표시"
@@ -109,8 +112,11 @@ msgstr "2단계 인증"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "연결"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "고급설정"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "SSID를 입력하세요"
+msgstr "SSID를 입력하세요."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "설정 준비"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "숨겨진 네트워크 검색"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Wi-Fi 액세스 포인트에서 WPS 버튼을 2분 안에 누르세요"
+msgstr "Wi-Fi 액세스 포인트에서 WPS 버튼을 2분 안에 누르세요."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Wi-Fi 네트워크가 검색되면 알려줍니다"
+msgstr "Wi-Fi 네트워크가 검색되면 알려줍니다."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(변경 없음)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "잠시만 기다리세요..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "네트워크를 찾을 수 없습니다"
+msgstr "네트워크를 찾을 수 없습니다."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "비밀번호가 바르지 않습니다"
+msgstr "비밀번호가 바르지 않습니다."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "비밀번호를 입력하세요"
+msgstr "비밀번호를 입력하세요."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "ID를 입력하세요"
+msgstr "ID를 입력하세요."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Wi-Fi 네트워크에 연결하기 위해 Wi-Fi 테더링을 해제합니다"
+msgstr "Wi-Fi 네트워크에 연결하기 위해 Wi-Fi 테더링을 해제합니다."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi 네트워크 정보"
 

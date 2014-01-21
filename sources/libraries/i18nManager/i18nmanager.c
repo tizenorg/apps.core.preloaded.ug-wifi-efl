@@ -58,6 +58,8 @@ static char* i18n_get_text_by_system(I18N_TYPES type){
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_PASSWORD");
 	case I18N_TYPE_Details:
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_DETAILS");
+	case I18N_TYPE_Help:
+		return (char*)dgettext("sys_string", "IDS_COM_BODY_HELP");
 	case I18N_TYPE_Unknown:
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_UNKNOWN");
 	case I18N_TYPE_Scan:
@@ -83,6 +85,7 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 	case I18N_TYPE_Connecting:
 	case I18N_TYPE_Connected:
 	case I18N_TYPE_Details:
+	case I18N_TYPE_Help:
 	case I18N_TYPE_Unknown:
 	case I18N_TYPE_Scan:
 	case I18N_TYPE_Open:
@@ -195,6 +198,8 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES");
 	case I18N_TYPE_WPS_Button:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BUTTON_WPS_BUTTON");
+	case I18N_TYPE_Advanced:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_ADVANCED");
 
 	default:
 		return apply_i18n(pkg_name, I18N_MODE_NO_NEEDED, "(debugapplying_i18n_failed");

@@ -7,6 +7,9 @@ msgstr "Ativando Wi-Fi..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Esquecer"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Ajuda"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "Endereço IP"
 
@@ -59,7 +62,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Endereço do gateway"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Insira senha"
+msgstr "Insira senha."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Certificado de CA"
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Identidade anônima"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Inserir identidade"
+msgstr "Inserir identidade."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Inserir identidade anônima"
+msgstr "Inserir identidade anônima."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Exibir senha"
@@ -109,8 +112,11 @@ msgstr "Autenticação de fase de 2"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Conectar"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Avançado"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Inserir SSID"
+msgstr "Inserir SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Provisionamento"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Localizar rede oculta"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Pressione o botão WPS em seu ponto de acesso Wi-Fi dentro de 2 minutos"
+msgstr "Pressione o botão WPS em seu ponto de acesso Wi-Fi dentro de 2 minutos."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Notifique quando uma rede Wi-Fi é encontrada"
+msgstr "Notifique quando uma rede Wi-Fi é encontrada."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(inalterado)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Por favor, aguarde..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Impossível encontrar rede"
+msgstr "Impossível encontrar rede."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Senha inválida"
+msgstr "Senha inválida."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Insira sua senha"
+msgstr "Insira sua senha."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Insira sua ID"
+msgstr "Insira sua ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Desative o roteamento Wi-Fi para se conectar à rede Wi-Fi"
+msgstr "Desative o roteamento Wi-Fi para se conectar à rede Wi-Fi."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Informações da rede Wi-Fi"
 

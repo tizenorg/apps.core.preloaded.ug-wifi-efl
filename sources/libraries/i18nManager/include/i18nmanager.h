@@ -102,6 +102,8 @@ typedef enum {
 	I18N_TYPE_Proxy_port,
 
 	/* WI-FI Advanced */
+	I18N_TYPE_Advanced,
+	I18N_TYPE_Help,
 	I18N_TYPE_Network_notification,
 	I18N_TYPE_Network_notify_me_later,
 

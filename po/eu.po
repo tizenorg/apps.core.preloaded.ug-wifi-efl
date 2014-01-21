@@ -7,6 +7,9 @@ msgstr "Wi-Fia aktibatzen..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Ahaztu"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Laguntza"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP helbidea"
 
@@ -109,6 +112,9 @@ msgstr "2. fasearen egiaztapena"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Konektatu"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Aurreratua"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
 msgstr "SSIDa idatzi"
 
@@ -159,4 +165,7 @@ msgstr "Adierazi zure IDa"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Ezgaitu Wi-Fi ainguraketa Wi-Fi sare batera konektatzeko"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi sarearen informazioa"
 

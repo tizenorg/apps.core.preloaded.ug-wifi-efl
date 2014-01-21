@@ -7,6 +7,9 @@ msgstr "Wi-Fi белсендірілуде..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Ұмыту"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Көмек"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP-мекен-жай"
 
@@ -59,7 +62,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Ену нүктесінің адресі"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Кілтсөз енгізіңіз"
+msgstr "Кілтсөз енгізіңіз."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA Сертификаты"
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Анонимді тұлғалық"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Идентификаторды енгізу"
+msgstr "Идентификаторды енгізу."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Анонимді идентификаторды енгізу"
+msgstr "Анонимді идентификаторды енгізу."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Құпиясөзді көрсету"
@@ -109,8 +112,11 @@ msgstr "2-кезең аутентификациясы"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Қосу"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Қосымша"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "SSID нөмірін енгізу"
+msgstr "SSID нөмірін енгізу."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Қамтамасыз ету"
@@ -122,13 +128,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Жасырын желіні табу"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Wi-Fi кіру нүктесіндегі WPS пернесін 2 минут ішінде басыңыз"
+msgstr "Wi-Fi кіру нүктесіндегі WPS пернесін 2 минут ішінде басыңыз."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Wi-Fi желісі табылғанда хабарлау"
+msgstr "Wi-Fi желісі табылғанда хабарлау."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(өзгертілген)"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Күте тұрыңыз..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Желіні табу мүмкін емес"
+msgstr "Желіні табу мүмкін емес."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Кілтсөз дұрыс емес"
+msgstr "Кілтсөз дұрыс емес."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Құпиясөзіңізді енгізіңіз"
+msgstr "Құпиясөзіңізді енгізіңіз."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Идентификаторыңызды енгізіңіз"
+msgstr "Идентификаторыңызды енгізіңіз."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Wi-Fi желісіне қосылу үшін Wi-Fi шектеуін өшіріңіз"
+msgstr "Wi-Fi желісіне қосылу үшін Wi-Fi шектеуін өшіріңіз."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi желілер туралы ақпарат"
 

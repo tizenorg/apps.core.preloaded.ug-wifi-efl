@@ -7,6 +7,9 @@ msgstr "Активиране на Wi-Fi..."
 msgid "IDS_WIFI_SK_FORGET"
 msgstr "Забравяне"
 
+msgid "IDS_COM_BODY_HELP"
+msgstr "Помощ"
+
 msgid "IDS_WIFI_BODY_IP_ADDRESS"
 msgstr "IP адрес"
 
@@ -77,10 +80,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Анонимна самоличност"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Въведете самоличност"
+msgstr "Въведете самоличност."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Въведете анонимна самоличност"
+msgstr "Въведете анонимна самоличност."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Показване на паролата"
@@ -109,6 +112,9 @@ msgstr "Удостоверяване с фаза 2"
 msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Свързване"
 
+msgid "IDS_ST_BODY_ADVANCED"
+msgstr "Допълнителни"
+
 msgid "IDS_WIFI_BODY_ENTER_SSID"
 msgstr "Въвеждане на SSID"
 
@@ -122,7 +128,7 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Намери скрита мрежа"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Натиснете WPS на Wi-Fi точката за достъп в рамките на 2 минути"
+msgstr "Натиснете WPS на Wi-Fi точката за достъп в рамките на 2 минути."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
@@ -146,17 +152,20 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Изчакайте..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Не може да се намери мрежа"
+msgstr "Не може да се намери мрежа."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Невалидна парола"
+msgstr "Невалидна парола."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Въведете паролата си"
+msgstr "Въведете паролата си."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Въведете вашия ИД"
+msgstr "Въведете вашия ИД."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Деактивирайте Wi-Fi привързването, за да се свържете към Wi-Fi мрежа"
+msgstr "Деактивирайте Wi-Fi привързването, за да се свържете към Wi-Fi мрежа."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Информация за Wi-Fi мрежа"
 
