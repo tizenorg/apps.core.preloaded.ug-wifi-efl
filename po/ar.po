@@ -146,7 +146,7 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "يرجى الانتظار ..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "يتعذر البحث عن شبكة"
+msgstr "يتعذر البحث عن شبكة."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "كلمة مرور غير صالحة"
@@ -159,4 +159,16 @@ msgstr "أدخل المعرف"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "ألغ تفعيل الربط عبر Wi-Fi للاتصال بشبكة Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "معلومات حول شبكة Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "الاتصال التلقائي بنقاط الوصول لشبكة Wi-Fi المجهزة بـ passpoint"
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (عبر Passpoint)"
 

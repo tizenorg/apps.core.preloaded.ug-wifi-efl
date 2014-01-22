@@ -195,7 +195,14 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES");
 	case I18N_TYPE_WPS_Button:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BUTTON_WPS_BUTTON");
-
+	case I18N_TYPE_Wi_Fi_network_info:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB");
+	case I18N_TYPE_Passpoint:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_HEADER_PASSPOINT");
+	case I18N_TYPE_Connect_passpoint_access_point:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY");
+	case I18N_TYPE_Connected_via_passpoint:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BODY_PS_HVIA_PASSPOINT");
 	default:
 		return apply_i18n(pkg_name, I18N_MODE_NO_NEEDED, "(debugapplying_i18n_failed");
 	}

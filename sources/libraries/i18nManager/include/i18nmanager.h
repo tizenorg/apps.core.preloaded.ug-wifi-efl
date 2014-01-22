@@ -69,6 +69,8 @@ typedef enum {
 	I18N_TYPE_Activating_WiFi,
 	I18N_TYPE_Invalid_password,
 
+	I18N_TYPE_Wi_Fi_network_info,
+
 	I18N_TYPE_Provisioning,
 	I18N_TYPE_User_Certificate,
 	I18N_TYPE_Unspecified,
@@ -108,7 +110,9 @@ typedef enum {
 	I18N_TYPE_WPS,
 	I18N_TYPE_Press_WPS_On_Your_Wi_Fi_Access_Point,
 	I18N_TYPE_WPS_Button,
-
+	I18N_TYPE_Passpoint,
+	I18N_TYPE_Connect_passpoint_access_point,
+	I18N_TYPE_Connected_via_passpoint,
 	I18N_TYPE_MAX
 } I18N_TYPES;
 

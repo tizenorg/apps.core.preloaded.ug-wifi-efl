@@ -146,10 +146,10 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Fan go fóill..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Ní féidir líonra a aimsiú"
+msgstr "Ní féidir líonra a aimsiú."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Pasfhocal neamhbhailí"
+msgstr "Pasfhocal neamhbhailí."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
 msgstr "Iontráil do phasfhocal"
@@ -159,4 +159,16 @@ msgstr "Iontráil do ID"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Díchumasaigh nascaireacht Wi-Fi le nascadh le líonra Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Faisnéis líonra Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Nasc go huathoibríoch le pointí rochtana Wi-Fi atá passpoint-chumasaithe"
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (trí Passpoint)"
 

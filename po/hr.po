@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Adresa pristupnika"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Unesite lozinku"
+msgstr "Unesite lozinku."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA certifikat"
@@ -77,10 +77,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonimni identitet"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Unesi identitet"
+msgstr "Unesi identitet."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Unesi anonimni identitet"
+msgstr "Unesi anonimni identitet."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Prikaži lozinku"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Spoji"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Unesite SSID"
+msgstr "Unesite SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Preuzimanje"
@@ -122,13 +122,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Traži skrivenu mrežu"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Pritisnite WPS na Wi-Fi pristupnoj točki u roku od 2 min"
+msgstr "Pritisnite WPS na Wi-Fi pristupnoj točki u roku od 2 min."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Obavijesti kad je Wi-Fi mreža pronađena"
+msgstr "Obavijesti kad je Wi-Fi mreža pronađena."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(nepromijenjeno)"
@@ -146,17 +146,29 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Pričekajte..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Nemoguće pronaći mrežu"
+msgstr "Nemoguće pronaći mrežu."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Neispravna lozinka"
+msgstr "Neispravna lozinka."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Unesite svoju lozinku"
+msgstr "Unesite svoju lozinku."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Upišite svoj ID"
+msgstr "Upišite svoj ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Isključi Wi-Fi dijeljenje za spajanje na Wi-Fi mrežu"
+msgstr "Isključi Wi-Fi dijeljenje za spajanje na Wi-Fi mrežu."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Informacije o Wi-Fi mreži"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Automatsko spajanje na Wi-Fi pristupne točke koje je omogućio passpoint."
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (preko Passpoint)"
 

@@ -160,3 +160,15 @@ msgstr "Insire a túa ID"
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Desactiva a ancoraxe á rede Wi-Fi para conectarte a unha rede Wi-Fi"
 
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Información rede Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Efectúa a conexión con puntos de acceso a Wi-Fi compatibles con passpoint automaticamente"
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (a través de Passpoint)"
+
