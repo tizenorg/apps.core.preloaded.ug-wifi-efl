@@ -50,6 +50,7 @@ typedef struct viewer_manager_object {
 	HEADER_MODES header_mode;
 	Elm_Object_Item *item_header;
 	Elm_Object_Item *item_bottom;
+	Elm_Object_Item *item_passpoint;
 } viewer_manager_object;
 
 typedef struct {
@@ -65,6 +66,8 @@ extern wifi_appdata *ug_app_state;
 static Elm_Genlist_Item_Class header_itc_text;
 static Elm_Genlist_Item_Class bottom_itc_text;
 static Elm_Genlist_Item_Class bottom_itc_helper_text;
+static Elm_Genlist_Item_Class passpoint_itc_text;
+static Elm_Genlist_Item_Class passpoint_itc_helper_text;
 static Elm_Genlist_Item_Class hidden_button_itc;
 
 void power_control(void)
@@ -492,6 +495,88 @@ static Evas_Object *_gl_bottom_content_get(void *data,
 	return toggle_btn;
 }
 
+static char *_gl_passpoint_text_get(void *data, Evas_Object *obj, const char *part)
+{
+	__COMMON_FUNC_ENTER__;
+
+	char *det = NULL;
+
+	if (!strncmp(part, "elm.text", strlen(part))) {
+		det = g_strdup(sc(PACKAGE, I18N_TYPE_Passpoint));
+		assertm_if(NULL == det, "NULL!!");
+	}
+
+	__COMMON_FUNC_EXIT__;
+	return det;
+}
+
+static char *_gl_passpoint_helper_text_get(void *data, Evas_Object *obj, const char *part)
+{
+	__COMMON_FUNC_ENTER__;
+
+	char *det = NULL;
+
+	det = g_strdup(sc(PACKAGE, I18N_TYPE_Connect_passpoint_access_point));
+
+	__COMMON_FUNC_EXIT__;
+	return det;
+}
+
+/* TODO : passpoint_onoff_cb */
+static void __gl_passpoint_onoff_cb(void *data, Evas_Object *obj, void *event_info)
+{
+#if 0
+	__COMMON_FUNC_ENTER__;
+	__COMMON_FUNC_EXIT__;
+#endif
+}
+
+/* TODO : passpoint_content_get */
+static Evas_Object *_gl_passpoint_content_get(void *data,
+		Evas_Object *obj, const char *part)
+{
+	__COMMON_FUNC_ENTER__;
+#if 0
+	int ret;
+
+	if (manager_object == NULL || obj == NULL)
+		return NULL;
+
+	Evas_Object *ao = NULL;
+	Evas_Object *toggle_btn = elm_check_add(obj);
+	retvm_if(NULL == toggle_btn, NULL);
+
+	elm_object_style_set(toggle_btn, "on&off");
+	evas_object_propagate_events_set(toggle_btn, EINA_FALSE);
+
+	ret = common_util_get_system_registry(VCONFKEY_WIFI_ENABLE_QS);
+
+	switch (ret) {
+		case 1:
+			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+			elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
+			elm_check_state_set(toggle_btn, EINA_TRUE);
+			break;
+		case 0:
+			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
+			elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
+			elm_check_state_set(toggle_btn, EINA_FALSE);
+			break;
+		default:
+			ERROR_LOG(COMMON_NAME_ERR, "Setting fail!!");
+			break;
+	}
+
+	evas_object_smart_callback_add(toggle_btn, "changed",
+			__gl_net_notification_onoff_cb, NULL);
+
+	__COMMON_FUNC_EXIT__;
+	return toggle_btn;
+#endif
+}
+
 static void _hidden_button_callback(void* data, Evas_Object* obj, void* event_info)
 {
 	__COMMON_FUNC_ENTER__;
@@ -610,6 +695,39 @@ static void __viewer_manager_bottom_create(Evas_Object* genlist)
 	__COMMON_FUNC_EXIT__;
 }
 
+static void __viewer_manager_passpoint_create(Evas_Object* genlist)
+{
+	__COMMON_FUNC_ENTER__;
+
+	assertm_if(NULL == genlist, "NULL!!");
+
+	passpoint_itc_text.item_style = "dialogue/1text.1icon";
+	passpoint_itc_text.func.text_get = _gl_passpoint_text_get;
+//	passpoint_itc_text.func.content_get = _gl_passpoint_content_get;
+	passpoint_itc_text.func.content_get = NULL;
+	passpoint_itc_text.func.state_get = NULL;
+	passpoint_itc_text.func.del = NULL;
+
+	passpoint_itc_helper_text.item_style = "multiline/1text";
+	passpoint_itc_helper_text.func.text_get = _gl_passpoint_helper_text_get;
+	passpoint_itc_helper_text.func.content_get = NULL;
+	passpoint_itc_helper_text.func.state_get = NULL;
+	passpoint_itc_helper_text.func.del = NULL;
+
+	manager_object->item_passpoint = elm_genlist_item_append(genlist, &passpoint_itc_text, NULL, NULL,
+			ELM_GENLIST_ITEM_NONE, __gl_passpoint_onoff_cb, NULL);
+
+	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
+	Elm_Object_Item *item = elm_genlist_item_append(genlist,
+			&passpoint_itc_helper_text, NULL, NULL,
+			ELM_GENLIST_ITEM_NONE, NULL, NULL);
+	elm_genlist_item_select_mode_set(item, ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY);
+
+	common_utils_add_dialogue_separator(genlist, "dialogue/separator");
+
+	__COMMON_FUNC_EXIT__;
+}
+
 static int viewer_manager_hidden_button_create(Evas_Object* genlist)
 {
 	__COMMON_FUNC_ENTER__;
@@ -709,6 +827,7 @@ Evas_Object* viewer_manager_create(Evas_Object* _parent)
 	assertm_if(NULL == manager_object->list, "manager_object->list is NULL");
 	__viewer_manager_header_create(manager_object->list);
 	__viewer_manager_bottom_create(manager_object->list);
+	__viewer_manager_passpoint_create(manager_object->list);
 
 	elm_object_part_content_set(view_content,
 			"elm.swallow.content", manager_object->list);

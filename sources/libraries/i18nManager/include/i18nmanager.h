@@ -108,7 +108,8 @@ typedef enum {
 	I18N_TYPE_WPS,
 	I18N_TYPE_Press_WPS_On_Your_Wi_Fi_Access_Point,
 	I18N_TYPE_WPS_Button,
-
+	I18N_TYPE_Passpoint,
+	I18N_TYPE_Connect_passpoint_access_point,
 	I18N_TYPE_MAX
 } I18N_TYPES;
 

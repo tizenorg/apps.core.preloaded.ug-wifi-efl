@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Endereço de gateway"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Introduzir palavra-passe"
+msgstr "Introduzir palavra-passe."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Certificado de CA"
@@ -77,10 +77,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Identidade anónima"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Introduzir identidade"
+msgstr "Introduzir identidade."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Introduzir identidade anónima"
+msgstr "Introduzir identidade anónima."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Mostrar palavra-passe"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Ligar"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Introduzir SSID"
+msgstr "Introduzir SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Aprovisionamento"
@@ -122,13 +122,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Localizar rede oculta"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Prima WPS no seu ponto de acesso Wi-Fi dentro de 2 minutos"
+msgstr "Prima WPS no seu ponto de acesso Wi-Fi dentro de 2 minutos."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Notificar quando for encontrada rede Wi-Fi"
+msgstr "Notificar quando for encontrada rede Wi-Fi."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(inalterado)"
@@ -146,17 +146,29 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Aguarde por favor..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Impossível encontrar rede"
+msgstr "Impossível encontrar rede."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Palavra-passe inválida"
+msgstr "Palavra-passe inválida."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Introduza a sua palavra-passe"
+msgstr "Introduza a sua palavra-passe."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Introduza o seu ID"
+msgstr "Introduza o seu ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Desactivar a ancoragem Wi-Fi para ligar a uma rede Wi-Fi"
+msgstr "Desactivar a ancoragem Wi-Fi para ligar a uma rede Wi-Fi."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Informações de rede Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Ligar automaticamente a PA Wi-Fi activados por Passpoint."
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (via Passpoint)"
 

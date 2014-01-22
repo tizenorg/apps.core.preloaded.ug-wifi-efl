@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Naslov prehoda"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Vnesite geslo"
+msgstr "Vnesite geslo."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Certifikat CA"
@@ -77,10 +77,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonimna identiteta"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Vnesite identiteto"
+msgstr "Vnesite identiteto."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Vnesite anonimno identiteto"
+msgstr "Vnesite anonimno identiteto."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Prikaži geslo"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Poveži"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Vnesite SSID"
+msgstr "Vnesite SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Omogočanje uporabe"
@@ -122,13 +122,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Poišči skrito omrežje"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Pritisnite WPS na dostopni točki Wi-Fi v 2 minutah"
+msgstr "Pritisnite WPS na dostopni točki Wi-Fi v 2 minutah."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Obvestilo, ko je najdeno omrežje Wi-Fi"
+msgstr "Obvestilo, ko je najdeno omrežje Wi-Fi."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(nespremenjeno)"
@@ -146,17 +146,29 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Prosimo počakajte..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Ni mogoče najti omrežja"
+msgstr "Ni mogoče najti omrežja."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Nepravilno geslo"
+msgstr "Nepravilno geslo."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Vnesite svoje geslo"
+msgstr "Vnesite svoje geslo."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Vnesite svoj ID"
+msgstr "Vnesite svoj ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Onemogočite privezovanje prek Wi-Fi, da se povežete z omrežjem Wi-Fi"
+msgstr "Onemogočite privezovanje prek Wi-Fi, da se povežete z omrežjem Wi-Fi."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Podatki o omrežju Wi-Fi"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Samodejna vzpostavitev povezave z dostopnimi točkami Wi-Fi s podporo za passpoint."
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (prek Passpoint)"
 
