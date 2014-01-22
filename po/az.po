@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Giriş ünvanı"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Kodu daxil et"
+msgstr "Kodu daxil et."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA sertifikatı"
@@ -77,10 +77,10 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonim kimlik"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Eyniliyi daxil edin"
+msgstr "Eyniliyi daxil edin."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Anonim eyniliyi daxil et"
+msgstr "Anonim eyniliyi daxil et."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
 msgstr "Parolu göstərin"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Qoşul"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "SSİD daxil edin"
+msgstr "SSİD daxil edin."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Təminat"
@@ -122,13 +122,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Gizli şəbəkləri tap"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "2 dəqiqə ərzində Wi-Fi giriş nöqtənizdə WPS basın"
+msgstr "2 dəqiqə ərzində Wi-Fi giriş nöqtənizdə WPS basın."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Wi-Fi şəbəkəsi tapılanda xəbər verin"
+msgstr "Wi-Fi şəbəkəsi tapılanda xəbər verin."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(dəyişdirilməmiş)"
@@ -143,20 +143,32 @@ msgid "IDS_ST_BODY_WI_FI_NETWORK_DETECTED_CONNECT_Q"
 msgstr "Wi-Fi şəbəkəsi aşkarlandı. Qoşulsun?"
 
 msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
-msgstr "Gözləyin"
+msgstr "Xahiş edirik gözləyin..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Şəbəkəni tapmaq mümkün deyil"
+msgstr "Şəbəkəni tapmaq mümkün deyil."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Yanlış şifrə"
+msgstr "Yanlış şifrə."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Parolunu daxil et"
+msgstr "Parolunu daxil et."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "ID-nizi daxil edin"
+msgstr "ID-nizi daxil edin."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Wi-Fi şəbəkəsinə qoşulmaq üçün Wi-Fi bağlanmasını qeyri-aktiv et"
+msgstr "Wi-Fi şəbəkəsinə qoşulmaq üçün Wi-Fi bağlanmasını qeyri-aktiv et."
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi şəbəkə məlumatı"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Avtomatik olaraq Passpoint aktivləşdirilmiş Wi-Fi AP-lərə daxil ol."
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s (Passpoint vasitəsilə)"
 

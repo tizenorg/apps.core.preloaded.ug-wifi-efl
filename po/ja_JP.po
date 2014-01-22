@@ -119,7 +119,7 @@ msgid "IDS_WIFI_BODY_WPS_BUTTON_CONNECTION"
 msgstr "WPSボタン接続"
 
 msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
-msgstr "非表示​ネットワーク​を​検索"
+msgstr "非表示ネットワークを検索"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
 msgstr "2分以内にWi-FiアクセスポイントのWPSボタンを押してください。"
@@ -159,4 +159,16 @@ msgstr "IDを入力してください。"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Wi-Fiネットワークに接続するには、Wi-Fiテザリングを無効にしてください。"
+
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fiネットワーク情報"
+
+msgid "IDS_WIFI_HEADER_PASSPOINT"
+msgstr "Passpoint"
+
+msgid "IDS_ST_BODY_CONNECT_TO_PASSPOINT_ENABLED_WI_FI_APS_AUTOMATICALLY"
+msgstr "Passpoint対応のWi-Fiアクセスポイントに自動的に接続"
+
+msgid "IDS_WIFI_BODY_PS_HVIA_PASSPOINT"
+msgstr "%s(Passpoint経由)"
 
