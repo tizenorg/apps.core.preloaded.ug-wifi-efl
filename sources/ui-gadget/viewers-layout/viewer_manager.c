@@ -531,12 +531,9 @@ static void __gl_passpoint_onoff_cb(void *data, Evas_Object *obj, void *event_in
 #endif
 }
 
-/* TODO : passpoint_content_get */
-static Evas_Object *_gl_passpoint_content_get(void *data,
-		Evas_Object *obj, const char *part)
+static Evas_Object *_gl_passpoint_content_get(void *data, Evas_Object *obj, const char *part)
 {
 	__COMMON_FUNC_ENTER__;
-#if 0
 	int ret;
 
 	if (manager_object == NULL || obj == NULL)
@@ -549,17 +546,19 @@ static Evas_Object *_gl_passpoint_content_get(void *data,
 	elm_object_style_set(toggle_btn, "on&off");
 	evas_object_propagate_events_set(toggle_btn, EINA_FALSE);
 
+//  TODO: check the VCONF
+//	ret = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
 	ret = common_util_get_system_registry(VCONFKEY_WIFI_ENABLE_QS);
 
 	switch (ret) {
 		case 1:
-			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			ao = elm_object_item_access_object_get(manager_object->item_passpoint);
 			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
 			elm_access_info_set(ao, ELM_ACCESS_STATE, "on");
 			elm_check_state_set(toggle_btn, EINA_TRUE);
 			break;
 		case 0:
-			ao = elm_object_item_access_object_get(manager_object->item_bottom);
+			ao = elm_object_item_access_object_get(manager_object->item_passpoint);
 			elm_access_info_set(ao, ELM_ACCESS_TYPE, "on/off button");
 			elm_access_info_set(ao, ELM_ACCESS_STATE, "off");
 			elm_check_state_set(toggle_btn, EINA_FALSE);
@@ -569,12 +568,10 @@ static Evas_Object *_gl_passpoint_content_get(void *data,
 			break;
 	}
 
-	evas_object_smart_callback_add(toggle_btn, "changed",
-			__gl_passpoint_onoff_cb, NULL);
+	evas_object_smart_callback_add(toggle_btn, "changed", __gl_passpoint_onoff_cb, NULL);
 
 	__COMMON_FUNC_EXIT__;
 	return toggle_btn;
-#endif
 }
 
 static void _hidden_button_callback(void* data, Evas_Object* obj, void* event_info)
@@ -703,8 +700,7 @@ static void __viewer_manager_passpoint_create(Evas_Object* genlist)
 
 	passpoint_itc_text.item_style = "dialogue/1text.1icon";
 	passpoint_itc_text.func.text_get = _gl_passpoint_text_get;
-//	passpoint_itc_text.func.content_get = _gl_passpoint_content_get;
-	passpoint_itc_text.func.content_get = NULL;
+	passpoint_itc_text.func.content_get = _gl_passpoint_content_get;
 	passpoint_itc_text.func.state_get = NULL;
 	passpoint_itc_text.func.del = NULL;
 
