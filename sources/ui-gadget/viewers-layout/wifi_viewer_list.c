@@ -555,13 +555,24 @@ static void __viewer_list_item_clicked_cb(void *data, Evas_Object *obj,
 static char *viewer_list_get_device_status_txt(wifi_device_info_t *wifi_device, VIEWER_ITEM_RADIO_MODES mode)
 {
 	char *status_txt = NULL;
+	char buf[100] = "";
+	bool passpoint = false;
+
 	/* The strings are currently hard coded. It will be replaced with string ids later */
 	if (VIEWER_ITEM_RADIO_MODE_CONNECTING == mode) {
 		status_txt = g_strdup(sc(PACKAGE, I18N_TYPE_Connecting));
 	} else if (VIEWER_ITEM_RADIO_MODE_DISCONNECTING == mode) {
 		status_txt = g_strdup(sc(PACKAGE, I18N_TYPE_Disconnecting));
 	} else if (VIEWER_ITEM_RADIO_MODE_CONNECTED == mode) {
-		status_txt = g_strdup(sc(PACKAGE, I18N_TYPE_Connected));
+		if (connection_manager_is_wifi_connection_used()) {
+			wifi_ap_is_passpoint(wifi_device->ap, &passpoint);
+			if (passpoint == true) {
+				g_snprintf(buf, sizeof(buf),
+						_(sc(PACKAGE, I18N_TYPE_Connected_via_passpoint)), sc(PACKAGE, I18N_TYPE_Connected));
+				status_txt = g_strdup(buf);
+			} else
+				status_txt = g_strdup(sc(PACKAGE, I18N_TYPE_Connected));
+		}
 	} else if (VIEWER_ITEM_RADIO_MODE_OFF == mode) {
 		status_txt = common_utils_get_ap_security_type_info_txt(PACKAGE, wifi_device);
 	} else {
