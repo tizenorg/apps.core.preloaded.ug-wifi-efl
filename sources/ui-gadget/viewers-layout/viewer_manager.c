@@ -522,13 +522,60 @@ static char *_gl_passpoint_helper_text_get(void *data, Evas_Object *obj, const c
 	return det;
 }
 
-/* TODO : passpoint_onoff_cb */
 static void __gl_passpoint_onoff_cb(void *data, Evas_Object *obj, void *event_info)
 {
-#if 0
 	__COMMON_FUNC_ENTER__;
+
+	int value = 0;
+	int ret = NET_ERR_NONE;
+	const char *object_type;
+	wifi_ap_h ap;
+	bool passpoint = false;
+
+	object_type = evas_object_type_get(obj);
+	if (!object_type) {
+		INFO_LOG(UG_NAME_SCAN, "object_type is NULL");
+		return;
+	}
+
+	value = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
+
+	if (g_strcmp0(object_type, "elm_check") == 0) {
+		Eina_Bool check_enable = elm_check_state_get(obj);
+
+		if (check_enable == TRUE) {
+			value = 1;
+		} else {
+			value = 0;
+		}
+	} else if (g_strcmp0(object_type, "elm_genlist") == 0) {
+		value = !value;
+	}
+
+	ret = net_wifi_set_passpoint(value);
+	if (ret == NET_ERR_NONE) {
+		INFO_LOG(UG_NAME_NORMAL, "Passpoint value set [%d]", value);
+		common_util_set_system_registry(VCONF_PASSPOINT_SWITCH, value);
+	} else {
+		INFO_LOG(COMMON_NAME_ERR, "Passpoint value set failed");
+	}
+
+	ret = wifi_get_connected_ap(&ap);
+	if (WIFI_ERROR_NONE == ret) {
+		wifi_ap_is_passpoint(ap, &passpoint);
+		if (passpoint == true) {
+			wifi_forget_ap(ap);
+			wifi_ap_destroy(ap);
+		}
+	}
+
+	if (manager_object->item_passpoint != NULL &&
+			g_strcmp0(object_type, "elm_genlist") == 0) {
+		elm_genlist_item_update(manager_object->item_passpoint);
+		elm_genlist_item_selected_set(manager_object->item_passpoint, EINA_FALSE);
+	}
+
 	__COMMON_FUNC_EXIT__;
-#endif
 }
 
 static Evas_Object *_gl_passpoint_content_get(void *data, Evas_Object *obj, const char *part)
@@ -546,9 +593,7 @@ static Evas_Object *_gl_passpoint_content_get(void *data, Evas_Object *obj, cons
 	elm_object_style_set(toggle_btn, "on&off");
 	evas_object_propagate_events_set(toggle_btn, EINA_FALSE);
 
-//  TODO: check the VCONF
-//	ret = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
-	ret = common_util_get_system_registry(VCONFKEY_WIFI_ENABLE_QS);
+	ret = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
 
 	switch (ret) {
 		case 1:
