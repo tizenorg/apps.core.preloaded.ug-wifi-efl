@@ -546,9 +546,7 @@ static Evas_Object *_gl_passpoint_content_get(void *data, Evas_Object *obj, cons
 	elm_object_style_set(toggle_btn, "on&off");
 	evas_object_propagate_events_set(toggle_btn, EINA_FALSE);
 
-//  TODO: check the VCONF
-//	ret = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
-	ret = common_util_get_system_registry(VCONFKEY_WIFI_ENABLE_QS);
+	ret = common_util_get_system_registry(VCONF_PASSPOINT_SWITCH);
 
 	switch (ret) {
 		case 1:
