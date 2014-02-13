@@ -65,6 +65,8 @@ void viewer_list_item_disable_all(void);
 Elm_Object_Item *item_get_for_ap(wifi_ap_h ap);
 Elm_Object_Item *item_get_for_ssid(const char* ssid, int *num_aps);
 
+void viewer_list_wifi_connect(wifi_device_info_t *device_info);
+
 #ifdef __cplusplus
 }
 #endif

@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Adresa mrežnog prolaza"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Unesi šifru"
+msgstr "Unesi šifru."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA sertifikat"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonimnost"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Unesi identitet"
+msgstr "Unesi identitet."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Unesi anonimnost"
+msgstr "Unesi anonimnost."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Prikaži šifru"
+msgstr "Prikaži lozinku."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Adresa proksija"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Poveži se"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Unesi SSID"
+msgstr "Unesi SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Pribavljanje"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Nađi skrivenu mrežu"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Pritisni WPS dugme na Wi-Fi pristupnoj tački u roku od 2 minuta"
+msgstr "Pritisni WPS dugme na Wi-Fi pristupnoj tački u roku od 2 minuta."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Podešavanja"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Obavesti me kada se pronađe Wi-Fi mreža"
+msgstr "Obavesti me kada se pronađe Wi-Fi mreža."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(nepromenjeno)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Sačekaj..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Nemoguće naći mrežu"
+msgstr "Nemoguće naći mrežu."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Šifra neispravna"
+msgstr "Šifra neispravna."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Unesi svoju lozinku"
+msgstr "Unesi svoju lozinku."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Unesi svoj ID"
+msgstr "Unesi svoj ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Onemogući Wi-Fi vezivanje radi povezivanja na Wi-Fi mrežu"
+msgstr "Onemogući Wi-Fi vezivanje radi povezivanja na Wi-Fi mrežu."
 

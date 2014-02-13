@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Ağ geçidi adresi"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Şifreyi girin"
+msgstr "Şifreyi girin."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA Sertifika"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "İsimsiz kimlik"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Kimlik girin"
+msgstr "Kimlik girin."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "İsimsiz kimlik girin"
+msgstr "İsimsiz kimlik girin."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Parolayı göster"
+msgstr "Parolayı göster."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Proxy adresi"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Bağlan"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "SSID girin"
+msgstr "SSID girin."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Hazırlanıyor"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Gizli ağ bul"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "2 dakika içinde Wi-Fi erişim noktanızdaki WPS düğmesine basın"
+msgstr "2 dakika içinde Wi-Fi erişim noktanızdaki WPS düğmesine basın."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Ayarlama"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Wi-Fi ağı bulunduğunda bildir"
+msgstr "Wi-Fi ağı bulunduğunda bildir."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(değiştirilmemiş)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Lütfen bekleyin..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Ağ bulunamadı"
+msgstr "Ağ bulunamadı."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Yanlış şifre"
+msgstr "Şifre geçersiz."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Şifrenizi girin"
+msgstr "Şifrenizi girin."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
 msgstr "ID'nizi girin"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Wi-Fi ağına bağlanmak için Wi-Fi bağlanmayı devre dışı bırakın"
+msgstr "Wi-Fi ağına bağlanmak için Wi-Fi tethering'i devre dışı bırakın"
 

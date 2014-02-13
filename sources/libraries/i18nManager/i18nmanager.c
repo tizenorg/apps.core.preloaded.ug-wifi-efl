@@ -64,6 +64,8 @@ static char* i18n_get_text_by_system(I18N_TYPES type){
 		return (char*)dgettext("sys_string", "IDS_COM_BUTTON_SCAN");
 	case I18N_TYPE_Open:
 		return (char*)dgettext("sys_string", "IDS_COM_SK_OPEN");
+	case I18N_TYPE_Setting:
+		return (char*)dgettext("sys_string", "IDS_COM_BODY_SETTING");
 	default:
 		return "(debug)system_text_failed";
 	}
@@ -195,6 +197,8 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES");
 	case I18N_TYPE_WPS_Button:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BUTTON_WPS_BUTTON");
+	case I18N_TYPE_Setting:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_COM_BODY_SETTING");
 
 	default:
 		return apply_i18n(pkg_name, I18N_MODE_NO_NEEDED, "(debugapplying_i18n_failed");

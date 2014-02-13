@@ -382,7 +382,19 @@ Evas_Object *common_utils_show_info_popup(Evas_Object *parent, popup_btn_info_t 
 			evas_object_smart_callback_add(btn_2, "clicked", __common_utils_del_popup, popup);
 		}
 	}
+	if (popup_data->btn3_txt) {
+		Evas_Object *btn_3 = elm_button_add(popup);
+		elm_object_text_set(btn_3, popup_data->btn3_txt);
+		elm_object_part_content_set(popup, "button3", btn_3);
+		evas_object_smart_callback_add(btn_3, "clicked", popup_data->btn3_cb, NULL);
+		evas_object_show(popup);
+		if (popup_data->btn3_cb) {
+			evas_object_smart_callback_add(btn_3, "clicked", popup_data->btn3_cb, popup_data->btn3_data);
 
+		} else {	// set the default callback
+			evas_object_smart_callback_add(btn_3, "clicked", __common_utils_del_popup, popup);
+		}
+	}
 	elm_object_focus_set(popup, EINA_TRUE);
 	evas_object_show(popup);
 

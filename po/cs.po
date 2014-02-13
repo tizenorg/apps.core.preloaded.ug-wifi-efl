@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Adresa brány"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Zadejte heslo"
+msgstr "Zadejte heslo."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Certifikát CA"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonymní identita"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Zadejte identitu"
+msgstr "Zadejte identitu."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Zadejte anonymní identitu"
+msgstr "Zadejte anonymní identitu."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Zobrazit heslo"
+msgstr "Zobrazit heslo."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Adresa proxy"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Připojit"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Zadat SSID"
+msgstr "Zadat SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Zajištění"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Najít skrytou síť"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Stiskněte do 2 minut tlačítko WPS na přístupovém bodu Wi-Fi"
+msgstr "Stiskněte do 2 minut tlačítko WPS na přístupovém bodu Wi-Fi."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Nastavení"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Upozornit při nalezení sítě Wi-Fi"
+msgstr "Upozornit při nalezení sítě Wi-Fi."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(nezměněno)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Čekejte prosím..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Síť nebyla nalezena"
+msgstr "Síť nebyla nalezena."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Neplatné heslo"
+msgstr "Neplatné heslo."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Zadejte své heslo"
+msgstr "Zadejte své heslo."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Zadejte své ID"
+msgstr "Zadejte své ID."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Chcete-li se připojit k síti Wi-Fi, vypněte sdílení připojení Wi-Fi"
+msgstr "Chcete-li se připojit k síti Wi-Fi, vypněte sdílení připojení Wi-Fi."
 

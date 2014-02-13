@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Адреса на порта"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Внесете лозинка"
+msgstr "Внесете лозинка."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA сертификат"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Анонимен идентитет"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Внесете идентитет"
+msgstr "Внесете идентитет."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Внесете анонимен идентитет"
+msgstr "Внесете анонимен идентитет."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Прикажи лозинка"
+msgstr "Прикажи лозинка."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Адреса на прокси"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Поврзи"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Внесете SSID"
+msgstr "Внесете SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Пружање"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Најди скриена мрежа"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Притиснете WPS на пристапната точка за Wi-Fi во рок од 2 минути"
+msgstr "Притиснете WPS на пристапната точка за Wi-Fi во рок од 2 минути."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Нагодување"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Извести ме кога ќе се најде Wi-Fi мрежа"
+msgstr "Извести ме кога ќе се најде Wi-Fi мрежа."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(непроменето)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Ве молам почекајте..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Не може да се најде мрежа"
+msgstr "Не може да се најде мрежа."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Погрешна лозинка"
+msgstr "Погрешна лозинка."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Внесете ја лозинката"
+msgstr "Внесете ја лозинката."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Внесете идентификација"
+msgstr "Внесете идентификација."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Исклучете го делењето Wi-Fi за да се поврзете со мрежа Wi-Fi"
+msgstr "Исклучете го споделувањето Wi-Fi за да се поврзете со мрежа Wi-Fi."
 

@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Gateway-adresse"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Angiv adgangskode"
+msgstr "Angiv adgangskode."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA-certifikat"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Anonym identitet"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Indtast identitet"
+msgstr "Indtast identitet."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Indtast anonym identitet"
+msgstr "Indtast anonym identitet."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Vis adgangskode"
+msgstr "Vis adgangskode."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Proxy-adresse"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Tilslut"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Angiv SSID"
+msgstr "Angiv SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Anskaffelse"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Find skjult netværk"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Tryk på WPS på dit Wi-Fi-adgangspunkt inden for 2 minutter"
+msgstr "Tryk på WPS på dit Wi-Fi-adgangspunkt inden for 2 minutter."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Indstilling"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Giv mig besked, når der er fundet et Wi-Fi-netværk"
+msgstr "Giv mig besked, når der er fundet et Wi-Fi-netværk."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(uændret)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Vent..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Kunne ikke finde netværk"
+msgstr "Kunne ikke finde netværk."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Ugyldig adgangskode"
+msgstr "Ugyldig adgangskode."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Indtast din adgangskode"
+msgstr "Indtast din adgangskode."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Indtast dit id"
+msgstr "Indtast dit id."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Deaktivér Wi-Fi-internetdeling for at oprette forbindelse til et Wi-Fi-netværk"
+msgstr "Deaktivér Wi-Fi-internetdeling for at oprette forbindelse til et Wi-Fi-netværk."
 

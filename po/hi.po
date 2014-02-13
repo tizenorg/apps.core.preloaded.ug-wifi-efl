@@ -20,7 +20,7 @@ msgid "IDS_WIFI_BODY_DNS_2"
 msgstr "DNS 2"
 
 msgid "IDS_ST_BODY_NETWORK_NOTIFICATION"
-msgstr "नेटवर्क नोटिफ़िकेशन"
+msgstr "नेटवर्क अधिसूचना"
 
 msgid "IDS_ST_BODY_SECURED_ABB_M_WIFI_AP_SUMMARY"
 msgstr "सुरक्षित"
@@ -38,16 +38,16 @@ msgid "IDS_ST_BODY_GOOD_M_STRENGTH"
 msgstr "अच्छा"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORKS"
-msgstr "Wi-Fi नेटवर्क"
+msgstr "Wi-Fi नेटवर्क्स"
 
 msgid "IDS_WIFI_BODY_DISCONNECTING_ING"
 msgstr "डिस्कनेक्ट हो रहा है..."
 
 msgid "IDS_WIFI_BODY_NO_APS"
-msgstr "कोई APs नहीं"
+msgstr "APs नहीं"
 
 msgid "IDS_WIFI_POP_DEACTIVATING_WI_FI_ING"
-msgstr "Wi-Fi निष्क्रिय हो रहा है…"
+msgstr "Wi-Fi निष्क्रिय हो रहा है..."
 
 msgid "IDS_WIFI_BODY_EAP_METHOD"
 msgstr "EAP विधि"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "अज्ञात पहचान"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "पहचान दर्ज करें"
+msgstr "पहचान प्रविष्ट करें"
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "अज्ञात पहचान दर्ज करें"
+msgstr "अज्ञात पहचान प्रविष्ट करें"
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "पासवर्ड दिखाएँ"
+msgstr "पासवर्ड दिखाएँ।"
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "प्रॉक्‍सी पता"
@@ -101,7 +101,7 @@ msgid "IDS_WIFI_BODY_CHANNEL"
 msgstr "चैनल"
 
 msgid "IDS_WIFI_POP_AUTOMATIC_CONNECTION_NETWORK_WILL_DISABLED_CONTINUE_Q_MSG"
-msgstr "इस नेटवर्क के साथ स्वचालित कनेक्शन अक्षम हो जाएगा। जारी रखें?"
+msgstr "इस नेटवर्क के साथ स्वचालित कनेक्शन अक्षमित हो जाएगा। जारी रखें?"
 
 msgid "IDS_COM_BODY_PHASE_2_AUTHENTICATION"
 msgstr "फ़ेज 2 प्रमाणीकरण"
@@ -127,8 +127,11 @@ msgstr "%d मिनट के अंदर आप के Wi-Fi एक्से�
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "सेटिंग"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Wi-Fi नेटवर्क के प्राप्त होने पर सूचित करें"
+msgstr "Wi-Fi नेटवर्क मिलने पर सूचित करें"
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(बदला नहीं)"
@@ -140,19 +143,19 @@ msgid "IDS_WIFI_BUTTON_WPS_BUTTON"
 msgstr "WPS बटन"
 
 msgid "IDS_ST_BODY_WI_FI_NETWORK_DETECTED_CONNECT_Q"
-msgstr "वाई-फाई नेटवर्क का पता लगाया गया। जोड़ें?"
+msgstr "Wi-Fi नेटवर्क का पता लगाया गया। जोड़ें?"
 
 msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "कृपया प्रतीक्षा करें..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "नेटवर्क खोजने में अक्षम"
+msgstr "नेटवर्क खोजने में अक्षम।"
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "अवैध पासवर्ड"
+msgstr "अवैध पासवर्ड।"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "अपना पासवर्ड दर्ज करें"
+msgstr "अपना पासवर्ड प्रविष्ट करें"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
 msgstr "अपनी ID दर्ज करें"

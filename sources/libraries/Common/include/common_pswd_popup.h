@@ -53,6 +53,7 @@ typedef struct {
 	Eina_Bool show_wps_btn;
 	Evas_Smart_Cb ok_cb;
 	Evas_Smart_Cb cancel_cb;
+	Evas_Smart_Cb setting_cb;
 	Evas_Smart_Cb wps_btn_cb;
 	wifi_ap_h ap;
 	void *cb_data;

@@ -77,10 +77,13 @@ typedef struct {
 	char *info_txt;
 	char *btn1_txt;
 	char *btn2_txt;
+	char *btn3_txt;
 	Evas_Smart_Cb btn1_cb;
 	Evas_Smart_Cb btn2_cb;
+	Evas_Smart_Cb btn3_cb;
 	const void *btn1_data;
 	const void *btn2_data;
+	const void *btn3_data;
 } popup_btn_info_t;
 
 typedef struct {
@@ -121,6 +124,7 @@ typedef struct {
 	ip_info_list_t *ip_info_list;
 	Evas_Object *forget_confirm_popup;
 	Evas_Object *view_detail_list;
+	Evas_Object *popup;
 } view_detail_data;
 
 void* common_util_genlist_item_data_get(void *data);

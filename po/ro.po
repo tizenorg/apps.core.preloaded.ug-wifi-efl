@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Adresă gateway"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Introduceţi parola"
+msgstr "Introduceţi parola."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Certificat CA"
@@ -83,7 +83,7 @@ msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
 msgstr "Introducere identitate anonimă"
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Afişare parolă"
+msgstr "Afişaţi parola."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Adresă proxy"
@@ -122,10 +122,13 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Găsire reţea ascunsă"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Apăsaţi pe WPS pe punctul de acces Wi-Fi în interval de 2 minute"
+msgstr "Apăsaţi pe WPS pe punctul de acces Wi-Fi în interval de 2 minute."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
+
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Setare"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
 msgstr "Notificare la găsirea reţelei Wi-Fi"
@@ -152,11 +155,11 @@ msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "Parolă greşită"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Introduceţi parola"
+msgstr "Introduceţi parola."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Introduceţi ID-ul"
+msgstr "Introduceţi ID-ul."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Dezactivaţi furnizarea accesului la internet prin Wi-Fi pentru a vă conecta la o reţea Wi-Fi"
+msgstr "Dezactivaţi furnizarea accesului la internet prin Wi-Fi pentru a vă conecta la o reţea Wi-Fi."
 

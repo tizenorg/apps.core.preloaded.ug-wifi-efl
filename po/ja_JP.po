@@ -119,13 +119,16 @@ msgid "IDS_WIFI_BODY_WPS_BUTTON_CONNECTION"
 msgstr "WPSボタン接続"
 
 msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
-msgstr "非表示​ネットワーク​を​検索"
+msgstr "非表示ネットワークを検索"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
 msgstr "2分以内にWi-FiアクセスポイントのWPSボタンを押してください。"
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
+
+msgid "IDS_COM_BODY_SETTING"
+msgstr "設定"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
 msgstr "Wi-Fiネットワークを検出すると通知"
