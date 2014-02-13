@@ -60,7 +60,7 @@ static void _gl_listview_more_btn_cb(void *data, Evas_Object *obj, void *event_i
 
 	DEBUG_LOG(UG_NAME_NORMAL, "ssid [%s]", device_info->ssid);
 
-	view_detail(device_info, ug_app_state->layout_main);
+	view_detail(device_info, ug_app_state->layout_main, NULL);
 
 	__COMMON_FUNC_EXIT__;
 }
@@ -346,6 +346,27 @@ popup_ok_cb_exit:
 	__COMMON_FUNC_EXIT__;
 }
 
+static void __passwd_popup_setting_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	__COMMON_FUNC_ENTER__;
+	INFO_LOG(UG_NAME_NORMAL,"=================\n");
+	INFO_LOG(UG_NAME_NORMAL," %s %d\n", __func__ ,__LINE__);
+	INFO_LOG(UG_NAME_NORMAL,"=================\n");
+
+	wifi_device_info_t* setting = (wifi_device_info_t*)data;
+
+	if (data == NULL) {
+		return;
+	}
+
+	evas_object_hide(ug_app_state->passpopup->popup);
+
+	view_detail(setting, ug_app_state->layout_main, ug_app_state->passpopup->popup);
+
+	__COMMON_FUNC_EXIT__;
+
+}
+
 static void __wps_pbc_popup_cancel_connecting(void *data, Evas_Object *obj,
 		void *event_info)
 {
@@ -384,7 +405,7 @@ static void _wps_btn_cb(void* data, Evas_Object* obj, void* event_info)
 	__COMMON_FUNC_EXIT__;
 }
 
-static void __viewer_list_wifi_connect(wifi_device_info_t *device_info)
+void viewer_list_wifi_connect(wifi_device_info_t *device_info)
 {
 	int rv;
 	bool favorite = false;
@@ -417,10 +438,11 @@ static void __viewer_list_wifi_connect(wifi_device_info_t *device_info)
 		popup_info.title = device_info->ssid;
 		popup_info.ok_cb = __passwd_popup_ok_cb;
 		popup_info.cancel_cb = __passwd_popup_cancel_cb;
+		popup_info.setting_cb = __passwd_popup_setting_cb;
 		popup_info.show_wps_btn = device_info->wps_mode;
 		popup_info.wps_btn_cb = _wps_btn_cb;
 		popup_info.ap = device_info->ap;
-		popup_info.cb_data = NULL;
+		popup_info.cb_data = device_info;
 
 		/* TODO: parameter with device_info */
 		/* TODO: finally parameter with wifi_ap_h, WPA, EAP */
@@ -521,7 +543,7 @@ static void __viewer_list_item_clicked_cb(void *data, Evas_Object *obj,
 		case HEADER_MODE_CONNECTED:
 		case HEADER_MODE_ON:
 		case HEADER_MODE_CONNECTING:
-			__viewer_list_wifi_connect(device_info);
+			viewer_list_wifi_connect(device_info);
 			__viewer_list_force_set_wifi_status_connecting(it);
 			viewer_list_item_radio_mode_set(it, VIEWER_ITEM_RADIO_MODE_CONNECTING);
 			break;

@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Адрес шлюза"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Введите пароль"
+msgstr "Введите пароль."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Сертификат"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Анонимный пользователь"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Введите удостоверение"
+msgstr "Введите удостоверение."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Введите анонимное удостоверение"
+msgstr "Введите анонимное удостоверение."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Показать пароль"
+msgstr "Показать пароль."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Адрес прокси"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Подключиться"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Введите SSID"
+msgstr "Введите SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Подготовка"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Найти скрытую сеть"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Нажмите кнопку WPS на точке доступа Wi-Fi в течение 2 мин"
+msgstr "Нажмите кнопку WPS на точке доступа Wi-Fi в течение 2 мин."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Настройки"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Уведомлять об обнаружении сети Wi-Fi"
+msgstr "Уведомлять об обнаружении сети Wi-Fi."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(без изменений)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Подождите..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Не удается найти сеть"
+msgstr "Не удается найти сеть."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "Неправильный пароль"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Введите пароль"
+msgstr "Введите пароль."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Введите свой идентификатор"
+msgstr "Введите свой идентификатор."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Чтобы подключиться к сети Wi-Fi, отключите модем Wi-Fi"
+msgstr "Чтобы подключиться к сети Wi-Fi, отключите модем Wi-Fi."
 

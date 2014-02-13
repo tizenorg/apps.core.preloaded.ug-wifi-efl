@@ -210,6 +210,7 @@ static Eina_Bool detailview_sk_cb(void *data, Elm_Object_Item *it)
 	view_detail_data *_detail_data = (view_detail_data *)data;
 	retvm_if(NULL == _detail_data, EINA_TRUE);
 
+	evas_object_show(_detail_data->popup);
 	ip_info_save_data(_detail_data->ip_info_list);
 	view_detail_end = TRUE;
 
@@ -271,7 +272,7 @@ static void _gl_realized(void *data, Evas_Object *obj, void *event_info)
 	__COMMON_FUNC_EXIT__;
 }
 
-void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main)
+void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main, void *data)
 {
 	__COMMON_FUNC_ENTER__;
 
@@ -286,6 +287,7 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main)
 
 	Evas_Object *layout = NULL;
 	Evas_Object* navi_frame = viewer_manager_get_naviframe();
+
 	if (navi_frame == NULL) {
 		ERROR_LOG(UG_NAME_NORMAL, "Failed to get naviframe");
 		return;
@@ -302,6 +304,8 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main)
 	_detail_data->ap = ap = device_info->ap;
 	wifi_ap_is_favorite(ap, &favorite);
 	_detail_data->ap_image_path = g_strdup(device_info->ap_image_path);
+	_detail_data->popup = data;
+
 	layout = common_utils_create_layout(navi_frame);
 	evas_object_show(layout);
 

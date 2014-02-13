@@ -38,6 +38,7 @@ typedef enum {
 	I18N_TYPE_Ok,
 	I18N_TYPE_No,
 	I18N_TYPE_Cancel,
+	I18N_TYPE_Setting,
 	I18N_TYPE_Scan,
 	I18N_TYPE_Forget,
 	I18N_TYPE_IP_address,

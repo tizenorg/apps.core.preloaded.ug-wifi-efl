@@ -83,7 +83,7 @@ msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
 msgstr "Introducir identidade anónima"
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Mostrar contrasinal"
+msgstr "Mostrar contrasinal."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Enderezo proxy"
@@ -126,6 +126,9 @@ msgstr "Pulsa no botón WPS no teu punto de acceso da Wi-Fi dentro de 2 minutos"
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
+
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Axustes"
 
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
 msgstr "Notificar cando se atope unha rede Wi-Fi"

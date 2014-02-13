@@ -27,7 +27,7 @@ extern "C"
 
 #include <Evas.h>
 
-void view_detail(wifi_device_info_t *device_info, Evas_Object *parent);
+void view_detail(wifi_device_info_t *device_info, Evas_Object *parent, void *data);
 
 int detailview_ip_and_dns_type_set_as_static();
 

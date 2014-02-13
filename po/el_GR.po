@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Διεύθυνση πύλης"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Εισαγωγή κωδικού"
+msgstr "Εισαγωγή κωδικού."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "Πιστοποιητικό CA"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Άγνωστη ταυτότητα"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Εισαγάγετε ταυτότητα"
+msgstr "Εισαγάγετε ταυτότητα."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Εισαγάγετε άγνωστη ταυτότητα"
+msgstr "Εισαγάγετε άγνωστη ταυτότητα."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Εμφάνιση κωδικού πρόσβασης"
+msgstr "Να εμφανιστεί ο κωδικός πρόσβασης."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Διεύθ.διακ.μεσολάβ."
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Σύνδεση"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Εισαγωγή στο SSID"
+msgstr "Εισαγωγή στο SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Παροχή"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Εύρεση κρυφού δικτύου"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Πιέστε το WPS του σημείου πρόσβασης Wi-Fi εντός 2 λεπτών"
+msgstr "Πιέστε το WPS του σημείου πρόσβασης Wi-Fi εντός 2 λεπτών."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Ρύθμιση"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Να ειδοποιούμαι, όταν εντοπίζεται δίκτυο Wi-Fi"
+msgstr "Να ειδοποιούμαι, όταν εντοπίζεται δίκτυο Wi-Fi."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(χωρίς αλλαγές)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Περιμένετε..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Δεν είναι δυνατή η εύρεση του δικτύου"
+msgstr "Δεν είναι δυνατή η εύρεση του δικτύου."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
-msgstr "Μη έγκυρος κωδικός"
+msgstr "Μη έγκυρος κωδικός."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Εισαγωγή του κωδικού πρόσβασης"
+msgstr "Εισαγωγή του κωδικού πρόσβασης."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Εισάγετε το ID σας"
+msgstr "Εισάγετε το ID σας."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Απενεργοποιήστε το Wi-Fi tethering για να συνδεθείτε σε δίκτυο Wi-Fi"
+msgstr "Απενεργοποιήστε το Wi-Fi tethering για να συνδεθείτε σε δίκτυο Wi-Fi."
 

@@ -59,7 +59,7 @@ msgid "IDS_WIFI_BODY_GATEWAY_ADDRESS"
 msgstr "Yhdyskäytävän osoite"
 
 msgid "IDS_WIFI_BODY_ENTER_PASSWORD"
-msgstr "Kirjoita salasana"
+msgstr "Kirjoita salasana."
 
 msgid "IDS_WIFI_BODY_CA_CERTIFICATE"
 msgstr "CA-varmenne"
@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "Nimettömät käyttäjätiedot"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "Anna käyttäjätiedot"
+msgstr "Anna käyttäjätiedot."
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "Anna nimettömät käyttäjätiedot"
+msgstr "Anna nimettömät käyttäjätiedot."
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "Näytä salasana"
+msgstr "Näytä salasana."
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "Välityspalvelimen osoite"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "Yhdistä"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "Anna SSID"
+msgstr "Anna SSID."
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "Valmistelu"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "Etsi piilotettu verkko"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "Paina Wi-Fi-yhteyspisteesi WPS-painiketta 2 minuutin kuluessa"
+msgstr "Paina Wi-Fi-yhteyspisteesi WPS-painiketta 2 minuutin kuluessa."
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "Asetus"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "Ilmoita, kun Wi-Fi-verkko löytyy"
+msgstr "Ilmoita, kun Wi-Fi-verkko löytyy."
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "(muuttumaton)"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "Ole hyvä ja odota..."
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "Verkkoa ei löydy"
+msgstr "Verkkoa ei löydy."
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "Virheellinen salasana"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "Anna salasanasi"
+msgstr "Anna salasanasi."
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "Anna tunnuksesi"
+msgstr "Anna tunnuksesi."
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "Poista Wi-Fi-yhteyden jako käytöstä Wi-Fi-verkkoyhteyden muodostamista varten"
+msgstr "Poista Wi-Fi-yhteyden jako käytöstä Wi-Fi-verkkoyhteyden muodostamista varten."
 

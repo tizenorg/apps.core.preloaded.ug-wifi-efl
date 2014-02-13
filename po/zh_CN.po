@@ -77,13 +77,13 @@ msgid "IDS_WIFI_BODY_ANONYMOUS_IDENTITY"
 msgstr "匿名身份"
 
 msgid "IDS_WIFI_BODY_ENTER_IDENTITY"
-msgstr "输入 ID"
+msgstr "输入 ID。"
 
 msgid "IDS_WIFI_BODY_ENTER_ANONYMOUS_IDENTITY"
-msgstr "输入匿名 ID"
+msgstr "输入匿名 ID。"
 
 msgid "IDS_ST_BODY_SHOW_PASSWORD"
-msgstr "显示密码"
+msgstr "显示密码。"
 
 msgid "IDS_WIFI_HEADER_PROXY_ADDRESS"
 msgstr "代理服务器地址"
@@ -110,7 +110,7 @@ msgid "IDS_WIFI_BODY_CONNECT"
 msgstr "连接"
 
 msgid "IDS_WIFI_BODY_ENTER_SSID"
-msgstr "输入 SSID"
+msgstr "输入 SSID。"
 
 msgid "IDS_WIFI_BODY_PROVISIONING"
 msgstr "配置"
@@ -122,13 +122,16 @@ msgid "IDS_WIFI_OPT_FIND_HIDDEN_NETWORK"
 msgstr "寻找隐藏的网络"
 
 msgid "IDS_ST_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_2_MINUTES"
-msgstr "在 2 分钟内按下您 Wi-Fi 接入点上的 WPS"
+msgstr "在 2 分钟内按下您 Wi-Fi 接入点上的 WPS。"
 
 msgid "IDS_WIFI_BODY_SSID"
 msgstr "SSID"
 
+msgid "IDS_COM_BODY_SETTING"
+msgstr "设定"
+
 msgid "IDS_WIFI_BODY_NOTIFY_WHEN_WI_FI_NETWORK_IS_FOUND"
-msgstr "当找到 Wi-Fi 网络时通知"
+msgstr "当找到 Wi-Fi 网络时通知。"
 
 msgid "IDS_ST_BODY_HUNCHANGED"
 msgstr "（未更改）"
@@ -146,17 +149,17 @@ msgid "IDS_WIFI_POP_PLEASE_WAIT_ING"
 msgstr "请稍等…"
 
 msgid "IDS_WIFI_POP_UNABLE_TO_FIND_NETWORK"
-msgstr "无法找到网络"
+msgstr "无法找到网络。"
 
 msgid "IDS_ST_POP_INVALID_PASSWORD"
 msgstr "无效密码"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_PASSWORD"
-msgstr "输入您的密码"
+msgstr "输入您的密码。"
 
 msgid "IDS_WIFI_BODY_ENTER_YOUR_ID"
-msgstr "输入您的 ID"
+msgstr "输入您的 ID。"
 
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
-msgstr "禁用 Wi-Fi 网络共享以连接至 Wi-Fi 网络"
+msgstr "禁用 Wi-Fi 网络共享以连接至 Wi-Fi 网络。"
 
