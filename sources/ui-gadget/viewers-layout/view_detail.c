@@ -64,12 +64,16 @@ static Evas_Object *_view_detail_grouptitle_content_get(void *data, Evas_Object 
 		DEBUG_LOG(UG_NAME_ERR, "Fatal: Image path is NULL");
 	} else if (!strncmp(part, "elm.icon", strlen(part))) {
 		/* for strength */
+		char *temp_str = NULL;
 		icon = elm_image_add(obj);
 		retvm_if(NULL == icon, NULL);
 
-		elm_image_file_set(icon, detail_data->ap_image_path, NULL);
-	}
+		temp_str = g_strdup_printf("%s.png", detail_data->ap_image_path);
+		DEBUG_LOG(UG_NAME_NORMAL, "%s", temp_str);
 
+		elm_image_file_set(icon, temp_str, NULL);
+
+	}
 	return icon;
 }
 
