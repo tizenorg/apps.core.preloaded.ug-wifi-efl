@@ -163,3 +163,6 @@ msgstr "輸入您的 ID。"
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "停用 Wi-Fi 網絡共享以連接至 Wi-Fi 網絡。"
 
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi 網絡資訊"
+

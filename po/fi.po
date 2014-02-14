@@ -163,3 +163,6 @@ msgstr "Anna tunnuksesi."
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Poista Wi-Fi-yhteyden jako käytöstä Wi-Fi-verkkoyhteyden muodostamista varten."
 
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Wi-Fi-verkon tiedot"
+

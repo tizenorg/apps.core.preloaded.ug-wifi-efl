@@ -56,8 +56,6 @@ static char* i18n_get_text_by_system(I18N_TYPES type){
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_DETAILS_NAME");
 	case I18N_TYPE_Password:
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_PASSWORD");
-	case I18N_TYPE_Details:
-		return (char*)dgettext("sys_string", "IDS_COM_BODY_DETAILS");
 	case I18N_TYPE_Unknown:
 		return (char*)dgettext("sys_string", "IDS_COM_BODY_UNKNOWN");
 	case I18N_TYPE_Scan:
@@ -84,7 +82,6 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 	case I18N_TYPE_Activating:
 	case I18N_TYPE_Connecting:
 	case I18N_TYPE_Connected:
-	case I18N_TYPE_Details:
 	case I18N_TYPE_Unknown:
 	case I18N_TYPE_Scan:
 	case I18N_TYPE_Open:
@@ -117,7 +114,7 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_EXCELLENT");
 	case I18N_TYPE_Good:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_ST_BODY_GOOD_M_STRENGTH");
-	case I18N_TYPE_Week:
+	case I18N_TYPE_Weak:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BODY_WEAK_M_STRENGTH");
 	case I18N_TYPE_Disable_WiFi_Tethering_To_Connect_To_A_WiFi_Network:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK");
@@ -199,6 +196,8 @@ char* i18n_manager_get_text(const char *pkg_name, I18N_TYPES type)
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_BUTTON_WPS_BUTTON");
 	case I18N_TYPE_Setting:
 		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_COM_BODY_SETTING");
+	case I18N_TYPE_Wi_Fi_Network_Info:
+		return apply_i18n(pkg_name, I18N_MODE_SELF_MADE, "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB");
 
 	default:
 		return apply_i18n(pkg_name, I18N_MODE_NO_NEEDED, "(debugapplying_i18n_failed");

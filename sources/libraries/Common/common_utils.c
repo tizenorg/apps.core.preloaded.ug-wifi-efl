@@ -162,7 +162,7 @@ char *common_utils_get_rssi_text(const char *str_pkg_name, int rssi)
 	case SIGNAL_STRENGTH_TYPE_GOOD:
 		return g_strdup(sc(str_pkg_name, I18N_TYPE_Good));
 	default:
-		return g_strdup(sc(str_pkg_name, I18N_TYPE_Week));
+		return g_strdup(sc(str_pkg_name, I18N_TYPE_Weak));
 	}
 }
 
