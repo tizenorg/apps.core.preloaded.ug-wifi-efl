@@ -163,3 +163,6 @@ msgstr "Įveskite savo ID."
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "Išjunkite „Wi-Fi“ siejimą, kad prisijungtumėte prie „Wi-Fi“ tinklo."
 
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "„Wi-Fi“ tinklo informacija"
+

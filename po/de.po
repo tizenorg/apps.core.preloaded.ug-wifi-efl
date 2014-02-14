@@ -163,3 +163,6 @@ msgstr "ID eingeben"
 msgid "IDS_WIFI_BODY_DISABLE_WI_FI_TETHERING_TO_CONNECT_TO_A_WI_FI_NETWORK"
 msgstr "WLAN-Tethering deaktivieren, um eine Verbindung zu einem WLAN-Netzwerk herzustellen."
 
+msgid "IDS_WIFI_HEADER_WI_FI_NETWORK_INFO_ABB"
+msgstr "Info zum WLAN-Netzwerk"
+

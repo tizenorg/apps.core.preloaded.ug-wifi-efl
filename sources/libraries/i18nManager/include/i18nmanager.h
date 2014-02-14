@@ -44,11 +44,10 @@ typedef enum {
 	I18N_TYPE_IP_address,
 	I18N_TYPE_Static_IP,
 	I18N_TYPE_Proxy_address,
-	I18N_TYPE_Details,
 	I18N_TYPE_Name,
 	I18N_TYPE_Excellent,
 	I18N_TYPE_Good,
-	I18N_TYPE_Week,
+	I18N_TYPE_Weak,
 	I18N_TYPE_Subnet_mask,
 	I18N_TYPE_Gateway,
 	I18N_TYPE_Gateway_address,
@@ -109,6 +108,7 @@ typedef enum {
 	I18N_TYPE_WPS,
 	I18N_TYPE_Press_WPS_On_Your_Wi_Fi_Access_Point,
 	I18N_TYPE_WPS_Button,
+	I18N_TYPE_Wi_Fi_Network_Info,
 
 	I18N_TYPE_MAX
 } I18N_TYPES;

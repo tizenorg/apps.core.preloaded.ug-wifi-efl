@@ -307,6 +307,10 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main, void *d
 	_detail_data->popup = data;
 
 	layout = common_utils_create_layout(navi_frame);
+
+	Elm_Object_Item* navi_it = elm_naviframe_item_push(navi_frame,
+			sc(PACKAGE, I18N_TYPE_Wi_Fi_Network_Info), NULL, NULL, layout, NULL);
+
 	evas_object_show(layout);
 
 	Evas_Object *detailview_list = elm_genlist_add(layout);
@@ -329,9 +333,6 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main, void *d
 	elm_object_item_disabled_set(title, TRUE);
 
 	elm_object_part_content_set(layout, "elm.swallow.content", detailview_list);
-
-	Elm_Object_Item* navi_it = elm_naviframe_item_push(navi_frame,
-			sc(PACKAGE, I18N_TYPE_Details), NULL, NULL, layout, NULL);
 
 	evas_object_data_set(navi_frame, SCREEN_TYPE_ID_KEY,
 				(void *)VIEW_MANAGER_VIEW_TYPE_DETAIL);
