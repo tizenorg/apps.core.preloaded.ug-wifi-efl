@@ -1392,7 +1392,7 @@ void viewer_manager_specific_scan_response_hlr(
 
 			ug_app_state->passpopup =
 					create_passwd_popup(ug_app_state->layout_main,
-							PACKAGE, &popup_info);
+							PACKAGE, &popup_info, EINA_FALSE);
 
 			if (ug_app_state->passpopup == NULL)
 				INFO_LOG(UG_NAME_ERR, "Fail to create password popup");

@@ -62,7 +62,7 @@ typedef struct {
 typedef struct pswd_popup pswd_popup_t;
 
 pswd_popup_t *create_passwd_popup(Evas_Object *win_main, const char *pkg_name,
-		pswd_popup_create_req_data_t *popup_info);
+		pswd_popup_create_req_data_t *popup_info, Eina_Bool is_qs);
 void create_pbc_popup(pswd_popup_t *pswd_popup_data, Evas_Smart_Cb cancel_cb,
 		void *cancel_cb_data);
 

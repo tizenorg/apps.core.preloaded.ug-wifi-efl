@@ -200,7 +200,7 @@ static void __view_main_wifi_connect(syspopup_genlist_data_t *gdata)
 		popup_info.ap = gdata->dev_info->ap;
 		popup_info.cb_data = NULL;
 		syspopup_app_state->passpopup = create_passwd_popup(
-				syspopup_app_state->layout_main, PACKAGE, &popup_info);
+				syspopup_app_state->layout_main, PACKAGE, &popup_info, EINA_TRUE);
 		evas_object_event_callback_add(syspopup_app_state->passpopup->popup,
 				EVAS_CALLBACK_KEY_DOWN, __popup_keydown_cb, NULL);
 		break;

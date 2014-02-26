@@ -447,7 +447,7 @@ void viewer_list_wifi_connect(wifi_device_info_t *device_info)
 		/* TODO: parameter with device_info */
 		/* TODO: finally parameter with wifi_ap_h, WPA, EAP */
 		ug_app_state->passpopup = create_passwd_popup(
-				ug_app_state->layout_main, PACKAGE, &popup_info);
+				ug_app_state->layout_main, PACKAGE, &popup_info, EINA_FALSE);
 
 		if (ug_app_state->passpopup == NULL)
 			INFO_LOG(UG_NAME_ERR, "Fail to create password popup");

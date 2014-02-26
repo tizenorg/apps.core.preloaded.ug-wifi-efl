@@ -207,7 +207,7 @@ void create_pbc_popup(pswd_popup_t *pswd_popup_data, Evas_Smart_Cb cancel_cb, vo
 }
 
 pswd_popup_t *create_passwd_popup(Evas_Object *win_main,
-		const char *pkg_name, pswd_popup_create_req_data_t *popup_info)
+		const char *pkg_name, pswd_popup_create_req_data_t *popup_info, Eina_Bool is_qs)
 {
 	__COMMON_FUNC_ENTER__;
 
@@ -232,16 +232,27 @@ pswd_popup_t *create_passwd_popup(Evas_Object *win_main,
 	popup_btn_info_t popup_btn_data;
 	memset(&popup_btn_data, 0, sizeof(popup_btn_data));
 
-	popup_btn_data.title_txt = popup_info->title;
-	popup_btn_data.btn3_cb = popup_info->ok_cb;
-	popup_btn_data.btn3_data = popup_info->cb_data;
-	popup_btn_data.btn2_cb = popup_info->setting_cb;
-	popup_btn_data.btn2_data = popup_info->cb_data;
-	popup_btn_data.btn1_cb = popup_info->cancel_cb;
-	popup_btn_data.btn1_data = popup_info->cb_data;
-	popup_btn_data.btn3_txt = sc(pkg_name, I18N_TYPE_Ok);
-	popup_btn_data.btn1_txt = sc(pkg_name, I18N_TYPE_Cancel);
-	popup_btn_data.btn2_txt = sc(pkg_name, I18N_TYPE_Setting);
+	if(EINA_TRUE == is_qs) {
+		popup_btn_data.title_txt = popup_info->title;
+		popup_btn_data.btn1_cb = popup_info->cancel_cb;
+		popup_btn_data.btn1_data = popup_info->cb_data;
+		popup_btn_data.btn1_txt = sc(pkg_name, I18N_TYPE_Cancel);
+		popup_btn_data.btn2_cb = popup_info->ok_cb;
+		popup_btn_data.btn2_data = popup_info->cb_data;
+		popup_btn_data.btn2_txt = sc(pkg_name, I18N_TYPE_Ok);
+	}
+	else {
+		popup_btn_data.title_txt = popup_info->title;
+		popup_btn_data.btn3_cb = popup_info->ok_cb;
+		popup_btn_data.btn3_data = popup_info->cb_data;
+		popup_btn_data.btn2_cb = popup_info->setting_cb;
+		popup_btn_data.btn2_data = popup_info->cb_data;
+		popup_btn_data.btn1_cb = popup_info->cancel_cb;
+		popup_btn_data.btn1_data = popup_info->cb_data;
+		popup_btn_data.btn3_txt = sc(pkg_name, I18N_TYPE_Ok);
+		popup_btn_data.btn1_txt = sc(pkg_name, I18N_TYPE_Cancel);
+		popup_btn_data.btn2_txt = sc(pkg_name, I18N_TYPE_Setting);
+	}
 	Evas_Object *passpopup = common_utils_show_info_popup(win_main, &popup_btn_data);
 
 	Evas_Object *eo = elm_layout_edje_get(passpopup);
