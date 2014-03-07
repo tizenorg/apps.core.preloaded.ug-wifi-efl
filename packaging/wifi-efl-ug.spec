@@ -3,7 +3,7 @@ Summary:    Wi-Fi UI Gadget
 Version:    0.5.2_50
 Release:    1
 Group:      App/Network
-License:    Flora License
+License:    Flora-1.1
 Source0:    %{name}-%{version}.tar.gz
 BuildRequires: cmake
 BuildRequires: pkgconfig(ecore)
@@ -59,7 +59,7 @@ cp -v net.wifi-qs.rule %{buildroot}%{_sysconfdir}/smack/accesses.d/
 
 #License
 mkdir -p %{buildroot}%{_datadir}/license
-cp LICENSE.Flora %{buildroot}%{_datadir}/license/wifi-efl-ug
+cp LICENSE.Flora %{buildroot}%{_datadir}/license/%{name}
 cp LICENSE.Flora %{buildroot}%{_datadir}/license/net.wifi-qs
 
 %post
@@ -83,7 +83,7 @@ vconftool set -t int db/wifi/enable_quick_start 1 -g 6519 -i -f
 %{PREFIX}/res/edje/wifi-efl-UG/*.edj
 %{PREFIX}/res/images/wifi-efl-UG/*.png
 %{PREFIX}/res/locale/*/LC_MESSAGES/*.mo
-%{_datadir}/license/wifi-efl-ug
+/usr/share/license/%{name}
 /usr/share/packages/wifi-efl-ug.xml
 
 %files -n net.wifi-qs
@@ -93,5 +93,5 @@ vconftool set -t int db/wifi/enable_quick_start 1 -g 6519 -i -f
 %{_datadir}/process-info/wifi-qs.ini
 %{_datadir}/icon/*.png
 %{_datadir}/locale/*/LC_MESSAGES/*.mo
-%{_datadir}/license/net.wifi-qs
+/usr/share/license/net.wifi-qs
 %{_sysconfdir}/smack/accesses.d/net.wifi-qs.rule
