@@ -207,15 +207,6 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		app_control_get_extra_data(app_control, "z_order", &zorder);
 		INFO_LOG(UG_NAME_NORMAL, "zorder [%s]", zorder);
 		if (zorder != NULL && 0 == g_strcmp0(zorder, "highest")) {
-			Ecore_X_Window xwin = elm_win_xwindow_get(ugd->win_main);
-			unsigned int val[3] = {0, 0, 0};
-			ecore_x_netwm_window_type_set(xwin,
-				ECORE_X_WINDOW_TYPE_NOTIFICATION);
-			efl_util_set_notification_window_level(ugd->win_main,
-				UTILX_NOTIFICATION_LEVEL_NORMAL);
-			Ecore_X_Atom ATOM_PANEL_SCROLLABLE_STATE =
-					ecore_x_atom_get(STR_ATOM_PANEL_SCROLLABLE_STATE);
-			ecore_x_window_prop_card32_set(xwin, ATOM_PANEL_SCROLLABLE_STATE, val, 3);
 			g_free(zorder);
 			zorder = NULL;
 		}

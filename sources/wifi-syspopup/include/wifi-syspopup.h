@@ -73,8 +73,6 @@ typedef struct wifi_object {
 	pswd_popup_t *passpopup;
 	eap_connect_data_t *eap_popup;
 	Evas_Object *alertpopup;
-	Ea_Theme_Color_Table *color_table;
-	Ea_Theme_Font_Table *font_table;
 
 	/* Sort type*/
 	int sort_type;

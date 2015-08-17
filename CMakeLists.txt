@@ -13,7 +13,7 @@ SET(ENGINE_PKGCONFIGS
 	capi-network-wifi
 	network)
 
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-declarations")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-declarations")
 
 IF(TIZEN_TETHERING_ENABLE)
 	ADD_DEFINITIONS(-DTIZEN_TETHERING_ENABLE)
@@ -26,7 +26,6 @@ ENDIF(MODEL_BUILD_FEATURE_WLAN_CONCURRENT_MODE)
 INCLUDE(FindPkgConfig)
 pkg_check_modules(pkgs REQUIRED
 	ecore
-	ecore-x
 	ecore-imf
 	ecore-input
 	appcore-efl
@@ -34,9 +33,7 @@ pkg_check_modules(pkgs REQUIRED
 	efl-assist
 	capi-ui-efl-util
 	glib-2.0
-	utilX
 	ui-gadget-1
-	x11
 	capi-network-connection
 	capi-network-wifi
 	sensor

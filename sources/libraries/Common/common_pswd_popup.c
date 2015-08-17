@@ -759,7 +759,6 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 				_common_wps_options_popup_cb, pswd_popup_data);
 	}
 
-	elm_genlist_realization_mode_set(genlist, EINA_TRUE);
 	evas_object_show(genlist);
 
 	elm_object_content_set(passpopup, genlist);

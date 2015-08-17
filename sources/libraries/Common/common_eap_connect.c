@@ -24,8 +24,6 @@
 #include <cert-svc/cprimitives.h>
 #include <ui-gadget.h>
 #include <efl_assist.h>
-#include <utilX.h>
-#include <Ecore_X.h>
 #include <vconf-keys.h>
 #include <glib/gstdio.h>
 #include <efl_extension.h>
@@ -345,9 +343,6 @@ static void _gl_eap_type_sub_sel(void *data, Evas_Object *obj, void *event_info)
 		elm_genlist_item_update(eap_data->eap_type_item);
 }
 
-static CertSvcStringList stringList;
-static CertSvcInstance instance;
-
 static void _gl_eap_user_cert_sel(void *data, Evas_Object *obj,
 		void *event_info)
 {
@@ -400,8 +395,6 @@ static void _gl_eap_user_cert_sel(void *data, Evas_Object *obj,
 static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 		Evas_Object *btn)
 {
-	int list_length = 0;
-	int index = 0;
 	Evas_Object *ctxpopup;
 	Elm_Object_Item *it = NULL;
 
@@ -426,14 +419,6 @@ static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 			ELM_CTXPOPUP_DIRECTION_UNKNOWN,
 			ELM_CTXPOPUP_DIRECTION_UNKNOWN);
 
-	if (certsvc_instance_new(&instance) == CERTSVC_FAIL) {
-		INFO_LOG(UG_NAME_ERR, "Failed to create new instance");
-		return;
-	}
-
-	certsvc_pkcs12_get_id_list(instance, &stringList);
-	certsvc_string_list_get_length(stringList, &list_length);
-
 	if (eap_data->cert_candidates) {
 		g_slist_free_full(eap_data->cert_candidates, g_free);
 		eap_data->cert_candidates = NULL;
@@ -444,30 +429,8 @@ static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 	elm_object_item_domain_text_translatable_set(it,
 			PACKAGE, EINA_TRUE);
 
-	for (index = 0; index < list_length; index++) {
-		char *char_buffer = NULL;
-		CertSvcString buffer;
-		int ret = certsvc_string_list_get_one(stringList, index, &buffer);
-		if (ret == CERTSVC_SUCCESS) {
-			char_buffer = g_strndup(buffer.privateHandler, buffer.privateLength);
-			if (char_buffer == NULL)
-				goto exit;
-
-			elm_ctxpopup_item_append(ctxpopup, char_buffer, NULL,
-					_gl_eap_user_cert_sel, eap_data);
-			eap_data->cert_candidates =
-					g_slist_prepend(eap_data->cert_candidates, char_buffer);
-
-			certsvc_string_free(buffer);
-		} else
-			ERROR_LOG(UG_NAME_NORMAL, "Failed to get certificates");
-	}
-
 	move_dropdown(eap_data, btn);
 	evas_object_show(ctxpopup);
-
-exit:
-	certsvc_instance_free(instance);
 }
 
 static void _gl_eap_cert_list_btn_cb(void *data, Evas_Object *obj,
@@ -1194,133 +1157,6 @@ static void __common_eap_connect_popup_init_item_class(void *data)
 static gboolean __cert_extract_files(const char *cert_alias,
 		eap_connect_data_t *eap_data)
 {
-	int ret;
-	int validity;
-	int cert_counts = 0;
-	int cert_index;
-	gchar *ca_cert_path = NULL;
-	gchar *user_cert_path = NULL;
-	gchar *privatekey_path = NULL;
-	FILE *fp;
-	CertSvcInstance cert_instance;
-	CertSvcString cert_alias_str;
-	CertSvcCertificateList cert_list;
-	CertSvcCertificate user_certificate;
-	CertSvcCertificate ca_certificate;
-	CertSvcCertificate *selected_certificate = NULL;
-	X509 *x509 = NULL;
-	EVP_PKEY *privatekey = NULL;
-
-	ret = certsvc_instance_new(&cert_instance);
-	if (ret != CERTSVC_SUCCESS) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to certsvc_instance_new");
-		goto error;
-	}
-	ret = certsvc_string_new(cert_instance, cert_alias, strlen(cert_alias), &cert_alias_str);
-	if (ret != CERTSVC_SUCCESS) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to certsvc_string_new");
-		goto error;
-	}
-	ret = certsvc_pkcs12_load_certificate_list(cert_instance, cert_alias_str, &cert_list);
-	if (ret != CERTSVC_SUCCESS) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to certsvc_pkcs12_load_certificate_list");
-		goto error;
-	}
-	ret = certsvc_certificate_list_get_length(cert_list, &cert_counts);
-	if (cert_counts < 1) {
-		ERROR_LOG(UG_NAME_NORMAL, "there is no certificates");
-		goto error;
-	}
-	INFO_LOG(UG_NAME_NORMAL, "cert counts: %d", cert_counts);
-	selected_certificate = g_try_new0(CertSvcCertificate, cert_counts);
-	if (selected_certificate == NULL) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to allocate memory");
-		goto error;
-	}
-	ret = certsvc_certificate_list_get_one(cert_list, 0, &user_certificate);
-	if (ret != CERTSVC_SUCCESS) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to certsvc_certificate_list_get_one");
-		goto error;
-	}
-	cert_index = cert_counts - 1;
-
-	selected_certificate[0] = user_certificate;
-
-	ret = certsvc_certificate_dup_x509(user_certificate, &x509);
-
-	user_cert_path = g_strdup_printf("%s%s_%s", EAP_TLS_PATH,
-				cert_alias, EAP_TLS_USER_CERT_PATH);
-	if ((fp = fopen(user_cert_path, "w")) == NULL) {
-		goto error;
-	}
-	ret = PEM_write_X509(fp, x509);
-	fclose(fp);
-	certsvc_certificate_free_x509(x509);
-	INFO_LOG(UG_NAME_NORMAL, "success to save user_cert file");
-
-	ca_cert_path = g_strdup_printf("%s%s_%s", EAP_TLS_PATH, cert_alias,
-				EAP_TLS_CA_CERT_PATH);
-	while (cert_index) {
-		ret = certsvc_certificate_list_get_one(cert_list, cert_index, &ca_certificate);
-		if (ret != CERTSVC_SUCCESS) {
-			ERROR_LOG(UG_NAME_NORMAL, "failed to certsvc_certificate_list_get_one");
-			goto error;
-		}
-
-		selected_certificate[cert_counts-cert_index] = ca_certificate;
-		cert_index--;
-
-		ret = certsvc_certificate_dup_x509(ca_certificate, &x509);
-		if ((fp = fopen(ca_cert_path, "a")) == NULL) {
-			goto error;
-		}
-		ret = PEM_write_X509(fp, x509);
-		fclose(fp);
-		certsvc_certificate_free_x509(x509);
-	}
-	INFO_LOG(UG_NAME_NORMAL, "success to save ca_cert file");
-	ret = certsvc_certificate_verify(selected_certificate[0], selected_certificate, cert_counts, NULL, 0, &validity);
-	if (ret != CERTSVC_SUCCESS) {
-		ERROR_LOG(UG_NAME_NORMAL, "failed to verify ca_certificate");
-		goto error;
-	}
-	if (validity == 0) {
-		ERROR_LOG(UG_NAME_NORMAL, "Invalid certificate");
-		goto error;
-	}
-
-	ret = certsvc_pkcs12_dup_evp_pkey(cert_instance, cert_alias_str, &privatekey);
-
-	privatekey_path = g_strdup_printf("%s%s_%s", EAP_TLS_PATH,
-				cert_alias, EAP_TLS_PRIVATEKEY_PATH);
-
-	if ((fp = fopen(privatekey_path, "w")) == NULL) {
-		goto error;
-	}
-	ret = PEM_write_PrivateKey(fp, privatekey, NULL, NULL, 0, NULL, NULL);
-	fclose(fp);
-	certsvc_pkcs12_free_evp_pkey(privatekey);
-	INFO_LOG(UG_NAME_NORMAL, "success to save privatekey file");
-
-	g_free(selected_certificate);
-	certsvc_instance_free(cert_instance);
-
-	eap_data->ca_cert_path = ca_cert_path;
-	eap_data->user_cert_path = user_cert_path;
-	eap_data->privatekey_path = privatekey_path;
-
-	return TRUE;
-
-error:
-	g_free(ca_cert_path);
-	g_free(user_cert_path);
-	g_free(privatekey_path);
-
-	if (selected_certificate) {
-		g_free(selected_certificate);
-	}
-
-	certsvc_instance_free(cert_instance);
 	return FALSE;
 }
 
@@ -1606,7 +1442,6 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 
 	eap_data->eap_done_ok = FALSE;
 	eap_data->genlist = view_list = elm_genlist_add(parent);
-	elm_genlist_realization_mode_set(view_list, TRUE);
 	elm_genlist_mode_set(view_list, ELM_LIST_COMPRESS);
 	elm_scroller_content_min_limit(view_list, EINA_FALSE, EINA_TRUE);
 

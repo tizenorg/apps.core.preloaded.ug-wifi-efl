@@ -650,7 +650,6 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main,
 
 	detailview_list = elm_genlist_add(layout);
 	assertm_if(NULL == detailview_list, "NULL!!");
-	elm_genlist_realization_mode_set(detailview_list, TRUE);
 
 	elm_object_style_set(detailview_list, "dialogue");
 	_detail_data->view_detail_list = detailview_list;

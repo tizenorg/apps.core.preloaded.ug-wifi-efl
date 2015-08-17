@@ -20,9 +20,7 @@ BuildRequires:	pkgconfig(efl-assist)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(cert-svc-vcore)
-BuildRequires:	pkgconfig(utilX)
 BuildRequires:	pkgconfig(ui-gadget-1)
-BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(sensor)
 BuildRequires:	pkgconfig(capi-network-wifi)
 BuildRequires:	pkgconfig(capi-network-connection)
@@ -36,7 +34,6 @@ BuildRequires:	pkgconfig(efl-extension)
 BuildRequires:	cmake
 BuildRequires:	gettext-tools
 BuildRequires:	edje-tools
-BuildRequires:	model-build-features
 Requires(post):		/sbin/ldconfig
 Requires(post):		/usr/bin/vconftool
 requires(postun):	/sbin/ldconfig

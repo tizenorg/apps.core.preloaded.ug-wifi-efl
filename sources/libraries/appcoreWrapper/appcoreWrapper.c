@@ -17,7 +17,6 @@
  *
  */
 
-#include <Ecore_X.h>
 #include <Elementary.h>
 
 #include "common.h"
@@ -32,7 +31,6 @@ static void __appcore_win_del(void *data, Evas_Object *obj, void *event)
 Evas_Object* appcore_create_win(const char *name, Elm_Win_Type type)
 {
 	Evas_Object *eo;
-	int w, h;
 
 	eo = elm_win_add(NULL, name, type);
 	if (eo) {
@@ -40,9 +38,6 @@ Evas_Object* appcore_create_win(const char *name, Elm_Win_Type type)
 		elm_win_borderless_set(eo, EINA_TRUE);
 		evas_object_smart_callback_add(eo, "delete,request",
 				__appcore_win_del, NULL);
-		ecore_x_window_size_get(ecore_x_window_root_first_get(),
-				&w, &h);
-		evas_object_resize(eo, w, h);
 	}
 
 	return eo;

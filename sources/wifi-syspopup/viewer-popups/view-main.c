@@ -17,7 +17,6 @@
  *
  */
 
-#include <utilX.h>
 #include "common.h"
 #include "view-main.h"
 #include "common_pswd_popup.h"

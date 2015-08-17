@@ -22,8 +22,6 @@
 #include <vconf-keys.h>
 #include <appcore-efl.h>
 #include <ui-gadget-module.h>
-#include <utilX.h>
-#include <Ecore_X.h>
 #include <efl_extension.h>
 
 #include "common.h"
@@ -308,9 +306,6 @@ static Eina_Bool __key_press_cb(void *data, int type, void *event)
 	if (!ev)
 		return ECORE_CALLBACK_RENEW;
 
-	if (strcmp(ev->keyname, KEY_HOME) == 0)
-		wifi_devpkr_destroy();
-
 	__COMMON_FUNC_EXIT__;
 	return ECORE_CALLBACK_RENEW;
 
@@ -542,7 +537,6 @@ static void app_control(app_control_h request, void *data)
 
 	Evas_Object *win_main = NULL;
 	Evas *evas = NULL;
-	Ecore_X_Window xwin;
 	char *caller = NULL;
 
 	assertm_if(NULL == data, "data param is NULL!!");
@@ -566,11 +560,6 @@ static void app_control(app_control_h request, void *data)
 	devpkr_app_state->evas = evas;
 
 	elm_win_alpha_set(devpkr_app_state->win_main, EINA_TRUE); /* invisible window */
-
-	xwin = elm_win_xwindow_get(win_main);
-	ecore_x_icccm_name_class_set(xwin, "APP_POPUP", "APP_POPUP");
-
-	utilx_set_system_notification_level(ecore_x_display_get(), elm_win_xwindow_get(win_main), UTILX_NOTIFICATION_LEVEL_LOW);
 
 	elm_win_borderless_set(devpkr_app_state->win_main, EINA_TRUE); /* No borders */
 	elm_win_conformant_set(devpkr_app_state->win_main, TRUE); /* Popup autoscroll */
