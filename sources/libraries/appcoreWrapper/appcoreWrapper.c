@@ -1,13 +1,13 @@
 /*
  * Wi-Fi
  *
- * Copyright 2012-2013 Samsung Electronics Co., Ltd
+ * Copyright 2012 Samsung Electronics Co., Ltd
  *
- * Licensed under the Flora License, Version 1.1 (the "License");
+ * Licensed under the Flora License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://floralicense.org/license
+ * http://www.tizenopensource.org/license
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -17,6 +17,7 @@
  *
  */
 
+#include <Ecore_X.h>
 #include <Elementary.h>
 
 #include "common.h"
@@ -28,12 +29,12 @@ static void __appcore_win_del(void *data, Evas_Object *obj, void *event)
 	elm_exit();
 }
 
-Evas_Object* appcore_create_win(const char *name)
+Evas_Object* appcore_create_win(const char *name, Elm_Win_Type type)
 {
 	Evas_Object *eo;
 	int w, h;
 
-	eo = elm_win_add(NULL, name, ELM_WIN_DIALOG_BASIC);
+	eo = elm_win_add(NULL, name, type);
 	if (eo) {
 		elm_win_title_set(eo, name);
 		elm_win_borderless_set(eo, EINA_TRUE);
