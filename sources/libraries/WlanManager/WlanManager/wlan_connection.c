@@ -1,13 +1,13 @@
 /*
  * Wi-Fi
  *
- * Copyright 2012-2013 Samsung Electronics Co., Ltd
+ * Copyright 2012 Samsung Electronics Co., Ltd
  *
- * Licensed under the Flora License, Version 1.1 (the "License");
+ * Licensed under the Flora License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://floralicense.org/license
+ * http://www.tizenopensource.org/license
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,6 +24,8 @@ struct wlan_connection {
 	wifi_ap_h ap;
 	wifi_connected_cb callback;
 	void *user_data;
+	char *pin;
+	wps_type_t type;
 };
 
 static struct wlan_connection current_item = { NULL, NULL, NULL };
@@ -36,11 +38,11 @@ static void wlan_connect_debug(wifi_ap_h ap)
 	wifi_ap_get_essid(ap, &ap_ssid);
 
 	if (next_item.ap == NULL) {
-		ERROR_LOG(UG_NAME_REQ, "%s will be connected", ap_ssid);
+		SECURE_ERROR_LOG(UG_NAME_REQ, "%s will be connected", ap_ssid);
 	} else {
 		wifi_ap_get_essid(next_item.ap, &next_ssid);
 
-		ERROR_LOG(UG_NAME_REQ, "%s will be connected (%s replaced)",
+		SECURE_ERROR_LOG(UG_NAME_REQ, "%s will be connected (%s replaced)",
 				ap_ssid, next_ssid);
 
 		g_free(next_ssid);
@@ -55,20 +57,23 @@ static gboolean wlan_is_same_with_next(wifi_ap_h ap)
 	char *next_ssid, *ap_ssid;
 	wifi_security_type_e next_sec, ap_sec;
 
-	if (next_item.ap == NULL)
+	if (next_item.ap == NULL) {
 		return FALSE;
+	}
 
 	wifi_ap_get_security_type(ap, &ap_sec);
 	wifi_ap_get_security_type(next_item.ap, &next_sec);
 
-	if (ap_sec != next_sec)
+	if (ap_sec != next_sec) {
 		return is_same;
+	}
 
 	wifi_ap_get_essid(ap, &ap_ssid);
 	wifi_ap_get_essid(next_item.ap, &next_ssid);
 
-	if (g_strcmp0(ap_ssid, next_ssid) == 0)
+	if (g_strcmp0(ap_ssid, next_ssid) == 0) {
 		is_same = TRUE;
+	}
 
 	g_free(ap_ssid);
 	g_free(next_ssid);
@@ -80,18 +85,20 @@ static void wlan_go_fast_next(void)
 {
 	bool favorite = false;
 
-	if (current_item.ap == NULL || next_item.ap == NULL)
+	if (current_item.ap == NULL || next_item.ap == NULL) {
 		return;
+	}
 
 	wifi_ap_is_favorite(current_item.ap, &favorite);
-	if (favorite == true)
+	if (favorite == true) {
 		return;
+	}
 
 	wifi_disconnect(current_item.ap, NULL, NULL);
 }
 
 static void wlan_update_next(wifi_ap_h ap, wifi_connected_cb callback,
-		void *user_data)
+		void *user_data, wps_type_t type, const char *pin)
 {
 	if (wlan_is_same_with_next(ap) == TRUE) {
 		wifi_ap_destroy(ap);
@@ -105,11 +112,19 @@ static void wlan_update_next(wifi_ap_h ap, wifi_connected_cb callback,
 	if (next_item.ap != NULL) {
 		wifi_ap_destroy(next_item.ap);
 		g_free(next_item.user_data);
+		if (next_item.type == WPS_PIN && next_item.pin != NULL) {
+			g_free(next_item.pin);
+			next_item.pin = NULL;
+		}
 	}
 
 	next_item.ap = ap;
 	next_item.callback = callback;
 	next_item.user_data = user_data;
+	next_item.type = type;
+	if (next_item.type == WPS_PIN && pin != NULL) {
+		next_item.pin = g_strdup(pin);
+	}
 
 	wlan_go_fast_next();
 }
@@ -119,28 +134,62 @@ static void wlan_connect_next(void)
 	current_item.ap = next_item.ap;
 	current_item.callback = next_item.callback;
 	current_item.user_data = next_item.user_data;
+	current_item.type = next_item.type;
+	if (current_item.type == WPS_PIN && next_item.pin != NULL) {
+		if (current_item.pin != NULL) {
+			g_free(current_item.pin);
+			current_item.pin = NULL;
+		}
+		current_item.pin = g_strdup(next_item.pin);
+	}
 
-	if (next_item.ap == NULL)
+	if (next_item.ap == NULL) {
 		return;
+	}
 
 	next_item.ap = NULL;
 	next_item.callback = NULL;
 	next_item.user_data = NULL;
+	if (next_item.type == WPS_PIN && next_item.pin != NULL) {
+		g_free(next_item.pin);
+		next_item.pin = NULL;
+	}
 
-	wifi_connect(current_item.ap, current_item.callback, current_item.user_data);
+	if (current_item.type == WPS_BTN) {
+		wifi_connect_by_wps_pbc(current_item.ap,
+				current_item.callback, current_item.user_data);
+	} else if (current_item.type == WPS_PIN) {
+		wifi_connect_by_wps_pin(current_item.ap,
+				current_item.pin, current_item.callback,
+				current_item.user_data);
+	} else {
+		wifi_connect(current_item.ap, current_item.callback,
+				current_item.user_data);
+	}
 }
 
-int wlan_connect(wifi_ap_h ap, wifi_connected_cb callback, void *user_data)
+int wlan_connect(wifi_ap_h ap, wifi_connected_cb callback, void *user_data,
+		wps_type_t type, const char *pin)
 {
 	if (current_item.ap == NULL) {
 		current_item.ap = ap;
 		current_item.callback = callback;
 		current_item.user_data = user_data;
+		current_item.type = type;
+		if (current_item.type == WPS_PIN) {
+			current_item.pin = g_strdup(pin);
+		}
 
-		return wifi_connect(ap, callback, user_data);
+		if (type == WPS_BTN) {
+			return wifi_connect_by_wps_pbc(ap, callback, user_data);
+		} else if (type == WPS_PIN) {
+			return wifi_connect_by_wps_pin(ap, pin, callback, user_data);
+		} else {
+			return wifi_connect(ap, callback, user_data);
+		}
 	}
 
-	wlan_update_next(ap, callback, user_data);
+	wlan_update_next(ap, callback, user_data, type, pin);
 
 	return WIFI_ERROR_NONE;
 }
@@ -149,12 +198,17 @@ void wlan_validate_alt_connection(void)
 {
 	wifi_connection_state_e state = WIFI_CONNECTION_STATE_DISCONNECTED;
 
-	if (current_item.ap == NULL)
+	if (current_item.ap == NULL) {
 		return;
+	}
 
-	wifi_get_connection_state(&state);
+	int ret = wifi_get_connection_state(&state);
+	if (ret != WIFI_ERROR_NONE) {
+		INFO_LOG(UG_NAME_ERR, "Failed to get wifi connection state [%d]", ret);
+	}
 
 	switch (state) {
+	case WIFI_CONNECTION_STATE_FAILURE:
 	case WIFI_CONNECTION_STATE_CONNECTED:
 	case WIFI_CONNECTION_STATE_DISCONNECTED:
 		wlan_connect_next();
@@ -166,5 +220,56 @@ void wlan_validate_alt_connection(void)
 		break;
 	default:
 		break;
+	}
+}
+
+gboolean wlan_connetion_next_item_exist(void)
+{
+	if (next_item.ap == NULL)
+		return FALSE;
+	else
+		return TRUE;
+}
+
+gboolean wlan_is_same_with_current(wifi_ap_h ap)
+{
+	gboolean is_same = FALSE;
+	char *current_ssid, *ap_ssid;
+	wifi_security_type_e currect_sec, ap_sec;
+
+	if (current_item.ap == NULL) {
+		return FALSE;
+	}
+
+	wifi_ap_get_security_type(ap, &ap_sec);
+	wifi_ap_get_security_type(current_item.ap, &currect_sec);
+
+	if (ap_sec != currect_sec) {
+		return is_same;
+	}
+
+	wifi_ap_get_essid(ap, &ap_ssid);
+	wifi_ap_get_essid(current_item.ap, &current_ssid);
+
+	if (g_strcmp0(ap_ssid, current_ssid) == 0) {
+		is_same = TRUE;
+	}
+
+	g_free(ap_ssid);
+	g_free(current_ssid);
+
+	return is_same;
+}
+
+void wlan_connect_cleanup(void)
+{
+	if (current_item.pin != NULL) {
+		g_free(current_item.pin);
+		current_item.pin = NULL;
+	}
+
+	if (next_item.pin != NULL) {
+		g_free(next_item.pin);
+		next_item.pin = NULL;
 	}
 }

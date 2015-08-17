@@ -1,13 +1,13 @@
 /*
  * Wi-Fi
  *
- * Copyright 2012-2013 Samsung Electronics Co., Ltd
+ * Copyright 2012 Samsung Electronics Co., Ltd
  *
- * Licensed under the Flora License, Version 1.1 (the "License");
+ * Licensed under the Flora License, Version 1.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://floralicense.org/license
+ * http://www.tizenopensource.org/license
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,7 +27,6 @@ extern "C"
 
 #include <glib.h>
 #include <wifi.h>
-#include <dbus/dbus-glib.h>
 
 #include "connman-request.h"
 #include "connman-response.h"
@@ -40,6 +39,7 @@ typedef enum {
 	WLAN_MANAGER_ERR_CONNECT_PASSWORD_NEEDED,
 	WLAN_MANAGER_ERR_CONNECT_EAP_SEC_TYPE,
 	WLAN_MANAGER_ERR_WIFI_TETHERING_OCCUPIED,
+	WLAN_MANAGER_ERR_WIFI_AP_TETHERING_OCCUPIED,
 	WLAN_MANAGER_ERR_NOSERVICE,
 	WLAN_MANAGER_ERR_IN_PROGRESS,
 } WLAN_MANAGER_ERR_TYPE;
@@ -130,22 +130,24 @@ typedef enum {
 	WLAN_MANAGER_RESPONSE_TYPE_SPECIFIC_SCAN_FAIL				= 0x1A,
 	WLAN_MANAGER_RESPONSE_TYPE_SPECIFIC_SCAN_IND				= 0x1B,
 	WLAN_MANAGER_RESPONSE_TYPE_UPDATE_WIFI_RSSI					= 0x1C,
-	WLAN_MANAGER_RESPONSE_TYPE_MAX								= 0x1D,
+	WLAN_MANAGER_RESPONSE_TYPE_CONFIGURATION					= 0x1D,
+	WLAN_MANAGER_RESPONSE_TYPE_DHCP_FAILED						= 0x1E,
+	WLAN_MANAGER_RESPONSE_TYPE_MAX								= 0x1F,
 } WLAN_MANAGER_RESPONSE_TYPES;
 
-#define WLAN_RSSI_LEVEL_EXCELLENT		64
-#define WLAN_RSSI_LEVEL_GOOD			59
-#define WLAN_RSSI_LEVEL_WEAK			34
+typedef enum {
+	WIFI_CONNECTION_ERROR_NONE				= 0x00,
+	WIFI_CONNECTION_ERROR_OUT_OF_RANGE		= 0x01,
+	WIFI_CONNECTION_ERROR_PIN_MISSING		= 0x02,
+	WIFI_CONNECTION_ERROR_DHCP_FAILED		= 0x03,
+	WIFI_CONNECTION_ERROR_CONNECT_FAILED	= 0x04,
+	WIFI_CONNECTION_ERROR_LOGIN_FAILED		= 0x05,
+	WIFI_CONNECTION_ERROR_AUTH_FAILED		= 0x06,
+	WIFI_CONNECTION_ERROR_INVALID_KEY		= 0x07,
+	WIFI_CONNECTION_ERROR_UNKNOWN			= 0x08,
+} wifi_connection_error_e;
 
 #define WLAN_PROXY_LEN_MAX 64
-
-typedef struct {
-	DBusGProxy *proxy;
-	DBusGProxyCall * pending_call;
-	gboolean is_handled;
-} wifi_pending_call_info_t;
-
-wifi_pending_call_info_t g_pending_call;
 
 typedef struct _wifi_device_info_t {
 	wifi_ap_h ap;
@@ -156,6 +158,7 @@ typedef struct _wifi_device_info_t {
 	int rssi;
 	wlan_security_mode_type_t security_mode;
 	bool wps_mode;
+	bool is_hidden;
 } wifi_device_info_t;
 
 typedef struct {
@@ -218,18 +221,20 @@ void wlan_manager_set_refresh_callback(wlan_manager_ui_refresh_func_t func);
 
 void wlan_manager_enable_scan_result_update(void);
 void wlan_manager_disable_scan_result_update(void);
-char *wlan_manager_get_connected_ssid(void);
 
 // request
 int wlan_manager_connect(wifi_ap_h ap);
 int wlan_manager_connect_with_password(wifi_ap_h ap, const char *pass_phrase);
 int wlan_manager_disconnect(wifi_ap_h ap);
 int wlan_manager_wps_connect(wifi_ap_h ap);
+int wlan_manager_wps_pin_connect(wifi_ap_h ap, const char *pin);
 int wlan_manager_power_on(void);
 int wlan_manager_power_off(void);
 int wlan_manager_scan(void);
 int wlan_manager_forget(wifi_ap_h ap);
 int wlan_manager_scan_with_ssid(const char *ssid, void *data);
+wifi_connection_error_e wlan_manager_get_connection_error_state(wifi_ap_h ap);
+gboolean wlan_manager_is_same_network(wifi_ap_h ap1, wifi_ap_h ap2);
 
 int wlan_manager_profile_modify_by_device_info(net_profile_info_t *profiles);
 
@@ -237,10 +242,6 @@ STRENGTH_TYPES wlan_manager_get_signal_strength(int rssi);
 
 //// profile refresh /////////////////////////////////////////////
 void wlan_manager_scanned_profile_refresh(void);
-wifi_device_info_t *wlan_manager_profile_device_info_blank_create(void);
-
-void wlan_manager_set_last_scan_time(void);
-time_t wlan_manager_get_last_scan_time(void);
 
 #ifdef __cplusplus
 }

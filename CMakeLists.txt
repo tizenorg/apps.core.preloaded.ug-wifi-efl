@@ -15,6 +15,14 @@ SET(ENGINE_PKGCONFIGS
 
 SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-declarations")
 
+IF(TIZEN_TETHERING_ENABLE)
+	ADD_DEFINITIONS(-DTIZEN_TETHERING_ENABLE)
+	SET(TETHERING_REQUIRED_PKGS "capi-network-tethering")
+ENDIF(TIZEN_TETHERING_ENABLE)
+IF(MODEL_BUILD_FEATURE_WLAN_CONCURRENT_MODE)
+	ADD_DEFINITIONS(-DMODEL_BUILD_FEATURE_WLAN_CONCURRENT_MODE)
+ENDIF(MODEL_BUILD_FEATURE_WLAN_CONCURRENT_MODE)
+
 INCLUDE(FindPkgConfig)
 pkg_check_modules(pkgs REQUIRED
 	ecore
@@ -22,18 +30,23 @@ pkg_check_modules(pkgs REQUIRED
 	ecore-input
 	appcore-efl
 	elementary
-	glib-2.0
-	utilX
-	ui-gadget-1
 	efl-assist
-	x11
+	capi-ui-efl-util
+	glib-2.0
+	ui-gadget-1
+	capi-network-connection
+	capi-network-wifi
 	sensor
-	syspopup
-	syspopup-caller
+	openssl
+	cert-svc-vcore
+	efl-extension
+#syspopup
+#syspopup-caller
+	feedback
+#setting-common-lite-internal
+	${TETHERING_REQUIRED_PKGS}
 #engine pkgconfigs
 	${ENGINE_PKGCONFIGS})
-
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/wifi-efl-ug.xml DESTINATION /usr/share/packages/)
 
 INCLUDE_DIRECTORIES(
 	${CMAKE_CURRENT_SOURCE_DIR}/sources/ui-gadget/include
