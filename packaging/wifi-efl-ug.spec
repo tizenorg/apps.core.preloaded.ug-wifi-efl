@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.149
+Version:	1.0.150
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -70,9 +70,6 @@ make %{?_smp_mflags}
 %install
 %make_install
 
-mkdir -p %{buildroot}%{_sysconfdir}/smack/accesses.d/
-cp -v net.wifi-qs.efl %{buildroot}%{_sysconfdir}/smack/accesses.d/
-
 #License
 mkdir -p %{buildroot}%{_datadir}/license
 cp LICENSE %{buildroot}%{_datadir}/license/wifi-efl-ug
@@ -113,4 +110,3 @@ vconftool set -t int file/private/wifi/sort_by 1 -g 6519 -s tizen::vconf::settin
 %{_datadir}/icons/*.png
 %{PREFIX}/apps/wifi-efl-ug/res/edje/wifi-qs/*.edj
 %{_datadir}/license/net.wifi-qs
-%{_sysconfdir}/smack/accesses.d/net.wifi-qs.efl
