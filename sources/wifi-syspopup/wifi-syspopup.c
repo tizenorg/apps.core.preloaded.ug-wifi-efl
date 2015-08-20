@@ -22,6 +22,7 @@
 #include <vconf-keys.h>
 #include <appcore-efl.h>
 #include <ui-gadget-module.h>
+#include <efl_util.h>
 #include <efl_extension.h>
 
 #include "common.h"
@@ -306,6 +307,9 @@ static Eina_Bool __key_press_cb(void *data, int type, void *event)
 	if (!ev)
 		return ECORE_CALLBACK_RENEW;
 
+	if (strcmp(ev->keyname, "XF86Home") == 0)
+		wifi_devpkr_destroy();
+
 	__COMMON_FUNC_EXIT__;
 	return ECORE_CALLBACK_RENEW;
 
@@ -560,6 +564,8 @@ static void app_control(app_control_h request, void *data)
 	devpkr_app_state->evas = evas;
 
 	elm_win_alpha_set(devpkr_app_state->win_main, EINA_TRUE); /* invisible window */
+
+	efl_util_set_notification_window_level(win_main, EFL_UTIL_NOTIFICATION_LEVEL_DEFAULT);
 
 	elm_win_borderless_set(devpkr_app_state->win_main, EINA_TRUE); /* No borders */
 	elm_win_conformant_set(devpkr_app_state->win_main, TRUE); /* Popup autoscroll */

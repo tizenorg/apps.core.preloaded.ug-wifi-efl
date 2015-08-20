@@ -557,6 +557,8 @@ int common_utils_send_message_to_net_popup(const char *title,
 	bundle_add(b, "_SYSPOPUP_TYPE_", type);
 	bundle_add(b, "_AP_NAME_", ssid);
 
+	ret = aul_launch_app("net.netpopup", b);
+
 	bundle_free(b);
 
 	return ret;
