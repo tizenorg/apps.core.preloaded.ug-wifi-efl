@@ -207,6 +207,7 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		app_control_get_extra_data(app_control, "z_order", &zorder);
 		INFO_LOG(UG_NAME_NORMAL, "zorder [%s]", zorder);
 		if (zorder != NULL && 0 == g_strcmp0(zorder, "highest")) {
+			efl_util_set_notification_window_level(ugd->win_main, EFL_UTIL_NOTIFICATION_LEVEL_DEFAULT);
 			g_free(zorder);
 			zorder = NULL;
 		}

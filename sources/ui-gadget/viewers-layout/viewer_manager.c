@@ -2017,6 +2017,12 @@ static void __hidden_ap_cancel_keydown_cb(void *data, Evas *e, Evas_Object *obj,
 {
 	__COMMON_FUNC_ENTER__;
 
+	Evas_Event_Key_Down *event = event_info;
+
+	if (g_strcmp0(event->keyname, "XF86Back") == 0) {
+		hidden_ap_connect_cancel_cb(data, obj, event_info);
+	}
+
 	__COMMON_FUNC_EXIT__;
 }
 
