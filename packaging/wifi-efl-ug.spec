@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.150
+Version:	1.0.151
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -29,6 +29,7 @@ BuildRequires:	pkgconfig(capi-ui-efl-util)
 BuildRequires:	pkgconfig(network)
 BuildRequires:	pkgconfig(feedback)
 BuildRequires:	pkgconfig(efl-extension)
+BuildRequires:	pkgconfig(aul)
 #BuildRequires:  pkgconfig(setting-common-internal)
 #BuildRequires:  pkgconfig(setting-lite-common-internal)
 BuildRequires:	cmake
@@ -79,6 +80,7 @@ cp LICENSE %{buildroot}%{_datadir}/license/net.wifi-qs
 /sbin/ldconfig
 
 mkdir -p %{PREFIX}/bin/
+mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 
 vconftool set -t int memory/wifi/ug_run_state 3 -i -g 6519 -s tizen::vconf::platform::rw
 
@@ -93,9 +95,14 @@ vconftool set -t int file/private/wifi/sort_by 1 -g 6519 -s tizen::vconf::settin
 
 %files
 %manifest wifi-efl-ug.manifest
-%{PREFIX}/apps/wifi-efl-ug/lib/ug/*
-%attr(644,-,-) %{PREFIX}/apps/wifi-efl-ug/lib/*
-%attr(755,-,-) %{PREFIX}/apps/wifi-efl-ug/lib/ug
+#tizen 2.4
+#%{PREFIX}/apps/wifi-efl-ug/lib/ug/*
+#%attr(644,-,-) %{PREFIX}/apps/wifi-efl-ug/lib/*
+#%attr(755,-,-) %{PREFIX}/apps/wifi-efl-ug/lib/ug
+#tizen 3.0
+%{PREFIX}/ug/lib/*
+%attr(644,-,-) %{PREFIX}/ug/lib/*
+%attr(755,-,-) %{PREFIX}/ug/lib/
 %{PREFIX}/apps/wifi-efl-ug/res/edje/wifi-efl-UG/*.edj
 %{_datadir}/locale/*/LC_MESSAGES/*.mo
 %{_datadir}/license/wifi-efl-ug

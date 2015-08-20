@@ -40,6 +40,7 @@ pkg_check_modules(pkgs REQUIRED
 	openssl
 	cert-svc-vcore
 	efl-extension
+	aul
 #syspopup
 #syspopup-caller
 	feedback

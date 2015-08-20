@@ -1,5 +1,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-PROJECT(wifi-efl-UG C)
+# tizen 2.4
+#PROJECT(wifi-efl-UG C)
+# tizen 3.0
+PROJECT(ug-wifi-efl-UG C)
 
 # defines
 SET(PREFIX ${CMAKE_INSTALL_PREFIX})
@@ -65,7 +68,10 @@ ADD_CUSTOM_TARGET(setup_wizard.edj
 
 ADD_DEPENDENCIES(${PROJECT_NAME} setup_wizard.edj)
 
-INSTALL(TARGETS ${PROJECT_NAME} DESTINATION /usr/apps/wifi-efl-ug/lib/ug/)
+# tizen 2.4
+#INSTALL(TARGETS ${PROJECT_NAME} DESTINATION /usr/apps/wifi-efl-ug/lib/ug/)
+# tizen 3.0
+INSTALL(TARGETS ${PROJECT_NAME} DESTINATION /usr/ug/lib/)
 
 # install image files
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/custom_editfield.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje/wifi-efl-UG)
