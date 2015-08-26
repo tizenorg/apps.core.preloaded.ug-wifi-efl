@@ -1628,6 +1628,7 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 	/* Create the entry items */
 	_create_and_update_list_items_based_on_rules(eap_type, eap_data);
 
+	evas_object_show(view_list);
 	evas_object_smart_callback_add(view_list, "language,changed",
 			gl_lang_changed, NULL);
 
@@ -1913,6 +1914,7 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 
 	Evas_Object *popup = NULL;
 	Evas_Object *list = NULL;
+	Evas_Object *box = NULL;
 
 	if (layout_main == NULL || device_info == NULL || pkg_name == NULL) {
 		return NULL;
@@ -1974,9 +1976,16 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 	evas_object_show(popup);
 	elm_object_focus_set(popup, EINA_TRUE);
 
+	box = elm_box_add(popup);
+	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+
 	/* Create an EAP connect view list */
-	list = _create_list(popup, eap_data);
-	elm_object_content_set(popup, list);
+	list = _create_list(box, eap_data);
+	elm_object_content_set(box, list);
+
+	elm_box_pack_end(box, list);
+	evas_object_size_hint_min_set(box, -1, ELM_SCALE_SIZE(300));
+	elm_object_content_set(popup, box);
 
 	evas_object_smart_callback_add(eap_data->conf,
 			"virtualkeypad,state,on", _eap_popup_keypad_on_cb,

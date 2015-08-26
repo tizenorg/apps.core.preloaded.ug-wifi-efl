@@ -654,6 +654,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	Evas_Object *passpopup = NULL;
 	Evas_Object *genlist = NULL;
 	Evas_Object *btn_ok = NULL;
+	Evas_Object *box = NULL;
 
 	__COMMON_FUNC_ENTER__;
 
@@ -717,7 +718,10 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	elm_access_info_set(ao, ELM_ACCESS_INFO, popup_info->title);
 #endif
 
-	genlist = elm_genlist_add(passpopup);
+	box = elm_box_add(passpopup);
+	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+
+	genlist = elm_genlist_add(box);
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
 	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
 	evas_object_size_hint_weight_set(genlist,
@@ -760,8 +764,9 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	}
 
 	evas_object_show(genlist);
-
-	elm_object_content_set(passpopup, genlist);
+	elm_box_pack_end(box, genlist);
+	evas_object_size_hint_min_set(box, -1, ELM_SCALE_SIZE(100));
+	elm_object_content_set(passpopup, box);
 
 	evas_object_smart_callback_add(passpopup, "show,finished",
 			popup_animation_finish_cb, entry_item);
