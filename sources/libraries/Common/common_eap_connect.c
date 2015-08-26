@@ -19,7 +19,6 @@
 
 #include <openssl/x509.h>
 #include <openssl/pem.h>
-#include <cert-service.h>
 #include <cert-svc/cpkcs12.h>
 #include <cert-svc/cprimitives.h>
 #include <ui-gadget.h>
