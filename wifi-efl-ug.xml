@@ -9,4 +9,9 @@
 		<operation name="http://tizen.org/appcontrol/operation/setting/wifi"/>
 		</application-service>
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/network.set</privilege>
+		<privilege>http://tizen.org/privilege/network.profile</privilege>
+	</privileges>
 </manifest>
