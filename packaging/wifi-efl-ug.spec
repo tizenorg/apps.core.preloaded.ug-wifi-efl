@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.154
+Version:	1.0.155
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -36,7 +36,6 @@ BuildRequires:	cmake
 BuildRequires:	gettext-tools
 BuildRequires:	edje-tools
 Requires(post):		/sbin/ldconfig
-Requires(post):		/usr/bin/vconftool
 requires(postun):	/sbin/ldconfig
 
 %description
@@ -45,7 +44,6 @@ Wi-Fi UI Gadget
 %package -n net.wifi-qs
 Summary:    Wi-Fi System popup
 Requires:   %{name} = %{version}
-Requires(post):   /usr/bin/vconftool
 
 %description -n net.wifi-qs
 Wi-Fi System popup for TIZEN
@@ -82,16 +80,7 @@ cp LICENSE %{buildroot}%{_datadir}/license/net.wifi-qs
 mkdir -p %{PREFIX}/bin/
 mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 
-vconftool set -t int memory/wifi/ug_run_state 3 -i -g 6519 -s tizen::vconf::platform::rw
-
-vconftool set -t int memory/wifi/wifi_qs_exit 0 -g 6519 -i -s tizen::vconf::platform::rw
-vconftool set -t int db/wifi/enable_quick_start 1 -g 6519 -i -s tizen::vconf::setting::admin
-
-vconftool set -t int file/private/wifi/network_bonding 0 -g 6519 -s tizen::vconf::setting::admin
-vconftool set -t int file/private/wifi/sort_by 1 -g 6519 -s tizen::vconf::setting::admin
-
 %postun -p /sbin/ldconfig
-
 
 %files
 %manifest wifi-efl-ug.manifest
