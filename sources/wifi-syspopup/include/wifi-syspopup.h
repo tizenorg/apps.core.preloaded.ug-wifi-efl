@@ -25,7 +25,6 @@ extern "C"
 {
 #endif
 
-#include <efl_assist.h>
 
 #include "common.h"
 #include "wlan_manager.h"

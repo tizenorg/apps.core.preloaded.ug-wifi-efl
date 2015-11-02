@@ -310,7 +310,7 @@ void create_pbc_popup(pswd_popup_t *pswd_popup_data, Evas_Smart_Cb cancel_cb,
 
 static char *_gl_wps_text_get(void *data, Evas_Object *obj, const char *part)
 {
-	if (!g_strcmp0(part, "elm.text.main.left")) {
+	if (!strcmp("elm.text", part)) {
 		char buf[1024];
 		snprintf(buf, 1023, "%s", sc(PACKAGE, (int)data));
 		return g_strdup(dgettext(PACKAGE, buf));
@@ -361,7 +361,7 @@ void create_wps_options_popup(Evas_Object *win_main,
 	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
 	evas_object_smart_callback_add(genlist, "realized", _gl_realized, NULL);
 
-	wps_itc.item_style = "1line";
+	wps_itc.item_style = WIFI_GENLIST_1LINE_TEXT_STYLE;
 	wps_itc.func.text_get = _gl_wps_text_get;
 	wps_itc.func.content_get = NULL;
 	wps_itc.func.state_get = NULL;
@@ -378,7 +378,7 @@ void create_wps_options_popup(Evas_Object *win_main,
 
 	evas_object_show(genlist);
 
-	eext_object_event_callback_add(popup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 			popup_info->cancel_cb, popup_info->cb_data);
 	elm_object_content_set(popup, genlist);
 	evas_object_show(popup);
@@ -392,7 +392,7 @@ void create_wps_options_popup(Evas_Object *win_main,
 static char *_passwd_popup_wps_item_text_get(void *data, Evas_Object *obj,
 		const char *part)
 {
-	if (!g_strcmp0(part, "elm.text.main.left")) {
+	if (!strcmp("elm.text", part)) {
 		char buf[1024];
 		snprintf(buf, 1023, "%s", sc(PACKAGE, I18N_TYPE_WPS));
 		return strdup(buf);
@@ -404,26 +404,18 @@ static Evas_Object *_passwd_popup_wps_item_content_get(void *data,
 		Evas_Object *obj, const char *part)
 {
 	Evas_Object *icon = NULL;
-	Evas_Object *ic = NULL;
 
-	ic = elm_layout_add(obj);
-	retvm_if(NULL == ic, NULL);
-
-	if (!g_strcmp0(part, "elm.icon.1")) {
-		elm_layout_theme_set(ic, "layout", "list/B/type.3", "default");
-
+	if (!strcmp("elm.swallow.icon", part)) {
 		/* image */
-		icon = elm_image_add(ic);
+		icon = elm_image_add(obj);
 		retvm_if(NULL == icon, NULL);
 
 		elm_image_file_set(icon, CUSTOM_EDITFIELD_PATH, "wifi_icon_wps.png");
 		evas_object_color_set(icon, 2, 61, 132, 153);
 
-		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		elm_object_part_content_set(ic, "elm.swallow.content", icon);
+		evas_object_size_hint_min_set(icon, DEFAULT_BUTTON_CIRCLE_SIZE, DEFAULT_BUTTON_CIRCLE_SIZE);
 	}
-	return ic;
+	return icon;
 }
 
 static void _entry_edit_mode_show_cb(void *data, Evas *e, Evas_Object *obj,
@@ -524,7 +516,7 @@ static void _chk_changed_cb(void *data, Evas_Object *obj, void *ei)
 static char *_gl_pswd_check_box_item_text_get(void *data, Evas_Object *obj,
 		const char *part)
 {
-	if (!g_strcmp0(part, "elm.text")) {
+	if (!strcmp("elm.text", part)) {
 		char buf[1024];
 		snprintf(buf, 1023, "%s", sc(PACKAGE, I18N_TYPE_Show_password));
 		return strdup(buf);
@@ -539,7 +531,7 @@ static Evas_Object *_gl_pswd_check_box_item_content_get(void *data,
 	Evas_Object *check = NULL;
 	pswd_popup_t *pswd_popup_data = (pswd_popup_t *)data;
 
-	if(!g_strcmp0(part, "elm.swallow.end")) {
+	if (!strcmp("elm.swallow.end", part)) {
 		check = elm_check_add(obj);
 		evas_object_propagate_events_set(check, EINA_FALSE);
 
@@ -654,7 +646,6 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	Evas_Object *passpopup = NULL;
 	Evas_Object *genlist = NULL;
 	Evas_Object *btn_ok = NULL;
-	Evas_Object *box = NULL;
 
 	__COMMON_FUNC_ENTER__;
 
@@ -718,10 +709,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	elm_access_info_set(ao, ELM_ACCESS_INFO, popup_info->title);
 #endif
 
-	box = elm_box_add(passpopup);
-	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
-	genlist = elm_genlist_add(box);
+	genlist = elm_genlist_add(passpopup);
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
 	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
 	evas_object_size_hint_weight_set(genlist,
@@ -740,7 +728,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 			NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 
 	/* Checkbox genlist item */
-	g_check_box_itc.item_style = "type1";
+	g_check_box_itc.item_style = WIFI_GENLIST_1LINE_TEXT_ICON_STYLE;
 	g_check_box_itc.func.text_get = _gl_pswd_check_box_item_text_get;
 	g_check_box_itc.func.content_get = _gl_pswd_check_box_item_content_get;
 	g_check_box_itc.func.state_get = NULL;
@@ -752,7 +740,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 
 	if (popup_info->show_wps_btn) {
 		/* WPS options genlist item */
-		g_wps_itc.item_style = "1line";
+		g_wps_itc.item_style = WIFI_GENLIST_1LINE_TEXT_ICON_STYLE;
 		g_wps_itc.func.text_get = _passwd_popup_wps_item_text_get;
 		g_wps_itc.func.content_get = _passwd_popup_wps_item_content_get;
 		g_wps_itc.func.state_get = NULL;
@@ -764,9 +752,8 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	}
 
 	evas_object_show(genlist);
-	elm_box_pack_end(box, genlist);
-	evas_object_size_hint_min_set(box, -1, ELM_SCALE_SIZE(100));
-	elm_object_content_set(passpopup, box);
+
+	elm_object_content_set(passpopup, genlist);
 
 	evas_object_smart_callback_add(passpopup, "show,finished",
 			popup_animation_finish_cb, entry_item);

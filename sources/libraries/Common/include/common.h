@@ -78,6 +78,10 @@ extern "C"
 #define WIFI_GENLIST_MULTILINE_TEXT_STYLE "multiline"
 #define WIFI_GENLIST_GROUP_INDEX_STYLE "group_index"
 
+/* Icon Size*/
+#define DEFAULT_BG_SIZE 96
+#define DEFAULT_BUTTON_CIRCLE_SIZE 40
+
 typedef enum {
 	UG_VIEW_DEFAULT = 0,
 	UG_VIEW_SETUP_WIZARD

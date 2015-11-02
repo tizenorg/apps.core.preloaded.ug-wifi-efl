@@ -18,7 +18,6 @@
  */
 
 #include <feedback.h>
-#include <efl_assist.h>
 
 #include "ug_wifi.h"
 #include "view_ime_hidden.h"

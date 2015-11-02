@@ -647,43 +647,33 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 	devpkr_gl_data_t *gdata = (devpkr_gl_data_t *) data;
 
 	Evas_Object* icon = NULL;
-	Evas_Object *ic = NULL;
 
 	if (!strcmp("elm.swallow.icon", part)) {
 		char *temp_str = NULL;
-		ic = elm_layout_add(obj);
 
-		icon = elm_image_add(ic);
+		icon = elm_image_add(obj);
 		retvm_if(NULL == icon, NULL);
-
-		elm_layout_theme_set(ic, "layout", "list/B/type.3", "default");
 
 		temp_str = g_strdup_printf("%s.png", gdata->dev_info->ap_image_path);
 		elm_image_file_set(icon, CUSTOM_EDITFIELD_PATH, temp_str);
 		g_free(temp_str);
 
 		evas_object_color_set(icon, 2, 61, 132, 204);
+		evas_object_size_hint_min_set(icon, DEFAULT_BUTTON_CIRCLE_SIZE, DEFAULT_BUTTON_CIRCLE_SIZE);
 
-		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		elm_layout_content_set(ic, "elm.swallow.content", icon);
 	} else if (!strcmp("elm.swallow.end", part)) {
 		if (gdata->connection_mode == ITEM_CONNECTION_MODE_CONNECTING ||
 				gdata->connection_mode == ITEM_CONNECTION_MODE_CONFIGURATION) {
-			ic = elm_layout_add(obj);
-			elm_layout_theme_set(ic, "layout", "list/C/type.2", "default");
 
 			icon = elm_progressbar_add(obj);
 			elm_object_style_set(icon, "process_medium");
 			evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, 0.5);
 			evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 			elm_progressbar_pulse(icon, TRUE);
-
-			elm_layout_content_set(ic, "elm.swallow.content", icon);
 		}
 	}
 
-	return ic;
+	return icon;
 }
 
 static void _gl_list_del(void* data, Evas_Object* obj)

@@ -87,7 +87,6 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 {
 	char* det = NULL;
 	char* buf = NULL;
-	int r = 0, g = 0, b = 0, a = 0;
 
 	ug_genlist_data_t* gdata = (ug_genlist_data_t*) data;
 	retvm_if(NULL == gdata || NULL == gdata->device_info, NULL);
@@ -99,11 +98,8 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 				gdata->device_info->ssid);
 		assertm_if(NULL == det, "NULL!!");
 		if (VIEWER_ITEM_RADIO_MODE_CONNECTED == gdata->radio_mode) {
-			edje_color_class_get("T024S",&r, &g, &b, &a,
-				NULL, NULL, NULL, NULL,
-				NULL, NULL, NULL, NULL);
 			buf = g_strdup_printf("<color=#%s>%s</color>",
-				ConvertRGBAtoHex(r, g, b, a), det);
+				ConvertRGBAtoHex(2, 61, 132, 255), det);
 
 			g_free(det);
 			return buf;
@@ -124,17 +120,13 @@ static Evas_Object *_gl_listview_content_get(void *data, Evas_Object *obj, const
 
 	Evas_Object *icon = NULL;
 	Evas_Object *btn = NULL;
-	Evas_Object *ic = NULL;
 
 	if (gdata->device_info->ap_image_path == NULL) {
 		/* if there is no ap_image_path (NO AP Found situation) */
 		DEBUG_LOG(UG_NAME_ERR, "Fatal: Image path is NULL");
 
 	} else if (!strcmp("elm.swallow.icon", part)) {
-		ic = elm_layout_add(obj);
-		elm_layout_theme_set(ic, "layout", "list/B/type.3", "default");
-
-		icon = elm_image_add(ic);
+		icon = elm_image_add(obj);
 		retvm_if(NULL == icon, NULL);
 
 		/* for strength */
@@ -144,24 +136,18 @@ static Evas_Object *_gl_listview_content_get(void *data, Evas_Object *obj, const
 		g_free(temp_str);
 
 		evas_object_color_set(icon, 2, 61, 132, 204);
-
-		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		elm_layout_content_set(ic, "elm.swallow.content", icon);
+		evas_object_size_hint_min_set(icon, ELM_SCALE_SIZE(DEFAULT_BUTTON_CIRCLE_SIZE), ELM_SCALE_SIZE(DEFAULT_BUTTON_CIRCLE_SIZE));
 
 	} else if (!strcmp("elm.swallow.end", part)) {
 		if (VIEWER_ITEM_RADIO_MODE_CONNECTING == gdata->radio_mode ||
 				VIEWER_ITEM_RADIO_MODE_CONFIGURATION == gdata->radio_mode) {
-			ic = elm_layout_add(obj);
-			elm_layout_theme_set(ic, "layout", "list/C/type.2", "default");
 
-			icon = elm_progressbar_add(ic);
+			icon = elm_progressbar_add(obj);
 
 			elm_object_style_set(icon, "process_medium");
 			evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, 0.5);
 			evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 			elm_progressbar_pulse(icon, TRUE);
-			elm_layout_content_set(ic, "elm.swallow.content", icon);
 			evas_object_propagate_events_set(icon, EINA_FALSE);
 
 		} else {
@@ -178,7 +164,7 @@ static Evas_Object *_gl_listview_content_get(void *data, Evas_Object *obj, const
 			return btn;
 		}
 	}
-	return ic;
+	return icon;
 }
 
 static void _gl_listview_del(void *data, Evas_Object *obj)

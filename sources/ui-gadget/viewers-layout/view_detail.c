@@ -80,9 +80,9 @@ static void _create_ctxpopup_forget_btn_cb(void *data, Evas_Object *obj, void *e
 
 	elm_ctxpopup_auto_hide_disabled_set(_detail_data->ctxpopup, EINA_TRUE);
 	elm_object_style_set(_detail_data->ctxpopup, "more/default");
-	eext_object_event_callback_add(_detail_data->ctxpopup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(_detail_data->ctxpopup, EEXT_CALLBACK_BACK,
 			_ctxpopup_del_cb, NULL);
-	eext_object_event_callback_add(_detail_data->ctxpopup, EA_CALLBACK_MORE,
+	eext_object_event_callback_add(_detail_data->ctxpopup, EEXT_CALLBACK_MORE,
 			_ctxpopup_del_cb, NULL);
 	evas_object_smart_callback_add(_detail_data->ctxpopup, "dismissed",
 			_ctxpopup_dismissed_cb, NULL);
@@ -256,9 +256,7 @@ static char *_view_detail_grouptitle_text_get(void *data,
 	char *tmp = NULL;
 	char *txt = NULL;
 
-	if (!strcmp("elm.text.sub", part)) {
-		ret = (char*) g_strdup(dgettext(PACKAGE, "IDS_WIFI_BODY_NAME"));
-	} else if (!strcmp("elm.text", part)) {
+	if (!strcmp("elm.text", part)) {
 		_detail_data = (view_detail_data *)data;
 		retvm_if(NULL == _detail_data, NULL);
 
@@ -283,15 +281,12 @@ static Evas_Object *_view_detail_grouptitle_content_get(void *data, Evas_Object 
 	view_detail_data *_detail_data = (view_detail_data *)data;
 	_detail_data = (view_detail_data *)data;
 	Evas_Object* icon = NULL;
-	Evas_Object* ic = NULL;
 
 	if (!strcmp("elm.swallow.end", part)) {
 		char *temp_str = NULL;
 
-		ic = elm_layout_add(obj);
-		elm_layout_theme_set(ic, "layout", "list/C/type.1", "default");
 		/* for strength */
-		icon = elm_image_add(ic);
+		icon = elm_image_add(obj);
 		retvm_if(NULL == icon, NULL);
 
 		if (_detail_data->ap_image_path != NULL) {
@@ -306,11 +301,10 @@ static Evas_Object *_view_detail_grouptitle_content_get(void *data, Evas_Object 
 		elm_image_file_set(icon, CUSTOM_EDITFIELD_PATH, temp_str);
 		g_free(temp_str);
 
-		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
-		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		elm_layout_content_set(ic, "elm.swallow.content", icon);
+		evas_object_size_hint_min_set(icon, ELM_SCALE_SIZE(DEFAULT_BUTTON_CIRCLE_SIZE), ELM_SCALE_SIZE(DEFAULT_BUTTON_CIRCLE_SIZE));
+
 	}
-	return ic;
+	return icon;
 }
 
 static void _remove_all(view_detail_data *_detail_data)

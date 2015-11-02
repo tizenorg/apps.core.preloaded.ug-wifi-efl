@@ -61,10 +61,10 @@ static Ecore_Timer *scan_update_timer = NULL;
 static char *__common_utils_2line_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	two_line_disp_data_t *item_data = (two_line_disp_data_t *)data;
-	if (!g_strcmp0(part, "elm.text.sub.left.bottom")) {
-		return g_strdup(item_data->info_str);
-	} else if (!g_strcmp0(part, "elm.text.main.left.top")) {
+	if (!strcmp("elm.text", part)) {
 		return g_strdup(item_data->title_str);
+	} else if (!strcmp("elm.text.sub", part)) {
+		return g_strdup(item_data->info_str);
 	}
 	return NULL;
 }
@@ -367,12 +367,6 @@ Evas_Object *common_utils_create_layout(Evas_Object *navi_frame)
 	layout = elm_layout_add(navi_frame);
 	elm_layout_theme_set(layout, "layout", "application", "noindicator");
 	evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
-	Evas_Object* bg = elm_bg_add(layout);
-	evas_object_size_hint_weight_set(bg, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-	elm_object_style_set(bg, "group_list");
-	elm_object_part_content_set(layout, "elm.swallow.bg", bg);
-
 	evas_object_show(layout);
 
 	return layout;
@@ -421,12 +415,12 @@ Evas_Object *common_utils_show_info_popup(Evas_Object *parent,
 		if (popup_data->btn1_cb) {
 			evas_object_smart_callback_add(btn_1, "clicked",
 					popup_data->btn1_cb, popup_data->btn1_data);
-			eext_object_event_callback_add(popup, EA_CALLBACK_BACK,
+			eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 					popup_data->btn1_cb, popup_data->btn1_data);
 		} else {
 			evas_object_smart_callback_add(btn_1, "clicked",
 					__common_utils_del_popup, popup);
-			eext_object_event_callback_add(popup, EA_CALLBACK_BACK,
+			eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
 					__common_utils_del_popup, popup);
 		}
 	}

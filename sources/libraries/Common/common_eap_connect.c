@@ -1183,7 +1183,7 @@ static void __common_eap_connect_popup_init_item_class(void *data)
 	g_eap_entry_itc.func.state_get = NULL;
 	g_eap_entry_itc.func.del = _gl_eap_entry_item_del;
 
-	g_eap_chkbox_itc.item_style = "1line";
+	g_eap_chkbox_itc.item_style = WIFI_GENLIST_1LINE_TEXT_ICON_STYLE;
 	g_eap_chkbox_itc.func.text_get = _gl_eap_chkbox_item_text_get;
 	g_eap_chkbox_itc.func.content_get = _gl_eap_chkbox_item_content_get;
 	g_eap_chkbox_itc.func.state_get = NULL;
@@ -2212,7 +2212,7 @@ eap_info_list_t *eap_info_append_items(wifi_ap_h ap, Evas_Object* view_list,
 	auth_type = __common_eap_connect_popup_get_auth_type(ap);
 
 	item = common_utils_add_2_line_txt_disabled_item(view_list,
-			"2line.top",
+			WIFI_GENLIST_2LINE_TOP_TEXT_STYLE,
 			sc(str_pkg_name, I18N_TYPE_EAP_method),
 			list_eap_type[eap_type].name);
 	eap_info_list_data->eap_method_item = item;
@@ -2236,8 +2236,8 @@ eap_info_list_t *eap_info_append_items(wifi_ap_h ap, Evas_Object* view_list,
 		if (eap_type == EAP_SEC_TYPE_PEAP ||
 				eap_type == EAP_SEC_TYPE_TTLS) {
 			/* Add EAP phase2 authentication */
-			item = common_utils_add_2_line_txt_disabled_item(
-					view_list, "2line.top",
+			item = common_utils_add_2_line_txt_disabled_item(view_list,
+					WIFI_GENLIST_2LINE_TOP_TEXT_STYLE,
 					sc(str_pkg_name, I18N_TYPE_Phase_2_authentication),
 					list_eap_auth[auth_type].name);
 			eap_info_list_data->eap_auth_item = item;
@@ -2255,8 +2255,8 @@ eap_info_list_t *eap_info_append_items(wifi_ap_h ap, Evas_Object* view_list,
 						I18N_TYPE_Unspecified));
 			}
 
-			item = common_utils_add_2_line_txt_disabled_item(
-					view_list, "2line.top",
+			item = common_utils_add_2_line_txt_disabled_item(view_list,
+					WIFI_GENLIST_2LINE_TOP_TEXT_STYLE,
 					sc(str_pkg_name, I18N_TYPE_User_Certificate),
 					temp_str);
 			eap_info_list_data->user_cert_item = item;
@@ -2267,8 +2267,10 @@ eap_info_list_t *eap_info_append_items(wifi_ap_h ap, Evas_Object* view_list,
 		bool is_paswd_set;
 		temp_str = NULL;
 		wifi_ap_get_eap_passphrase(ap, &temp_str, &is_paswd_set);
-		item = common_utils_add_2_line_txt_disabled_item(view_list, "2line.top",
-				sc(str_pkg_name, I18N_TYPE_Identity), temp_str);
+		item = common_utils_add_2_line_txt_disabled_item(view_list,
+				WIFI_GENLIST_2LINE_TOP_TEXT_STYLE,
+				sc(str_pkg_name, I18N_TYPE_Identity),
+				temp_str);
 		eap_info_list_data->id_item = item;
 		g_free(temp_str);
 
