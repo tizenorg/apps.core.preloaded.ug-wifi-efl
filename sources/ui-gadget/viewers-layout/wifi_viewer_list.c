@@ -86,7 +86,7 @@ char* ConvertRGBAtoHex(int r, int g, int b, int a)
 static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *part)
 {
 	char* det = NULL;
-	char* buf =NULL;
+	char* buf = NULL;
 	int r = 0, g = 0, b = 0, a = 0;
 
 	ug_genlist_data_t* gdata = (ug_genlist_data_t*) data;
@@ -94,7 +94,7 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 
 	assertm_if(NULL == gdata->device_info->ssid, "NULL!!");
 
-	if (!strncmp(part, "elm.text.main.left.top", strlen(part))) {
+	if (!strcmp("elm.text", part)) {
 		det = evas_textblock_text_utf8_to_markup(NULL,
 				gdata->device_info->ssid);
 		assertm_if(NULL == det, "NULL!!");
@@ -108,8 +108,8 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 			g_free(det);
 			return buf;
 		}
-	} else if (!strncmp(part, "elm.text.sub.left.bottom", strlen(part)) &&
-			gdata->device_info->ap_status_txt != NULL) {
+	} else if (!strcmp("elm.text.sub", part)
+			&& gdata->device_info->ap_status_txt != NULL) {
 		det = g_strdup(gdata->device_info->ap_status_txt);
 
 		assertm_if(NULL == det, "NULL!!");
@@ -130,7 +130,7 @@ static Evas_Object *_gl_listview_content_get(void *data, Evas_Object *obj, const
 		/* if there is no ap_image_path (NO AP Found situation) */
 		DEBUG_LOG(UG_NAME_ERR, "Fatal: Image path is NULL");
 
-	} else if (!g_strcmp0(part, "elm.icon.1")) {
+	} else if (!strcmp("elm.swallow.icon", part)) {
 		ic = elm_layout_add(obj);
 		elm_layout_theme_set(ic, "layout", "list/B/type.3", "default");
 
@@ -149,7 +149,7 @@ static Evas_Object *_gl_listview_content_get(void *data, Evas_Object *obj, const
 		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		elm_layout_content_set(ic, "elm.swallow.content", icon);
 
-	} else if (!g_strcmp0(part, "elm.icon.2")) {
+	} else if (!strcmp("elm.swallow.end", part)) {
 		if (VIEWER_ITEM_RADIO_MODE_CONNECTING == gdata->radio_mode ||
 				VIEWER_ITEM_RADIO_MODE_CONFIGURATION == gdata->radio_mode) {
 			ic = elm_layout_add(obj);
@@ -200,7 +200,7 @@ static void _gl_listview_del(void *data, Evas_Object *obj)
 static char *_gl_text_available_networks_get(void *data, Evas_Object *obj,
 		const char *part)
 {
-	if (g_strcmp0(part, "elm.text.main") == 0)
+	if (!strcmp("elm.text", part))
 		return g_strdup(sc(PACKAGE, I18N_TYPE_Available_networks));
 
 	return NULL;
@@ -948,13 +948,13 @@ Evas_Object* viewer_list_create(Evas_Object *win)
 	evas_object_size_hint_weight_set(viewer_list, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(viewer_list, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
-	itc.item_style = "2line.top";
+	itc.item_style = WIFI_GENLIST_2LINE_TOP_TEXT_ICON_STYLE;
 	itc.func.text_get = _gl_listview_text_get;
 	itc.func.content_get = _gl_listview_content_get;
 	itc.func.state_get = NULL;
 	itc.func.del = _gl_listview_del;
 
-	no_wifi_device_itc.item_style = "1line";
+	no_wifi_device_itc.item_style = WIFI_GENLIST_1LINE_TEXT_STYLE;
 	no_wifi_device_itc.func.text_get = _gl_listview_text_get;
 	no_wifi_device_itc.func.content_get = NULL;
 	no_wifi_device_itc.func.state_get = NULL;
@@ -996,7 +996,7 @@ void viewer_list_title_item_set(Elm_Object_Item *item_header)
 	}
 
 	memset(&grouptitle_itc, 0, sizeof(grouptitle_itc));
-	grouptitle_itc.item_style = "groupindex";
+	grouptitle_itc.item_style = WIFI_GENLIST_GROUP_INDEX_STYLE;
 	grouptitle_itc.func.text_get = _gl_text_available_networks_get;
 	grouptitle_itc.func.content_get = _gl_content_scanning_icon_get;
 

@@ -614,14 +614,14 @@ static char *_gl_text_get(void *data, Evas_Object *obj, const char *part)
 	devpkr_gl_data_t *gdata = (devpkr_gl_data_t *) data;
 	retvm_if(NULL == gdata, NULL);
 
-	if (!strncmp(part, "elm.text.main.left.top", strlen(part))) {
+	if (!strcmp("elm.text", part)) {
 		txt = evas_textblock_text_utf8_to_markup(NULL, gdata->dev_info->ssid);
 		ret = g_strdup(txt);
 		if (ret == NULL) {
 			ERROR_LOG(SP_NAME_NORMAL, "ssid name is NULL!!");
 		}
 		g_free(txt);
-	} else if (!strncmp(part, "elm.text.sub.left.bottom", strlen(part))) {
+	} else if (!strcmp("elm.text.sub", part)) {
 		if (ITEM_CONNECTION_MODE_CONNECTING == gdata->connection_mode) {
 			ret = g_strdup(sc(PACKAGE, I18N_TYPE_Connecting));
 		} else if (ITEM_CONNECTION_MODE_CONFIGURATION == gdata->connection_mode) {
@@ -649,7 +649,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 	Evas_Object* icon = NULL;
 	Evas_Object *ic = NULL;
 
-	if (!strncmp(part, "elm.icon.1", strlen(part))) {
+	if (!strcmp("elm.swallow.icon", part)) {
 		char *temp_str = NULL;
 		ic = elm_layout_add(obj);
 
@@ -667,7 +667,7 @@ static Evas_Object *_gl_content_get(void *data, Evas_Object *obj, const char *pa
 		evas_object_size_hint_align_set(icon, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_size_hint_weight_set(icon, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		elm_layout_content_set(ic, "elm.swallow.content", icon);
-	} else if (!strncmp(part, "elm.icon.2", strlen(part))) {
+	} else if (!strcmp("elm.swallow.end", part)) {
 		if (gdata->connection_mode == ITEM_CONNECTION_MODE_CONNECTING ||
 				gdata->connection_mode == ITEM_CONNECTION_MODE_CONFIGURATION) {
 			ic = elm_layout_add(obj);
@@ -721,7 +721,7 @@ static Evas_Object *_create_genlist(Evas_Object* parent)
 	evas_object_size_hint_weight_set(list, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(list, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
-	itc.item_style = "2line.top";
+	itc.item_style = WIFI_GENLIST_2LINE_TOP_TEXT_ICON_STYLE;
 	itc.func.text_get = _gl_text_get;
 	itc.func.content_get = _gl_content_get;
 	itc.func.state_get = NULL;
@@ -937,7 +937,7 @@ static Evas_Object *_gl_content_title_get(void *data, Evas_Object *obj, const ch
 
 static char* _gl_text_title_get(void *data, Evas_Object *obj,const char *part)
 {
-	if (g_strcmp0(part, "elm.text.main") == 0) {
+	if (!strcmp("elm.text", part)) {
 		return (char*) g_strdup(sc(PACKAGE, I18N_TYPE_Available_networks));
 	}
 
@@ -946,7 +946,7 @@ static char* _gl_text_title_get(void *data, Evas_Object *obj,const char *part)
 
 static void view_main_add_group_title(void)
 {
-	grouptitle_itc.item_style = "groupindex";
+	grouptitle_itc.item_style = WIFI_GENLIST_GROUP_INDEX_STYLE;
 	grouptitle_itc.func.text_get = _gl_text_title_get;
 	grouptitle_itc.func.content_get = _gl_content_title_get;
 
@@ -985,6 +985,7 @@ void view_main_update_group_title(gboolean is_bg_scan)
 
 		main_list = _create_genlist(box);
 		view_main_add_group_title();
+
 		elm_box_pack_start(box, main_list);
 
 		evas_object_show(main_list);

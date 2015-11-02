@@ -670,7 +670,7 @@ static char *_gl_wifi_onoff_text_get(void *data, Evas_Object *obj, const char *p
 
 	retvm_if(NULL == manager_object, NULL);
 
-	if (!strncmp(part, "elm.text.main.left", strlen(part))) {
+	if (!strcmp("elm.text", part)) {
 		det = g_strdup(manager_object->item_wifi_onoff_text);
 		assertm_if(NULL == det, "NULL!!");
 	}
@@ -691,7 +691,7 @@ static Evas_Object *_gl_wifi_onoff_content_get(void *data,
 	Evas_Object *ao = NULL;
 #endif
 
-	if (!strncmp(part, "elm.icon.2", strlen(part))) {
+	if (!strcmp("elm.swallow.end", part)) {
 		icon = elm_layout_add(obj);
 		elm_layout_theme_set(icon, "layout", "list/C/type.3", "default");
 
@@ -750,7 +750,7 @@ static void __viewer_manager_wifi_onoff_item_create(Evas_Object* genlist)
 
 	manager_object->item_wifi_onoff_text = g_strdup(sc(PACKAGE, I18N_TYPE_Wi_Fi));
 
-	wifi_onoff_itc.item_style = "1line";
+	wifi_onoff_itc.item_style = WIFI_GENLIST_1LINE_TEXT_ICON_STYLE;
 	wifi_onoff_itc.func.text_get = _gl_wifi_onoff_text_get;
 	wifi_onoff_itc.func.content_get = _gl_wifi_onoff_content_get;
 	wifi_onoff_itc.func.state_get = NULL;
@@ -1112,6 +1112,7 @@ static void __viewer_manager_create_wifi_ug_content(Evas_Object *layout,
 	__COMMON_FUNC_EXIT__;
 }
 
+#if 0 /* not used */
 Evas_Object *viewer_manager_create_bg(Evas_Object *parent, char *style)
 {
 	Evas_Object *bg;
@@ -1128,6 +1129,7 @@ Evas_Object *viewer_manager_create_bg(Evas_Object *parent, char *style)
 
 	return bg;
 }
+#endif
 
 Evas_Object *viewer_manager_create(Evas_Object *_parent, Evas_Object *_win_main)
 {
@@ -1137,7 +1139,6 @@ Evas_Object *viewer_manager_create(Evas_Object *_parent, Evas_Object *_win_main)
 
 	Evas_Object *layout = NULL;
 	Evas_Object *view_content = NULL;
-	Evas_Object *bg = NULL;
 
 	manager_object = g_new0(viewer_manager_object, 1);
 	retvm_if(NULL == manager_object, NULL);
@@ -1180,9 +1181,6 @@ Evas_Object *viewer_manager_create(Evas_Object *_parent, Evas_Object *_win_main)
 		__viewer_manager_create_setup_wizard_content(view_content);
 	} else {
 		__viewer_manager_create_wifi_ug_content(view_content, _win_main);
-
-		bg = viewer_manager_create_bg(_win_main, "group_list");
-		elm_object_part_content_set(view_content, "elm.swallow.bg", bg);
 	}
 
 	evas_object_show(layout);

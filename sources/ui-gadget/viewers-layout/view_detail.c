@@ -256,10 +256,9 @@ static char *_view_detail_grouptitle_text_get(void *data,
 	char *tmp = NULL;
 	char *txt = NULL;
 
-	if (!strncmp(part, "elm.text.sub.left.top", strlen(part))) {
+	if (!strcmp("elm.text.sub", part)) {
 		ret = (char*) g_strdup(dgettext(PACKAGE, "IDS_WIFI_BODY_NAME"));
-	} else if (!strncmp(part, "elm.text.main.left.bottom", strlen(part))) {
-//		view_detail_data *_detail_data = (view_detail_data *)data;
+	} else if (!strcmp("elm.text", part)) {
 		_detail_data = (view_detail_data *)data;
 		retvm_if(NULL == _detail_data, NULL);
 
@@ -286,7 +285,7 @@ static Evas_Object *_view_detail_grouptitle_content_get(void *data, Evas_Object 
 	Evas_Object* icon = NULL;
 	Evas_Object* ic = NULL;
 
-	if (!strncmp(part, "elm.icon.2", strlen(part))) {
+	if (!strcmp("elm.swallow.end", part)) {
 		char *temp_str = NULL;
 
 		ic = elm_layout_add(obj);
@@ -657,7 +656,7 @@ void view_detail(wifi_device_info_t *device_info, Evas_Object *win_main,
 	evas_object_smart_callback_add(detailview_list, "language,changed",
 			gl_lang_changed, NULL);
 
-	grouptitle_itc.item_style = "2line.bottom";
+	grouptitle_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_TEXT_ICON_STYLE;
 	grouptitle_itc.func.text_get = _view_detail_grouptitle_text_get;
 	grouptitle_itc.func.content_get = _view_detail_grouptitle_content_get;
 	grouptitle_itc.func.state_get = NULL;
