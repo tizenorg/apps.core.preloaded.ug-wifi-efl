@@ -706,7 +706,7 @@ static Evas_Object *_create_genlist(Evas_Object* parent)
 	list = elm_genlist_add(parent);
 	assertm_if(NULL == list, "list allocation fail!!");
 	elm_genlist_mode_set(list, ELM_LIST_COMPRESS);
-	elm_genlist_homogeneous_set(list, EINA_TRUE);
+	//elm_genlist_realization_mode_set(list, EINA_TRUE);
 
 	evas_object_size_hint_weight_set(list, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(list, EVAS_HINT_FILL, EVAS_HINT_FILL);

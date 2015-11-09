@@ -929,7 +929,7 @@ Evas_Object* viewer_list_create(Evas_Object *win)
 	// To use multiline textblock/entry/editfield in genlist, set height_for_width mode
 	// then the item's height is calculated while the item's width fits to genlist width.
 	elm_genlist_mode_set(viewer_list, ELM_LIST_COMPRESS);
-	elm_genlist_homogeneous_set(viewer_list, EINA_TRUE);
+	//elm_genlist_realization_mode_set(viewer_list, EINA_TRUE);
 
 	evas_object_size_hint_weight_set(viewer_list, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(viewer_list, EVAS_HINT_FILL, EVAS_HINT_FILL);

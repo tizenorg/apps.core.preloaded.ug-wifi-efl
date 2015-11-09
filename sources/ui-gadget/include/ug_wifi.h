@@ -37,7 +37,6 @@ extern "C"
 #include "winset_popup.h"
 #include "wlan_manager.h"
 #include "viewer_manager.h"
-#include <efl_assist.h>
 #include <efl_util.h>
 
 #define PACKAGE		"ug-wifi-efl-UG"

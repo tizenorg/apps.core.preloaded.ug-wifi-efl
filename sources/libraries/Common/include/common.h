@@ -78,8 +78,12 @@ extern "C"
 #define WIFI_GENLIST_MULTILINE_TEXT_STYLE "multiline"
 #define WIFI_GENLIST_GROUP_INDEX_STYLE "group_index"
 
+/* Genlist new style for Tizen 3.0 */
+#define WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE "type2"
+#define WIFI_GENLIST_SWALLOW_CONTENT_STYLE "full"
+
 /* Icon Size*/
-#define DEFAULT_BG_SIZE 96
+#define DEFAULT_BG_SIZE 60
 #define DEFAULT_BUTTON_CIRCLE_SIZE 40
 
 typedef enum {

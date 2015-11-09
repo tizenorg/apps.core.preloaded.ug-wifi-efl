@@ -449,7 +449,7 @@ static Evas_Object* _gl_pswd_entry_item_content_get(void *data,
 	static Elm_Entry_Filter_Limit_Size limit_filter_data;
 	pswd_popup_t *pswd_popup_data = (pswd_popup_t *)data;
 
-	if (!g_strcmp0(part, "elm.icon.entry")) {
+	if (!g_strcmp0(part, "elm.swallow.content")) {
 		editfield = elm_layout_add(obj);
 		elm_layout_theme_set(editfield, "layout", "editfield", "singleline");
 		evas_object_size_hint_align_set(editfield, EVAS_HINT_FILL, 0.0);
@@ -512,6 +512,7 @@ static void _chk_changed_cb(void *data, Evas_Object *obj, void *ei)
 	} else {
 		elm_entry_password_set((Evas_Object *)data, EINA_TRUE);
 	}
+	elm_entry_cursor_end_set((Evas_Object *)data);
 }
 static char *_gl_pswd_check_box_item_text_get(void *data, Evas_Object *obj,
 		const char *part)
@@ -717,7 +718,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 	evas_object_size_hint_align_set(genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
 
 	/* Entry genlist item */
-	g_pswd_entry_itc.item_style = "entry";
+	g_pswd_entry_itc.item_style = WIFI_GENLIST_SWALLOW_CONTENT_STYLE;
 	g_pswd_entry_itc.func.text_get = NULL;
 	g_pswd_entry_itc.func.content_get = _gl_pswd_entry_item_content_get;
 	g_check_box_itc.func.state_get = NULL;
@@ -751,6 +752,7 @@ pswd_popup_t *create_passwd_popup(Evas_Object *conformant,Evas_Object *win_main,
 				_common_wps_options_popup_cb, pswd_popup_data);
 	}
 
+	//elm_genlist_realization_mode_set(genlist, EINA_TRUE);
 	evas_object_show(genlist);
 
 	elm_object_content_set(passpopup, genlist);

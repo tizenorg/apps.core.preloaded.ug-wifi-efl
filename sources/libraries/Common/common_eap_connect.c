@@ -414,7 +414,7 @@ static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK,
 			cert_ctxpopup_dismissed_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed",
 			cert_ctxpopup_dismissed_cb, eap_data);
@@ -493,7 +493,7 @@ static char *_gl_eap_user_cert_text_get(void *data, Evas_Object *obj, const char
 {
 	eap_connect_data_t *eap_data = (eap_connect_data_t *)data;
 
-	if (!g_strcmp0(part, "elm.text.main")) {
+	if (!g_strcmp0(part, "elm.text.sub")) {
 		return g_strdup(sc(eap_data->str_pkg_name,
 				I18N_TYPE_User_Certificate));
 	}
@@ -509,7 +509,7 @@ static Evas_Object *_gl_eap_user_cert_content_get(void *data,
 	Evas_Object *ly = NULL;
 	char buf[100];
 
-	if (!strcmp(part, "elm.icon.entry")) {
+	if (!strcmp(part, "elm.swallow.icon.0")) {
 		ly = elm_layout_add(obj);
 		elm_layout_file_set(ly, CUSTOM_EDITFIELD_PATH,
 				"eap_dropdown_button");
@@ -565,7 +565,7 @@ static void _create_eap_type_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK,
 			eext_ctxpopup_back_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed",
 			ctxpopup_dismissed_cb, eap_data);
@@ -614,7 +614,7 @@ static char *_gl_eap_type_text_get(void *data, Evas_Object *obj, const char *par
 {
 	eap_connect_data_t *eap_data = (eap_connect_data_t *)data;
 
-	if (!g_strcmp0(part, "elm.text.main")) {
+	if (!g_strcmp0(part, "elm.text.sub")) {
 		return g_strdup(sc(eap_data->str_pkg_name, I18N_TYPE_EAP_method));
 	}
 
@@ -630,7 +630,7 @@ static Evas_Object *_gl_eap_type_content_get(void *data,
 	Evas_Object *ly = NULL;
 	char buf[100];
 
-	if (!strcmp(part, "elm.icon.entry")) {
+	if (!strcmp(part, "elm.swallow.icon.0")) {
 		ly = elm_layout_add(obj);
 		elm_layout_file_set(ly, CUSTOM_EDITFIELD_PATH,
 				"eap_dropdown_button");
@@ -704,7 +704,7 @@ static void _create_eap_auth_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed", ctxpopup_dismissed_cb, eap_data);
 	elm_ctxpopup_direction_priority_set(ctxpopup,
 			ELM_CTXPOPUP_DIRECTION_DOWN,
@@ -752,7 +752,7 @@ static char *_gl_eap_auth_text_get(void *data, Evas_Object *obj, const char *par
 {
 	eap_connect_data_t *eap_data = (eap_connect_data_t *)data;
 
-	if (!g_strcmp0(part, "elm.text.main")) {
+	if (!g_strcmp0(part, "elm.text.sub")) {
 		return g_strdup(sc(eap_data->str_pkg_name,
 				I18N_TYPE_Phase_2_authentication));
 	}
@@ -769,7 +769,7 @@ static Evas_Object *_gl_eap_auth_content_get(void *data,
 	Evas_Object *ly = NULL;
 	char buf[100];
 
-	if (!strcmp(part, "elm.icon.entry")) {
+	if (!strcmp(part, "elm.swallow.icon.0")) {
 		ly = elm_layout_add(obj);
 		elm_layout_file_set(ly, CUSTOM_EDITFIELD_PATH,
 				"eap_dropdown_button");
@@ -964,7 +964,7 @@ static char *_gl_eap_entry_item_text_get(void *data, Evas_Object *obj, const cha
 		return NULL;
 	}
 
-	if (!g_strcmp0(part, "elm.text.main")) {
+	if (!g_strcmp0(part, "elm.text.sub")) {
 		return g_strdup(dgettext(PACKAGE, entry_info->title_txt));
 	}
 
@@ -978,7 +978,7 @@ static Evas_Object *_gl_eap_entry_item_content_get(void *data, Evas_Object *obj,
 		return NULL;
 	}
 
-	if (g_strcmp0(part, "elm.icon.entry") == 0) {
+	if (g_strcmp0(part, "elm.swallow.icon.0") == 0) {
 		Evas_Object *entry = NULL;
 		char *guide_txt = NULL;
 		char *accepted = NULL;
@@ -1103,7 +1103,7 @@ static char *_gl_eap_chkbox_item_text_get(void *data, Evas_Object *obj,
 {
 	char *str_pkg_name = (char *)data;
 
-	if (!g_strcmp0(part, "elm.text.main.left")) {
+	if (!strcmp("elm.text", part)) {
 		char buf[1024];
 		snprintf(buf, 1023, "%s", sc(str_pkg_name, I18N_TYPE_Show_password));
 		return strdup(buf);
@@ -1117,7 +1117,7 @@ static Evas_Object *_gl_eap_chkbox_item_content_get(void *data,
 {
 	Evas_Object *check = NULL;
 
-	if(!g_strcmp0(part, "elm.icon.right")) {
+	if (!strcmp("elm.swallow.end", part)) {
 		check = elm_check_add(obj);
 		evas_object_propagate_events_set(check, EINA_FALSE);
 
@@ -1159,25 +1159,25 @@ static void gl_lang_changed(void *data, Evas_Object *obj, void *event_info)
 
 static void __common_eap_connect_popup_init_item_class(void *data)
 {
-	g_eap_type_itc.item_style = "entry.main";
+	g_eap_type_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	g_eap_type_itc.func.text_get = _gl_eap_type_text_get;
 	g_eap_type_itc.func.content_get = _gl_eap_type_content_get;
 	g_eap_type_itc.func.state_get = NULL;
 	g_eap_type_itc.func.del = NULL;
 
-	g_eap_auth_itc.item_style = "entry.main";
+	g_eap_auth_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	g_eap_auth_itc.func.text_get = _gl_eap_auth_text_get;
 	g_eap_auth_itc.func.content_get = _gl_eap_auth_content_get;
 	g_eap_auth_itc.func.state_get = NULL;
 	g_eap_auth_itc.func.del = NULL;
 
-	g_eap_user_cert_itc.item_style = "entry.main";
+	g_eap_user_cert_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	g_eap_user_cert_itc.func.text_get = _gl_eap_user_cert_text_get;
 	g_eap_user_cert_itc.func.content_get = _gl_eap_user_cert_content_get;
 	g_eap_user_cert_itc.func.state_get = NULL;
 	g_eap_user_cert_itc.func.del = NULL;
 
-	g_eap_entry_itc.item_style = "entry.main";
+	g_eap_entry_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	g_eap_entry_itc.func.text_get = _gl_eap_entry_item_text_get;
 	g_eap_entry_itc.func.content_get = _gl_eap_entry_item_content_get;
 	g_eap_entry_itc.func.state_get = NULL;
@@ -1605,6 +1605,7 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 
 	eap_data->eap_done_ok = FALSE;
 	eap_data->genlist = view_list = elm_genlist_add(parent);
+	//elm_genlist_realization_mode_set(view_list, EINA_TRUE);
 	elm_genlist_mode_set(view_list, ELM_LIST_COMPRESS);
 	elm_scroller_content_min_limit(view_list, EINA_FALSE, EINA_TRUE);
 
@@ -1627,7 +1628,6 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 	/* Create the entry items */
 	_create_and_update_list_items_based_on_rules(eap_type, eap_data);
 
-	evas_object_show(view_list);
 	evas_object_smart_callback_add(view_list, "language,changed",
 			gl_lang_changed, NULL);
 
@@ -1913,7 +1913,6 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 
 	Evas_Object *popup = NULL;
 	Evas_Object *list = NULL;
-	Evas_Object *box = NULL;
 
 	if (layout_main == NULL || device_info == NULL || pkg_name == NULL) {
 		return NULL;
@@ -1975,16 +1974,9 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 	evas_object_show(popup);
 	elm_object_focus_set(popup, EINA_TRUE);
 
-	box = elm_box_add(popup);
-	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
 	/* Create an EAP connect view list */
-	list = _create_list(box, eap_data);
-	elm_object_content_set(box, list);
-
-	elm_box_pack_end(box, list);
-	evas_object_size_hint_min_set(box, -1, ELM_SCALE_SIZE(300));
-	elm_object_content_set(popup, box);
+	list = _create_list(popup, eap_data);
+	elm_object_content_set(popup, list);
 
 	evas_object_smart_callback_add(eap_data->conf,
 			"virtualkeypad,state,on", _eap_popup_keypad_on_cb,
