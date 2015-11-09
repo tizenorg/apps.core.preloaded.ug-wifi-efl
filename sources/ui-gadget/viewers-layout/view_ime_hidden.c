@@ -293,6 +293,7 @@ void view_hidden_ap_popup_create(Evas_Object *win_main, const char *str_pkg_name
 	genlist = elm_genlist_add(passpopup);
 	evas_object_size_hint_weight_set(genlist, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	evas_object_size_hint_align_set(genlist, EVAS_HINT_FILL, EVAS_HINT_FILL);
+	//elm_genlist_realization_mode_set(genlist, EINA_TRUE);
 	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
 
 	g_entry_itc.item_style = "entry";

@@ -97,7 +97,7 @@ static char *_ip_info_detail_description_text_get(void *data,
 	_view_detail_description_data_t* det =
 			(_view_detail_description_data_t*) data;
 
-	if (0 == strncmp("elm.text.main", part, strlen(part))) {
+	if (0 == strncmp("elm.text.sub", part, strlen(part))) {
 		return g_strdup(dgettext(PACKAGE, det->title));
 	}
 
@@ -114,7 +114,7 @@ static Evas_Object *_ip_info_detail_description_content_get(void *data,
 	_view_detail_description_data_t* det =
 			(_view_detail_description_data_t*) data;
 
-	if (g_strcmp0(part, "elm.icon.entry") == 0) {
+	if (g_strcmp0(part, "elm.swallow.end") == 0) {
 		Evas_Object *entry = NULL;
 
 		entry = elm_entry_add(obj);
@@ -362,7 +362,7 @@ static char *_ip_info_entry_item_text_get(void *data, Evas_Object *obj, const ch
 		return NULL;
 	}
 
-	if (!g_strcmp0(part, "elm.text.main")) {
+	if (!g_strcmp0(part, "elm.text.sub")) {
 		return g_strdup(dgettext(PACKAGE, entry_info->title_txt));
 	}
 
@@ -417,7 +417,7 @@ static Evas_Object *_ip_info_entry_item_content_get(void *data, Evas_Object *obj
 		return NULL;
 	}
 
-	if (g_strcmp0(part, "elm.icon.entry") == 0) {
+	if (g_strcmp0(part, "elm.swallow.end") == 0) {
 		Evas_Object *entry = NULL;
 		char *guide_txt = NULL;
 		char *accepted = NULL;
@@ -763,7 +763,7 @@ static char* _ip_info_iptoggle_text_get(void *data, Evas_Object *obj,
 	retvm_if(NULL == data || NULL == part, NULL);
 	full_ip_info_t *ip_data = (full_ip_info_t *) data;
 
-	if (!strncmp(part, "elm.text.main.left", strlen(part))) {
+	if (!strcmp("elm.text", part)) {
 		ip_info_list_t *ip_info_list_data = ip_data->ip_info_list;
 #ifdef ACCESSIBLITY_FEATURE
 		char buf[100];
@@ -905,15 +905,10 @@ static Evas_Object *_ip_info_iptoggle_content_get(void *data,
 	retvm_if(NULL == data || NULL == obj || NULL == part, NULL);
 	full_ip_info_t *ip_data = (full_ip_info_t *) data;
 	ip_info_list_t *ip_info_list_data = ip_data->ip_info_list;
-	Evas_Object *ic = NULL;
 	Evas_Object *toggle_btn = NULL;
 
-	ic = elm_layout_add(obj);
-
-	if (!g_strcmp0(part, "elm.icon.2")) {
-		elm_layout_theme_set(ic, "layout", "list/C/type.3", "default");
-
-		toggle_btn = elm_check_add(ic);
+	if (!strcmp("elm.swallow.end", part)) {
+		toggle_btn = elm_check_add(obj);
 		elm_object_style_set(toggle_btn, "on&off");
 		elm_object_focus_allow_set(toggle_btn, EINA_FALSE);
 		if (WIFI_IP_CONFIG_TYPE_STATIC == ip_info_list_data->ip_type) {
@@ -925,11 +920,10 @@ static Evas_Object *_ip_info_iptoggle_content_get(void *data,
 		evas_object_propagate_events_set(toggle_btn, EINA_FALSE);
 		evas_object_size_hint_align_set(toggle_btn, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_size_hint_weight_set(toggle_btn, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		elm_layout_content_set(ic, "elm.swallow.content", toggle_btn);
 		evas_object_smart_callback_add(toggle_btn, "changed",
 				__ip_info_toggle_item_sel_cb, ip_data);
 	}
-	return ic;
+	return toggle_btn;
 }
 
 #if 0
@@ -1069,19 +1063,19 @@ full_ip_info_t *ip_info_append_items(wifi_ap_h ap, const char *pkg_name,
 	ip_info_list_data->input_panel_cb = input_panel_cb;
 	ip_info_list_data->input_panel_cb_data = input_panel_cb_data;
 
-	ip_toggle_itc.item_style = "1line";
+	ip_toggle_itc.item_style = WIFI_GENLIST_1LINE_TEXT_ICON_STYLE;
 	ip_toggle_itc.func.text_get = _ip_info_iptoggle_text_get;
 	ip_toggle_itc.func.content_get = _ip_info_iptoggle_content_get;
 	ip_toggle_itc.func.state_get = NULL;
 	ip_toggle_itc.func.del = NULL;
 
-	description_itc.item_style = "entry.main";
+	description_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	description_itc.func.text_get = _ip_info_detail_description_text_get;
 	description_itc.func.content_get = _ip_info_detail_description_content_get;
 	description_itc.func.state_get = NULL;
 	description_itc.func.del = _ip_info_detail_description_del;
 
-	ip_entry_itc.item_style = "entry.main";
+	ip_entry_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
 	ip_entry_itc.func.text_get = _ip_info_entry_item_text_get;
 	ip_entry_itc.func.content_get = _ip_info_entry_item_content_get;
 	ip_entry_itc.func.state_get = NULL;

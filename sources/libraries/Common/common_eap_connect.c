@@ -414,7 +414,7 @@ static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK,
 			cert_ctxpopup_dismissed_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed",
 			cert_ctxpopup_dismissed_cb, eap_data);
@@ -565,7 +565,7 @@ static void _create_eap_type_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK,
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK,
 			eext_ctxpopup_back_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed",
 			ctxpopup_dismissed_cb, eap_data);
@@ -704,7 +704,7 @@ static void _create_eap_auth_list(eap_connect_data_t *eap_data,
 	ctxpopup = elm_ctxpopup_add(eap_data->win);
 	eap_data->sub_popup = ctxpopup;
 	elm_object_style_set(ctxpopup, "dropdown/list");
-	eext_object_event_callback_add(ctxpopup, EA_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
+	eext_object_event_callback_add(ctxpopup, EEXT_CALLBACK_BACK, eext_ctxpopup_back_cb, NULL);
 	evas_object_smart_callback_add(ctxpopup,"dismissed", ctxpopup_dismissed_cb, eap_data);
 	elm_ctxpopup_direction_priority_set(ctxpopup,
 			ELM_CTXPOPUP_DIRECTION_DOWN,
@@ -1103,7 +1103,7 @@ static char *_gl_eap_chkbox_item_text_get(void *data, Evas_Object *obj,
 {
 	char *str_pkg_name = (char *)data;
 
-	if (!g_strcmp0(part, "elm.text.main.left")) {
+	if (!strcmp("elm.text", part)) {
 		char buf[1024];
 		snprintf(buf, 1023, "%s", sc(str_pkg_name, I18N_TYPE_Show_password));
 		return strdup(buf);
@@ -1117,7 +1117,7 @@ static Evas_Object *_gl_eap_chkbox_item_content_get(void *data,
 {
 	Evas_Object *check = NULL;
 
-	if(!g_strcmp0(part, "elm.icon.right")) {
+	if (!strcmp("elm.swallow.end", part)) {
 		check = elm_check_add(obj);
 		evas_object_propagate_events_set(check, EINA_FALSE);
 
@@ -1605,6 +1605,7 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 
 	eap_data->eap_done_ok = FALSE;
 	eap_data->genlist = view_list = elm_genlist_add(parent);
+	//elm_genlist_realization_mode_set(view_list, EINA_TRUE);
 	elm_genlist_mode_set(view_list, ELM_LIST_COMPRESS);
 	elm_scroller_content_min_limit(view_list, EINA_FALSE, EINA_TRUE);
 
@@ -1627,7 +1628,6 @@ static Evas_Object* _create_list(Evas_Object* parent, void *data)
 	/* Create the entry items */
 	_create_and_update_list_items_based_on_rules(eap_type, eap_data);
 
-	evas_object_show(view_list);
 	evas_object_smart_callback_add(view_list, "language,changed",
 			gl_lang_changed, NULL);
 
@@ -1913,7 +1913,6 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 
 	Evas_Object *popup = NULL;
 	Evas_Object *list = NULL;
-	Evas_Object *box = NULL;
 
 	if (layout_main == NULL || device_info == NULL || pkg_name == NULL) {
 		return NULL;
@@ -1975,16 +1974,9 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 	evas_object_show(popup);
 	elm_object_focus_set(popup, EINA_TRUE);
 
-	box = elm_box_add(popup);
-	evas_object_size_hint_weight_set(box, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-
 	/* Create an EAP connect view list */
-	list = _create_list(box, eap_data);
-	elm_object_content_set(box, list);
-
-	elm_box_pack_end(box, list);
-	evas_object_size_hint_min_set(box, -1, ELM_SCALE_SIZE(300));
-	elm_object_content_set(popup, box);
+	list = _create_list(popup, eap_data);
+	elm_object_content_set(popup, list);
 
 	evas_object_smart_callback_add(eap_data->conf,
 			"virtualkeypad,state,on", _eap_popup_keypad_on_cb,
