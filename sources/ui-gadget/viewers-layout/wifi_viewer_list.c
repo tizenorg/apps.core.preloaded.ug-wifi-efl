@@ -87,6 +87,7 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 {
 	char* det = NULL;
 	char* buf = NULL;
+    char* convertedColor = NULL;
 
 	ug_genlist_data_t* gdata = (ug_genlist_data_t*) data;
 	retvm_if(NULL == gdata || NULL == gdata->device_info, NULL);
@@ -97,11 +98,15 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 		det = evas_textblock_text_utf8_to_markup(NULL,
 				gdata->device_info->ssid);
 		assertm_if(NULL == det, "NULL!!");
+
+		convertedColor = ConvertRGBAtoHex(2, 61, 132, 255);
+		assertm_if(NULL == convertedColor, "NULL!!");
 		if (VIEWER_ITEM_RADIO_MODE_CONNECTED == gdata->radio_mode) {
 			buf = g_strdup_printf("<color=#%s>%s</color>",
-				ConvertRGBAtoHex(2, 61, 132, 255), det);
+				convertedColor, det);
 
 			g_free(det);
+            g_free(convertedColor);
 			return buf;
 		}
 	} else if (!strcmp("elm.text.sub", part)
