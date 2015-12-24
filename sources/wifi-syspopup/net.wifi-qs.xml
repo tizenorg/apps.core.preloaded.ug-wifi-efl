@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns="http://tizen.org/ns/packages" package="net.wifi-qs" version="1.0.0" install-location="internal-only">
+<manifest xmlns="http://tizen.org/ns/packages" package="net.wifi-qs" api-version="2.4" version="1.0.0" install-location="internal-only">
 	<label>Wi-Fi device picker</label>
 	<author email="hj0426.kim@samsung.com" href="www.samsung.com">Hyunjee Kim</author>
 	<author email="sanghoon80.cho@samsung.com" href="www.samsung.com">Sanghoon Cho</author>
