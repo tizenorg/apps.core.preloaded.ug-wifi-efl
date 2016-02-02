@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.159
+Version:	1.0.160
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -96,6 +96,7 @@ mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 %{_datadir}/locale/*/LC_MESSAGES/*.mo
 %{_datadir}/license/wifi-efl-ug
 %{_datadir}/packages/wifi-efl-ug.xml
+%{_datadir}/icons/*.png
 /usr/apps/wifi-efl-ug/shared/res/tables/ug-wifi-efl_ChangeableColorTable.xml
 /usr/apps/wifi-efl-ug/shared/res/tables/ug-wifi-efl_FontInfoTable.xml
 
