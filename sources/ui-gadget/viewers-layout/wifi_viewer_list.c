@@ -77,7 +77,7 @@ char* ConvertRGBAtoHex(int r, int g, int b, int a)
 	string = g_try_malloc0(sizeof(char )* 255);
 	if (string != NULL) {
 		hexcolor = (r << 24) + (g << 16) + (b << 8) + a;
-		sprintf(string, "%08x", hexcolor);
+		g_snprintf(string, sizeof(hexcolor), "%08x", hexcolor);
 	}
 
 	return string;
