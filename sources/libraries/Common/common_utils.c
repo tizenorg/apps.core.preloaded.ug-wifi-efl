@@ -546,10 +546,10 @@ int common_utils_send_message_to_net_popup(const char *title,
 	int ret = 0;
 	bundle *b = bundle_create();
 
-	bundle_add(b, "_SYSPOPUP_TITLE_", title);
-	bundle_add(b, "_SYSPOPUP_CONTENT_", content);
-	bundle_add(b, "_SYSPOPUP_TYPE_", type);
-	bundle_add(b, "_AP_NAME_", ssid);
+	bundle_add_str(b, "_SYSPOPUP_TITLE_", title);
+	bundle_add_str(b, "_SYSPOPUP_CONTENT_", content);
+	bundle_add_str(b, "_SYSPOPUP_TYPE_", type);
+	bundle_add_str(b, "_AP_NAME_", ssid);
 
 	ret = aul_launch_app("net.netpopup", b);
 
