@@ -286,30 +286,18 @@ static void _gl_realized(void *data, Evas_Object *obj, void *event_info)
 		elm_access_info_set(ao, ELM_ACCESS_TYPE, buf);
 		elm_access_info_set(ao, ELM_ACCESS_STATE, sc(PACKAGE, I18N_TYPE_Wi_Fi_network_info));
 	}
-
-	if (ug_app_state->ug_type == UG_VIEW_SETUP_WIZARD &&
-			first_item_index == index) {
-		viewer_manager_setup_wizard_btns_color_set(TRUE);
-	}
 #else
-	Elm_Object_Item *item = (Elm_Object_Item *)event_info;
 	Elm_Object_Item *first_item = viewer_list_get_first_item();
 
 	if (first_item == NULL) {
 		return;
 	}
 
-	int index = (int)elm_genlist_item_index_get(item);
 	int first_item_index = (int)elm_genlist_item_index_get(first_item);
 
 	if (first_item_index == -1) {
 		int group_index = (int)elm_genlist_item_index_get(grouptitle);
 		first_item_index = group_index + 1;
-	}
-
-	if (ug_app_state->ug_type == UG_VIEW_SETUP_WIZARD &&
-			first_item_index == index) {
-		viewer_manager_setup_wizard_btns_color_set(TRUE);
 	}
 #endif
 }

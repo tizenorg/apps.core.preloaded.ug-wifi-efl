@@ -342,7 +342,6 @@ static void _gl_eap_type_sub_sel(void *data, Evas_Object *obj, void *event_info)
 		elm_genlist_item_update(eap_data->eap_type_item);
 }
 
-static CertSvcStringList stringList;
 static CertSvcInstance instance;
 static CertSvcStoreCertList *certList = NULL;
 
@@ -398,8 +397,7 @@ static void _gl_eap_user_cert_sel(void *data, Evas_Object *obj,
 static void _create_eap_cert_list(eap_connect_data_t *eap_data,
 		Evas_Object *btn)
 {
-	int list_length = 0;
-	int index = 0;
+	size_t list_length = 0;
 	Evas_Object *ctxpopup;
 	Elm_Object_Item *it = NULL;
 
@@ -1195,7 +1193,7 @@ static gboolean __cert_extract_files(const char *cert_alias,
 {
 	int ret;
 	int validity;
-	int cert_counts = 0;
+	size_t cert_counts = 0;
 	int cert_index;
 	gchar *ca_cert_path = NULL;
 	gchar *user_cert_path = NULL;

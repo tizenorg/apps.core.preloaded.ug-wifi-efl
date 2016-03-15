@@ -91,7 +91,6 @@ Evas_Object *viewer_manager_create_bg(Evas_Object *parent, char *style);
 #endif
 void viewer_manager_update_hidden_btn(void);
 int viewer_manager_create_scan_btn(void);
-void viewer_manager_setup_wizard_btns_color_set(bool state);
 void viewer_manager_eap_view_deref(void);
 
 #ifdef __cplusplus

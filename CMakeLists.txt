@@ -13,7 +13,7 @@ SET(ENGINE_PKGCONFIGS
 	capi-network-wifi
 	network)
 
-SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-declarations")
+SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Werror -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wmissing-declarations")
 
 IF(TIZEN_TETHERING_ENABLE)
 	ADD_DEFINITIONS(-DTIZEN_TETHERING_ENABLE)

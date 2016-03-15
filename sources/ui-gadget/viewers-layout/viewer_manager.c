@@ -80,7 +80,6 @@ static GList *wifi_device_list = NULL;
 static Eina_Bool rotate_flag = EINA_FALSE;
 
 static bool show_more = TRUE;
-static bool is_on_color_set = FALSE;
 
 static void _hidden_button_callback(void* data, Evas_Object* obj, void* event_info);
 static void viewer_manager_hidden_confirm_cleanup(void);
@@ -768,107 +767,6 @@ static void _hidden_button_callback(void* data, Evas_Object* obj, void* event_in
 	__COMMON_FUNC_EXIT__;
 }
 
-void viewer_manager_setup_wizard_btns_color_set(bool state)
-{
-	Evas_Object *layout = NULL;
-	Evas_Object *ly = NULL;
-	Elm_Object_Item *navi_it = NULL;
-
-	navi_it = elm_naviframe_top_item_get(manager_object->nav);
-	layout = elm_object_item_content_get(navi_it);
-	if (layout == NULL) {
-		ERROR_LOG(UG_NAME_NORMAL, "layout is NULL");
-		return;
-	}
-
-	ly = (Evas_Object *)elm_layout_edje_get(layout);
-	if (ly == NULL) {
-		ERROR_LOG(UG_NAME_NORMAL, "ly is NULL");
-		return;
-	}
-	int item_r, item_g, item_b, item_a = 0;
-	int bg_r, bg_g, bg_b, bg_a = 0;
-	int item_banded_a, bg_banded_a = 0;
-	int i = 0;
-	int item_color[3] = {0,};
-	Elm_Object_Item *item = NULL;
-
-	if (state == TRUE && is_on_color_set == TRUE) {
-		return;
-	}
-
-	item = elm_genlist_first_item_get(manager_object->list);
-	if (item == NULL) {
-		INFO_LOG(UG_NAME_NORMAL, "first item is NULL");
-		return;
-	}
-
-	const char *item_bg = edje_object_data_get(
-			(Evas_Object *)elm_object_item_edje_get(item),
-			"bg_color");
-	const char *pers_bg = edje_object_data_get(
-			(Evas_Object *)elm_layout_edje_get(manager_object->list),
-			"personalized_color");
-
-	if (item_bg == NULL || pers_bg == NULL) {
-		ERROR_LOG(UG_NAME_NORMAL, "color is NULL");
-		return;
-	} else {
-		INFO_LOG(UG_NAME_NORMAL, "item_bg-[%s] pers_bg-[%s]",
-				item_bg, pers_bg);
-	}
-
-	edje_object_color_class_get(
-			(Evas_Object *)elm_object_item_edje_get(item),
-			item_bg, &item_r, &item_g, &item_b, &item_a,
-			NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-	edje_object_color_class_get(
-			(Evas_Object *)elm_layout_edje_get(manager_object->list),
-			pers_bg, &bg_r, &bg_g, &bg_b, &bg_a,
-			NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
-
-	if (state == TRUE && manager_object->sw_hidden_btn != NULL) {
-		edje_object_signal_emit(ly, "rect_bg_color_on", "elm");
-
-		for (i = 0; i < 5; i++) {
-			item_banded_a = 255 - (i+1)*10;
-			bg_banded_a = 255 - item_banded_a;
-
-			if (i == 4) {
-				item_color[0] = ((item_r * item_banded_a) >> 8) +
-						((bg_r * bg_banded_a) >> 8);
-				item_color[1] = ((item_g * item_banded_a) >> 8) +
-						((bg_g * bg_banded_a) >> 8);
-				item_color[2] = ((item_b * item_banded_a) >> 8) +
-						((bg_b * bg_banded_a) >> 8);
-			}
-		}
-		edje_object_color_class_set(ly,
-				"on_color", item_color[0], item_color[1], item_color[2],
-				255, 255, 255, 255, 255, 255, 255, 255, 255);
-
-		is_on_color_set = TRUE;
-	} else {
-		edje_object_signal_emit(ly, "rect_bg_color_off", "elm");
-
-		item_banded_a = 255 - (i+1)*10;
-		bg_banded_a = 255 - item_banded_a;
-
-		item_color[0] = ((item_r * item_banded_a) >> 8) +
-				((bg_r * bg_banded_a) >> 8);
-		item_color[1] = ((item_g * item_banded_a) >> 8) +
-				((bg_g * bg_banded_a) >> 8);
-		item_color[2] = ((item_b * item_banded_a) >> 8) +
-				((bg_b * bg_banded_a) >> 8);
-
-		edje_object_color_class_set(ly, "off_color",
-				item_color[0], item_color[1], item_color[2],
-				255, 255, 255, 255, 255, 255, 255, 255, 255);
-		is_on_color_set = FALSE;
-	}
-	INFO_LOG(UG_NAME_NORMAL, "Set button bg color [%d]", state);
-}
-
 static void __viewer_manager_hidden_button_create(Evas_Object *genlist)
 {
 	__COMMON_FUNC_ENTER__;
@@ -1181,9 +1079,6 @@ Evas_Object *viewer_manager_create(Evas_Object *_parent, Evas_Object *_win_main)
 
 	evas_object_show(layout);
 	elm_object_focus_set(layout, EINA_TRUE);
-	if (ug_app_state->ug_type == UG_VIEW_SETUP_WIZARD) {
-		viewer_manager_setup_wizard_btns_color_set(FALSE);
-	}
 
 	__COMMON_FUNC_EXIT__;
 	return layout;
@@ -1233,7 +1128,6 @@ Eina_Bool viewer_manager_show(VIEWER_WINSETS winset)
 			__viewer_manager_hidden_button_create(manager_object->list);
 			__viewer_manager_setup_wizard_scan_btn_create(
 				manager_object->list);
-			viewer_manager_setup_wizard_btns_color_set(TRUE);
 		}
 		break;
 
@@ -1301,7 +1195,6 @@ Eina_Bool viewer_manager_hide(VIEWER_WINSETS winset)
 		}
 
 		if (ug_app_state->ug_type == UG_VIEW_SETUP_WIZARD) {
-			viewer_manager_setup_wizard_btns_color_set(FALSE);
 			__viewer_manager_hidden_btn_del();
 			__viewer_manager_setup_wizard_scan_btn_del();
 		}
@@ -1530,7 +1423,6 @@ void viewer_manager_header_mode_set(HEADER_MODES new_mode)
 			manager_object->scan_button = NULL;
 		}
 		if (ug_app_state->ug_type == UG_VIEW_SETUP_WIZARD) {
-			viewer_manager_setup_wizard_btns_color_set(FALSE);
 			__viewer_manager_hidden_btn_del();
 			__viewer_manager_setup_wizard_scan_btn_del();
 		}
@@ -1857,7 +1749,6 @@ Eina_Bool viewer_manager_refresh(void)
 		__viewer_manager_hidden_button_create(manager_object->list);
 		__viewer_manager_setup_wizard_scan_btn_create(
 			manager_object->list);
-		viewer_manager_setup_wizard_btns_color_set(TRUE);
 	}
 
 	if (WLAN_MANAGER_CONNECTING == state) {
