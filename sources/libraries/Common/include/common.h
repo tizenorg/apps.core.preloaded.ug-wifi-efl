@@ -105,26 +105,26 @@ typedef enum {
 	FUNC_LOG(COMMON_NAME_FUNC, "[Quit/>]: %s() [%d]", __func__, __LINE__)
 
 #define FUNC_LOG(MID, format, args...) \
-	SLOG(LOG_INFO, MID, "\033[2m[%s:%d]\033[2m " format "\033[0m", __func__, __LINE__, ##args)
+	SLOG(LOG_INFO, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 #define DEBUG_LOG(MID, format, args...) \
-	SLOG(LOG_DEBUG, MID, "\033[42m[%s:%d]\033[0m\033[32m " format "\033[0m", __func__, __LINE__, ##args)
+	SLOG(LOG_DEBUG, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 #define INFO_LOG(MID, format, args...) \
-	SLOG(LOG_INFO, MID, "\033[0m[%s:%d]\033[0m " format, __func__, __LINE__, ##args)
+	SLOG(LOG_INFO, MID, "[%s:%d] " format, __func__, __LINE__, ##args)
 #define WARN_LOG(MID, format, args...) \
-	SLOG(LOG_WARN, MID, "\033[43m[%s:%d]\033[0m\033[33m " format "\033[0m", __func__, __LINE__, ##args)
+	SLOG(LOG_WARN, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 #define ERROR_LOG(MID, format, args...) \
-	SLOG(LOG_ERROR, MID, "\033[41m[%s:%d]\033[0m\033[31m " format "\033[0m", __func__, __LINE__, ##args)
+	SLOG(LOG_ERROR, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 
 #define SECURE_FUNC_LOG(MID, format, args...) \
-	SECURE_SLOG(LOG_INFO, MID, "\033[2m[%s:%d]\033[2m " format "\033[0m", __func__, __LINE__, ##args)
+	SECURE_SLOG(LOG_INFO, MID, "[%s:%d] " format, __func__, __LINE__, ##args)
 #define SECURE_DEBUG_LOG(MID, format, args...) \
-	SECURE_SLOG(LOG_DEBUG, MID, "\033[42m[%s:%d]\033[0m\033[32m " format "\033[0m", __func__, __LINE__, ##args)
+	SECURE_SLOG(LOG_DEBUG, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 #define SECURE_INFO_LOG(MID, format, args...) \
-	SECURE_SLOG(LOG_INFO, MID, "\033[0m[%s:%d]\033[0m " format, __func__, __LINE__, ##args)
+	SECURE_SLOG(LOG_INFO, MID, "[%s:%d] " format, __func__, __LINE__, ##args)
 #define SECURE_WARN_LOG(MID, format, args...) \
-	SECURE_SLOG(LOG_WARN, MID, "\033[43m[%s:%d]\033[0m\033[33m " format "\033[0m", __func__, __LINE__, ##args)
+	SECURE_SLOG(LOG_WARN, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 #define SECURE_ERROR_LOG(MID, format, args...) \
-	SECURE_SLOG(LOG_ERROR, MID, "\033[41m[%s:%d]\033[0m\033[31m " format "\033[0m", __func__, __LINE__, ##args)
+	SECURE_SLOG(LOG_ERROR, MID, "[%s:%d] " format , __func__, __LINE__, ##args)
 
 #define retm_if(expr) do { \
 	if (expr) { \

@@ -14,5 +14,6 @@
 		<privilege>http://tizen.org/privilege/network.set</privilege>
 		<privilege>http://tizen.org/privilege/network.profile</privilege>
 		<privilege>http://tizen.org/privilege/appmanager.launch</privilege>
+		<privilege>http://tizen.org/privilege/systemsettings.admin</privilege>
 	</privileges>
 </manifest>
