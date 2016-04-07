@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Майдонро тағйир додан"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Хомӯш"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Фурӯзон"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Хондагирӣ иҷро мешавад..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Танзимот"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Бекор кардан"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID дохил кунед."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "Суроғаи IP"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "WPS-ро дар нуқтаи дастрасии Wi-Fi дар давоми %d дақиқа пахш кунед."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Захира карда шуд"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Муҳофизатшуда"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Тугмаи WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Ман розиям"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Ковиш"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Паролро дохил кунед"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Пайваст шудан"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Хомӯш"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Фурӯзон"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Захира кардан"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Амният"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Нишон додани парол"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Ҳолат"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Пайвастагӣ иҷро нашуд"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Пароли нодуруст"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Хатогии санҷиши ҳаққоният ба миён омад"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Пайвастшуда"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Тава. Bluetooth пайв-т аст"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Пайвастшавӣ..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Ҷудо шуд"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Пайваст нашудааст"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Ягон сигнал ошк. наш."
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Гирифтани\nсуроғаи IP..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Ковиш..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Фурӯзон мешавад..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi хомӯш карда шуд"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Дастгоҳ ба шабакаи Wi-Fi %s пайваст шудааст."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Гирифтани суроғаи IP иҷро нашуд."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Ягон нуқтаи дастрасии Wi-Fi ёфт нашуд."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "Суроғаи IP"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Гирифтани ишора"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Қарс"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Катаки ишоратӣ"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Парол"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Фаромӯш к-н"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Парол"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Шаб-аҳои Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Номиа AP %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Суроғаи гуз-гоҳ"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Суръати пайванд"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Суроғаи прокси"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Порти прокси"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Тавоноии сигнал"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "IP-и cобит"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Ниқоби зертур"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Шабакаҳои Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Ягон нуқтаи дастраси Wi-Fi ёфт нашуд"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Хуб"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Мб/с"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Хеле тавоно"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Танзимоти прокси"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear ҳангоми аз дастгоҳи мобилии шумо ҷудо будан шабакаҳои Wi-Fi-ро мекобад."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "PIN-ро дар маршрутизатор ворид кунед.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "Усули WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "Усули WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Пайв. ба шаб. Wi-Fi АР иҷро н."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Гирифтани суроғаи IP иҷро наш."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "ПАЙВАСТ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "ФАРОМӮШ КРД"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "ЗАХИРА КРДН"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "СКАН"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Хатоги тайид ба амал омад"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Усули EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Усули EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Одилона"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Интернет дастрас нест"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Кушодан"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Захира шуд"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Муҳофизат"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Муҳофизат (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Муҳофизат (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Қатъӣ"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Беқуват"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Пайваст мешавед?\nТавоноии сигнал\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "PIN-ро дар маршрутизатор ворид кунед.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "БЕКОР К-ДАН"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Гузаштан"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Шумораи зиёдтарини аломатҳо истифода шуд."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Сиёсати амният истифодаи Wi-Fi-ро пешгирӣ мекунад."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Гузаштан"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Дастгирӣ намешавад"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Хатогии тайид ба амал омад."
+

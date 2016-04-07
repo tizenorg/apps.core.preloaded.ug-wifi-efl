@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="com.samsung.wifi" version="0.3.71" install-location="internal-only" preload="true">
+    <author email="yho.yoon@samsung.com">Youngho Yoon</author>
+	<profile name="wearable" />
+	<ui-application appid="com.samsung.wifi" exec="@TZ_SYS_RO_APPS@/com.samsung.wifi/bin/wifi" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="use-GL">
+		<icon></icon>
+		<label>Wi-Fi</label>
+		<label xml:lang="en-us">Wi-Fi</label>
+	</ui-application>
+    <privileges>
+        <privilege>http://tizen.org/privilege/network.get</privilege>
+        <privilege>http://tizen.org/privilege/systemsettings.admin</privilege>
+        <privilege>http://tizen.org/privilege/network.set</privilege>
+        <privilege>http://developer.samsung.com/tizen/privilege/hostconnection.admin</privilege>
+        <privilege>http://tizen.org/privilege/network.profile</privilege>
+    </privileges>
+</manifest>

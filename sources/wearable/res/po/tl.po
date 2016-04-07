@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "I-edit ang field"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Naka-off"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Naka-on"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Ini-i-scan..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Settings"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Ikansela"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Ilagay ang SSID."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP address"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Pindutin ang WPS sa iyong Wi-Fi access point sa loob ng %d (na) minuto."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Na-save."
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Naka-secure"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS button"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Sang-ayon"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "I-scan"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Ipasok ang password"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Kumonekta"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "I-off"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "I-on"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "I-save"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Seguridad"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Ipakita ang password"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Katayuan"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Nabigo ang koneksyon."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Mali ang password."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Nagkaroon ng error sa pagpapatotoo"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Nakakonekta"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Nakakonekta sa pamamagitan ng Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Kumokonekta..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Nakadiskonekta"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Hindi nakakonekta"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Walang natukoy na signal"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Kinukuha ang IP address..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Nagsa-scan..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Ino-on..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Naka-off ang Wi-Fi"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Nakakonekta sa Wi-Fi network na %s"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Nabigong kunin ang IP address."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Walang nakitang access point ng Wi-Fi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP address"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Alisan ng check"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Markahan"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Tickbox"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Password"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Kalimutan"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Password"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Mga Wi-Fi network"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Pangalan ng AP %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Address ng Gateway"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Bilis ng Link"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proxy address"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proxy port"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Lakas ng signal"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Static IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Subnet mask"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Mga Wi-Fi network"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Walang nakitang Wi-Fi access point"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Maganda"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Malakas na malakas"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Mga setting ng proxy"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Magsi-scan ang Gear ng mga Wi-Fi network kapag nakadiskonekta mula sa mobile device mo."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Ipasok ang PIN sa router.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS method"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS method"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Nabigong kumonekta sa Wi-Fi AP."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Nabigong makuha ang IP address."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "KUMONEKTA"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "KALIMUTAN"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "I-SAVE"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "I-SCAN"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Nagkaroon ng error sa pag-authenticate"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Paraan ng EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Paraan ng EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Katamtaman"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Hindi available ang Internet"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Bukas"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Naka-save"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Naka-secure"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Naka-secure (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Naka-secure (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Malakas"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Mahina"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Ikonekta?\nAng lakas ng signal ay\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Ipasok ang PIN sa router.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "KANSELAHIN"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Lumipat"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Naabot na ang maximum na bilang ng mga character."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Pinipigilan ng patakaran sa seguridad ang paggamit ng Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Lumipat"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Hindi suportado"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Nagkaroon ng error sa pag-authenticate."
+

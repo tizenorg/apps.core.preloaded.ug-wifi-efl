@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "புலம் திருத்துக"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "ஆஃப்"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "ஆன்"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "ஸ்கேனிங்..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "அமைவுகள்"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "சரி"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "ரத்து"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID உள்ளிடுக."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP முகவரி"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "உங்கள் Wi-Fi அணுகல் புள்ளியில் WPS பொத்தானை %d நிமிடங்களுக்குள் அழுத்தவும்."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "சேமிக்கப்பட்டது."
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "பாதுகாக்கப்பட்டது"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS பொத்தான்"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "ஏற்கிறேன்"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "ஸ்கேன்"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "கடவுச்சொல் உள்ளிடவும்"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "இணைப்பு"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "ஆஃப்"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "ஆன்"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "சேமிக்கவும்"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "பாதுகாப்பு"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "கடவுச்சொல் காண்பிக்கவும்"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "நிலை"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "இணைப்பு தோல்வி."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "கடவுச்சொல் தவறு."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "அங்கீகரிப்புப் பிழை ஏற்பட்டுள்ளது"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "இணைக்கப்பட்டது"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "ப்ளூடூத் வழி இணைக்கப்பட்."
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "இணைக்கிறது..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "துண்டிக்கப்பட்டது"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "இணைக்கப்படவில்லை"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "சிக்னல் கண்டறியவில்லை"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP முகவரியைப் பெறுகிறது..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "ஸ்கேனிங்..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "இயக்குகிறது..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi ஆஃப் செய்யப்பட்டது"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Wi-Fi நெட்வொர்க்குடன் %s இணைக்கப்பட்டது"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP முகவரி பெறுதல் தோல்வியுற்றது."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi அணுகல் புள்ளிகள் எதுவும் காணப்படவில்லை."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP முகவரி"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "தேர்வுநீக்குக"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "தேர்வு"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "தேர்வுபெட்டி"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "கடவுச்சொல்"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "துண்டிக்கவும்"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "கடவுச்சொல்"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi நெட்வொர்க்."
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP பெயர் %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "நுழைவாயில் முகவரி"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "இணைப்பு வேகம்"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "ப்ராக்ஸி முகவரி"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "ஃப்ராக்ஸி போர்ட்"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "சிக்னல் வலிமை"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "நிலையான IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "சப்நெட் மாஸ்க்"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi நெட்வொர்க்."
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi அணுகல் புள்ளி எதுவும் கண்டறியப்படவில்லை"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "நன்று"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "மிகவும் வலிமை"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "ப்ராக்ஸி அமைவுகள்"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "உங்கள் மொபைல் சாதனத்தில் இருந்து துண்டிக்கப்பட்டவுடன் Wi-Fi நெட்வொர்க்குகள் உள்ளதா என கியர் ஸ்கேன் செய்யும்."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "ரூட்டரில் PIN உள்ளிடவும்.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS முறை"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS முறை"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi AP உடன் இணைப்பது தோல்வி."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP முகவரியைப் பெறுவது தோல்வி."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "இணைக்கவும்"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "துண்டி."
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "சேமிக்கவும்"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "ஸ்கேன்"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "அங்கீகரிப்பு பிழை ஏற்பட்டுள்ளது"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP முறை"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP முறை"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "நன்று"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "இணையதளம் கிடைக்கவில்லை"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "திறக்கவும்"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "சேமிக்கப்பட்டது"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "பாதுகாக்கப்பட்டது"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "பா.காப்பு (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "பா.காப்பு (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "பலமான"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "பலவீனமான"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "இணைக்கவா?\nசிக்னல் வலிமை\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "ரூட்டரில் PIN-ஐ உள்ளிடவும்.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "ரத்துசெய்க"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "சுவிட்சு"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "அதிகபட்ச எழுத்துக்களின் எண்ணிக்கையை அடைந்தது."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "பாதுகாப்புக் கொள்கையானது Wi-Fi பயன்படுத்துவதைத் தடுக்கிறது."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "மாற்றுக"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "ஆதரிக்கப்படவில்லை"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "அங்கீகாரப் பிழை ஏற்பட்டுள்ளது."
+

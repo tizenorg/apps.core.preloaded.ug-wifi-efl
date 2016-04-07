@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "რედაქტირების ველი"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "გამორთვა"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "ჩართვა"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "მიმდ. სკანირება"
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "პარამეტ."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "კი"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "გაუქმება"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID შეტანა."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP მისამართი"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "მაქსიმუმ %d წუთში დააჭირეთ WPS–ს თქვენი Wi-Fi წვდომის წერტილზე."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "შენახულია"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "დაცული"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS ღილაკი"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "ვეთანხმები"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "სკანირება"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "შეიყვანეთ პაროლი"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "დაკავშირება"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "გამორთ."
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "ჩართვა"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "შენახვა"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "უსაფრთხოება"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "პაროლის გამოჩენა"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "სტატუსი"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "ვერ დაუკავშირდა."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "პაროლი არასწორია."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "მოხდა ავტორიზაციის შეცდომა"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "დაკავშირებული"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "დაკავშირდა Bluetooth-ით"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "უკავშირდება..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "გათიშულია"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "კავშირი არაა"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "სიგნალი არ იძებნება"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "მიმდინარეობს IP\nმისამართის მიღება..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "სკანირდება..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "ჩართვა..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi გამორთულია"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "დაუკავშირდა Wi-Fi ქსელს %s"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP მისამართის მიღება ვერ მოხდა."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi–ის წვდომის წერტილები ვერ მოიძებნა."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP მისამართი"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "მონიშვნის გაუქმება"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "მონიშვნა"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "მოსანიშნი უჯრა"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "პაროლი"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "დაივიწყე"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "პაროლი"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi ქსელები"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP-ის სახელი %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "გასასვლელი"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "კავშირის სიჩქ."
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "პროქსის მისამ."
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "პროქსის პორტი"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "სიგნალის დონე"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "სტატიკ. IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "ქვე-ქსელის ნიღ."
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi ქსელები"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi–ის წვდომის წერტილი ვერ მოიძებნა"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "კარგი"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d მბ/წმ"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "ძალიან ძლიერი"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "პროქსი-სერვერის პარამეტრები"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear მოძებნის Wi-Fi ქსელებს, როდესაც გამორთავთ მის კავშირს მობილურ მოწყობილობასთან."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "შეიყვანეთ PIN როუტერში.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS მეთოდი"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS მეთოდი"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi წერტილს ვერ დაუკავშირდა."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP მისამართი ვერ მივიღეთ."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "დაკავშირება"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "დაივიწყე"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "შენახვა"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "ძებნა"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "მოხდა ავტორიზაციის შეცდომა"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP მეთოდი"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP მეთოდი"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "ნორმალური"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "ინტერნეტი მიუწვდომელია"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "გახსნილი"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "შენახული"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "დაცული"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "დაცული (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "დაცული (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "ძლიერი"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "სუსტი"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "დაკავშირდეს?\nსიგნალის სიმძლავრე\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "შეიყვანეთ PIN როუტერში.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "გაუქმება"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "გადართვა"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "მიღწეულია სიმბოლოების მაქსიმალური რაოდენობა."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "უსაფრთხოების პოლიტიკა კრძალავს Wi-Fi-ს გამოყენებას."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "გადართვა"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "მხარდაჭერა არაა"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "მოხდა ავტორიზაციის შეცდომა."
+

@@ -1,0 +1,24 @@
+com.samsung.wifi tizen::vconf::setting::admin rw
+com.samsung.wifi sound_server rw
+com.samsung.wifi dbus rwx
+com.samsung.wifi com.samsung.clock rx
+com.samsung.wifi ail::db rw
+com.samsung.wifi sound_server r
+com.samsung.wifi svi-data rx
+com.samsung.wifi xorg rw
+com.samsung.wifi system::use_internet r
+com.samsung.wifi connman rw
+com.samsung.wifi net-config rw
+com.samsung.wifi isf rwx
+com.samsung.wifi immvibed rw
+com.samsung.wifi tts-server rx
+com.samsung.wifi com.samsung.bt-connection-popup x
+com.samsung.wifi com.samsung.clocksetting rw
+com.samsung.wifi weconn rw
+com.samsung.wifi wpasupplicant rw
+com.samsung.wifi deviced::haptic rw
+com.samsung.wifi syspopup::db
+com.samsung.wifi mdm-server::admin r
+com.samsung.wifi mdm-server::wifi r
+com.samsung.wifi app.default include
+com.samsung.wifi e17::notification rw

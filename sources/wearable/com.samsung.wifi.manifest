@@ -1,0 +1,13 @@
+<manifest>
+	<define>
+		<domain name="com.samsung.wifi" />
+	<request>
+	</request>
+	</define>
+	<assign>
+		<filesystem path="/usr/share/locale/*" label="_" />
+		<filesystem path="/usr/apps/com.samsung.wifi/res/locale/*" label="_" />
+		<filesystem path="/usr/apps/com.samsung.wifi/shared/res/tables/color_table.xml" label="_"/>
+		<filesystem path="/usr/apps/com.samsung.wifi/shared/res/tables/font_table.xml" label="_"/>
+	</assign>
+</manifest>

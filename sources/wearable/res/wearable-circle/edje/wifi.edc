@@ -1,0 +1,1069 @@
+/*
+ * Copyright (c) 2000-2014 Samsung Electronics Co., Ltd All Rights Reserved
+ *
+ * PROPRIETARY/CONFIDENTIAL
+ *
+ * This software is the confidential and proprietary information of
+ * SAMSUNG ELECTRONICS ("Confidential Information").
+ * You shall not disclose such Confidential Information and shall
+ * use it only in accordance with the terms of the license agreement
+ * you entered into with SAMSUNG ELECTRONICS.
+ * SAMSUNG make no representations or warranties about the suitability
+ * of the software, either express or implied, including but not
+ * limited to the implied warranties of merchantability, fitness for
+ * a particular purpose, or non-infringement.
+ * SAMSUNG shall not be liable for any damages suffered by licensee as
+ * a result of using, modifying or distributing this software or its derivatives.
+
+ */
+
+#define MAIN_H 320
+#define MAIN_W 320
+
+#define LOGS_DEFAULT_COLOR_TRANSPARENCY 0 0 0 0
+#define LOGS_DEFAULT_COLOR_BLACK 0 0 0
+
+#define POPUP_ENTRY_H 66
+#define POPUP_PADDING_H 32
+#define POPUP_ENTRY_HIDDEN_AP_MIN 0 325
+
+collections {
+	base_scale: 1.3;
+	plugins {
+		plugin {
+			name: "touch_sound";
+			source: "feedback";
+			param: "FEEDBACK_TYPE_SOUND FEEDBACK_PATTERN_TAP";
+		}
+	}
+	styles {
+		style {
+			name: "textblock_popup_title";
+			base: "font=Tizen:style=Bold font_size=33 align=center color=#FFFFFF color_class=T091 text_class=tizen wrap=mixed";
+		}
+		style { name: "textblock_popup_body";
+			base: "font=Tizen:style=Regular font_size=32 color=#CCCCCC color_class=T092 wrap=mixed align=center ellipsis=1.0 text_class=T092";
+			tag: "br" "\n";
+		}
+		style { name: "textblock_popup_body_wps";
+			base: "font=Tizen:style=Regular font_size=32 color=#CCCCCC color_class=T092 wrap=mixed align=center text_class=T092";
+			tag: "br" "\n";
+		}
+		style { name: "check_text_in_password_layout";
+			base: "font=Tizen:style=Regular font_size=37 align=left color=#FFFFFF color_class=AT014 text_class=AT014";
+		}
+	}
+	group {
+		name: "ap_signal_image_layout";
+		parts {
+			part {
+				name: "spacer.base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 76 76;
+					max: 76 76;
+				}
+			}
+			part {
+				name: "elm.image.signal";
+				type: SWALLOW;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+				}
+			}
+			part {
+				name: "elm.image.lock";
+				type: SWALLOW;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+				}
+			}
+		}
+	}
+	group {
+	  name: "popup_body_button";
+      parts {
+         part { name: "base";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 360 0;
+            }
+         }
+         part { name: "top_left_pad";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 68 76;
+               rel1.to: "base";
+               rel2 {
+                  to: "base";
+                  relative: 0.0 0.0;
+               }
+               align: 0.0 0.0;
+               fixed: 1 1;
+            }
+         }
+         part { name: "bottom_right_pad";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 68 42;
+               rel1 {
+                  to: "base";
+                  relative: 1.0 1.0;
+               }
+               rel2.to: "base";
+               align: 1.0 1.0;
+               fixed: 1 1;
+            }
+         }
+        part { name: "elm.text.content";
+            type: TEXTBLOCK;
+            scale: 1;
+            description { state: "default" 0.0;
+               max: -1 3703; // 4000(max height) - (76 + 42 + 19 + 160)
+               rel1 {
+                  to: "top_left_pad";
+                  relative: 1.0 1.0;
+               }
+               rel2 {
+                  to_x: "bottom_right_pad";
+                  to_y: "top_left_pad";
+                  relative: 0.0 1.0;
+               }
+               align: 0.5 0.0;
+               fixed: 0 1;
+               text {
+                  style: "textblock_popup_body";
+                  min: 0 1;
+               }
+            }
+         }
+         part { name: "text_bottom_pad";
+            type: SPACER;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 0 19;
+               rel1 {
+                  to: "elm.text.content";
+                  relative: 0.0 1.0;
+               }
+               rel2.to: "elm.text.content";
+               align: 0.5 0.0;
+               fixed: 0 1;
+            }
+         }
+         part { name: "elm.swallow.button";
+            type: SWALLOW;
+            scale: 1;
+            description { state: "default" 0.0;
+               min: 160 160;
+               max: 160 160;
+               rel1 {
+                  to: "text_bottom_pad";
+                  relative: 0.0 1.0;
+               }
+               rel2 {
+                  to: "bottom_right_pad";
+                  relative: 0.0 0.0;
+               }
+            }
+         }
+      }
+	}
+	group {
+		name: "wps_text_block_layout";
+		parts {
+			part {
+				name: "elm.text.content";
+				type: TEXTBLOCK;
+				description {
+					state: "default" 0.0;
+					min: 260 200;
+					text {
+						style: "textblock_popup_body_wps";
+						min: 0 1;
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "wps_progress_layout";
+		parts {
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 360;
+					max: 360 360;
+				}
+			}
+			part {
+				name: "elm.swallow.progressbar";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 360;
+					max: 360 360;
+				}
+			}
+		}
+	}
+	group {
+		name: "wps_progress_popup_layout";
+		parts {
+			images {
+				image: "wifi_percent_bg.png" COMP;
+			}
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 360;
+					max: 360 360;
+				}
+			}
+			part {
+				name: "top_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 15;
+					fixed: 0 1;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.percent_label";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 32;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 {
+						to: "top_padding";
+						relative: 0.0 1.0;
+					}
+					rel2 {
+						to: "top_padding";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "elm.image";
+				type: IMAGE;
+				scale : 1;
+				description {
+					color_class: AO017;
+					state: "default" 0.0;
+					min: 0 50;
+					fixed : 1 1;
+					align: 0.0 0.0;
+					visible: 1;
+					image.normal: "wifi_percent_bg.png";
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "left_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "right_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 50 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "middle_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: "left_padding";
+						to_y: "elm.image";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "right_padding";
+						to_y: "elm.image";
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.label";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 260 50;
+					fixed: 0 0;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x:"left_padding";
+						to_y: "middle_padding";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "right_padding";
+						to_y: "base";
+					}
+				}
+			}
+		}
+	}
+	group {
+		name: "progressbar_layout";
+		parts {
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 360;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "top_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 108;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						to: "left_padding";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "right_padding";
+						relative: 0.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "left_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 30 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "right_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 30 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "content_bg";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 86 86;
+					max: 86 86;
+					fixed: 1 1;
+					align: 0.5 0.0;
+					rel1 {
+						relative: 0.0 1.0;
+						to: "top_padding";
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to: "top_padding";
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 86 86;
+					fixed: 1 1;
+					align: 0.5 0.5;
+					rel1.to: "content_bg";
+					rel2.to: "content_bg";
+				}
+			}
+			part {
+				name: "middle_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 16;
+					fixed: 0 1;
+					align: 0.5 0.0;
+					rel1 {
+						relative: 0.0 1.0;
+						to: "content_bg";
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to: "content_bg";
+					}
+			}
+			part {
+				name: "elm.text.progressbar";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					fixed: 1 1;
+					align: 0.5 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: "left_padding";
+						to_y: "middle_padding";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "right_padding";
+						to_y: "middle_padding";
+					}
+				}
+			}
+		}
+	}
+}
+	group {
+		name: "psk_style";
+		parts {
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "elm.swallow.genlist";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					fixed: 0 1;
+					rel1.to: "base";
+					rel2.to: "base";
+				}
+			}
+		}
+	}
+	group {
+		name: "password_layout";
+		parts {
+			images {
+				image: "b_list_edit_field_bg.png" COMP;
+			}
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 0;
+				}
+			}
+			part {
+				name: "left_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 36 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "right_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 36 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "top_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 55;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 0.0;
+						to_x: "left_padding";
+					}
+					rel2 {
+						relative: 0.0 0.0;
+						to_x: "right_padding";
+					}
+				}
+			}
+	        part {
+	        	name: "elm.text.title";
+				type: TEXTBLOCK;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 44;
+					align: 0.0 0.0;
+					fixed: 0 1;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: "left_padding";
+						to_y: "top_padding";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "right_padding";
+						to_y: "top_padding";
+					}
+					text {
+						style: "textblock_popup_title";
+						min: 0 1;
+					}
+				}
+	        }
+	        part {
+	        	name: "elm.access.title";
+	        	type: RECT;
+	        	repeat_events: 1;
+	        	description {
+	        		state: "default" 0.0;
+	        		fixed: 1 1;
+	        		rel1 { relative: 0.0 0.0; to: "elm.text.title"; }
+	        		rel2 { relative: 1.0 1.0; to: "elm.text.title"; }
+	        		color: 0 0 0 0;
+	        	}
+	        }
+			part {
+				name: "middle_padding0";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 29;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 0.0 1.0;
+						to: "elm.text.title";
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to: "elm.text.title";
+					}
+				}
+			}
+			part {
+				name: "magic_spacer";
+				type: SPACER;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+					min: 36 62;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: "left_padding";
+						to_y: "middle_padding0";
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to_x: "left_padding";
+						to_y: "middle_padding0";
+					}
+				}
+			}
+			part {
+				name: "right_magic_spacer";
+				type: SPACER;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+					min: 36 62;
+					fixed: 1 1;
+					align: 1.0 0.0;
+					rel1 {
+						to_x: "right_padding";
+						to_y: "middle_padding0";
+						relative: 0.0 1.0;
+					}
+					rel2 {
+						to_x: "right_padding";
+						to_y: "middle_padding0";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "entry_spacer";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 62;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x:"magic_spacer";
+						to_y:"middle_padding0";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x:"right_magic_spacer";
+						to_y:"middle_padding0";
+					}
+				}
+			}
+			part {
+				name: "elm.image.entry";
+				type: IMAGE;
+				scale : 1;
+				description {
+					color_class: B02112;
+					state: "default" 0.0;
+					min: 0 62;
+					fixed : 1 1;
+					align: 0.0 0.0;
+					visible: 1;
+					image.normal: "b_list_edit_field_bg.png";
+					image.border: 36 36 0 0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x:"left_padding";
+						to_y:"middle_padding0";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x:"right_padding";
+						to_y:"middle_padding0";
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.entry";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 62;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1.to: "entry_spacer";
+					rel2.to: "entry_spacer";
+				}
+			}
+			part {
+				name: "middle_spacer";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 16;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 0.0 1.0;
+						to_x: base;
+						to_y: entry_spacer;
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to_x: base;
+						to_y: entry_spacer;
+					}
+				}
+			}
+			part {
+				name: "check.left.padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					// (left_padding(20) + check_size(34) + check_spacer(7)) 0
+					min: 61  0;
+					// (left_padding(20) + check_size(34) + check_spacer(7)) -1
+					max: 61 -1;
+					fixed: 1 0;
+					align: 0 0;
+					rel1 {
+						relative: 0.0 1.0;
+						to_x: base;
+						to_y: middle_spacer;
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: base;
+						to_y: middle_spacer;
+					}
+				}
+			}
+			part {
+				name: "check.right.padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 20  0; // right_padding(20)  0
+					max: 20 -1; // right_padding(20) -1
+					fixed: 1 0;
+					align: 1 0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: base;
+						to_y: middle_spacer;
+					}
+					rel2 {
+						relative: 1.0 1.0;
+						to_x: base;
+						to_y: middle_spacer;
+					}
+				}
+			}
+			part {
+				name: "elm.text.check";
+				type: TEXTBLOCK;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 0.5 0;
+					rel1 {
+						relative: 1.0 0.0;
+						to : "check.left.padding";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to : "check.right.padding";
+					}
+					text {
+						style: "check_text_in_password_layout";
+						min: 0 1;
+						max: 1 1;
+						ellipsis: -1.0;
+					}
+				}
+			}
+			part {
+				name: "elm.spacer.check";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 7 0;
+					fixed: 1 0;
+					align: 1 0;
+					rel1 {
+						relative: 0.0 0.0;
+						to : "elm.text.check";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to : "elm.text.check";
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.check";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					align: 1 0.5;
+					rel1 {
+						relative: 0.0 0.0;
+						to : "elm.spacer.check";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to : "elm.spacer.check";
+					}
+				}
+			}
+	        part {
+	        	name: "elm.access.check";
+	        	type: RECT;
+	        	repeat_events: 1;
+	        	description {
+	        		state: "default" 0.0;
+	        		fixed: 1 1;
+	        		rel1 { relative: 0.0 0.0; to: "elm.swallow.check"; }
+	        		rel2 { relative: 1.0 1.0; to: "elm.text.check"; }
+	        		color: 0 0 0 0;
+	        	}
+	        }
+		}
+		programs {
+			program {
+				name: "clicked";
+				signal: "mouse,clicked,1";
+				source: "elm.text.check";
+				script {
+					run_program(PROGRAM:"play_touch_sound");
+					emit("clicked", "");
+				}
+			}
+			program {
+				name: "play_touch_sound";
+				action: RUN_PLUGIN "touch_sound";
+			}
+		}
+	}
+	group {
+		name: "entry_layout";
+		parts {
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 360 0;
+				}
+			}
+			part {
+				name: "padding_top";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 27;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						to_x: "padding_left";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to_x: "padding_right";
+						relative: 0.0 0.0;
+					}
+				}
+				description {
+					state: "prediction_off" 0.0;
+					min: 0 44;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						to_x: "padding_left";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to_x: "padding_right";
+						relative: 0.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "padding_left";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 78 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "padding_right";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 78 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "content_bg";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 45;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						to_x: "padding_left";
+						to_y: "padding_top";
+						relative: 1.0 1.0;
+					}
+					rel2 {
+						to_x: "padding_right";
+						to_y: "padding_top";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 45;
+					fixed: 1 1;
+					align: 0.0 0.0;
+					rel1.to: "content_bg";
+					rel2.to: "content_bg";
+				}
+			}
+		}
+
+		programs {
+			program {
+				name: "prediction_on";
+				signal: "prediction,on,layout";
+				source: "";
+				action: STATE_SET "default" 0.0;
+				target: "padding_top";
+			}
+			program {
+				name: "prediction_off";
+				signal: "prediction,off,layout";
+				source: "";
+				action: STATE_SET "prediction_off" 0.0;
+				target: "padding_top";
+			}
+		}
+	}
+}
