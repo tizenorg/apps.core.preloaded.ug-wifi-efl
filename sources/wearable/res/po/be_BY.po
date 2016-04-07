@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Рэдагаваць поле"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Выкл."
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Укл."
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Сканаванне..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Налады"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "ОК"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Скасав."
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Увесці SSID."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP-адрас"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Націсніце WPS на пункце доступу Wi-Fi на працягу %d хвілін(-ы)."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Захавана"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Бяспечны"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Кнопка WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Згаджаюся"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Пошук"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Увядзіце пароль"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Падлучыць"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Выключыць"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Укл."
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Захаваць"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Бяспека"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Паказаць пароль"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Стан"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Збой падлучэння."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Няправільны пароль."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Памылка праверкі сапраўднасці"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Злучана"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Злучана праз Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Злучэнне..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Адлучана"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Не злучана"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Сігнал не знойдзены"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Атрыманне\nIP-адраса..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Сканіраванне..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Уключэнне..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi выключаны"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Падлучана да сеткі Wi-Fi «%s»."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Не ўдалося атрымаць IP-адрас."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Не знойдзены кропкі доступу Wi-Fi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP-адрас"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Untick"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Птушка"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Поле птушкі"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Пароль"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Не запамін"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Пароль"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Сеткі Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Назва п дост %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Адрас шлюза"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Хуткасць лініі"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Адрас проксі"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Порт проксі"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Сіла сігналу"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Статычны IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Маска падсеткі"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Сеткі Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Не знойдзена кропка доступу Wi-Fi"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Добра"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Мбіт/с"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Вельмі моцна"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Налады проксі"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear будзе выконваць пошук сетак Wi-Fi, калі адлучыцца ад вашай мабільнай прылады."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Увядзіце PIN-код на маршрутызатары.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "Спосаб WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "Спосаб WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "PIN-код WPS"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Збой падл да п. доступу Wi-Fi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Не ўдалося атрымаць IP-адрас."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "ПАДЛУЧЫЦЬ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "НЕ ЗАПАМІН"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "ЗАХАВАЦЬ"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "ШУКАЦЬ"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Адбылася памылка аўтэнтыфікацыі"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Спосаб EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Спосаб EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM-карта"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Нармальны"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Інтэрнэт недаступны"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Адкрыта"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Захавана"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Бяспечны"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Бяспечны (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Бяспечны (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM-карта"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Моцны"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Слабы"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Падлучыць?\nСіла сігналу\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Увядзіце PIN-код на маршрутызатары.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "АДМЯНІЦЬ"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "Паг аб аўт і кл"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Пераключыць"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Дасягнута максімальная колькасць сімвалаў."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Палітыка бяспекі забараняе выкарыстанне Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Пераключыць"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Не падтрымліваецца"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Адбылася памылка аўтэнтыфікацыі."
+

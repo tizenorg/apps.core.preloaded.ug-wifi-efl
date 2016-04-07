@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "සංස්කරණ ක්ෂේත්‍රය"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "අක්‍රියයි"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "සක්‍රියයි"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "පිරික්සමින්..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "සැකසුම්"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "හරි"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "අවලංගු කරන්න"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID අංකය ඇතුල් කරන්න."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP ලිපිනය"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "විනාඩි %d කින් ඔබේ Wi-Fi ප්‍රවේශ ස්ථානයේ WPS ඔබන්න."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "සුරැකිණි"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "ආරක්ෂිතයි"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS බොත්තම"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "මම එකඟයි"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "පිරික්සන්න"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "මුරපදය ඇතුළත් කරන්න"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "සම්බන්ධ වීම"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "අක්‍රියයි"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "සක්‍රියයි"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "සුරකින්න"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "ආරක්ෂාව"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "මුරපදය පෙන්වන්න"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "තත්ත්වය"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "සම්බන්ධතාවය අසමත් විය."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "වැරදි මුරපදය."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "සත්‍යාපන දෝෂය හට ගැනිණි"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "සබැඳිණි"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "බ්ලූටූත් හරහා සම්බන්ධ කෙ."
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "සම්බන්ධ වෙමින්..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "විසන්ධි විය"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "සබැඳී නැත"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "සංඥා අනාව.ය කර නොගැ."
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP ලිපිනය ලබා ගනිමින්..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "පිරික්සමින්..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "ක්‍රියාත්මක කරමින්..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi ක්‍රියාවිරහිතයි"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "%s Wi-Fi ජාලය වෙත සබැඳිණි."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP ලිපිනය ලබා ගැනීමට අසමත් විය."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi ප්‍රවේශ ස්ථානයන් හමු නොවුණි."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP ලිපිනය"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "අන්ටික් කරන්න"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "ටික් කරන්න"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "හරි කොටුව"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "මුරපදය"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "අමතක කරන්න"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "මුරපදය"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi ජාල"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP නම %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "ගේට්වේ ලිපිනය"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "සබැඳියේ වේගය"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "ප්‍රොක්සි ලිපිනය"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "ප්‍රොක්සි කවුළුව"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "සංඥා ප්‍රබලත්වය"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "ස්ථිතික IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "අතුරුජ. වෙස්මු."
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi ජාල"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "කිසිදු Wi-Fi ප්‍රවේශ ස්ථානයක් සොයා නොගැනිණි"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "හොඳයි"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "ඉතා ප්‍රබලයි"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "ප්‍රොක්සි සැකසුම්"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "ඔබේ ජංගම උපාංගය වෙතින් විසන්ධි වූ විට ගියර් විසින් Wi-Fi ජාල සඳහා පිරික්සනු ඇත."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "රවුටරය මත PIN ඇතුළු කරන්න.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS ක්‍රමය"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS ක්‍රමය"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi AP වෙත සබැඳීමට අසමත් විය."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP ලිපිනය ලබා ගැනීමට අසමත් විය."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "සබඳින්න"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "අමතක කරන්න"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "සුරකින්න"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "පිරික්සන්න"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "සත්‍යාපන දෝෂයක් සිදු විය"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP ක්‍රමය"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP ක්‍රමය"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "සාමාන්‍යයි"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "අන්තර්ජාලය නොපවතී"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "විවෘත"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "සුරැකූ"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "ආරක්ෂිත"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "ආරක්ෂිත (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "ආරක්ෂිත (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "ප්‍රබලයි"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "දුර්වලයි"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "සබඳින්න ද?\nසංඥා ප්‍රබලත්වය\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "රවුටරය මත PIN ඇතුළු කරන්න.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "අවලංගු කරන්න"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "මාරු කරන්න"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "උපරිම අක්ෂර ගණනට ළඟා විය."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "ආරක්ෂණ ප්‍රතිපත්තිය මගින් Wi-Fi භාවිතය වළක්වයි."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "ස්විච්චය"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "සහාය නොදක්වයි"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "සත්‍යාපනයේ දෝෂයක් සිදු විය."
+

@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Maydonni tahrirlash"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "O‘ch"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Yoq"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Qidirish"
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Parametr"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Bekor qilish"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID kiriting."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP-manzil"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Wi-Fi kirishda WPSni %d daqiqa bosib turing."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Saqlandi"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Himoyalangan"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS tugmasi"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Roziman"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Qidirish"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Parolni kiriting"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Ulanish"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "O‘ch."
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Yoq."
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Saqlash"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Xavfsizlik"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Parol ko‘rsatilsin"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Holat"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Ulanib bo‘lmadi."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Noto‘g‘ri parol."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Haqiqiylik tekshiruvi xatosi yuz berdi"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Ulangan"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth orqali ulangan"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Ulanmoqda..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Uzildi"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Ulanmagan"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Signal aniqlanmadi"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP-manzil\nolinmoqda..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Qidirilmoqda..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Yoqilmoqda..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi o‘chirilgan"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "%s Wi-Fi tarmog‘iga ulangan"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP-manzilni olib bo‘lmadi."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi ulanish nuqtasi topilmadi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP-manzil"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Belgini olib tashlash"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Belgi qo‘yish"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Belgilash katakchasi"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Parol"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Unutish"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Parol"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi tarmoq"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP nomi %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Shluz manzili"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Bog‘lanish tzlk"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proksi manzili"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proksi porti"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Signal kuchi"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Statik IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Tagtrmq maskasi"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi tarmoqlar"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi ulanish nuqtasi topilmadi"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Yaxshi"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mb/s"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Juda kuchli"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Proksi parametrlari"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear mobil qurilmadan uzilganda, Wi-Fi tarmoqlarni qidiradi."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Routerda PIN-kodni kiriting.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS uslubi"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS uslubi"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN-kodi"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi AP’ga ulanib bo‘lmadi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP-manzilni olib bo‘lmadi."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "ULAN"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "UNUT"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "SAQLA"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "SKANERLA"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Tekshiruvda xato yuz berdi"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP uslubi"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP uslubi"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM-karta"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Qoniqarli"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet mavjud emas"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Ochish"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Saqlandi"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Himoyalangan"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Himoya-gan (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Himoya-gan (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM-karta"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Kuchli"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Kuchsiz"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Ulansinmi?\nSignal kuchi\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Routerda PIN-kodni kiriting.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "BEKOR QIL"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Almashtirish"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Belgilar soni maksimal miqdorga yetdi."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Xavfsizlik siyosati Wi-Fi ishlatilishiga yo‘l qo‘ymaydi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Almashtirish"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Ishlamaydi"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Haqiqiylik tekshiruvi xatosi yuz berdi."
+

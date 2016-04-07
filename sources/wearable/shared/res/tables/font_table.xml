@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FontInfoTable>
+	<FontInfo id="AT011" style="L" size="32" />
+	<FontInfo id="AT012" style="L" size="32" />
+	<FontInfo id="AT012P" style="L" size="32" />
+	<FontInfo id="AT012D" style="L" size="32" />
+	<FontInfo id="AT012S" style="L" size="32" />
+	<FontInfo id="AT013" style="L" size="28" />
+	<FontInfo id="AT014" style="L" size="28" />
+	<FontInfo id="AT015" style="M" size="24" />
+</FontInfoTable>

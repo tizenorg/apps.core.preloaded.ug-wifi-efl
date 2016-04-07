@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Editar camp"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Desactivat"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Activat"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Examinant..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Ajust"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "Acceptar"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Cancel"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Introdueixi SSID"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "Adreça IP"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Premi WPS al seu punt d'accés Wi-Fi en %d minuts"
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Desat"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Protegit"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Botó WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Accepto"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Examinar"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Introdueixi la contrasenya"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Connectar"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Desactivat"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Activat"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Desar"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Seguretat"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Mostrar contrasenya"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Estat"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Error de connexió"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Contrasenya incorrecta"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "S'ha produït un error d'autenticació"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Connectat"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Connectat mitjan Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Connectant..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Desconnectat"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "No connectat"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Cap senyal detectada"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Obtenint adreça IP..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Examinant..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Activant..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi desactivat"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Està connectat a la xarxa Wi-Fi %s."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Error en obtenir l'adreça IP."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "No s'han trobat punts d'accés Wi-Fi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "Adreça IP"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Desmarcar"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Marcar"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Quadre de verificació"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Contrasenya"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Oblidar"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Contrasenya"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Xarxes Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Nom d'AP %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Adreça passarel"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Velocit enllaç"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Adreça de proxy"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Port del proxy"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Potència senyal"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "IP estàtica"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Màscara subxarx"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Xarxes Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "No s'ha trobat cap punt d'accés Wi-Fi"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Bo"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Molt fort"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Ajustaments de proxy"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "El Gear cercarà xarxes Wi-Fi quan es desconnecti del dispositiu mòbil."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Introdueixi el PIN a l'encaminador.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "Mètode WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "Mètode WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "PIN WPS"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Error con a punt accés Wi-Fi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Error en obtenir l'adreça IP."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "CONNECTAR"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "OBLIDAR"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "DESAR"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "CERCAR"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Error d'autenticació"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Mètode EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Mètode EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Favorable"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet no disponible"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Oberta"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Desat"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Assegurat"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Protegit (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Protegit (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Forta"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Feble"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Connectar?\nPotència senyal\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Introdueixi el PIN a l'encaminador.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "CANCEL·LAR"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Canviar"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "S'ha assolit el nombre màxim de caràcters."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "La política de seguretat impedeix l'ús de Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Canviar"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "No admès"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "S'ha produït un error d'autenticació."
+
