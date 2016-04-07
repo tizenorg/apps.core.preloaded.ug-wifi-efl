@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Өрісті өңдеу"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Өшіру"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Қосу"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Көшірілуде..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Параме-р"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Тоқтату"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID нөмірін енгізу."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP-мекен-жай"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Wi-Fi қатынас нүктесіндегі WPS пернесін %d минут ішінде басыңыз."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Сақталған"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Қауіпсіз"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS түймесі"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Келісемін"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Қарап шығу"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Құпиясөзді енгізіңіз"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Қосу"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Өшірілген"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Қосылған"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Сақтау"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Қауіпсіздік"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Құпиясөзді көрсету"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Статус"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Қосылу үзіліп кетті"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Қате кілтсөз."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Түпнұсқалық растама қатесі орын алды"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Қосылған"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth арқылы қосылған"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Қосылуда..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Ажыратылған"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Қосылмаған"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Сигнал анықталмады"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP мекенжайы\nалынуда..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Тексерілуде..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Қосылуда..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi өшірілді"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "%s Wi-Fi желісіне қосылды"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP мекенжайын алу сәтсіз аяқталды."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi қатынас нүктелері табылмады."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP-мекен-жай"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Белгілемеу"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Белгі"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Белгі көзі"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Құпия сөз"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Ұмыту"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Құпия сөз"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi желілері"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP атауы %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Шлюз мекенжайы"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Байланыс жылд-ы"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Прокси мекенжай"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Прокси порты"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Сигнал деңгейі"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Статик-қ IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Ішкі желі маскасы"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi желілері"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi қатынасу нүктесі табылмады"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Жақсы"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Мбит/с"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Өте жоғары"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Прокси параметрлері"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Ұялы құрылғыдан ажыратылған кезде Gear Wi-Fi желілерін іздейді."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Маршрутизатордағы PIN кодын енгізіңіз.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS әдісі"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS әдісі"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN коды"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi AP қосу сәтсіз болды."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP мекенжайын алу сәтсіз."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "ҚОСЫЛУ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "ҰМЫТУ"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "САҚТАУ"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "СКАНЕРЛЕУ"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Түпнұсқа растама қате орын алды"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP әдісі"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP әдісі"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Орташа"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Интернет қолжетімсіз"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Ашу"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Сақталған"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Қауіпсіз"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Қауіпсіз (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Қауіпсіз (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Жоғары"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Төмен"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Қосу керек пе?\nСигнал деңгейі\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "PIN кодты маршрутизаторда енгізіңіз.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "БАС ТАРТУ"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Ауыстыру"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Таңбалардың ең көп саны шегіне жетті."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Қауіпсіздік саясаты Wi-Fi желісін пайдалануға жол бермейді."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Қосу"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Қолдау көрсе-мейді"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Түпнұсқалық растама қатесі пайда болды."
+

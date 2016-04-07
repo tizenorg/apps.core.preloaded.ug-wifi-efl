@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Mező szerkesztése"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Kikapcsolva"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Bekapcsolva"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Ellenőrzés..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Beállít."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Mégse"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Adja meg az SSID-t."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP-cím"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "%d percen belül nyomja meg a Wi-Fi hozzáférési pont WPS gombját."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Mentve."
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Titkosított"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS gomb"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Elfogad"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Keresés"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Adja meg a jelszót"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Kapcsolódás"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Ki"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Be"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Ment"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Védelem"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Jelszó megjelenítése"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Állapot"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Kapcsolódás sikertelen."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Téves jelszó"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Hitelesítési hiba történt"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Csatlakoztatva"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth-on kapcsolódott"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Kapcsolódás..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Leválasztva"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Nincs kapcsolat"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Nem észlelhető jel"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP-cím lekérése..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Keresés..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Bekapcsolás..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "A Wi-Fi ki van kapcsolva"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "A(z) %s Wi-Fi hálózathoz kapcsolódva."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Nem sikerült lekérni az IP-címet."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Nem található Wi-Fi hozzáférési pont."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP-cím"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Bejelölés törlése"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Bejelölés"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Jelölőnégyzet"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Jelszó"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Elfelejtés"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Jelszó"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi-hálóz."
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "%d. hozz.p.-név"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "%d. DNS"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Átjárócím"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Kapcs.sebesség"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proxycím"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proxyport"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Jelerősség"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Statikus IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Alhálóz. maszk"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi-hálózatok"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Nem található Wi-Fi-hozzáférési pont"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Jó"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mb/s"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Kiváló"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Proxybeállítások"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "A Gear Wi-Fi-hálózatokat keres, ha megszakad a kapcsolata a mobileszközzel."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Adja meg a PIN-t az útválasztón.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS-módszer"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS-módszer"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS-PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Nem kapcs. a Wi-Fi-hozz. p.hoz."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Nem sik. lekérni az IP-címet."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "KAPCSOLÓDÁS"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "ELFELEJTÉS"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "MENTÉS"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "KERESÉS"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Hitelesítési hiba történt"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP-módszer"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP-módszer"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Megfelelő"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Nincs internetkapcsolat"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Nyílt"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Védett"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Biztonságos"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Biztons. (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Biztons. (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Erős"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Gyenge"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Kapcsolódik?\nJelerősség:\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Adja meg a PIN-t az útválasztón.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "MÉGSE"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Váltás"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Elérte a karakterek maximális számát."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "A biztonsági házirend tiltja a Wi-Fi használatát."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Alkalmazásváltó"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Nem használható"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Hitelesítési hiba történt."
+

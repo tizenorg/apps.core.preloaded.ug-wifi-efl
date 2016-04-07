@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "ویرایش قسمت"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "خاموش"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "روشن"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "در حال بررسی..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "تنظیمات"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "تأیید"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "لغو"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID را وارد کنید."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "آدرسIP"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "ظرف %d دقیقه WPS را در نقطه دستیابی Wi-Fi فشار دهید."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "ثبت شد."
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "ایمن"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "دکمه WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "موافقم"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "اسکن"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "رمز ورود را وارد کنید"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "اتصال"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "خاموش"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "روشن"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "ثبت"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "امنيت"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "نمایش رمز ورود"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "موقعیت"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "خطا در ارتباط رخ داد."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "رمز اشتباه است."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "خطای تأیید اعتبار رخ داد"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "متصل شد"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "از طریق بلوتوث متصل شد"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "در حال اتصال..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "قطع شد"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "متصل نشد"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "سیگنالی شناسایی نشد"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "در حال دریافت آدرس IP..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "در حال اسکن..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "در حال روشن کردن..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi خاموش شد"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "به %s شبکه Wi-Fi وصل شد"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "دریافت آدرس IP ناموفق بود."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "هیچ نقطه دسترسی Wi-Fi یافت نشد."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "آدرسIP"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "حذف تیک"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "تیک"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "کادر انتخاب"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "رمز ورود"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "فراموش کردن"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "رمز ورود"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "شبکه‌های Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "نام AP ‎%d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "آدرس دروازه"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "سرعت لینک"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "آدرس پروکسی"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "درگاه پروکسی"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "قدرت سیگنال"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "IP ایستا"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "ماسک زیرشبکه"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "شبکه‌های Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "هیچ نقطه دسترسی به Wi-Fi یافت نشد"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "خوب"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "‎%d مگابیت در ثانیه"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "بسیار قوی"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "تنظیمات پروکسی"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "وقتی اتصال Gear با دستگاه تلفن همراه قطع می‌شود، به اسکن شبکه‌های Wi-Fi می‌پردازد."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "پین را در مسیریاب وارد کنید.‎\n‏%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "روش WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "روش WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "پین WPS"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "به نقطه دسترسی Wi-Fi متصل نشد."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "دریافت آدرس IP ناموفق بود."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "اتصال"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "فراموش کردن"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "ذخیره"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "اسکن"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "خطای تأیید اعتبار رخ داد"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "روش EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "روش EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "سیم‌کارت"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "نسبتاً خوب"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "اینترنت در دسترس نیست"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "باز"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "ذخیره شده"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "ایمن"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "ایمن (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "ایمن (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "سیم‌کارت"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "قوی"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "ضعیف"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "وصل شود؟‎\nقدرت سیگنال‎\n‏‎%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "پین را در مسیریاب وارد کنید.‎\n‏‎%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "لغو"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "تغییر وضعیت"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "تعداد نویسه‌ها به حداکثر رسیده است."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "سیاست امنیتی از استفاده از Wi-Fi جلوگیری می‌کند."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "کلید تعویض"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "پشتیبانی نمی‌شود"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "خطای تأیید اعتبار رخ داد."
+

@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Muokkaa kenttää"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Ei käytössä"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Käytössä"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Etsitään..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Aset."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Peruuta"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Anna SSID."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP-osoite"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Paina Wi-Fi-yhteyspisteesi WPS-painiketta %d minuutin kuluessa."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Tallennettu"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Suojattu"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS-painike"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Hyväksyn"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Hae"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Anna salasana"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Yhdistä"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Pois"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Päällä"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Tallenna"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Turvallisuus"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Näytä salasana"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Tila"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Yhdistäminen epäonnistui."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Virheellinen salasana"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Todennusvirhe"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Yhdistetty"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Yhdistetty Bluetoothilla"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Yhdistetään..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Yhteys katkaistu"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Ei yhdistetty"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Signaalia ei havaittu"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Haetaan IP-osoitetta..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Haetaan..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Käynnistetään..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi poistettu käytöstä"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Yhdistetty Wi-Fi-verkkoon %s."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP-osoitteen haku epäonnistui."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi-tukiasemia ei löytynyt."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP-osoite"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Poista valinta"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Valitse"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Valintaruutu"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Salasana"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Unohda"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Salasana"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi-verkot"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Tukias. nimi %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Yhdysk. osoite"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Linkin nopeus"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Väl.palv. osoite"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Väl.palv. portti"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Signaalinvoim."
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Kiinteä IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Aliverkon peite"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi-verkot"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi-tukiasemaa ei löydy"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Hyvä"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Erittäin voimakas"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Välityspalvelimen asetukset"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear hakee Wi-Fi-verkkoja, kun sen yhteys mobiililaitteeseen katkaistaan."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Anna PIN-koodi reitittimessä.\n%d %"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS-menetelmä"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS-menetelmä"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Yhteys Wi-Fi-tukias. epäonn."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP-osoitteen haku epäonnistui."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "YHDISTÄ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "UNOHDA"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "TALLENNA"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "HAE"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Todennusvirhe"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP-menetelmä"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP-menetelmä"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM-kortti"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Kohtalainen"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet ei ole käytettävissä"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Avaa"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Tallennettu"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Suojattu"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Suojattu (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Suojattu (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM-kortti"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Voimakas"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Heikko"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Yhdistetäänkö?\nSignaalin voimakkuus\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Anna PIN-koodi reitittimessä.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "PERUUTA"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Vaihda"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Merkkien enimmäismäärä saavutettu."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Suojauskäytäntö estää Wi-Fi-yhteyden käytön."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Vaihda"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Ei tueta"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Todennusvirhe."
+

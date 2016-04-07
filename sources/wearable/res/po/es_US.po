@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Editar campo"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Desactivado"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Activado"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Buscando..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Ajustes"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "Aceptar"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Cancelar"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Introducir SSID."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "Dirección IP"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Pulse WPS en el Punto de Acceso Wi-Fi en %d minutos."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Guardado"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Protegida"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Botón WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Acepto"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Buscar"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Introducir contraseña"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Conectar"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Desactivado"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Activado"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Guardar"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Seguridad"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Mostrar contraseña"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Estado"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Error de conexión."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Contraseña incorrecta."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Se ha producido un error de autentificación"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Conectado"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Conectado vía Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Conectando..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Desconectado"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "No conectado"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Señal no detectada"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Obteniendo dirección IP..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Buscando..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Encendiendo..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi desactivado"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Conectado a red Wi-Fi %s."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Error al obtener la dirección IP."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "No se encontraron Puntos de Acceso Wi-Fi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "Dirección IP"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Desmarcar"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Marcar"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Casilla de verificación"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Contraseña"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Olvidar"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Contraseña"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Redes Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Nombre de PA %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Puerta enlace"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Velocidad"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Dirección proxy"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Puerto de proxy"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Intensidad"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "IP estática"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Máscara subred"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Redes Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "No se ha encontrado un punto de acceso Wi-Fi"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Buena"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Muy fuerte"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Ajustes de proxy"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear buscará redes Wi-Fi cuando se desconecte del dispositivo móvil."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Introduzca el PIN en el router.\n%d %"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "Método WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "Método WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "PIN de WPS"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Error al conectar al PA Wi-Fi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Error al obtener dirección IP."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "CONECTAR"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "OLVIDAR"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "GUARDAR"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "BUSCAR"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Ocurrió error de autenticación"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Método EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Método EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Regular"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet no disponible"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Abierta"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Guardada"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Protegida"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Protegida (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Protegida (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Fuerte"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Débil"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "¿Conectar?\nIntensidad de la señal\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Introduzca el PIN del router.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "CANCELAR"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Cambiar"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Se alcanzó el número máximo de caracteres."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "La política de seguridad impide el uso de Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Cambiar"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "No se admite"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Ocurrió un error de autenticación."
+

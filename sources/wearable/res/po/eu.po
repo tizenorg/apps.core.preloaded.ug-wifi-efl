@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Editatu eremua"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Desaktibatuta"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Aktibatuta"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Eskaneatzen..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Ezarp."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "Ados"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Ezeztatu"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSIDa idatzi"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP helbidea"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Sakatu WPS Wi-Fi sargunean %d minutu igaro baino lehen"
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Gordeta"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Babestua"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS botoia"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Onartu"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Eskaneatzea"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Adierazi pasahitza"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Konektatu"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Desaktibatuta"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Aktibatuta"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Gorde"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Segurtasuna"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Erakutsi pasahitza"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Egoera"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Konektatzerakoan errorea"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Pasahitz okerra"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Autentifikazio errorea gertatu da"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Konektatuta"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth bid. konektatuta"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Konektatzen..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Deskonektatuta"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Ez dago konektatuta"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Ez da seina. hauteman"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP helbidea lortzen..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Bilatzen..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Pizten..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi itzalita"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "%s Wi-Fi sarera konektatu da."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Ezin izan da IP helbidea lortu."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Ez da Wi-Fi sarbide punturik aurkitu."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP helbidea"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Desmarkatu"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Markatu"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Markatze laukia"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Pasahitza"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Ahaztu"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Pasahitza"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi sareak"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "SP izena %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Atebide helbid."
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Esteka abiadura"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proxy helbidea"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proxy ataka"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Seinale indarra"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "IP estatik."
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Azpisare mask."
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi sareak"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Ez da Wi-Fi sarbiderik aurkitu"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Ona"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Oso sendoa"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Proxy ezarpenak"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear gailuak Wi-Fi sareak bilatuko ditu gailu mugikorretik deskonektatzen denean."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Idatzi PINa bideratzailean.\n%%d"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS metodoa"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS metodoa"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PINa"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Ez da Wi-Fi SPra konektatu."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Ez da IP helbidea lortu."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "KONEKTATU"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "AHAZTU"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "GORDE"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "BILATU"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Autentifikazio errorea"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP metodoa"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP metodoa"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Onargarria"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet ez dago eskuragarri"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Ireki"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Gordeta"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Babestua"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Babestua (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Babestua (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Handia"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Ahula"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Konektatu?\nSeinalearen indarra\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Idatzi PINa bideratzailean.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "UTZI"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Aldatu"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Gehienezko karaktere kopurua gainditu da."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Segurtasun politikak Wi-Fi konexioa erabiltzea galarazten du."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Aldatu"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Ez da onartzen"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Autentifikazio errorea gertatu da."
+

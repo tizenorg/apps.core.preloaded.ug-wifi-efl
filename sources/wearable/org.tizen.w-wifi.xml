@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="http://tizen.org/ns/packages" package="org.tizen.w-wifi" api-version="2.3.1" version="${PKG_VERSION}" install-location="internal-only" type="rpm" preload="true">
+	<label>wifi-efl</label>
+	<description>wifi-efl</description>
+	<ui-application appid="org.tizen.w-wifi" exec="/usr/apps/org.tizen.w-wifi/bin/wifi" nodisplay="true" multiple="false" type="capp" taskmanage="false" hw-acceleration="use-GL" effectimage-type="edj-default">
+		<icon></icon>
+		<label>Wi-Fi</label>
+		<label xml:lang="en-us">Wi-Fi</label>
+	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/network.set</privilege>
+		<privilege>http://tizen.org/privilege/network.profile</privilege>
+	</privileges>
+</manifest>
