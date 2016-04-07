@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Düzediş meýdany"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Ýapyk"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Açyk"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Skanirlenýär..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Sazlam."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Ýatyr"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID giriziň"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP salgysy"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Wi-Fi giriş nokadyňyzdaky WPS düwmesine %d minudyň içinde basyň."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Saklanan"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Kepillikli"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS düwmesi"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Ylalaşýaryn"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Skan et"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Paroly giriziň"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Birikdir"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Ýapyk"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Açyk"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Ýatda sakla"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Howpsuzlygy"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Paroly görkez"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Ýagdaý"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Birikme şowsuz geçdi"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Nädogry parol"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Anyklaýyşda ýalňyşlyk ýüze çykdy"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Birikdi"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth arkaly birikdi"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Birigýär..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Birikme kesildi"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Birikmedik"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Signal tapylmady"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP salgysy alynýar..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Barlanýar..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Açylýar..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi öçürilen"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "%s Wi-Fi toruna birikdi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP salgysyny alyp bolmady."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi giriş nokatlary tapylmady."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP salgysy"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Belligini aýyr"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Sikl"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Basyş gutusy"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Parol"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Ýatd. çykar"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Parol"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi torlary"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP ady %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Şlýuz salgysy"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Bag tizligi"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proksi salgy"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proksi port"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Signal güýji"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Statik IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Subnet maska"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi torlary"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi giriş nokady tapylmady"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Gowy"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbit/sek"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Gaty güýçli"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Proksi sazlamalar"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear mobil enjamyňyzdan aýrylanda, Wi-Fi torlaryny gözlär."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Ugurlaýjyda PIN-i giriziň.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS usuly"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS usuly"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi AP-ä birigip bolmady."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP salgysyny alyp bolmady."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "BIRIK"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "UNUT"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "ÝAZDYR"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "GÖZLE"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Hak.-barlag ýalňyşlygy boldy"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP usuly"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP usuly"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Kadaly"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internet elýeterli däl"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Aç"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Ýazdyryldy"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Howpsuz"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Howpsuz (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Howpsuz (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Güýçli"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Gowşak"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Birikmelimi?\nSignal güýji\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Ugurlaýjyda PIN-i giriziň.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "ÝATYR"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Geçir"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Maksimum nyşan sanyna ýetildi."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Howpsuzlyk syýasaty Wi-Fi-yň ulanylmagyna ýol bermeýär."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Geçir"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Goldanylmaýar"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Hakykylyk barlagy ýalňyşlygy ýüze çykdy."
+

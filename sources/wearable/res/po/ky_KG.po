@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Талааны оңдоо"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Өчүк"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Күйүк "
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Издөө..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Орнотуу."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "ОК"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Артка"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "SSID киргизүү"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP дарек"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Wi-Fi кошулуу чекитиңизден %d минут ичинде WPS басыңыз"
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Сакталды"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Корголгон"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS баскычы"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Макулмун"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Издөө"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Сырсөз киргизүү"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Туташуу"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Өчүк"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Күйүк"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Сактоо"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Коопсуздук"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Сырсөздү көрсөтүү"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Абал"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Байланыш үзүлдү"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Туура эмес сырсөз"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Накталыгын аныктоо катасы пайда болду"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Туташылды"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Bluetooth аркылуу туташкан"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Туташууда..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Байланыш үзүлдү"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Туташылган эмес"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Эч сигн. ажыратылбады"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP дарек алууда..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Издөөдө..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Күйгүзүүдө..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Өчүрүлгөн Wi-Fi"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Wi-Fi %s тармагына туташты."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "IP дарек алуу кыйрады."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Wi-Fi кошулуу чекиттери табылбады."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP дарек"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Untick"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Илм.кой"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Белгилөө кутусу"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Сырсөз"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Унутуу"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Сырсөз"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi кош. чек."
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP аты %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Дарбаза дареги"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Шилтеме ылдамд."
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Прокси дареги"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Прокси порту"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Сигнал күчү"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Туруктуу IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Субнет маскасы"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi кош. чек."
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Wi-Fi кошулуу чекити табылбады"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Жакшы"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Мбит/с"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Өтө күчтүү"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Прокси орнотуулары"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear, мобилдик түзмөгүңүздөн ажыратылган убакта, байкалган Wi-Fi кошулуу чекитин издей баштайт."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Роутерге ПИН кодун киргизүү.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS методу"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS методу"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS ПИН коду"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Wi-Fi APге туташуу кыйрады."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "IP дарек алуу кыйрады."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "ТУТАШУУ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "УНУТУУ"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "САКТОО"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "ИЗДӨӨ"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Накталыгын анык. катасы чыкты"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP ыкмасы"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP ыкмасы"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Дурус"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Интернет байкалбайт"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Ачуу"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Сакталган"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Корголгон"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Корголгон (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Корголгон (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Күчтүү"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Чабал"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Туташылсынбы?\nСигналдын күчү\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Роутерге ПИН кодун киргизиңиз.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "ТОКТОТУУ"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Которуу"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Тамгалар максималдык санына жетти."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Коопсуздук саясаты Wi-Fi колдонуусунун алдын алат."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Которуу"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Колдоого алынбайт"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Накталыгын аныктоо катасы пайда болду."
+

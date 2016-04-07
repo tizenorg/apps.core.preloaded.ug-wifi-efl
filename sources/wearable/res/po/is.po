@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Breyta reit"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Slökkt"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Kveikt"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Verið er að skrá..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Still."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "Í lagi"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Hætta v."
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Tilgreindu SSID."
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP vistfang"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Ýttu á WPS á Wi-Fi aðgangsstaðnum innan %d mínútna."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Vistað"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Öruggt"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Nettengingarhnappur"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Ég samþykki"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Skanna"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Sláðu inn lykilorð"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Tengjast"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Slökkt"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Kveikt"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Vista"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Öryggi"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Sýna lykilorð"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Staða"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Tenging mistókst."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Rangt aðgangsorð."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Auðkenningarvilla kom upp"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Tengt"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Tengt um Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Tengist..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Aftengt"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Engin tenging"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Merki greindist ekki"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "IP-tala sótt..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Leita..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Ræsi..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Slökkt á Wi-Fi"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Tengt við Wi-Fi netið %s."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Mistókst að fá IP-tölu."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Engir Wi-Fi aðgangsstaðir fundust."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP vistfang"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Afmerkja"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Merkja"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Merkibox"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Lykilorð"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Gleyma"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Lykilorð"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi net"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Aðgangsst. %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Gáttarvistfang"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Tengihraði"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Proxy-vistfang"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Proxy-gátt"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Sendistyrkur"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Föst IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Maski undirnets"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi net"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Enginn Wi-Fi aðgangsstaður fannst"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Góður"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mb/sek."
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Mjög mikill"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Proxy-stillingar"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear leitar að Wi-Fi netum þegar það er ekki tengt fartækinu."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Sláðu inn PIN-númerið á beininum.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS-aðferð"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS-aðferð"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN-númer"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Gat ekki tengst Wi-Fi aðgst."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Mistókst að fá IP-tölu."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "TENGJA"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "GLEYMA"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "VISTA"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "LEITA"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Auðkenningarvilla kom upp"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP-aðferð"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP-aðferð"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM-kort"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Sæmileg"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internetsamband er ekki í boði"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Opin"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Vistuð"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Örugg"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Örugg (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Örugg (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM-kort"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Mikill"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Lítill"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Tengja?\nSendistyrkur\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Sláðu inn PIN-númerið á beininum.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "HÆTTA VIÐ"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Skipta"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Hámarksfjölda stafa hefur verið náð."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Öryggisstefnan kemur í veg fyrir notkun Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Skipta"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Ekki stutt"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Auðkenningarvilla kom upp."
+

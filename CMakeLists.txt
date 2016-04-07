@@ -62,6 +62,10 @@ INCLUDE_DIRECTORIES(
 #engine includes
 	${ENGINE_INCLUDES})
 
+IF(TIZEN_MOBILE)
 ADD_SUBDIRECTORY(po)
-ADD_SUBDIRECTORY(sources/ui-gadget)
 ADD_SUBDIRECTORY(sources/wifi-syspopup)
+ELSE()
+ADD_SUBDIRECTORY(sources/wearable)
+ENDIF(TIZEN_MOBILE)
+ADD_SUBDIRECTORY(sources/ui-gadget)

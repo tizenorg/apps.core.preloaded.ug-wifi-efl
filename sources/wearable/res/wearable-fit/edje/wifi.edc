@@ -1,0 +1,296 @@
+/*
+ * Copyright (c) 2000-2014 Samsung Electronics Co., Ltd All Rights Reserved
+ *
+ * PROPRIETARY/CONFIDENTIAL
+ *
+ * This software is the confidential and proprietary information of
+ * SAMSUNG ELECTRONICS ("Confidential Information").
+ * You shall not disclose such Confidential Information and shall
+ * use it only in accordance with the terms of the license agreement
+ * you entered into with SAMSUNG ELECTRONICS.
+ * SAMSUNG make no representations or warranties about the suitability
+ * of the software, either express or implied, including but not
+ * limited to the implied warranties of merchantability, fitness for
+ * a particular purpose, or non-infringement.
+ * SAMSUNG shall not be liable for any damages suffered by licensee as
+ * a result of using, modifying or distributing this software or its derivatives.
+
+ */
+
+#define MAIN_H 320
+#define MAIN_W 320
+
+#define LOGS_DEFAULT_COLOR_TRANSPARENCY 0 0 0 0
+#define LOGS_DEFAULT_COLOR_BLACK 0 0 0
+
+#define POPUP_ENTRY_H 66
+#define POPUP_PADDING_H 32
+#define POPUP_ENTRY_HIDDEN_AP_MIN 0 325
+
+collections {
+	base_scale: 1.4;
+	styles {
+		style { name: "textblock_popup_body";
+			base: "font=Tizen:style=Regular font_size=28 color=#CCCCCC color_class=T092 wrap=mixed align=center ellipsis=1.0 text_class=T092";
+			tag: "br" "\n";
+		}
+		style { name: "textblock_popup_body_wps";
+			base: "font=Tizen:style=Regular font_size=28 color=#CCCCCC color_class=T092 wrap=mixed align=center text_class=T092";
+			tag: "br" "\n";
+		}
+	}
+	group {
+		name: "bottom_button_layout";
+		parts {
+			part {
+				name: "bottom_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 64;
+					max: -1 64;
+					rel1.relative: 0.0 1.0;
+					rel2.relative: 1.0 1.0;
+					fixed: 0 1;
+					align: 0.5 1.0;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel2 {
+						to: "bottom_padding";
+						relative: 1.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.button";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1.relative: 0.0 1.0;
+					rel2.relative: 1.0 1.0;
+					fixed: 0 1;
+					align: 0.5 1.0;
+				}
+			}
+		}
+	}
+	group {
+		name: "ap_signal_image_layout";
+		parts {
+			part {
+				name: "spacer.base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 54 54;
+					max: 54 54;
+				}
+			}
+			part {
+				name: "elm.image.signal";
+				type: SWALLOW;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+				}
+			}
+			part {
+				name: "elm.image.lock";
+				type: SWALLOW;
+				scale : 1;
+				description {
+					state: "default" 0.0;
+				}
+			}
+		}
+	}
+	group {
+	  name: "popup_body_button";
+		parts {
+			part {
+				name: "bottom_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 12;
+					max: -1 12;
+					rel1.relative: 0.0 1.0;
+					rel2.relative: 1.0 1.0;
+					fixed: 0 1;
+					align: 0.5 1.0;
+				}
+			}
+			part {
+				name: "elm.text.content";
+				type: TEXTBLOCK;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 200;
+					max: -1 200;
+					rel2 {
+						to: "elm.swallow.button";
+						relative: 1.0 0.0;
+					}
+					text {
+						style: "textblock_popup_body";
+						min: 0 1;
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.button";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					rel1 {
+						to: "bottom_padding";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "bottom_padding";
+						relative: 1.0 0.0;
+					}
+					fixed: 0 1;
+					align: 0.5 1.0;
+				}
+			}
+		}
+	}
+	group {
+		name: "wps_progress_layout";
+		parts {
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					max: 214 -1;
+				}
+			}
+		}
+	}
+	group {
+		name: "progressbar_layout";
+		parts {
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					max: 214 -1;
+				}
+			}
+		}
+	}
+	group {
+		name: "psk_style";
+		parts {
+			part {
+				name: "base";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					fixed: 1 0;
+				}
+			}
+			part {
+				name: "elm.swallow.genlist";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 0;
+					fixed: 0 1;
+					rel1.to: "base";
+					rel2.to: "base";
+				}
+			}
+		}
+	}
+	group {
+		name: "entry_layout";
+		parts {
+			part {
+				name: "top_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 48;
+					max: -1 48;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 1.0 0.0;
+					fixed: 0 1;
+					align: 0.5 0.0;
+				}
+			}
+			part {
+				name: "left_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 6 0;
+					max: 6 -1;
+					rel1.relative: 0.0 0.0;
+					rel2.relative: 0.0 1.0;
+					fixed: 1 0;
+					align: 0.0 0.5;
+				}
+			}
+			part {
+				name: "right_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 6 0;
+					max: 6 -1;
+					rel1.relative: 1.0 0.0;
+					rel2.relative: 1.0 1.0;
+					fixed: 1 0;
+					align: 1.0 0.5;
+				}
+			}
+			part {
+				name: "elm.swallow.content";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 204 40;
+					max: 204 40;
+					fixed: 1 1;
+					align: 0.5 0.0;
+					rel1 {
+						to_x: "left_padding";
+						to_y: "top_padding";
+						relative: 1.0 1.0;
+					}
+					rel2 {
+						to_x: "right_padding";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+		}
+	}
+}

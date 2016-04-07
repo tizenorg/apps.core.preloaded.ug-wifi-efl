@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "Pole edycji"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "Wyłōnczōne"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "Załōnczōne"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "Skanowanie..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "Sztalow."
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "OK"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "Pociep"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "Podej nōmer SSID"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "Adresa IP"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "Naciś knefel WPS pōnktu dostympu do neca Wi-Fi bez minut: %d."
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "Zachowane"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "Zabezpieczōne"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "Knefel WPS"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "Dŏwōm zgoda"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "Skanuj"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "Podej hasło"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "Połōncz"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "Wyłōnczōne"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "Załōnczōne"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "Zachowej"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "Bezpieczyństwo"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "Pokŏż hasło"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "Sztatus"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "Feler łōnczyniŏ."
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "Felerne hasło."
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "Zaszeł feler uwierzytelnianiŏ"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "Połōnczōne"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "Pożyniōne bez Bluetooth"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "Łōnczynie…"
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "Ôdłōnczōne"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "Niy połōnczōne"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "Niy rozpozn.sygnału"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "Dostŏwanie adresy IP…"
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "Skanowanie..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "Załōnczanie…"
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Nec Wi-Fi wyłōnczōny"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "Pożyniōne z necym Wi-Fi %s."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "Niy idzie dostać adresy IP."
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "Niy znŏd żech pōnktōw dostympu do Wi-Fi."
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "Adresa IP"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "Brak zaznaczenia"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "Zaznaczenie."
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "Krzinka do badaniŏ"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "Hasło"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "Przepōmnij"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "Hasło"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Nece Wi-Fi"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "Miano AP %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "Adresa wrotōw"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "Gibkość łōncza"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "Adresa proxy"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "Port proxy"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "Moc sygnału"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "Statycz. IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "Maska podneca"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Nece Wi-Fi"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "Niy znŏd żech pōnktu dostympu do neca Wi-Fi"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "Dobrŏ"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mb/s"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "Fest mocnŏ"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "Nasztalowania serwera proxy"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Po ôdłōnczyniu ôd masziny mobilnyj zygarek Gear bydzie sznupōł za necym Wi-Fi."
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "Podej PIN na routerze.\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "Metoda WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "Metoda WPS"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "PIN WPS"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "Feler pożyniyniŏ z pōnktym Wi-Fi."
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "Niy idzie dostać adresy IP."
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "POŻYŃ"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "PRZEPŌMNIJ"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "ZACHOWEJ"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "SKANUJ"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Zaszeł feler uwierzytelnianiŏ"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "Metoda EAP"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "Metoda EAP"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "Dostateczne"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "Internec niyma dostympny"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "Ôdymkniōne"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "Zachowane"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "Chrōniōne"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "Chrōniōne (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "Chrōniōne (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "Wielge"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "Darymne"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "Pożynić?\nSiła sygnōłu\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "Podej PIN na routerze.\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "POCIEP"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "Przeciep"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "Mŏsz maksymalnŏ wielość znakōw."
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "Prawidła zabezpieczyń niy dozwŏlajōm na używanie neca Wi-Fi."
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "Przełōncz"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "Niyôbsugiwane"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "Zaszeł feler uwierzytelnianio."
+

@@ -1,0 +1,294 @@
+msgid "IDS_TPLATFORM_BODY_EDIT_FIELD_M_NOUN_T_TTS"
+msgstr "編輯欄位"
+
+msgid "WDS_PN_SBODY_OFF_M_STATUS_ABB"
+msgstr "關"
+
+msgid "WDS_PN_SBODY_ON_M_STATUS_ABB"
+msgstr "開"
+
+msgid "WDS_WIFI_POP_SCANNING_ING"
+msgstr "正在掃描..."
+
+msgid "WDS_WIFI_BUTTON_SETTINGS_ABB"
+msgstr "設定"
+
+msgid "WDS_WIFI_BUTTON_OK"
+msgstr "確定"
+
+msgid "WDS_WIFI_BUTTON_CANCEL"
+msgstr "取消"
+
+msgid "WDS_WIFI_OPT_WI_FI"
+msgstr "Wi-Fi"
+
+msgid "WDS_WIFI_BODY_ENTER_SSID"
+msgstr "輸入 SSID。"
+
+msgid "WDS_WIFI_POP_IP_ADDRESS"
+msgstr "IP 地址"
+
+msgid "WDS_WIFI_BODY_PRESS_WPS_ON_YOUR_WI_FI_ACCESS_POINT_WITHIN_PD_MINUTES"
+msgstr "在 %d 分鐘內按下Wi-Fi 接入點的 WPS。"
+
+msgid "WDS_WIFI_BODY_SAVED_M_STATUS"
+msgstr "已儲存"
+
+msgid "WDS_WIFI_BODY_SECURED_M_STATUS_ABB"
+msgstr "安全"
+
+msgid "WDS_WIFI_BODY_WPS_BUTTON"
+msgstr "WPS 按鍵"
+
+msgid "WDS_WIFI_BUTTON_I_AGREE_ABB"
+msgstr "我同意"
+
+msgid "WDS_WIFI_BUTTON_SCAN"
+msgstr "掃描"
+
+msgid "WDS_WIFI_NPBODY_ENTER_PASSWORD_ABB"
+msgstr "輸入密碼"
+
+msgid "WDS_WIFI_OPT_CONNECT"
+msgstr "連接"
+
+msgid "WDS_WIFI_OPT_OFF_M_STATUS"
+msgstr "關"
+
+msgid "WDS_WIFI_OPT_ON_M_STATUS"
+msgstr "開"
+
+msgid "WDS_WIFI_OPT_SAVE"
+msgstr "儲存"
+
+msgid "WDS_WIFI_OPT_SECURITY"
+msgstr "安全性"
+
+msgid "WDS_WIFI_OPT_SHOW_PASSWORD"
+msgstr "顯示密碼"
+
+msgid "WDS_WIFI_OPT_STATUS"
+msgstr "狀態"
+
+msgid "WDS_WIFI_POP_CONNECTION_FAILED"
+msgstr "連接失敗"
+
+msgid "WDS_WIFI_POP_INCORRECT_PASSWORD"
+msgstr "密碼不正確"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED"
+msgstr "發生認證錯誤"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_M_STATUS_ABB"
+msgstr "已連接"
+
+msgid "WDS_WIFI_SBODY_CONNECTED_VIA_BLUETOOTH_ABB"
+msgstr "已透過藍牙連接"
+
+msgid "WDS_WIFI_SBODY_CONNECTING_ING"
+msgstr "正在連接..."
+
+msgid "WDS_WIFI_SBODY_DISCONNECTED_M_STATUS"
+msgstr "已中斷連接"
+
+msgid "WDS_WIFI_SBODY_NOT_CONNECTED_M_STATUS_ABB"
+msgstr "未連接"
+
+msgid "WDS_WIFI_SBODY_NO_SIGNAL_DETECTED_ABB"
+msgstr "未偵測到訊號"
+
+msgid "WDS_WIFI_SBODY_OBTAINING_IP_ADDRESS_ING_ABB"
+msgstr "正在取得 IP 地址..."
+
+msgid "WDS_WIFI_SBODY_SCANNING_ING_ABB"
+msgstr "正在掃描..."
+
+msgid "WDS_WIFI_SBODY_TURNING_ON_ING_ABB"
+msgstr "正在開啟..."
+
+msgid "WDS_WIFI_SBODY_WI_FI_TURNED_OFF_ABB"
+msgstr "Wi-Fi 已關閉"
+
+msgid "WDS_WIFI_TPOP_CONNECTED_TO_WI_FI_NETWORK_PS"
+msgstr "已連接至 Wi-Fi 網絡 %s"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS"
+msgstr "取得 IP 地址失敗。"
+
+msgid "WDS_WIFI_TPOP_NO_WI_FI_ACCESS_POINTS_FOUND"
+msgstr "找不到 Wi-Fi 接入點。"
+
+msgid "WDS_WIFI_BODY_IP_ADDRESS"
+msgstr "IP 地址"
+
+msgid "IDS_COM_BODY_UNTICK_T_TTS"
+msgstr "取消勾選"
+
+msgid "IDS_COM_BODY_TICK_T_TTS"
+msgstr "勾選"
+
+msgid "IDS_COM_BODY_TICKBOX_T_TTS"
+msgstr "勾選方塊"
+
+msgid "WDS_WIFI_BODY_PASSWORD_ABB"
+msgstr "密碼"
+
+msgid "WDS_WIFI_BUTTON_FORGET_ABB"
+msgstr "忘記"
+
+msgid "WDS_WIFI_HEADER_PASSWORD_ABB"
+msgstr "密碼"
+
+msgid "WDS_WIFI_HEADER_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi 網絡"
+
+msgid "WDS_WIFI_MBODY_AP_NAME_PD_ABB"
+msgstr "AP 名稱 %d"
+
+msgid "WDS_WIFI_MBODY_DNS_PD_ABB"
+msgstr "DNS %d"
+
+msgid "WDS_WIFI_MBODY_GATEWAY_ADDRESS_ABB"
+msgstr "閘道地址"
+
+msgid "WDS_WIFI_MBODY_LINK_SPEED_ABB"
+msgstr "連結速度"
+
+msgid "WDS_WIFI_MBODY_PROXY_ADDRESS_ABB"
+msgstr "代理地址"
+
+msgid "WDS_WIFI_MBODY_PROXY_PORT_ABB"
+msgstr "代理端口"
+
+msgid "WDS_WIFI_MBODY_SIGNAL_STRENGTH_ABB"
+msgstr "訊號強度"
+
+msgid "WDS_WIFI_MBODY_STATIC_IP_ABB"
+msgstr "靜態 IP"
+
+msgid "WDS_WIFI_MBODY_SUBNET_MASK_ABB"
+msgstr "子網絡遮罩"
+
+msgid "WDS_WIFI_MBODY_WI_FI_NETWORKS_ABB"
+msgstr "Wi-Fi 網絡"
+
+msgid "WDS_WIFI_NPBODY_NO_WI_FI_ACCESS_POINT_FOUND"
+msgstr "找不到 Wi-Fi 接入點"
+
+msgid "WDS_WIFI_SBODY_GOOD_ABB"
+msgstr "好"
+
+msgid "WDS_WIFI_SBODY_PD_MBPS_ABB"
+msgstr "%d Mbps"
+
+msgid "WDS_WIFI_SBODY_VERY_STRONG_ABB"
+msgstr "非常強"
+
+msgid "WDS_WIFI_BODY_PROXY_SETTINGS"
+msgstr "代理設定"
+
+msgid "WDS_WIMAX_TPOP_GEAR_WILL_SCAN_FOR_WI_FI_NETWORKS_WHEN_DISCONNECTED_FROM_YOUR_MOBILE_DEVICE"
+msgstr "Gear 將在從您的流動裝置中斷連接時掃描 Wi-Fi 網絡。"
+
+msgid "WDS_WIFI_BODY_ENTER_PIN_ON_ROUTER_NPDP"
+msgstr "在路由器上輸入 PIN 碼。\n%d%"
+
+msgid "WDS_WIFI_HEADER_WPS_METHOD_ABB"
+msgstr "WPS 方式"
+
+msgid "WDS_WIFI_MBODY_WPS_METHOD_ABB"
+msgstr "WPS 方式"
+
+msgid "WDS_WIFI_MBODY_WPS_PIN_ABB"
+msgstr "WPS PIN"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_CONNECT_TO_WI_FI_AP_ABB"
+msgstr "連接至 Wi-Fi AP 失敗。"
+
+msgid "WDS_WIFI_TPOP_FAILED_TO_OBTAIN_IP_ADDRESS_ABB"
+msgstr "取得 IP 地址失敗。"
+
+msgid "WDS_WIFI_ACBUTTON_CONNECT_ABB"
+msgstr "連接"
+
+msgid "WDS_WIFI_ACBUTTON_FORGET_ABB"
+msgstr "忘記"
+
+msgid "WDS_WIFI_ACBUTTON_SAVE_ABB"
+msgstr "儲存"
+
+msgid "WDS_WIFI_ACBUTTON_SCAN_ABB"
+msgstr "掃描"
+
+msgid "WDS_WIFI_SBODY_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "發生驗證錯誤"
+
+msgid "WDS_WIFI_HEADER_EAP_METHOD_ABB"
+msgstr "EAP 方法"
+
+msgid "WDS_WIFI_MBODY_EAP_METHOD_ABB"
+msgstr "EAP 方法"
+
+msgid "WDS_WIFI_MBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_FAIR_ABB"
+msgstr "普通"
+
+msgid "WDS_WIFI_SBODY_INTERNET_NOT_AVAILABLE_ABB"
+msgstr "互聯網不可用"
+
+msgid "WDS_WIFI_SBODY_OPEN_ABB"
+msgstr "開啟"
+
+msgid "WDS_WIFI_SBODY_SAVED_ABB"
+msgstr "已儲存"
+
+msgid "WDS_WIFI_SBODY_SECURED_ABB"
+msgstr "安全"
+
+msgid "WDS_WIFI_SBODY_SECURED_HEAP_ABB"
+msgstr "安全 (EAP)"
+
+msgid "WDS_WIFI_SBODY_SECURED_HWPS_ABB"
+msgstr "安全 (WPS)"
+
+msgid "WDS_WIFI_SBODY_SIM_ABB"
+msgstr "SIM"
+
+msgid "WDS_WIFI_SBODY_STRONG_ABB2"
+msgstr "強"
+
+msgid "WDS_WIFI_SBODY_WEAK_ABB"
+msgstr "弱"
+
+msgid "WDS_WIFI_TPOP_CONNECT_Q_NSIGNAL_STRENGTH_NPS_ABB"
+msgstr "連接嗎？\n訊號強度\n%s"
+
+msgid "WDS_WIFI_TPOP_ENTER_PIN_ON_ROUTER_NPS_ABB"
+msgstr "在路由器上輸入 PIN 碼。\n%s"
+
+msgid "WDS_WIFI_ACBUTTON_CANCEL_ABB"
+msgstr "取消"
+
+msgid "WDS_WIFI_MBODY_AKA_ABB"
+msgstr "AKA"
+
+msgid "WDS_ALM_TBOPT_SWITCH"
+msgstr "切換"
+
+msgid "WDS_WIFI_TPOP_MAXIMUM_NUMBER_OF_CHARACTERS_REACHED"
+msgstr "已達字元數量上限。"
+
+msgid "WDS_WIFI_TPOP_SECURITY_POLICY_PREVENTS_USE_OF_WI_FI"
+msgstr "安全性政策可防止 Wi-Fi 的使用。"
+
+msgid "IDS_COM_HEADER_SWITCH"
+msgstr "切換"
+
+msgid "WDS_WIFI_SBODY_NOT_SUPPORTED_ABB"
+msgstr "不支援"
+
+msgid "WDS_WIFI_TPOP_AUTHENTICATION_ERROR_OCCURRED_ABB"
+msgstr "發生驗證錯誤。"
+
