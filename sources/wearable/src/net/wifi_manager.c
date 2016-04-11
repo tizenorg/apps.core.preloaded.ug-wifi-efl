@@ -1194,6 +1194,7 @@ void wifi_manager_ap_set_proxy_manual(wifi_ap_object *ap_obj)
 gchar *wifi_manager_ap_get_proxy_address(wifi_ap_object *ap_obj)
 {
 	gchar *proxy_address = NULL;
+	char *saveptr = NULL;
 	WIFI_RET_VAL_IF_FAIL(ap_obj != NULL, NULL);
 
 	proxy_address = _ap_get_proxy_address(ap_obj);
@@ -1202,12 +1203,13 @@ gchar *wifi_manager_ap_get_proxy_address(wifi_ap_object *ap_obj)
 		return NULL;
 	}
 
-	return g_strdup(strtok(proxy_address, ":"));
+	return g_strdup(strtok_r(proxy_address, ":", &saveptr));
 }
 
 gchar *wifi_manager_ap_get_proxy_port(wifi_ap_object *ap_obj)
 {
 	gchar *proxy_address = NULL;
+	char *saveptr = NULL;
 	WIFI_RET_VAL_IF_FAIL(ap_obj != NULL, NULL);
 
 	proxy_address = _ap_get_proxy_address(ap_obj);
@@ -1216,7 +1218,7 @@ gchar *wifi_manager_ap_get_proxy_port(wifi_ap_object *ap_obj)
 		return NULL;
 	}
 
-	strtok(proxy_address, ":");
+	strtok_r(proxy_address, ":", &saveptr);
 	return g_strdup(strtok(NULL, ":"));
 }
 
