@@ -5,9 +5,9 @@
 	<ui-application appid="wifi-efl-ug" exec="/usr/apps/wifi-efl-ug/bin/wifi-efl-UG" ui-gadget="true" nodisplay="true" taskmanage="false" multiple="false" type="capp" process-pool="true" hw-acceleration="use-GL">
 		<label>Wi-Fi</label>
 		<icon>/usr/share/icons/setting_wifi.png</icon>
-		<application-service>
+		<app-control>
 		<operation name="http://tizen.org/appcontrol/operation/setting/wifi"/>
-		</application-service>
+		</app-control>
 	</ui-application>
 	<privileges>
 		<privilege>http://tizen.org/privilege/network.get</privilege>
