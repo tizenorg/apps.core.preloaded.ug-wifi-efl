@@ -1029,7 +1029,11 @@ Evas_Object *viewer_manager_create(Evas_Object *_parent, Evas_Object *_win_main)
 {
 	__COMMON_FUNC_ENTER__;
 
-	retvm_if(NULL != manager_object || NULL == _parent, NULL);
+	retvm_if(NULL == _parent, NULL);
+	if (manager_object != NULL) {
+		free(manager_object);
+		manager_object = NULL;
+	}
 
 	Evas_Object *layout = NULL;
 	Evas_Object *view_content = NULL;
