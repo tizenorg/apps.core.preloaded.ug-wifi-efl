@@ -8,4 +8,8 @@
 		<label>Wi-Fi device picker</label>
 		<icon>/usr/share/icons/setting_wifi.png</icon>
 	</ui-application>
+	<privileges>
+		<privilege>http://tizen.org/privilege/network.get</privilege>
+		<privilege>http://tizen.org/privilege/network.set</privilege>
+	</privileges>
 </manifest>
