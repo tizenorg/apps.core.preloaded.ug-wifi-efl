@@ -3455,7 +3455,7 @@ static void __on_scan_pop_transition_finished_for_connect(void *data,
 			_wifi_reserve_connect_to_selected_ap(app_obj,
 							     __wifi_disconnected_for_connect_cb, app_obj);
 		} else {
-			_wifi_connect_to_selected_ap(app_obj);// seonah
+			_wifi_connect_to_selected_ap(app_obj);
 		}
 	} else {
 		WIFI_LOG_ERR("AP list closed.");
@@ -3580,8 +3580,6 @@ static void __scan_menu_ap_item_tap_cb(void *data, Evas_Object *obj, void *event
 			app_obj->ap_info = _ap_info_create(app_obj, ap);
 			if (app_obj->ap_info) {
 				app_obj->selected_wifi_ap = wifi_manager_ap_clone(ap);
-                if(app_obj->selected_wifi_ap) {
-                } else
 				_wifi_address_for_connect_init(app_obj);
 				_wifi_address_reset_use_ap(app_obj->address_for_connect,
 							   app_obj->selected_wifi_ap);
