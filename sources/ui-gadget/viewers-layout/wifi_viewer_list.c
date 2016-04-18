@@ -99,7 +99,7 @@ static char* _gl_listview_text_get(void *data, Evas_Object *obj, const char *par
 				gdata->device_info->ssid);
 		assertm_if(NULL == det, "NULL!!");
 
-		convertedColor = ConvertRGBAtoHex(2, 61, 132, 255);
+		convertedColor = ConvertRGBAtoHex(61, 185, 204, 255);
 		assertm_if(NULL == convertedColor, "NULL!!");
 		if (VIEWER_ITEM_RADIO_MODE_CONNECTED == gdata->radio_mode) {
 			buf = g_strdup_printf("<color=#%s>%s</color>",
