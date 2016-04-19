@@ -1219,7 +1219,7 @@ gchar *wifi_manager_ap_get_proxy_port(wifi_ap_object *ap_obj)
 	}
 
 	strtok_r(proxy_address, ":", &saveptr);
-	return g_strdup(strtok(NULL, ":"));
+	return g_strdup(strtok_r(NULL, ":", &saveptr));
 }
 
 void wifi_manager_ap_set_proxy_address(wifi_ap_object *ap_obj, const gchar *proxy_address)
