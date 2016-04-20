@@ -53,8 +53,7 @@ static void __wifi_tethering_deactivated_cb(tethering_error_e error,
 		viewer_manager_header_mode_set(HEADER_MODE_OFF);
 	} else {
 		INFO_LOG(COMMON_NAME_LIB, "TYPE = %d", type);
-		if (type == TETHERING_TYPE_WIFI ||
-				type == TETHERING_TYPE_RESERVED) {
+		if (type == TETHERING_TYPE_WIFI) {
 			INFO_LOG(COMMON_NAME_LIB, "OK\n");
 			/* Tethering is now disabled. All OK to switch on Wi-Fi */
 			power_control();
@@ -130,8 +129,7 @@ static void __wifi_tethering_off_ok_cb(void* data, Evas_Object* obj,
 		manager_object->popup_user_prompt = NULL;
 	}
 
-	if (manager_object->type == TETHERING_TYPE_WIFI ||
-			manager_object->type == TETHERING_TYPE_RESERVED) {
+	if (manager_object->type == TETHERING_TYPE_WIFI) {
 		if (FALSE != __wifi_tethering_deativate(manager_object)) {
 			INFO_LOG(UG_NAME_NORMAL, "Successfully de-activate Wi-Fi tethering");
 
@@ -205,8 +203,7 @@ void winset_popup_mode_set(popup_manager_object_t *manager_object,
 
 		if(option == POPUP_OPTION_POWER_ON_FAILED_TETHERING_OCCUPIED)
 			manager_object->type = TETHERING_TYPE_WIFI;
-		else
-			manager_object->type = TETHERING_TYPE_RESERVED;
+
 		popup_btn_data.title_txt = "IDS_WIFI_BODY_WI_FI";
 		popup_btn_data.info_txt = "IDS_ST_POP_TURNING_ON_WI_FI_WILL_DISABLE_WI_FI_TETHERING";
 		popup_btn_data.btn1_txt = "IDS_WIFI_SK_CANCEL";
