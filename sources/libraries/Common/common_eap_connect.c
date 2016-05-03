@@ -1931,8 +1931,11 @@ eap_connect_data_t *create_eap_view(Evas_Object *layout_main, Evas_Object *win,
 		char *ssid = NULL;
 
 		wifi_ap_get_essid(device_info->ap, &ssid);
-		if (ssid == NULL)
+		if (ssid == NULL) {
+			if(eap_data->ssid)
+				g_free(eap_data->ssid);
 			return NULL;
+		}
 
 		wifi_ap_hidden_create(ssid, &(eap_data->ap));
 		g_free(ssid);
