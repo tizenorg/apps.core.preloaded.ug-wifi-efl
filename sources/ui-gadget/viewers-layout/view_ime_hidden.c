@@ -100,6 +100,15 @@ static void __popup_entry_maxlength_reached(void *data, Evas_Object *obj,
 				"Lengthy Password", "notification", NULL);
 }
 
+static void __popup_entry_edit_mode_show_cb(void *data, Evas *e, Evas_Object *obj,
+		void *event_info)
+{
+	evas_object_event_callback_del(obj, EVAS_CALLBACK_SHOW,
+			__popup_entry_edit_mode_show_cb);
+
+	elm_object_focus_set(obj, EINA_TRUE);
+}
+
 hiddep_ap_popup_data_t *view_hidden_ap_popup_data_get(void)
 {
 	return g_hidden_ap_popup_data;
@@ -178,16 +187,20 @@ static Evas_Object *_gl_entry_item_content_get(void *data,
 
 	int return_key_type;
 	Evas_Object *entry = NULL;
+	Evas_Object *editfield = NULL;
 
 	static Elm_Entry_Filter_Limit_Size limit_filter_data;
 
-	if (!g_strcmp0(part, "elm.icon.entry")) {
-		entry = elm_entry_add(obj);
-		elm_layout_theme_set(entry, "layout", "editfield", "singleline");
-		evas_object_size_hint_weight_set(entry, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
-		evas_object_size_hint_align_set(entry, EVAS_HINT_FILL, EVAS_HINT_FILL);
+	if (!g_strcmp0(part, "elm.swallow.content")) {
+		editfield= elm_layout_add(obj);
+		elm_layout_theme_set(editfield, "layout", "editfield", "singleline");
+		evas_object_size_hint_weight_set(editfield, EVAS_HINT_EXPAND, 0.0);
+		evas_object_size_hint_align_set(editfield, EVAS_HINT_FILL, 0.0);
+		entry = elm_entry_add(editfield);
 		elm_entry_single_line_set(entry, EINA_TRUE);
 		elm_entry_scrollable_set(entry, EINA_TRUE);
+		evas_object_size_hint_weight_set(entry, EVAS_HINT_EXPAND, 0.0);
+		evas_object_size_hint_align_set(entry, EVAS_HINT_FILL, 0.0);
 		if (!entry)
 			return NULL;
 
@@ -219,12 +232,15 @@ static Evas_Object *_gl_entry_item_content_get(void *data,
 				__popup_entry_focused_cb, NULL);
 		evas_object_smart_callback_add(entry, "unfocused",
 				__popup_entry_unfocused_cb, NULL);
+		evas_object_event_callback_add(entry, EVAS_CALLBACK_SHOW,
+				__popup_entry_edit_mode_show_cb, NULL);
 		evas_object_smart_callback_add(entry, "maxlength,reached",
 				__popup_entry_maxlength_reached, NULL);
 
+		elm_object_part_content_set(editfield, "elm.swallow.content", entry);
 		elm_entry_input_panel_show(entry);
 
-		return entry;
+		return editfield;
 	}
 
 	return NULL;
@@ -296,7 +312,7 @@ void view_hidden_ap_popup_create(Evas_Object *win_main, const char *str_pkg_name
 	//elm_genlist_realization_mode_set(genlist, EINA_TRUE);
 	elm_scroller_content_min_limit(genlist, EINA_FALSE, EINA_TRUE);
 
-	g_entry_itc.item_style = "entry";
+	g_entry_itc.item_style = "full";
 	g_entry_itc.func.text_get = NULL;
 	g_entry_itc.func.content_get = _gl_entry_item_content_get;
 	g_entry_itc.func.state_get = NULL;
