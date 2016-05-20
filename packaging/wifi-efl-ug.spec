@@ -69,6 +69,9 @@ cmake -DCMAKE_INSTALL_PREFIX=%{PREFIX} \
 %if "%{profile}" == "mobile"
 	-DTIZEN_MOBILE=1 \
 %endif
+%if "%{profile}" == "wearable"
+	-DTIZEN_WEARABLE=1 \
+%endif
 	.
 
 make %{?_smp_mflags}

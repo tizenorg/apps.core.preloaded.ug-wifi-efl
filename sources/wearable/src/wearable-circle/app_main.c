@@ -439,7 +439,7 @@ static void _wifi_disconnecting_ap_destroy(app_object *app_obj)
 	app_obj->disconnecting_wifi_ap = NULL;
 }
 
-gboolean _scan_scroll_to_top_for_idle(gpointer user_data)
+static gboolean _scan_scroll_to_top_for_idle(gpointer user_data)
 {
 	layout_scan_object *scan = user_data;
 	__WIFI_FUNC_ENTER__;
@@ -2143,7 +2143,7 @@ static void __wps_method_menu_wps_pin_tap_cb(void *data, Evas_Object *obj, void 
 	}
 }
 
-layout_wps_method_object *_wps_method_create(app_object *app_obj)
+static layout_wps_method_object *_wps_method_create(app_object *app_obj)
 {
 	layout_wps_method_object *wps_method = layout_wps_method_new(app_obj->base);
 	WIFI_RET_VAL_IF_FAIL(wps_method != NULL, NULL);
@@ -2332,7 +2332,7 @@ static void __password_entry_wearable_input_activated_cb(void *data,
 	g_free(password);
 }
 
-layout_wearable_input_object *_password_entry_wearable_input_create(app_object *app_obj)
+static layout_wearable_input_object *_password_entry_wearable_input_create(app_object *app_obj)
 {
 	layout_wearable_input_object *wearable_input = layout_wearable_input_new(app_obj->base);
 	int password_maxlen = MAX_PASSWORD_LENGTH;
@@ -2399,7 +2399,7 @@ static void __password_entry_checkbox_changed_cb(void *data, Evas_Object *obj, v
 	layout_password_entry_set_show_password(app_obj->password_entry, elm_check_state_get(obj));
 }
 
-layout_password_entry_object *_password_entry_create(app_object *app_obj)
+static layout_password_entry_object *_password_entry_create(app_object *app_obj)
 {
 	layout_password_entry_object *password_entry = layout_password_entry_new(app_obj->base);
 	if (!password_entry) {
@@ -2723,7 +2723,7 @@ static void __static_ip_wearable_input_activated_cb(void *data, Evas_Object *obj
 	layout_static_ip_pop_to(app_obj->static_ip);
 }
 
-layout_wearable_input_object *_static_ip_wearable_input_create(app_object *app_obj,
+static layout_wearable_input_object *_static_ip_wearable_input_create(app_object *app_obj,
 							       const gchar *text, gboolean is_guide_text)
 {
 	layout_wearable_input_object *wearable_input = layout_wearable_input_new(app_obj->base);
@@ -2877,7 +2877,7 @@ static void __static_ip_save_button_tap_cb(void *data, Evas_Object *obj, void *e
 	layout_ap_info_menu_update(app_obj->ap_info, AP_INFO_MENU_STATIC);
 }
 
-layout_static_ip_object *_static_ip_create(app_object *app_obj)
+static layout_static_ip_object *_static_ip_create(app_object *app_obj)
 {
 	layout_static_ip_object *static_ip = layout_static_ip_new(app_obj->base);
 	if (!static_ip) {
@@ -3212,7 +3212,7 @@ static void __proxy_setting_wearable_input_activated_cb(void *data, Evas_Object 
 	layout_proxy_setting_pop_to(app_obj->proxy_setting);
 }
 
-layout_wearable_input_object *_proxy_setting_wearable_input_create(app_object *app_obj,
+static layout_wearable_input_object *_proxy_setting_wearable_input_create(app_object *app_obj,
 								   Elm_Input_Panel_Layout input_type,
 								   const gchar *text, gboolean is_guide_text)
 {
@@ -3317,7 +3317,7 @@ static void __proxy_setting_save_button_tap_cb(void *data, Evas_Object *obj, voi
 	layout_ap_info_menu_update(app_obj->ap_info, AP_INFO_MENU_PROXY);
 }
 
-layout_proxy_setting_object *_proxy_setting_create(app_object *app_obj)
+static layout_proxy_setting_object *_proxy_setting_create(app_object *app_obj)
 {
 	layout_proxy_setting_object *proxy_setting = layout_proxy_setting_new(app_obj->base);
 	if (!proxy_setting) {

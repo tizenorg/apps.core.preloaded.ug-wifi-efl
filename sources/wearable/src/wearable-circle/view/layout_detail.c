@@ -132,7 +132,7 @@ static void _append_menu(layout_detail_object *self, layout_detail_menu_type typ
 	elm_genlist_item_class_free(itc);
 }
 
-gboolean _layout_detail_create(layout_detail_object *self, gboolean is_show_forgetbutton)
+static gboolean _layout_detail_create(layout_detail_object *self, gboolean is_show_forgetbutton)
 {
 	WIFI_RET_VAL_IF_FAIL(self != NULL, FALSE);
 	WIFI_RET_VAL_IF_FAIL(self->base != NULL, FALSE);

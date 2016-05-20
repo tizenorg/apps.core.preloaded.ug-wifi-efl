@@ -125,7 +125,7 @@ static void __wifi_connection_state_changed_cb(wifi_connection_state_e state,
 	}
 }
 
-bool __wifi_config_list_cb(const wifi_config_h config, void *user_data)
+static bool __wifi_config_list_cb(const wifi_config_h config, void *user_data)
 {
     
     __WIFI_FUNC_ENTER__;
