@@ -1,11 +1,15 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.172
+Version:	1.0.173
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
 Source0:	%{name}-%{version}.tar.gz
+
+%if "%{?profile}" == "tv"
+ExcludeArch: %{arm} %ix86 x86_64
+%endif
 
 BuildRequires:	pkgconfig(ecore)
 BuildRequires:	pkgconfig(ecore-imf)
