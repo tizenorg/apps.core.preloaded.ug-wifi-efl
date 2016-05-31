@@ -1049,7 +1049,7 @@ Elm_Object_Item *viewer_list_item_insert_after(wifi_device_info_t *wifi_device,
 	VIEWER_ITEM_RADIO_MODES rad_mode = VIEWER_ITEM_RADIO_MODE_OFF;
 	retvm_if(NULL == viewer_list, NULL);
 
-	if (wifi_device != NULL) {
+	if (wifi_device != NULL && wifi_device->ap != NULL) {
 		if (wifi_ap_get_connection_state(wifi_device->ap, &state) ==
 				WIFI_ERROR_NONE) {
 			rad_mode = _convert_wifi_state_to_viewer_radio_mode(state);
