@@ -26,6 +26,7 @@ extern "C"
 #endif
 
 #include <Evas.h>
+#include <network-wifi-intf.h>
 
 #include "wlan_manager.h"
 #include "common_utils.h"

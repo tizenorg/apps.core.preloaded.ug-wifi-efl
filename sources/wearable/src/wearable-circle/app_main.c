@@ -1746,7 +1746,7 @@ static void _popup_change_ap_show_use_ap(app_object *app_obj, wifi_ap_object *ap
         WIFI_LOG_INFO("selected_wifi_ap isn't null!!");
 	} else
 	    WIFI_LOG_INFO("selected_wifi_ap is null!!");
-    
+
 	popup_change_ap_set_destroy_cb(app_obj->popup_change_ap,
 				       __popup_change_ap_destroy_cb, app_obj);
 	popup_change_ap_set_tap_ok_button_cb(app_obj->popup_change_ap,
@@ -3895,7 +3895,7 @@ static void __main_menu_power_tap_cb(void *data, Evas_Object *obj, void *event_i
                 wifi_error_to_string(err));
 			return;
 		}
-         
+
 	} else {
 	        WIFI_LOG_INFO("disable_for_wifi_power_on");
 			_main_menu_disable_for_wifi_power_on(app_obj);

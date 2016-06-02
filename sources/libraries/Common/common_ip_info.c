@@ -28,6 +28,7 @@
 #define DEFAULT_PROXY_ADDR		"0.0.0.0:80"
 
 #define MAX_PORT_NUMBER		65535
+#define MAX_LABEL_LENGTH	512
 
 typedef struct {
 	char* title;
@@ -114,14 +115,68 @@ static Evas_Object *_ip_info_detail_description_content_get(void *data,
 	_view_detail_description_data_t* det =
 			(_view_detail_description_data_t*) data;
 
-	if (g_strcmp0(part, "elm.swallow.end") == 0) {
+	if (g_strcmp0(part, "elm.swallow.content") == 0) {
 		Evas_Object *entry = NULL;
+		Evas_Object *box1 = NULL;
+		Evas_Object *box2 = NULL;
+		Evas_Object *tpad = NULL;
+		Evas_Object *lpad = NULL;
+		Evas_Object *label1 = NULL;
+		Evas_Object *label2 = NULL;
+		int height = 60;
+		char buf[MAX_LABEL_LENGTH] = {0, };
 
-		entry = elm_entry_add(obj);
-		elm_entry_single_line_set(entry, EINA_TRUE);
-		elm_entry_scrollable_set(entry, EINA_TRUE);
-		elm_object_domain_translatable_part_text_set(entry, "elm.guide",
-				PACKAGE, det->description);
+		entry = elm_box_add(obj);
+		elm_box_align_set(entry, 0.0, 0.0);
+
+		tpad = evas_object_rectangle_add(entry);
+		evas_object_size_hint_min_set(tpad, 0, ELM_SCALE_SIZE(10));
+		evas_object_show(tpad);
+		elm_box_pack_end(entry, tpad);
+
+		box1 = elm_box_add(entry);
+		evas_object_size_hint_align_set(box1, 0.0, 0.0);
+		elm_box_horizontal_set(box1, EINA_TRUE);
+		elm_box_pack_end(entry, box1);
+		evas_object_show(box1);
+
+		lpad = evas_object_rectangle_add(box1);
+		evas_object_size_hint_min_set(lpad, ELM_SCALE_SIZE(15), 0);
+		evas_object_show(lpad);
+		elm_box_pack_end(box1, lpad);
+		evas_object_show(box1);
+
+		label1 = elm_label_add(box1);
+		snprintf(buf, MAX_LABEL_LENGTH, "<font_size=30>%s</font_size>",
+			dgettext(PACKAGE, det->title));
+		elm_object_text_set(label1, buf);
+		evas_object_size_hint_align_set(label1, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(label1, 0.9, EVAS_HINT_EXPAND);
+		elm_box_pack_end(box1, label1);
+		evas_object_show(label1);
+
+		box2 = elm_box_add(entry);
+		evas_object_size_hint_align_set(box2, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		elm_box_horizontal_set(box2, EINA_TRUE);
+		elm_box_pack_end(entry, box2);
+
+		elm_box_pack_end(box2, lpad);
+
+		label2 = elm_label_add(box2);
+		snprintf(buf, MAX_LABEL_LENGTH, "<font_size=40>%s</font_size>",
+			dgettext(PACKAGE, det->description));
+		elm_object_text_set(label2, buf);
+		evas_object_size_hint_align_set(label2, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(label2, 0.9, EVAS_HINT_EXPAND);
+		elm_box_pack_end(box2, label2);
+		evas_object_show(label2);
+
+		evas_object_show(box2);
+		elm_box_pack_end(entry, box2);
+
+		evas_object_size_hint_min_set(entry, 0, ELM_SCALE_SIZE(height));
+		elm_object_focus_set(entry, EINA_FALSE);
+		evas_object_show(entry);
 
 		return entry;
 	}
@@ -417,12 +472,20 @@ static Evas_Object *_ip_info_entry_item_content_get(void *data, Evas_Object *obj
 		return NULL;
 	}
 
-	if (g_strcmp0(part, "elm.swallow.end") == 0) {
+	if (g_strcmp0(part, "elm.swallow.content") == 0) {
 		Evas_Object *entry = NULL;
+		Evas_Object *box = NULL;
+		Evas_Object *tpad = NULL;
+		Evas_Object *lpad = NULL;
+		Evas_Object *label = NULL;
+		Evas_Object *layout = NULL;
+		Evas_Object *editfield = NULL;
 		char *guide_txt = NULL;
 		char *accepted = NULL;
 		Elm_Input_Panel_Layout panel_type;
 		int return_key_type;
+		int height = 60;
+		char buf[MAX_LABEL_LENGTH] = {0, };
 
 		switch (entry_info->entry_id)
 		{
@@ -453,30 +516,64 @@ static Evas_Object *_ip_info_entry_item_content_get(void *data, Evas_Object *obj
 			return NULL;
 		}
 
-		entry = elm_entry_add(obj);
-		elm_entry_single_line_set(entry, EINA_TRUE);
-		elm_entry_scrollable_set(entry, EINA_TRUE);
+		entry = elm_box_add(obj);
+		elm_box_align_set(entry, 0.0, 0.0);
+
+		tpad = evas_object_rectangle_add(entry);
+		evas_object_size_hint_min_set(tpad, 0, ELM_SCALE_SIZE(10));
+		evas_object_show(tpad);
+		elm_box_pack_end(entry, tpad);
+
+		box = elm_box_add(entry);
+		evas_object_size_hint_align_set(box, 0.0, 0.0);
+		elm_box_horizontal_set(box, EINA_TRUE);
+		elm_box_pack_end(entry, box);
+		evas_object_show(box);
+
+		lpad = evas_object_rectangle_add(box);
+		evas_object_size_hint_min_set(lpad, ELM_SCALE_SIZE(15), 0);
+		evas_object_show(lpad);
+		elm_box_pack_end(box, lpad);
+		evas_object_show(box);
+
+		label = elm_label_add(box);
+		snprintf(buf, MAX_LABEL_LENGTH, "<font_size=30>%s</font_size>",
+			dgettext(PACKAGE, entry_info->title_txt));
+		elm_object_text_set(label, buf);
+		evas_object_size_hint_align_set(label, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(label, 0.9, EVAS_HINT_EXPAND);
+		elm_box_pack_end(box, label);
+		evas_object_show(label);
+
+		layout = elm_layout_add(entry);
+		elm_layout_theme_set(layout, "layout", "editfield", "singleline");
+		evas_object_size_hint_align_set(layout, EVAS_HINT_FILL, EVAS_HINT_FILL);
+		evas_object_size_hint_weight_set(layout, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
+
+		editfield = elm_entry_add(layout);
+		elm_entry_single_line_set(editfield, EINA_TRUE);
+		elm_entry_scrollable_set(editfield, EINA_TRUE);
 
 		if (!g_strcmp0(entry_info->str_pkg_name, "wifi-qs")) {
-			elm_entry_input_panel_imdata_set(entry, "type=systempopup", 16);
+			elm_entry_input_panel_imdata_set(editfield, "type=systempopup", 16);
 		}
-		elm_entry_cnp_mode_set(entry, ELM_CNP_MODE_PLAINTEXT);
+		elm_entry_cnp_mode_set(editfield, ELM_CNP_MODE_PLAINTEXT);
 
-		elm_object_part_text_set(entry, "elm.guide", guide_txt);
+		elm_object_part_text_set(editfield, "elm.guide", guide_txt);
 		if (entry_info->entry_txt && (strlen(entry_info->entry_txt) > 0) &&
 				g_strcmp0(entry_info->entry_txt, DEFAULT_GUIDE_IP) != 0) {
-			elm_entry_entry_set(entry, entry_info->entry_txt);
+			elm_entry_entry_set(editfield, entry_info->entry_txt);
 		}
 
-		elm_entry_input_panel_layout_set(entry, panel_type);
+		elm_entry_input_panel_layout_set(editfield, panel_type);
 
 		Elm_Entry_Filter_Accept_Set digits_filter_data;
 		memset(&digits_filter_data, 0, sizeof(Elm_Entry_Filter_Accept_Set));
 		digits_filter_data.accepted = accepted;
-		elm_entry_markup_filter_append(entry, elm_entry_filter_accept_set, &digits_filter_data);
+		elm_entry_markup_filter_append(editfield, elm_entry_filter_accept_set, &digits_filter_data);
 
 		if (entry_info->input_panel_cb) {
-			Ecore_IMF_Context *imf_ctxt = elm_entry_imf_context_get(entry);
+			Ecore_IMF_Context *imf_ctxt = elm_entry_imf_context_get(editfield);
 			if (imf_ctxt) {
 				ecore_imf_context_input_panel_event_callback_add(
 						imf_ctxt,
@@ -486,8 +583,16 @@ static Evas_Object *_ip_info_entry_item_content_get(void *data, Evas_Object *obj
 			}
 		}
 
-		elm_entry_input_panel_return_key_type_set(entry, return_key_type);
-		_ip_info_entry_add_callbacks(entry, entry_info);
+		elm_entry_input_panel_return_key_type_set(editfield, return_key_type);
+		_ip_info_entry_add_callbacks(editfield, entry_info);
+		elm_object_part_content_set(layout, "elm.swallow.content", editfield);
+
+		evas_object_show(layout);
+		elm_box_pack_end(entry, layout);
+
+		evas_object_size_hint_min_set(entry, 0, ELM_SCALE_SIZE(height));
+		elm_object_focus_set(entry, EINA_FALSE);
+		evas_object_show(entry);
 
 		return entry;
 	}
@@ -841,6 +946,12 @@ static void __ip_info_toggle_item_sel_cb(void* data,
 		return;
 	}
 
+	if (!net_get_device_policy_wifi_profile()) {
+		SECURE_DEBUG_LOG(UG_NAME_NORMAL, "Wifi profile device policy restricts");
+		__COMMON_FUNC_EXIT__;
+		return;
+	}
+
 	wifi_ap_h ap = ip_info_list_data->ap;
 
 	object_type = evas_object_type_get(obj);
@@ -905,6 +1016,7 @@ static Evas_Object *_ip_info_iptoggle_content_get(void *data,
 	retvm_if(NULL == data || NULL == obj || NULL == part, NULL);
 	full_ip_info_t *ip_data = (full_ip_info_t *) data;
 	ip_info_list_t *ip_info_list_data = ip_data->ip_info_list;
+	prev_ip_info_t *prev_ip_info_data = ip_data->ip_info_list;
 	Evas_Object *toggle_btn = NULL;
 
 	if (!strcmp("elm.swallow.end", part)) {
@@ -926,7 +1038,6 @@ static Evas_Object *_ip_info_iptoggle_content_get(void *data,
 	return toggle_btn;
 }
 
-#if 0
 static void ip_info_print_values(wifi_ap_h ap)
 {
 	char *txt;
@@ -994,7 +1105,6 @@ static void ip_info_print_values(wifi_ap_h ap)
 	SECURE_DEBUG_LOG(UG_NAME_NORMAL, "* PROXY PORT [%s]", proxy_port);
 	g_free(txt);
 }
-#endif
 
 void ip_info_delete_prev(prev_ip_info_t *prev_ip_info)
 {
@@ -1069,13 +1179,13 @@ full_ip_info_t *ip_info_append_items(wifi_ap_h ap, const char *pkg_name,
 	ip_toggle_itc.func.state_get = NULL;
 	ip_toggle_itc.func.del = NULL;
 
-	description_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
+	description_itc.item_style = WIFI_GENLIST_FULL_STYLE;
 	description_itc.func.text_get = _ip_info_detail_description_text_get;
 	description_itc.func.content_get = _ip_info_detail_description_content_get;
 	description_itc.func.state_get = NULL;
 	description_itc.func.del = _ip_info_detail_description_del;
 
-	ip_entry_itc.item_style = WIFI_GENLIST_2LINE_BOTTOM_SWALLOW_STYLE;
+	ip_entry_itc.item_style = WIFI_GENLIST_FULL_STYLE;
 	ip_entry_itc.func.text_get = _ip_info_entry_item_text_get;
 	ip_entry_itc.func.content_get = _ip_info_entry_item_content_get;
 	ip_entry_itc.func.state_get = NULL;
@@ -1325,7 +1435,7 @@ void ip_info_save_data(full_ip_info_t *ip_data)
 		g_free((gpointer)txt);
 	}
 
-	//ip_info_print_values(ap);
+	ip_info_print_values(ap);
 
 	__COMMON_FUNC_EXIT__;
 }

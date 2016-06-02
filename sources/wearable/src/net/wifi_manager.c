@@ -127,7 +127,7 @@ static void __wifi_connection_state_changed_cb(wifi_connection_state_e state,
 
 static bool __wifi_config_list_cb(const wifi_config_h config, void *user_data)
 {
-    
+
     __WIFI_FUNC_ENTER__;
 	wifi_manager_object *manager = user_data;
 	wifi_config_object *config_obj;
@@ -163,14 +163,14 @@ static void _wifi_config_destory(gpointer data)
 
 static void _clear_wifi_config_list(wifi_manager_object *manager)
 {
-    
+
     __WIFI_FUNC_ENTER__;
 	WIFI_RET_IF_FAIL(manager != NULL);
 	WIFI_RET_IF_FAIL(manager->config_list != NULL);
 
 	g_list_free_full(manager->config_list, _wifi_config_destory);
 	manager->config_list = NULL;
-    
+
     __WIFI_FUNC_EXIT__;
 }
 
