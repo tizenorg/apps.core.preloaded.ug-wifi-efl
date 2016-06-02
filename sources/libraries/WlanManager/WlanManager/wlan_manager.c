@@ -523,8 +523,11 @@ int wlan_manager_power_on(void)
 	ret = wifi_activate(wlan_manager_network_event_cb, req_data);
 	if (WIFI_ERROR_NONE != ret && WIFI_ERROR_ALREADY_EXISTS != ret) {
 		ERROR_LOG(UG_NAME_REQ, "Power on request. Error Reason [%d]", ret);
-
 		g_free(req_data);
+
+		if (WIFI_ERROR_SECURITY_RESTRICTED == ret)
+			ret = common_utils_send_restriction_to_net_popup("Wi-Fi unavailable",
+					"toast_popup", "wifi");
 
 		__COMMON_FUNC_EXIT__;
 		return WLAN_MANAGER_ERR_UNKNOWN;

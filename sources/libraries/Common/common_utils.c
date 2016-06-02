@@ -558,6 +558,24 @@ int common_utils_send_message_to_net_popup(const char *title,
 	return ret;
 }
 
+int common_utils_send_restriction_to_net_popup(const char *title,
+		const char *type, const char *restriction)
+{
+	int ret = 0;
+	bundle *b = bundle_create();
+
+	bundle_add_str(b, "_SYSPOPUP_TITLE_", title);
+	bundle_add_str(b, "_SYSPOPUP_CONTENT_", "security restriction");
+	bundle_add_str(b, "_SYSPOPUP_TYPE_", type);
+	bundle_add_str(b, "_RESTRICTED_TYPE_", restriction);
+
+	ret = aul_launch_app("net.netpopup", b);
+
+	bundle_free(b);
+
+	return ret;
+}
+
 int common_util_set_system_registry(const char *key, int value)
 {
 	__COMMON_FUNC_ENTER__;

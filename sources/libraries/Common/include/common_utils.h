@@ -115,6 +115,8 @@ wlan_security_mode_type_t common_utils_get_sec_mode(
 		wifi_security_type_e sec_type);
 int common_utils_send_message_to_net_popup(const char *title,
 		const char *content, const char *type, const char *ssid);
+int common_utils_send_restriction_to_net_popup(const char *title,
+		const char *type, const char *restriction);
 
 int common_util_set_system_registry(const char *key, int value);
 int common_util_get_system_registry(const char *key);
