@@ -90,7 +90,7 @@ static Evas_Object *_create_initialized_menu_list(layout_wps_method_object *self
 		evas_object_del(menu_list);
 		return NULL;
 	}
-	menu_wps_button_itc = create_genlist_itc("1text",
+	menu_wps_button_itc = create_genlist_itc("type1",
 						 __menu_wps_button_text_get_cb, NULL, NULL, NULL);
 	if (!menu_wps_button_itc) {
 		WIFI_LOG_ERR("menu wps button itc create failed.");
@@ -98,7 +98,7 @@ static Evas_Object *_create_initialized_menu_list(layout_wps_method_object *self
 		evas_object_del(menu_list);
 		return NULL;
 	}
-	menu_wps_pin_itc = create_genlist_itc("1text",
+	menu_wps_pin_itc = create_genlist_itc("type1",
 					      __menu_wps_pin_text_get_cb, NULL, NULL, NULL);
 	if (!menu_wps_pin_itc) {
 		WIFI_LOG_ERR("menu wps pin itc create failed.");

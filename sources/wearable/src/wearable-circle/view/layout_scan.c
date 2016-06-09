@@ -194,7 +194,7 @@ static gboolean _is_ap_list_exists(layout_scan_object *self)
 
 static gboolean _ap_list_append_title(layout_scan_object *self)
 {
-	Elm_Genlist_Item_Class *title_itc = create_genlist_itc("title",
+	Elm_Genlist_Item_Class *title_itc = create_genlist_itc("type1",
 							       __title_text_get_cb, NULL,
 							       NULL, NULL);
 	WIFI_RET_VAL_IF_FAIL(title_itc != NULL, FALSE);
@@ -208,7 +208,7 @@ static gboolean _ap_list_append_title(layout_scan_object *self)
 
 static inline Elm_Genlist_Item_Class *_create_wifi_ap_itc(layout_scan_object *self)
 {
-	return create_genlist_itc("2text.1icon.1/sub1.multiline",
+	return create_genlist_itc("type1",
 				  self->menu_cb[SCAN_MENU_WIFI_AP_ITEM].text_get,
 				  self->menu_cb[SCAN_MENU_WIFI_AP_ITEM].content_get,
 				  self->menu_cb[SCAN_MENU_WIFI_AP_ITEM].state_get,
