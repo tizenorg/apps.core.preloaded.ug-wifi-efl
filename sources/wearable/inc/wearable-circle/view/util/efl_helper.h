@@ -34,10 +34,10 @@ extern "C" {
 #define TABLE_COLOR_FILE "color_table.xml"
 #define TABLE_FONT_FILE "font_table.xml"
 
-#define EDJ_PATH "/edje"
+#define EDJ_PATH "edje"
 #define EDJ_FILE "wifi.edj"
 
-#define IMAGE_PATH "/images"
+#define IMAGE_PATH "images"
 
 gboolean get_color_table_path(gchar *table_path, gsize table_path_length);
 gboolean get_font_table_path(gchar *table_path, gsize table_path_length);
