@@ -137,7 +137,7 @@ mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 %defattr(-,root,root,-)
 %attr(-,inhouse,inhouse)
 %{PREFIX}/apps/org.tizen.w-wifi/bin/*
-#%{PREFIX}/res/images/*.png
+%{PREFIX}/apps/org.tizen.w-wifi/res/images/*.png
 %{PREFIX}/apps/org.tizen.w-wifi/res/locale/*/LC_MESSAGES/*.mo
 %{PREFIX}/apps/org.tizen.w-wifi/res/edje/*
 %{_datadir}/packages/org.tizen.w-wifi.xml
