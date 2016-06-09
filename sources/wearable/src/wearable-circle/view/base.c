@@ -34,9 +34,7 @@ struct _view_base_object {
 	Evas_Object *conformant;
 	Evas_Object *bg;
 	Evas_Object *naviframe;
-#ifdef USE_EXTENSION_API
 	Eext_Circle_Surface *circle_surface;
-#endif
 };
 
 static Evas_Object *_create_window(const gchar *name)
@@ -47,9 +45,7 @@ static Evas_Object *_create_window(const gchar *name)
 
 	elm_win_title_set(window, name);
 	elm_win_borderless_set(window, EINA_TRUE);
-#ifdef USE_EXTENSION_API
-	ecore_x_window_size_get(ecore_x_window_root_first_get(), &width, &height);
-#endif
+	elm_win_screen_size_get(window, NULL, NULL, &width, &height);
 	evas_object_resize(window, width, height);
 
 	if (elm_win_wm_rotation_supported_get(window)) {
@@ -72,7 +68,6 @@ static Evas_Object *_create_conformant(Evas_Object *parent)
 	return conformant;
 }
 
-#ifdef USE_EXTENSION_API
 static Eext_Circle_Surface *_create_circle_surface_from_naviframe(Evas_Object *naviframe)
 {
 	Eext_Circle_Surface *circle_surface;
@@ -81,7 +76,7 @@ static Eext_Circle_Surface *_create_circle_surface_from_naviframe(Evas_Object *n
 	circle_surface = eext_circle_surface_naviframe_add(naviframe);
 	return circle_surface;
 }
-#endif
+
 static Evas_Object *_create_bg(Evas_Object *parent)
 {
 	Evas_Object *bg = elm_bg_add(parent);
@@ -155,16 +150,12 @@ gboolean view_base_create(view_base_object *self)
 	}
 	elm_object_content_set(self->conformant, self->naviframe);
 
-#ifdef USE_EXTENSION_API
 	self->circle_surface = _create_circle_surface_from_naviframe(self->naviframe);
 	if (!self->circle_surface) {
 		WIFI_LOG_ERR("_create_circle_surface_from_conformant() is failed.");
 		view_base_destroy(self);
 		return FALSE;
 	}
-
-	ea_theme_changeable_ui_enabled_set(EINA_TRUE);
-#endif
 
 	return TRUE;
 }
@@ -173,12 +164,10 @@ void view_base_destroy(view_base_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
 
-#ifdef USE_EXTENSION_API
 	if (self->circle_surface) {
 		eext_circle_surface_del(self->circle_surface);
 		self->circle_surface = NULL;
 	}
-#endif
 
 	evas_object_del(self->naviframe);
 	evas_object_del(self->bg);
@@ -320,7 +309,7 @@ Evas_Object *view_base_add_genlist_for_circle(view_base_object *self, Evas_Objec
 
 	genlist = view_base_add_genlist(self, parent);
 	WIFI_RET_VAL_IF_FAIL(genlist, NULL);
-#ifdef USE_EXTENSION_API
+#if 0
 	uxt_genlist_set_bottom_margin_enabled(genlist, EINA_TRUE);
 
 	*circle_genlist = eext_circle_object_genlist_add(genlist, self->circle_surface);
@@ -351,7 +340,6 @@ Evas_Object *view_base_add_scroller_for_circle(view_base_object *self, Evas_Obje
 	scroller = view_base_add_scroller(self, parent);
 	WIFI_RET_VAL_IF_FAIL(scroller, NULL);
 
-#ifdef USE_EXTENSION_API
 	*circle_scroller = eext_circle_object_scroller_add(scroller, self->circle_surface);
 	if (!(*circle_scroller)) {
 		evas_object_del(scroller);
@@ -359,7 +347,6 @@ Evas_Object *view_base_add_scroller_for_circle(view_base_object *self, Evas_Obje
 	}
 	eext_circle_object_scroller_policy_set(*circle_scroller,
 					       ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
-#endif
 	return scroller;
 }
 
@@ -371,7 +358,6 @@ Evas_Object *view_base_add_progressbar(view_base_object *self, Evas_Object *pare
 	return elm_progressbar_add(parent);
 }
 
-#ifdef USE_EXTENSION_API
 Evas_Object *view_base_add_progressbar_for_circle(view_base_object *self, Evas_Object *parent)
 {
 	WIFI_RET_VAL_IF_FAIL(self, NULL);
@@ -379,7 +365,6 @@ Evas_Object *view_base_add_progressbar_for_circle(view_base_object *self, Evas_O
 
 	return eext_circle_object_progressbar_add(parent, self->circle_surface);
 }
-#endif
 
 Evas_Object *view_base_add_popup(view_base_object *self, Evas_Object *parent)
 {
@@ -399,7 +384,7 @@ Evas_Object *view_base_add_popup_for_circle(view_base_object *self, Evas_Object 
 	WIFI_RET_VAL_IF_FAIL(popup, NULL);
 
 	elm_object_style_set(popup, "circle");
-#ifdef USE_EXTENSION_API
+#if 0
 	uxt_popup_set_rotary_event_enabled(popup, EINA_TRUE);
 #endif
 	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
