@@ -22,6 +22,7 @@
 #include "util.h"
 #include "net/util/vconf_helper.h"
 #include "net/wifi_manager.h"
+#include "net/wifi_generate_pin.h"
 
 typedef enum {
 	WIFI_MANAGER_CB_DEVICE_STATE_CHANGED,
@@ -430,6 +431,28 @@ wifi_error_e wifi_manager_deinit(wifi_manager_object *manager)
 		g_list_free_full(manager->cb_data_list, g_free);
 	}
 	return wifi_deinitialize();
+}
+
+wifi_error_e wifi_manager_generate_wps_pin(wifi_manager_object *manager, char **pin)
+{
+	WIFI_RET_VAL_IF_FAIL(manager != NULL, WIFI_ERROR_INVALID_PARAMETER);
+	WIFI_RET_VAL_IF_FAIL(pin != NULL, WIFI_ERROR_INVALID_PARAMETER);
+	unsigned int rpin = 0;
+	char npin[9] = { '\0' };
+	int pin_len = 0;
+
+	rpin = wifi_generate_pin();
+	if (rpin > 0)
+		g_snprintf(npin, sizeof(npin), "%08d", rpin);
+
+	pin_len = strlen(npin);
+	if (pin_len != 8) {
+		WIFI_LOG_ERR("Invalid PIN");
+		return WIFI_ERROR_OPERATION_FAILED;
+	}
+	*pin = g_strdup(npin);
+
+	return WIFI_ERROR_NONE;
 }
 
 wifi_manager_object *wifi_manager_new_with_init(wifi_error_e *error)
