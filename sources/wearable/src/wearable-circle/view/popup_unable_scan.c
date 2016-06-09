@@ -141,6 +141,7 @@ gboolean popup_unable_scan_create(popup_unable_scan_object *self)
 void popup_unable_scan_destroy(popup_unable_scan_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	__WIFI_FUNC_ENTER__;
 
 	if (self->ok_button) {
 		evas_object_del(self->ok_button);
@@ -154,6 +155,7 @@ void popup_unable_scan_destroy(popup_unable_scan_object *self)
 		evas_object_del(self->popup);
 		self->popup = NULL;
 	}
+	__WIFI_FUNC_EXIT__;
 }
 
 void popup_unable_scan_show(popup_unable_scan_object *self)

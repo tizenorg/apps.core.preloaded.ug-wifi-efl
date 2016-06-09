@@ -25,6 +25,7 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/inc/wearable-circle)
 
 SET(SRCS ${SRCS}
 	src/net/wifi_manager.c
+	src/net/wifi_generate_pin.c
 	src/net/util/wifi_address.c
 	src/util/idler.c)
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/inc)

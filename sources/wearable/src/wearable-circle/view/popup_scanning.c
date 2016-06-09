@@ -62,6 +62,7 @@ static Evas_Object *_create_popup(popup_scanning_object *self, Evas_Object *pare
 				       __popup_hide_cb, NULL);
 	evas_object_smart_callback_add(popup, "dismissed",
 				       self->destroy_cb.func, self->destroy_cb.data);
+
 	return popup;
 }
 
@@ -169,10 +170,12 @@ gboolean popup_scanning_create(popup_scanning_object *self)
 void popup_scanning_destroy(popup_scanning_object *self)
 {
 	WIFI_RET_IF_FAIL(self != NULL);
+	__WIFI_FUNC_ENTER__;
 
 	if (self->popup) {
 		evas_object_del(self->popup);
 		self->popup = NULL;
+		__WIFI_FUNC_EXIT__;
 	}
 }
 
@@ -190,6 +193,9 @@ void popup_scanning_dismiss(popup_scanning_object *self)
 	WIFI_RET_IF_FAIL(self->popup != NULL);
 
 	elm_popup_dismiss(self->popup);
+
+	/* TODO: It will be removed. */
+	popup_scanning_destroy(self);
 }
 
 void popup_scanning_set_destroy_cb(popup_scanning_object *self,

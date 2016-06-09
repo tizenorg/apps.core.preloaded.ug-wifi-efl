@@ -65,22 +65,23 @@ static void __popup_hide_cb(void *data, Evas_Object *obj, void *event_info)
 static void __response_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	if (!data) return;
-	elm_popup_dismiss(data);
+	layout_wps_progress_object *self = data;
+	elm_popup_dismiss(self->popup);
+
+	/* TODO: It will be removed */
+	layout_wps_progress_destroy(self);
 }
 
 static Eina_Bool __progress_timer_task_cb(void *data)
 {
-#ifdef USE_EXTENSION_API
 	double progressbar_value, progressbar_interval = 1.2;
 	gchar percent_text[8];
-#endif
 	layout_wps_progress_object *wps_progress = data;
 
 	__WIFI_FUNC_ENTER__;
 	WIFI_RET_VAL_IF_FAIL(wps_progress != NULL, ECORE_CALLBACK_CANCEL);
 	WIFI_RET_VAL_IF_FAIL(wps_progress->progress_timer != NULL, ECORE_CALLBACK_CANCEL);
 
-#ifdef USE_EXTENSION_API
 	progressbar_value = eext_circle_object_value_get(wps_progress->progressbar);
 	if (progressbar_value < 100)
 		progressbar_value += progressbar_interval;
@@ -92,7 +93,6 @@ static Eina_Bool __progress_timer_task_cb(void *data)
 	WIFI_LOG_INFO("progress[%0.2f]", progressbar_value);
 	if (progressbar_value < 100)
 		return ECORE_CALLBACK_RENEW;
-#endif
 
 	layout_wps_progress_dismiss(wps_progress);
 	return ECORE_CALLBACK_CANCEL;
@@ -186,13 +186,11 @@ static Evas_Object *_create_progressbar(layout_wps_progress_object *self, Evas_O
 	Evas_Object *progressbar = NULL;
 	WIFI_RET_VAL_IF_FAIL(parent, NULL);
 
-#ifdef USE_EXTENSION_API
 	progressbar = eext_circle_object_progressbar_add(parent, NULL);
 	WIFI_RET_VAL_IF_FAIL(progressbar, NULL);
 
 	eext_circle_object_value_min_max_set(progressbar, 0.0, 100.0);
 	evas_object_show(progressbar);
-#endif
 	return progressbar;
 }
 
@@ -229,7 +227,7 @@ static Evas_Object *_create_cancel_button(layout_wps_progress_object *self, Evas
 	evas_object_propagate_events_set(cancel_button, EINA_FALSE);
 
 	evas_object_smart_callback_add(cancel_button, "clicked",
-				       __response_cb, self->popup);
+				       __response_cb, self);
 
 	return cancel_button;
 }
@@ -341,6 +339,8 @@ void layout_wps_progress_destroy(layout_wps_progress_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
 
+	__WIFI_FUNC_ENTER__;
+	
 	if (self->progress_timer) {
 		ecore_timer_del(self->progress_timer);
 		self->progress_timer = NULL;
@@ -354,6 +354,8 @@ void layout_wps_progress_destroy(layout_wps_progress_object *self)
 		evas_object_del(self->popup);
 		self->popup = NULL;
 	}
+
+	__WIFI_FUNC_EXIT__;
 }
 
 void layout_wps_progress_show(layout_wps_progress_object *self)
