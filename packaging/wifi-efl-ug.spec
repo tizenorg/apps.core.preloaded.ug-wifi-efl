@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.174
+Version:	1.0.175
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -24,7 +24,9 @@ BuildRequires:	pkgconfig(ui-gadget-1)
 BuildRequires:	pkgconfig(sensor)
 BuildRequires:	pkgconfig(capi-network-wifi)
 BuildRequires:	pkgconfig(capi-network-connection)
+%if "%{?profile}" != "wearable"
 BuildRequires:	pkgconfig(capi-network-tethering)
+%endif
 BuildRequires:	pkgconfig(capi-ui-efl-util)
 BuildRequires:	pkgconfig(network)
 BuildRequires:	pkgconfig(feedback)
@@ -66,7 +68,7 @@ Wi-Fi UI Gadget for wearable
 %build
 #LDFLAGS+="-Wl,--rpath=%{PREFIX}/lib -Wl,--as-needed"
 cmake -DCMAKE_INSTALL_PREFIX=%{PREFIX} \
-%if ! 0%{?model_build_feature_network_tethering_disable}
+%if "%{profile}" != "wearable"
 	-DTIZEN_TETHERING_ENABLE=1 \
 %endif
 	-DMODEL_BUILD_FEATURE_WLAN_CONCURRENT_MODE=1 \
