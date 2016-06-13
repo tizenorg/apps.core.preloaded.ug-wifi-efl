@@ -1111,11 +1111,12 @@ static void ip_info_print_values(wifi_ap_h ap)
 	}
 
 	/* Proxy Address */
-	char *proxy_addr = strtok(txt, ":");
+	char *save_str = NULL;
+	char *proxy_addr = strtok_r(txt, ":", &save_str);
 	SECURE_DEBUG_LOG(UG_NAME_NORMAL, "* PROXY ADDR [%s]", proxy_addr);
 
 	/* Proxy port */
-	char *proxy_port = strtok(NULL, ":");
+	char *proxy_port = strtok_r(NULL, ":", &save_str);
 	SECURE_DEBUG_LOG(UG_NAME_NORMAL, "* PROXY PORT [%s]", proxy_port);
 	g_free(txt);
 }
