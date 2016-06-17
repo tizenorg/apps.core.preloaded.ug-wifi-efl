@@ -313,6 +313,7 @@ static void on_resume(ui_gadget_h ug, app_control_h app_control, void *priv)
 
 	INFO_LOG(UG_NAME_NORMAL, "Wi-Fi UG resumed");
 
+	viewer_manager_rotate_top_setupwizard_layout();
 	connman_request_scan_mode_set(WIFI_BGSCAN_MODE_PERIODIC);
 
 	common_util_set_system_registry(VCONFKEY_WIFI_UG_RUN_STATE,
