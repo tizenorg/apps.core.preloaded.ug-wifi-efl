@@ -603,15 +603,12 @@ static gboolean _app_view_base_init(app_object *app_obj)
 
 static gboolean _is_unable_to_scan_state(wifi_manager_object *manager)
 {
-	gboolean is_mobile_connected_via_bluetooth = 0;
 	gboolean is_wearable_debuging_mode = vconf_is_wearable_debugging_mode();
 
-	WIFI_LOG_INFO("[BT] mobile connected = %s",
-		      is_mobile_connected_via_bluetooth ? "Y" : "N");
 	WIFI_LOG_INFO("[Wi-Fi] debuging mode = %s",
 		      is_wearable_debuging_mode ? "Y" : "N");
 
-	return is_mobile_connected_via_bluetooth && !is_wearable_debuging_mode;
+	return !is_wearable_debuging_mode;
 }
 
 static void _main_scan_menu_enable_init(layout_main_object *main_obj,
