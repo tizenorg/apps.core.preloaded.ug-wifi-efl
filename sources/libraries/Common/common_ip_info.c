@@ -206,7 +206,7 @@ static void _ip_info_entry_key_enter_cb(void *data, Evas_Object *obj, void *even
 		while (next_item) {
 			if (elm_object_item_disabled_get(next_item) == EINA_FALSE &&
 				elm_genlist_item_select_mode_get(next_item) != ELM_OBJECT_SELECT_MODE_DISPLAY_ONLY) {
-				entry = elm_object_item_part_content_get(next_item, "elm.icon.entry");
+				entry = elm_object_item_part_content_get(next_item, "elm.swallow.content");
 				if (entry) {
 					elm_object_focus_set(entry, EINA_TRUE);
 					return;
@@ -217,7 +217,7 @@ static void _ip_info_entry_key_enter_cb(void *data, Evas_Object *obj, void *even
 		}
 		break;
 	case ENTRY_TYPE_PROXY_PORT:
-		entry = elm_object_item_part_content_get(entry_info->item, "elm.icon.entry");
+		entry = elm_object_item_part_content_get(entry_info->item, "elm.swallow.content");
 		if (entry) {
 			elm_object_focus_set(entry, EINA_FALSE);
 		}
