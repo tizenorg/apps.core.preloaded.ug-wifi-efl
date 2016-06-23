@@ -32,7 +32,8 @@ typedef enum {
 	AP_INFO_MENU_PASSWORD,
 	AP_INFO_MENU_STATIC,
 	AP_INFO_MENU_PROXY,
-	AP_INFO_MENU_SIZE
+	AP_INFO_MENU_EMPTY,
+	AP_INFO_MENU_SIZE,
 } ap_info_menu_type;
 
 typedef struct _layout_ap_info_object layout_ap_info_object;
