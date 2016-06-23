@@ -3518,6 +3518,10 @@ static layout_ap_info_object *_ap_info_create(app_object *app_obj, wifi_ap_objec
 				   NULL, NULL,
 				   __ap_info_menu_proxy_tap_cb, app_obj);
 
+	/* Add empty item to avoid overlap */
+	layout_ap_info_set_menu_cb(ap_info_obj, AP_INFO_MENU_EMPTY,
+				   NULL, NULL, NULL, NULL, NULL, NULL);
+
 	layout_ap_info_set_tap_connect_button_cb(ap_info_obj,
 						 __ap_info_tap_connect_button_cb, app_obj);
 
@@ -3700,7 +3704,7 @@ static void __main_del_cb(void *data, Evas *e,
 			  Evas_Object *obj, void *event_info)
 {
 	__WIFI_FUNC_ENTER__;
-
+	app_efl_exit();
 }
 
 static char *__main_menu_power_text_get_cb(void *data, Evas_Object *obj, const char *part)

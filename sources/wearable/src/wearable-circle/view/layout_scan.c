@@ -281,6 +281,8 @@ static gboolean _ap_list_update_ap_items(layout_scan_object *self)
 			_ap_list_append_ap_item(self, wifi_ap_itc, l->data);
 		}
 	}
+	/* Add empty item to avoid overlap */
+	_ap_list_append_ap_item(self, wifi_ap_itc, NULL);
 	elm_genlist_item_class_free(wifi_ap_itc);
 
 	WIFI_LOG_INFO("ap list update items count %d.", elm_genlist_items_count(self->ap_list) - 1);

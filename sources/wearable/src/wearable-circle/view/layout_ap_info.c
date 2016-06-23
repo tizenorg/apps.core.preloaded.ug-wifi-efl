@@ -154,6 +154,11 @@ static void _append_menu(layout_ap_info_object *self, ap_info_menu_type type,
 					 self->menu_cb[type].text_get, self->menu_cb[type].content_get, NULL, NULL);
 		break;
 
+	case AP_INFO_MENU_EMPTY:
+		/* Empty item */
+		itc = create_genlist_itc("1text", NULL, NULL, NULL, NULL);
+		break;
+
 	default:
 		return;
 	}
@@ -240,6 +245,7 @@ void layout_ap_info_open_show(layout_ap_info_object *self, void *menu_data)
 	_append_menu(self, AP_INFO_MENU_TITLE, menu_data);
 	_append_menu(self, AP_INFO_MENU_STATIC, menu_data);
 	_append_menu(self, AP_INFO_MENU_PROXY, menu_data);
+	_append_menu(self, AP_INFO_MENU_EMPTY, menu_data);
 	self->naviframe_item = view_base_naviframe_push(self->base,
 							self->layout, self->del_cb.func, self->del_cb.data);
 	if (!self->naviframe_item) {
@@ -258,6 +264,7 @@ void layout_ap_info_wps_show(layout_ap_info_object *self, void *menu_data)
 	_append_menu(self, AP_INFO_MENU_WPS, menu_data);
 	_append_menu(self, AP_INFO_MENU_STATIC, menu_data);
 	_append_menu(self, AP_INFO_MENU_PROXY, menu_data);
+	_append_menu(self, AP_INFO_MENU_EMPTY, menu_data);
 	self->naviframe_item = view_base_naviframe_push(self->base,
 							self->layout, self->del_cb.func, self->del_cb.data);
 	if (!self->naviframe_item) {
@@ -276,6 +283,7 @@ void layout_ap_info_eap_show(layout_ap_info_object *self, void *menu_data)
 	_append_menu(self, AP_INFO_MENU_EAP, menu_data);
 	_append_menu(self, AP_INFO_MENU_STATIC, menu_data);
 	_append_menu(self, AP_INFO_MENU_PROXY, menu_data);
+	_append_menu(self, AP_INFO_MENU_EMPTY, menu_data);
 	self->naviframe_item = view_base_naviframe_push(self->base,
 							self->layout, self->del_cb.func, self->del_cb.data);
 	if (!self->naviframe_item) {
@@ -294,6 +302,7 @@ void layout_ap_info_security_show(layout_ap_info_object *self, void *menu_data)
 	_append_menu(self, AP_INFO_MENU_PASSWORD, menu_data);
 	_append_menu(self, AP_INFO_MENU_STATIC, menu_data);
 	_append_menu(self, AP_INFO_MENU_PROXY, menu_data);
+	_append_menu(self, AP_INFO_MENU_EMPTY, menu_data);
 	self->naviframe_item = view_base_naviframe_push(self->base,
 							self->layout, self->del_cb.func, self->del_cb.data);
 	if (!self->naviframe_item) {
