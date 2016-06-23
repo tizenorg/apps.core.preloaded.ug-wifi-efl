@@ -118,6 +118,11 @@ static void *on_create(ui_gadget_h ug, enum ug_mode mode,
 		return NULL;
 	}
 
+	if(ug_app_state) {
+		INFO_LOG(UG_NAME_NORMAL, "ug_app_state already exists");
+		return ug_app_state->layout_main;
+	}
+
 	ug_app_state = g_new0(wifi_appdata, 1);
 	retvm_if(NULL == ug_app_state, NULL);
 
