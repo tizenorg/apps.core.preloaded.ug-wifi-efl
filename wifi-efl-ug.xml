@@ -2,7 +2,7 @@
 <manifest xmlns="http://tizen.org/ns/packages" package="wifi-efl-ug" api-version="2.4" version="1.0.0" install-location="internal-only">
 	<label>Wi-Fi</label>
 	<description>Wi-Fi</description>
-	<ui-application appid="wifi-efl-ug" exec="/usr/apps/wifi-efl-ug/bin/wifi-efl-UG" ui-gadget="true" nodisplay="true" taskmanage="false" multiple="false" type="capp" process-pool="true" hw-acceleration="use-GL">
+	<ui-application appid="wifi-efl-ug" exec="/usr/apps/wifi-efl-ug/bin/wifi-efl-UG" ui-gadget="true" nodisplay="true" taskmanage="false" multiple="false" type="capp" process-pool="true" hw-acceleration="use-GL" launch_mode="caller">
 		<label>Wi-Fi</label>
 		<icon>/usr/share/icons/setting_wifi.png</icon>
 		<app-control>
