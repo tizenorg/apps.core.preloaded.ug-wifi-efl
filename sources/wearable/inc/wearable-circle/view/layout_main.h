@@ -29,6 +29,7 @@ typedef enum {
 	MAIN_MENU_TITLE = -1,
 	MAIN_MENU_POWER,
 	MAIN_MENU_SCAN,
+	MAIN_MENU_EMPTY,
 	MAIN_MENU_SIZE
 } main_menu_type;
 
