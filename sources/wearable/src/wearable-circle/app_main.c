@@ -1043,8 +1043,6 @@ static char *__scan_menu_ap_item_text_get_cb(void *data, Evas_Object *obj, const
 
 	WIFI_RET_VAL_IF_FAIL(ap_obj != NULL, NULL);
 
-	WIFI_LOG_ERR("part (%s)", part);
-
 	if (!g_strcmp0(part, "elm.text")) {
 		gchar *ssid, *markup_ssid;
 		ssid = wifi_manager_ap_get_ssid(ap_obj);
