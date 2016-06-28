@@ -480,7 +480,7 @@ static void __wifi_manager_connection_state_changed_cb(wifi_manager_object *mana
 			layout_scan_pop_to(app_obj->scan);
 			layout_scan_ap_list_item_move_to_top(app_obj->scan, ap_item);
 			//elm_genlist_item_update(ap_item);
-			elm_genlist_item_fields_update(ap_item, "elm.text.sub", ELM_GENLIST_ITEM_FIELD_TEXT);
+			elm_genlist_item_fields_update(ap_item, "elm.text.1", ELM_GENLIST_ITEM_FIELD_TEXT);
 			idler_util_managed_idle_add(_scan_scroll_to_top_for_idle,
 						    app_obj->scan);
 
@@ -751,7 +751,7 @@ static char *__detail_menu_status_text_get_cb(void *data, Evas_Object *obj, cons
 {
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_STATUS);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		app_object *app_obj = data;
 		wifi_connection_state_e conn_state;
 		if (!app_obj) {
@@ -811,7 +811,7 @@ static char *__detail_menu_strength_text_get_cb(void *data, Evas_Object *obj, co
 {
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_SIGNAL_STRENGTH);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		app_object *app_obj = data;
 		if (!app_obj) {
 			WIFI_LOG_ERR("app object is NULL");
@@ -827,7 +827,7 @@ static char *__detail_menu_speed_text_get_cb(void *data, Evas_Object *obj, const
 {
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_LINK_SPEED);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		app_object *app_obj = data;
 		gint max_speed;
 		if (!app_obj) {
@@ -845,7 +845,7 @@ static char *__detail_menu_ip_text_get_cb(void *data, Evas_Object *obj, const ch
 {
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_IP_ADDRESS);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		app_object *app_obj = data;
 		if (!app_obj) {
 			WIFI_LOG_ERR("app object is NULL");
@@ -924,7 +924,7 @@ static void __scan_ap_item_update_last_connection_error(app_object *app_obj,
 	}
 
 	wifi_manager_ap_set_last_connection_error(found_ap, connection_error);
-//	elm_genlist_item_fields_update(ap_item, "elm.text.sub",
+//	elm_genlist_item_fields_update(ap_item, "elm.text.1",
 //				       ELM_GENLIST_ITEM_FIELD_TEXT);
 	elm_genlist_item_update(ap_item);
 }
@@ -1051,7 +1051,7 @@ static char *__scan_menu_ap_item_text_get_cb(void *data, Evas_Object *obj, const
 		markup_ssid = elm_entry_utf8_to_markup(ssid);
 		g_free(ssid);
 		return markup_ssid;
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		app_object *app_obj = evas_object_data_get(obj,
 							   LAYOUT_SCAN_DATA_KEY_WIFI_AP_ITEM_SELECT);
 		wifi_connection_state_e state;
@@ -1174,7 +1174,7 @@ static Evas_Object *__scan_menu_ap_item_content_get_cb(void *data, Evas_Object *
 	wifi_ap_object *ap_obj = data;
 	WIFI_RET_VAL_IF_FAIL(ap_obj != NULL, NULL);
 
-	if (!g_strcmp0(part, "elm.swallow.end")) {
+	if (!g_strcmp0(part, "elm.icon")) {
 		return _get_ap_signal_strength_image_layout(ap_obj, obj);
 	}
 	return NULL;
@@ -1810,7 +1810,7 @@ static char *__ap_info_menu_eap_text_get_cb(void *data, Evas_Object *obj, const 
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_EAP_METHOD_MENU);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		wifi_eap_type_e eap_type =
 			wifi_address_get_eap_type(app_obj->address_for_connect);
 		if (eap_type == WIFI_EAP_TYPE_SIM) {
@@ -2495,7 +2495,7 @@ static char *__static_ip_menu_ip_address_text_get_cb(void *data, Evas_Object *ob
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_IP_ADDRESS);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return _make_static_ip_menu_text(
 			       wifi_address_get_ip_address(app_obj->address_for_edit),
 			       DEFAULT_GUIDE_IP_ADDRESS);
@@ -2510,7 +2510,7 @@ static char *__static_ip_menu_gateway_address_text_get_cb(void *data, Evas_Objec
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_GATYEWAY);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return _make_static_ip_menu_text(
 			       wifi_address_get_gateway_address(app_obj->address_for_edit),
 			       DEFAULT_GUIDE_GATEWAY_ADDRESS);
@@ -2525,7 +2525,7 @@ static char *__static_ip_menu_subnet_mask_text_get_cb(void *data, Evas_Object *o
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_SUBNETMASK);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return _make_static_ip_menu_text(
 			       wifi_address_get_subnet_mask(app_obj->address_for_edit),
 			       DEFAULT_GUIDE_SUBNET_MASK);
@@ -2540,7 +2540,7 @@ static char *__static_ip_menu_dns1_text_get_cb(void *data, Evas_Object *obj, con
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup_printf(STR_DNS, 1);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return _make_static_ip_menu_text(
 			       wifi_address_get_dns_address(app_obj->address_for_edit, 1),
 			       DEFAULT_GUIDE_DNS1);
@@ -2555,7 +2555,7 @@ static char *__static_ip_menu_dns2_text_get_cb(void *data, Evas_Object *obj, con
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup_printf(STR_DNS, 2);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return _make_static_ip_menu_text(
 			       wifi_address_get_dns_address(app_obj->address_for_edit, 2),
 			       DEFAULT_GUIDE_DNS2);
@@ -3127,7 +3127,7 @@ static char *__proxy_setting_menu_address_text_get_cb(void *data, Evas_Object *o
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_PROXY_ADDRESS);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return g_strdup(wifi_address_get_proxy_address(app_obj->address_for_edit));
 	}
 	return NULL;
@@ -3140,7 +3140,7 @@ static char *__proxy_setting_menu_port_text_get_cb(void *data, Evas_Object *obj,
 
 	if (!g_strcmp0(part, "elm.text")) {
 		return g_strdup(STR_PROXY_PORT);
-	} else if (!g_strcmp0(part, "elm.text.sub")) {
+	} else if (!g_strcmp0(part, "elm.text.1")) {
 		return g_strdup(wifi_address_get_proxy_port(app_obj->address_for_edit));
 	}
 	return NULL;
@@ -3267,7 +3267,7 @@ static void __proxy_setting_menu_tap_cb(void *data, Evas_Object *obj, void *even
 
 	WIFI_RET_IF_FAIL(app_obj->wearable_input == NULL);
 
-	proxy_text = elm_object_item_part_text_get(item, "elm.text.sub");
+	proxy_text = elm_object_item_part_text_get(item, "elm.text.1");
 	menu_item_type = layout_proxy_setting_get_menu_type(app_obj->proxy_setting, item);
 	switch (menu_item_type) {
 	case PROXY_SETTING_ITEM_ADDRESS:
@@ -3947,7 +3947,7 @@ static char *__main_menu_scan_text_get_cb(void *data, Evas_Object *obj, const ch
 	if (!g_strcmp0(part, "elm.text"))
 		return g_strdup(STR_WIFI_NETWORKS);
 
-	if (!g_strcmp0(part, "elm.text.sub")) {
+	if (!g_strcmp0(part, "elm.text.1")) {
 		if (!wifi_manager_is_wifi_use(app_obj->wifi_manager))
 			return g_strdup(STR_TURNED_OFF);
 
@@ -4340,9 +4340,8 @@ static void app_service(app_control_h service, void *user_data)
 					wifi_ap_object *found_ap = elm_object_item_data_get(found_ap_item);
 					wifi_manager_ap_set_captiveportal(found_ap, TRUE);
 
-					elm_genlist_item_fields_update(found_ap_item, "elm.text.sub",
+					elm_genlist_item_fields_update(found_ap_item, "elm.text.1",
 								       ELM_GENLIST_ITEM_FIELD_TEXT);
-					WIFI_LOG_INFO("update.. text.sub!");
 				}
 			}
 			free(ssid);

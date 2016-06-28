@@ -67,7 +67,7 @@ static gboolean _create_menu_itc_array(layout_main_object *obj,
 							      NULL, NULL);
 	WIFI_RET_VAL_IF_FAIL(menu_item_array[MAIN_MENU_POWER], FALSE);
 
-	menu_item_array[MAIN_MENU_SCAN] = create_genlist_itc("type1",
+	menu_item_array[MAIN_MENU_SCAN] = create_genlist_itc("2text",
 							     obj->menu_cb[MAIN_MENU_SCAN].text_get,
 							     obj->menu_cb[MAIN_MENU_SCAN].content_get,
 							     NULL, NULL);
