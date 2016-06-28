@@ -253,30 +253,11 @@ collections {
 				}
 			}
 			part {
-				name: "elm.swallow.percent_label";
-				type: SWALLOW;
-				scale: 1;
-				description {
-					state: "default" 0.0;
-					min: 0 32;
-					fixed: 0 1;
-					align: 0.5 0.0;
-					rel1 {
-						to: "top_padding";
-						relative: 0.0 1.0;
-					}
-					rel2 {
-						to: "top_padding";
-						relative: 1.0 1.0;
-					}
-				}
-			}
-			part {
 				name: "elm.image";
 				type: IMAGE;
 				scale : 1;
 				description {
-					color_class: AO017;
+					color: 8 56 94 255;
 					state: "default" 0.0;
 					min: 0 50;
 					fixed : 1 1;
@@ -290,6 +271,65 @@ collections {
 					rel2 {
 						to: "base";
 						relative: 1.0 0.0;
+					}
+				}
+			}
+			part {
+				name: "top_left_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 145 0;
+					fixed: 1 0;
+					align: 0.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 0.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 0.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "top_right_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 145 0;
+					fixed: 1 0;
+					align: 1.0 0.0;
+					rel1 {
+						to: "base";
+						relative: 1.0 0.0;
+					}
+					rel2 {
+						to: "base";
+						relative: 1.0 1.0;
+					}
+				}
+			}
+			part {
+				name: "elm.swallow.percent_label";
+				type: SWALLOW;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 32;
+					fixed: 0 1;
+					align: 0.0 0.0;
+					rel1 {
+						relative: 1.0 1.0;
+						to_x: "top_left_padding";
+						to_y: "top_padding";
+					}
+					rel2 {
+						relative: 0.0 1.0;
+						to_x: "top_right_padding";
+						to_y: "top_padding";
 					}
 				}
 			}

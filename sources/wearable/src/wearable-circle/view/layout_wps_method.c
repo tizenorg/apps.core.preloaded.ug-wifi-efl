@@ -76,6 +76,7 @@ static Evas_Object *_create_initialized_menu_list(layout_wps_method_object *self
 	Elm_Genlist_Item_Class *menu_title_itc = NULL;
 	Elm_Genlist_Item_Class *menu_wps_button_itc = NULL;
 	Elm_Genlist_Item_Class *menu_wps_pin_itc = NULL;
+	Elm_Genlist_Item_Class *menu_empty_itc = NULL;
 
 	if (!menu_list) {
 		WIFI_LOG_ERR("menu_list create is failed.");
@@ -107,6 +108,15 @@ static Evas_Object *_create_initialized_menu_list(layout_wps_method_object *self
 		evas_object_del(menu_list);
 		return NULL;
 	}
+	menu_empty_itc = create_genlist_itc("1text", NULL, NULL, NULL, NULL);
+	if (!menu_empty_itc) {
+		WIFI_LOG_ERR("menu wps pin itc create failed.");
+		elm_genlist_item_class_free(menu_title_itc);
+		elm_genlist_item_class_free(menu_wps_button_itc);
+		elm_genlist_item_class_free(menu_wps_pin_itc);
+		evas_object_del(menu_list);
+		return NULL;
+	}
 	elm_genlist_item_append(menu_list, menu_title_itc, NULL,
 				NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_append(menu_list, menu_wps_button_itc, menu_data,
@@ -116,10 +126,14 @@ static Evas_Object *_create_initialized_menu_list(layout_wps_method_object *self
 	elm_genlist_item_append(menu_list, menu_wps_pin_itc, menu_data,
 				NULL, ELM_GENLIST_ITEM_NONE,
 				self->menu_cb[WPS_METHOD_MENU_WPS_PIN].tap,
+
 				self->menu_cb[WPS_METHOD_MENU_WPS_PIN].data);
+	elm_genlist_item_append(menu_list, menu_empty_itc, menu_data,
+				NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	elm_genlist_item_class_free(menu_title_itc);
 	elm_genlist_item_class_free(menu_wps_button_itc);
 	elm_genlist_item_class_free(menu_wps_pin_itc);
+	elm_genlist_item_class_free(menu_empty_itc);
 	return menu_list;
 }
 

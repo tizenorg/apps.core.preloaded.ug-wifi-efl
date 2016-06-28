@@ -74,6 +74,7 @@ static gboolean _create_menu_itc_array(layout_main_object *obj,
 	if (!menu_item_array[MAIN_MENU_SCAN]) {
 		elm_genlist_item_class_free(menu_item_array[MAIN_MENU_POWER]);
 	}
+	
 	return TRUE;
 }
 
