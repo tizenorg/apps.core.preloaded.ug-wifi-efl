@@ -312,7 +312,11 @@ static void __wifi_manager_scan_finished_cb(wifi_manager_object *manager,
 	}
 
 	app_obj->is_scan_finished = TRUE;
-	popup_scanning_dismiss(app_obj->popup_scanning);
+	if (app_obj->popup_scanning) {
+		popup_scanning_destroy(app_obj->popup_scanning);
+		popup_scanning_free(app_obj->popup_scanning);
+		app_obj->popup_scanning = NULL;
+	}
 
 	if (error_code != WIFI_ERROR_NONE) {
 		WIFI_LOG_ERR("Wi-Fi Scan failed. error code = %s",
