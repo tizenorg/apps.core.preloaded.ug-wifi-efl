@@ -3706,7 +3706,7 @@ static void __main_del_cb(void *data, Evas *e,
 			  Evas_Object *obj, void *event_info)
 {
 	__WIFI_FUNC_ENTER__;
-	app_efl_exit();
+	ui_app_exit();
 }
 
 static char *__main_menu_power_text_get_cb(void *data, Evas_Object *obj, const char *part)

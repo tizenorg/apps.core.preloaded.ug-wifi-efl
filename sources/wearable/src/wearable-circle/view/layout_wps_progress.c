@@ -103,10 +103,10 @@ static Evas_Object *_create_popup(layout_wps_progress_object *self, Evas_Object 
 	Evas_Object *popup = view_base_add_popup_for_circle(self->base, parent);
 	WIFI_RET_VAL_IF_FAIL(popup != NULL, NULL);
 
-	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK, 
-			self->destroy_cb.func, self->destroy_cb.data);
+	eext_object_event_callback_add(popup, EEXT_CALLBACK_BACK,
+									__popup_hide_cb, NULL);
 	evas_object_smart_callback_add(popup, "dismissed",
-			self->destroy_cb.func, self->destroy_cb.data);
+									self->destroy_cb.func, self->destroy_cb.data);
 	return popup;
 }
 
