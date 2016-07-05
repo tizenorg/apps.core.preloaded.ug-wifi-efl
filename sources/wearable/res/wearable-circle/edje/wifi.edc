@@ -666,7 +666,7 @@ collections {
 					state: "default" 0.0;
 					min: 0 44;
 					align: 0.0 0.0;
-					fixed: 0 1;
+					fixed: 1 1;
 					rel1 {
 						relative: 1.0 1.0;
 						to_x: "left_padding";
@@ -889,6 +889,7 @@ collections {
 				description {
 					state: "default" 0.0;
 					align: 0.5 0;
+					fixed: 1 1;
 					rel1 {
 						relative: 1.0 0.0;
 						to : "check.left.padding";
@@ -912,7 +913,7 @@ collections {
 				description {
 					state: "default" 0.0;
 					min: 7 0;
-					fixed: 1 0;
+					fixed: 1 1;
 					align: 1 0;
 					rel1 {
 						relative: 0.0 0.0;
@@ -939,6 +940,7 @@ collections {
 						relative: 0.0 1.0;
 						to : "elm.spacer.check";
 					}
+					fixed: 1 1;
 				}
 			}
 	        part {

@@ -72,7 +72,6 @@ static void __editfield_state_changed_cb(void *data, Ecore_IMF_Context *ctx, int
 	if (value == ECORE_IMF_INPUT_PANEL_STATE_HIDE) {
 		if (view_base_window_is_focus(input_obj->base)) {
 			WIFI_LOG_INFO("Key pad is now closed by user");
-			//layout_wearable_input_pop(input_obj);
 		} else {
 			WIFI_LOG_INFO("Key pad is now closed by other window show");
 		}
