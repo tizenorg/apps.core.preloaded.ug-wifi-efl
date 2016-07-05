@@ -18,6 +18,16 @@ Reviewed-on: https://review.tizen.org/gerrit/78350
 Project: apps/core/preloaded/ug-wifi-efl
 Branch: refs/heads/tizen
 
+Code-Review+1: taesub kim <taesub.kim@samsung.com>
+Code-Review+1: hyunuk tak <hyunuk.tak@samsung.com>
+Verified+1: hyunuk tak <hyunuk.tak@samsung.com>
+Code-Review+1: cheoleun moon <chleun.moon@samsung.com>
+Submitted-by: cheoleun moon <chleun.moon@samsung.com>
+Submitted-at: Tue, 05 Jul 2016 00:40:20 -0700
+Reviewed-on: https://review.tizen.org/gerrit/78350
+Project: apps/core/preloaded/ug-wifi-efl
+Branch: refs/heads/tizen
+
 Code-Review+2: cheoleun moon <chleun.moon@samsung.com>
 Code-Review+1: taesub kim <taesub.kim@samsung.com>
 Code-Review+1: hyunuk tak <hyunuk.tak@samsung.com>
