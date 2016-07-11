@@ -264,11 +264,13 @@ proxy_setting_menu_type layout_proxy_setting_get_menu_type(layout_proxy_setting_
 void layout_proxy_setting_activate_rotary_event(layout_proxy_setting_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_proxy_setting_deactivate_rotary_event(layout_proxy_setting_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_proxy_setting_set_del_cb(layout_proxy_setting_object *self,

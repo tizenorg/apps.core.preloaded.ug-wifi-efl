@@ -156,7 +156,7 @@ static void _append_menu(layout_ap_info_object *self, ap_info_menu_type type,
 
 	case AP_INFO_MENU_EMPTY:
 		/* Empty item */
-		itc = create_genlist_itc("1text", NULL, NULL, NULL, NULL);
+		itc = create_genlist_itc("padding", NULL, NULL, NULL, NULL);
 		break;
 
 	default:
@@ -345,11 +345,13 @@ void layout_ap_info_set_connect_button_enable(layout_ap_info_object *self,
 void layout_ap_info_activate_rotary_event(layout_ap_info_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_ap_info_deactivate_rotary_event(layout_ap_info_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_ap_info_set_del_cb(layout_ap_info_object *self,

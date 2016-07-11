@@ -192,11 +192,13 @@ void layout_eap_method_pop(layout_eap_method_object *self)
 void layout_eap_method_activate_rotary_event(layout_eap_method_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_eap_method_deactivate_rotary_event(layout_eap_method_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_eap_method_set_del_cb(layout_eap_method_object *self,
