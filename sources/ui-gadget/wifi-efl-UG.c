@@ -309,6 +309,9 @@ static void on_pause(ui_gadget_h ug, app_control_h app_control, void *priv)
 	common_util_set_system_registry(VCONFKEY_WIFI_UG_RUN_STATE,
 			VCONFKEY_WIFI_UG_RUN_STATE_ON_BACKGROUND);
 
+	passwd_popup_free(ug_app_state->passpopup);
+	ug_app_state->passpopup = NULL;
+
 	__COMMON_FUNC_EXIT__;
 }
 
