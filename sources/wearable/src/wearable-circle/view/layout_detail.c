@@ -220,11 +220,13 @@ void layout_detail_show(layout_detail_object *self)
 void layout_detail_activate_rotary_event(layout_detail_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_detail_deactivate_rotary_event(layout_detail_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_detail_set_del_cb(layout_detail_object *self,

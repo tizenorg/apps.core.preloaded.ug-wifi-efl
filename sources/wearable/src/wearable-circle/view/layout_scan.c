@@ -551,11 +551,13 @@ void layout_scan_ap_list_clear_data(layout_scan_object *self)
 void layout_scan_ap_list_activate_rotary_event(layout_scan_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->ap_list_circle, EINA_TRUE);
 }
 
 void layout_scan_ap_list_deactivate_rotary_event(layout_scan_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->ap_list_circle, EINA_FALSE);
 }
 
 void layout_scan_set_del_cb(layout_scan_object *self,

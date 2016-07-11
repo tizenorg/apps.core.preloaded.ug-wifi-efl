@@ -75,6 +75,11 @@ static gboolean _create_menu_itc_array(layout_main_object *obj,
 		elm_genlist_item_class_free(menu_item_array[MAIN_MENU_POWER]);
 	}
 
+	menu_item_array[MAIN_MENU_EMPTY] = create_genlist_itc("padding", NULL, NULL, NULL, NULL);
+	if (!menu_item_array[MAIN_MENU_EMPTY]) {
+		elm_genlist_item_class_free(menu_item_array[MAIN_MENU_EMPTY]);
+	}
+
 	return TRUE;
 }
 
@@ -227,11 +232,13 @@ void layout_main_menu_show(layout_main_object *self, main_menu_type type)
 void layout_main_activate_rotary_event(layout_main_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_main_deactivate_rotary_event(layout_main_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_main_set_del_cb(layout_main_object *self,

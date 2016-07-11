@@ -409,6 +409,7 @@ static void __wifi_manager_device_state_changed_cb(wifi_manager_object *manager,
 
 	layout_main_menu_update(app_obj->main, MAIN_MENU_POWER);
 	layout_main_menu_update(app_obj->main, MAIN_MENU_SCAN);
+	layout_main_menu_update(app_obj->main, MAIN_MENU_EMPTY);
 
 	layout_main_menu_set_enable(app_obj->main, MAIN_MENU_POWER, EINA_TRUE);
 	layout_main_menu_set_enable(app_obj->main,
@@ -518,6 +519,7 @@ static void __wifi_manager_wifi_use_changed_cb(keynode_t *node, void *user_data)
 
 	layout_main_menu_update(app_obj->main, MAIN_MENU_POWER);
 	layout_main_menu_update(app_obj->main, MAIN_MENU_SCAN);
+	layout_main_menu_update(app_obj->main, MAIN_MENU_EMPTY);
 }
 
 static void __wifi_manager_background_scan_cb(wifi_manager_object *manager,
@@ -4033,6 +4035,7 @@ static void _main_callbacks_init(layout_main_object *main_obj,
 	layout_main_set_menu_cb(main_obj, MAIN_MENU_SCAN,
 				__main_menu_scan_text_get_cb, NULL,
 				__main_menu_scan_tap_cb, app_obj);
+	layout_main_set_menu_cb(main_obj, MAIN_MENU_EMPTY, NULL, NULL, NULL, NULL);
 }
 
 static layout_main_object *_main_create(view_base_object *base_obj,

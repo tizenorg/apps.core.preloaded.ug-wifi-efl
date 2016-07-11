@@ -286,11 +286,13 @@ void layout_static_ip_save_button_set_disable(layout_static_ip_object *self)
 void layout_static_ip_activate_rotary_event(layout_static_ip_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_TRUE);
 }
 
 void layout_static_ip_deactivate_rotary_event(layout_static_ip_object *self)
 {
 	WIFI_RET_IF_FAIL(self);
+	eext_rotary_object_event_activated_set(self->menu_list_circle, EINA_FALSE);
 }
 
 void layout_static_ip_set_del_cb(layout_static_ip_object *self,

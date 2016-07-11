@@ -311,7 +311,7 @@ Evas_Object *view_base_add_genlist_for_circle(view_base_object *self, Evas_Objec
 	WIFI_RET_VAL_IF_FAIL(genlist, NULL);
 #if 0
 	uxt_genlist_set_bottom_margin_enabled(genlist, EINA_TRUE);
-
+#endif
 	*circle_genlist = eext_circle_object_genlist_add(genlist, self->circle_surface);
 	if (!(*circle_genlist)) {
 		evas_object_del(genlist);
@@ -319,7 +319,8 @@ Evas_Object *view_base_add_genlist_for_circle(view_base_object *self, Evas_Objec
 	}
 	eext_circle_object_genlist_scroller_policy_set(*circle_genlist,
 						       ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
-#endif
+	eext_rotary_object_event_activated_set(*circle_genlist, EINA_TRUE);
+
 	return genlist;
 }
 
@@ -347,6 +348,7 @@ Evas_Object *view_base_add_scroller_for_circle(view_base_object *self, Evas_Obje
 	}
 	eext_circle_object_scroller_policy_set(*circle_scroller,
 					       ELM_SCROLLER_POLICY_OFF, ELM_SCROLLER_POLICY_AUTO);
+	eext_rotary_object_event_activated_set(*circle_scroller, EINA_TRUE);
 	return scroller;
 }
 

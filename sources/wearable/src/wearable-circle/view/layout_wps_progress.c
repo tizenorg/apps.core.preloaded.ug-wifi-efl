@@ -381,6 +381,7 @@ void layout_wps_progress_activate_rotary_event(layout_wps_progress_object *self)
 {
 	WIFI_RET_IF_FAIL(self != NULL);
 	WIFI_RET_IF_FAIL(self->progress_label_circle != NULL);
+	eext_rotary_object_event_activated_set(self->progress_label_circle, EINA_TRUE);
 }
 
 void layout_wps_progress_set_show_finished_cb(layout_wps_progress_object *self,
