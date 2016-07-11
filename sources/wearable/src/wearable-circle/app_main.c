@@ -4267,6 +4267,8 @@ static void app_pause(void *user_data)
 
 	WIFI_RET_IF_FAIL(app_obj != NULL);
 	WIFI_RET_IF_FAIL(app_obj->wifi_manager != NULL);
+
+	layout_main_pop_to(app_obj->main);
 }
 
 static void app_resume(void *user_data)
