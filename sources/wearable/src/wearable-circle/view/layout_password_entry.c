@@ -104,7 +104,6 @@ static Evas_Object *_create_entry(layout_password_entry_object *self, Evas_Objec
 	entry = elm_entry_add(parent);
 	WIFI_RET_VAL_IF_FAIL(entry != NULL, NULL);
 
-	elm_object_style_set(entry, "editfield/password");
 	elm_object_part_text_set(entry, "elm.guide", STR_PASSWORD_HEADER);
 	elm_access_object_unregister(entry);
 

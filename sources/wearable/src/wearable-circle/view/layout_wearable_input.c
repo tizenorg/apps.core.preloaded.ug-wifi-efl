@@ -123,7 +123,6 @@ static Evas_Object *_create_editfield(layout_wearable_input_object *self, Evas_O
 
 	WIFI_RET_VAL_IF_FAIL(editfield != NULL, NULL);
 
-	elm_object_style_set(editfield, "editfield/popup");
 	if (self->input_guide_text) {
 		gchar *markup_text = elm_entry_utf8_to_markup(self->input_guide_text);
 		if (markup_text) {
