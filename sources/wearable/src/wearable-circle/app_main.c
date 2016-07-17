@@ -679,6 +679,41 @@ static view_base_object *_view_base_create()
 	return base_obj;
 }
 
+static Eina_Bool _homekey_press_cb(void *data, int type, void *event)
+{
+	__WIFI_FUNC_ENTER__;
+	app_object *app_obj = data;
+	Evas_Event_Key_Down *ev = event;
+
+	WIFI_RET_IF_FAIL(app_obj != NULL);
+	WIFI_RET_IF_FAIL(ev != NULL);
+
+	if (app_obj->main && strcmp(ev->keyname, "XF86PowerOff") == 0) {
+		_release_popups(app_obj);
+		layout_main_pop_to(app_obj->main);
+	}
+
+	return ECORE_CALLBACK_RENEW;
+}
+
+static gboolean _app_view_base_callback_init_for_keygrab(app_object *app_obj)
+{
+	Evas_Object *window;
+
+	__WIFI_FUNC_ENTER__;
+
+	if (app_obj->base) {
+		window = view_base_get_window(app_obj->base);
+		if (window) {
+			elm_win_keygrab_set(window, "XF86Home", 0, 0, 0, ELM_WIN_KEYGRAB_SHARED);
+			ecore_event_handler_add(ECORE_EVENT_KEY_DOWN, _homekey_press_cb, app_obj);
+			return TRUE;
+		}
+	}
+
+	return FALSE;
+}
+
 static void __popup_unable_scan_destroy_cb(void *data, Evas_Object *obj, void *event_info)
 {
 	app_object *app_obj = data;
@@ -4087,6 +4122,11 @@ static void _app_service_handle_launch_requested(app_control_h service,
 	if (!_app_view_base_init(app_obj)) {
 		WIFI_LOG_ERR("_app_view_base_init() is failed.");
 	}
+
+	if (!_app_view_base_callback_init_for_keygrab(app_obj)) {
+		WIFI_LOG_ERR("_app_view_base_callback_init_for_keygrab() is failed");
+	}
+
 	if (is_scanlist_requested) {
 		_popup_scanning_show(app_obj, FALSE);
 		if (!app_obj->popup_scanning) {
@@ -4273,7 +4313,6 @@ static void app_pause(void *user_data)
 	WIFI_RET_IF_FAIL(app_obj != NULL);
 	WIFI_RET_IF_FAIL(app_obj->wifi_manager != NULL);
 
-	layout_main_pop_to(app_obj->main);
 }
 
 static void app_resume(void *user_data)
