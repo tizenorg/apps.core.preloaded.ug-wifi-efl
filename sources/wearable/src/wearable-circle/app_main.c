@@ -302,13 +302,16 @@ static void __wifi_manager_scan_finished_cb(wifi_manager_object *manager,
 		return;
 	}
 
-	if (app_obj->is_first_scan) {
-		if (idler_util_managed_idle_add(_wifi_manager_scan_start_for_idle,
+		if (app_obj->is_first_scan) {
+			if (!app_obj->scan)
+				app_obj->scan = _scan_create(app_obj->base, app_obj);
+
+			if (idler_util_managed_idle_add(_wifi_manager_scan_start_for_idle,
 						app_obj) > 0) {
-			return;
-		} else {
-			WIFI_LOG_ERR("idler_util_managed_idle_add() is failed.");
-		}
+				return;
+			} else {
+				WIFI_LOG_ERR("idler_util_managed_idle_add() is failed.");
+			}
 	}
 
 	app_obj->is_scan_finished = TRUE;
