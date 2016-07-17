@@ -386,9 +386,7 @@ Evas_Object *view_base_add_popup_for_circle(view_base_object *self, Evas_Object 
 	WIFI_RET_VAL_IF_FAIL(popup, NULL);
 
 	elm_object_style_set(popup, "circle");
-#if 0
-	uxt_popup_set_rotary_event_enabled(popup, EINA_TRUE);
-#endif
+	eext_rotary_object_event_activated_set(popup, EINA_TRUE);
 	evas_object_size_hint_weight_set(popup, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 
 	return popup;

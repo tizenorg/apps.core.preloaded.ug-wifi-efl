@@ -1780,7 +1780,6 @@ static void _popup_change_ap_show_use_ap(app_object *app_obj, wifi_ap_object *ap
 	}
 }
 
-#if 0
 static void __ap_info_del_cb(void *data, Evas *e,
 			     Evas_Object *obj, void *event_info)
 {
@@ -1805,7 +1804,6 @@ static void __ap_info_del_cb(void *data, Evas *e,
 		layout_scan_ap_list_activate_rotary_event(app_obj->scan);
 	}
 }
-#endif
 
 static char *__ap_info_menu_eap_text_get_cb(void *data, Evas_Object *obj, const char *part)
 {
@@ -3491,7 +3489,7 @@ static layout_ap_info_object *_ap_info_create(app_object *app_obj, wifi_ap_objec
 		return NULL;
 	}
 
-	//layout_ap_info_set_del_cb(ap_info_obj, __ap_info_del_cb, app_obj);
+	layout_ap_info_set_del_cb(ap_info_obj, __ap_info_del_cb, app_obj);
 	layout_ap_info_set_menu_cb(ap_info_obj, AP_INFO_MENU_TITLE,
 				   __general_title_menu_item_display_ssid_text_get_cb, NULL, NULL, NULL, NULL, NULL);
 	if (security_type == WIFI_SECURITY_TYPE_NONE) {
