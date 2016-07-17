@@ -31,6 +31,7 @@ typedef enum {
 	DETAIL_MENU_STRENGTH,
 	DETAIL_MENU_SPEED,
 	DETAIL_MENU_IP,
+	DETAIL_MENU_EMPTY,
 	DETAIL_MENU_SIZE
 } layout_detail_menu_type;
 

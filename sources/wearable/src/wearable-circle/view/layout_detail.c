@@ -114,6 +114,9 @@ static void _append_menu(layout_detail_object *self, layout_detail_menu_type typ
 		itc = create_genlist_itc("2text",
 					 self->menu_cb[type].text_get, NULL, NULL, NULL);
 		break;
+	case DETAIL_MENU_EMPTY:
+		itc = create_genlist_itc("padding", NULL, NULL, NULL, NULL);
+		break;
 
 	default:
 		return;
@@ -151,6 +154,8 @@ static gboolean _layout_detail_create(layout_detail_object *self, gboolean is_sh
 	_append_menu(self, DETAIL_MENU_STRENGTH);
 	_append_menu(self, DETAIL_MENU_SPEED);
 	_append_menu(self, DETAIL_MENU_IP);
+	_append_menu(self, DETAIL_MENU_EMPTY);
+
 	elm_object_part_content_set(self->layout,
 				    "elm.swallow.content", self->menu_list);
 
