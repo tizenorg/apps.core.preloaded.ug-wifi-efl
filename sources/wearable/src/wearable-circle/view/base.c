@@ -287,6 +287,16 @@ void view_base_conformant_del_virtualkeypad_size_changed_cb(view_base_object *se
 				       "virtualkeypad,size,changed", func);
 }
 
+static void
+gl_realized_cb(void *data, Evas_Object *obj, void *event_info)
+{
+	Elm_Object_Item *it = (Elm_Object_Item *)event_info;
+	if (it == elm_genlist_first_item_get(obj))
+	{
+		elm_object_item_signal_emit(it, "elm,action,title,slide,start", "elm");
+	}
+}
+
 Evas_Object *view_base_add_genlist(view_base_object *self, Evas_Object *parent)
 {
 	Evas_Object *genlist = NULL;
@@ -297,6 +307,7 @@ Evas_Object *view_base_add_genlist(view_base_object *self, Evas_Object *parent)
 	WIFI_RET_VAL_IF_FAIL(genlist, NULL);
 
 	elm_genlist_mode_set(genlist, ELM_LIST_COMPRESS);
+	evas_object_smart_callback_add(genlist, "realized", gl_realized_cb, NULL);
 
 	return genlist;
 }
