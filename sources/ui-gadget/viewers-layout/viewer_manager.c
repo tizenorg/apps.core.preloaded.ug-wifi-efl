@@ -1798,7 +1798,7 @@ static void hidden_ap_connect_ok_cb (void *data,
 	char* szPassword = NULL;
 	wifi_ap_h ap;
 
-	int ret = wifi_ap_hidden_create(hidden_ap_data->ssid, &ap);
+	int ret = wifi_ap_create(hidden_ap_data->ssid, &ap);
 	if (WIFI_ERROR_NONE != ret) {
 		ERROR_LOG(UG_NAME_ERR, "Failed to create an AP handle. Err = %d", ret);
 
@@ -2036,7 +2036,7 @@ void viewer_manager_specific_scan_response_hlr(
 			wifi_device_info_t device_info;
 			wifi_ap_h ap;
 
-			wifi_ap_hidden_create(ssid, &ap);
+			wifi_ap_create(ssid, &ap);
 			wifi_ap_set_security_type(ap, WIFI_SECURITY_TYPE_EAP);
 
 			struct ug_data *ugd = (struct ug_data *)ug_app_state->gadget;
