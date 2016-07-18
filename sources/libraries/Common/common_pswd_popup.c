@@ -507,10 +507,12 @@ static void _chk_changed_cb(void *data, Evas_Object *obj, void *ei)
 	}
 
 	Eina_Bool state = elm_check_state_get(obj);
+	pswd_popup_t *pswd_popup_data = (pswd_popup_t *)data;
+
 	if (state) {
-		elm_entry_password_set((Evas_Object *)data, EINA_FALSE);
+		elm_entry_password_set(pswd_popup_data->entry, EINA_FALSE);
 	} else {
-		elm_entry_password_set((Evas_Object *)data, EINA_TRUE);
+		elm_entry_password_set(pswd_popup_data->entry, EINA_TRUE);
 	}
 	elm_entry_cursor_end_set((Evas_Object *)data);
 }
@@ -539,7 +541,7 @@ static Evas_Object *_gl_pswd_check_box_item_content_get(void *data,
 		evas_object_size_hint_align_set(check, EVAS_HINT_FILL, EVAS_HINT_FILL);
 		evas_object_size_hint_weight_set(check, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 		evas_object_smart_callback_add(check, "changed",
-				_chk_changed_cb, pswd_popup_data->entry);
+				_chk_changed_cb, pswd_popup_data);
 
 		elm_object_focus_allow_set(check, EINA_FALSE);
 

@@ -653,6 +653,21 @@ static void app_terminate(void *data)
 		devpkr_app_state->win_main = NULL;
 	}
 
+	if (devpkr_app_state->popup) {
+		evas_object_del(devpkr_app_state->popup);
+		devpkr_app_state->popup = NULL;
+	}
+
+	if (devpkr_app_state->alertpopup) {
+		evas_object_del(devpkr_app_state->alertpopup);
+		devpkr_app_state->alertpopup = NULL;
+	}
+
+	if (devpkr_app_state->eap_popup) {
+		eap_connect_data_free(devpkr_app_state->eap_popup);
+		devpkr_app_state->eap_popup = NULL;
+	}
+
 	common_util_managed_ecore_scan_update_timer_del();
 	wlan_manager_destroy();
 

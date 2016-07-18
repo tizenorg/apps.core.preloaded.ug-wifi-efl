@@ -997,6 +997,7 @@ static void view_main_create_empty_layout(void)
 	Evas_Object *layout = NULL;
 	Evas_Object *prev_box = NULL;
 
+	if (devpkr_app_state->popup == NULL) return;
 	prev_box = elm_object_content_get(devpkr_app_state->popup);
 	if (prev_box != NULL) {
 		evas_object_del(prev_box);
