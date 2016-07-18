@@ -39,7 +39,6 @@ struct _layout_wps_progress_object {
 	Evas_Object *progressbar;
 	Evas_Object *progress_label;
 	Evas_Object *progress_label_circle;
-	Evas_Object *progress_percent_label;
 	Evas_Object *cancel_button;
 
 	Ecore_Timer *progress_timer;
@@ -88,7 +87,7 @@ static Eina_Bool __progress_timer_task_cb(void *data)
 	eext_circle_object_value_set(wps_progress->progressbar, progressbar_value);
 
 	g_snprintf(percent_text, sizeof(percent_text), "%d%%", (gint)progressbar_value);
-	elm_object_text_set(wps_progress->progress_percent_label, percent_text);
+	elm_object_part_text_set(wps_progress->progress_popup_layout, "elm.swallow.percent_text", percent_text);
 
 	WIFI_LOG_INFO("progress[%0.2f]", progressbar_value);
 	if (progressbar_value < 100)
@@ -194,23 +193,6 @@ static Evas_Object *_create_progressbar(layout_wps_progress_object *self, Evas_O
 	return progressbar;
 }
 
-static Evas_Object *_create_progress_percent_label(layout_wps_progress_object *self, Evas_Object *parent)
-{
-	Evas_Object *percent_label;
-	WIFI_RET_VAL_IF_FAIL(self != NULL, NULL);
-	WIFI_RET_VAL_IF_FAIL(parent != NULL, NULL);
-
-	percent_label = elm_label_add(parent);
-	WIFI_RET_VAL_IF_FAIL(percent_label != NULL, NULL);
-
-	elm_object_style_set(percent_label, "popup/default");
-	elm_label_line_wrap_set(percent_label, ELM_WRAP_MIXED);
-	elm_object_text_set(percent_label, "0%");
-	evas_object_show(percent_label);
-
-	return percent_label;
-}
-
 static Evas_Object *_create_cancel_button(layout_wps_progress_object *self, Evas_Object *parent)
 {
 	Evas_Object *cancel_button;
@@ -306,15 +288,7 @@ gboolean layout_wps_progress_create(layout_wps_progress_object *self)
 	elm_object_part_content_set(self->progress_popup_layout,
 				    "elm.swallow.label", self->progress_label);
 
-	self->progress_percent_label =
-		_create_progress_percent_label(self, self->progress_popup_layout);
-	if (!self->progress_percent_label) {
-		WIFI_LOG_ERR("_create_progress_percent_label() is failed.");
-		layout_wps_progress_destroy(self);
-		return FALSE;
-	}
-	elm_object_part_content_set(self->progress_popup_layout,
-				    "elm.swallow.percent_label", self->progress_percent_label);
+	elm_object_part_text_set(self->progress_popup_layout, "elm.swallow.percent_text", "0%");
 
 	self->cancel_button = _create_cancel_button(self, self->bottom_button_layout);
 	if (!self->cancel_button) {

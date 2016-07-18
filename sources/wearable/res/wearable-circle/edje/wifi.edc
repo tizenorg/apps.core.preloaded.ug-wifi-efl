@@ -55,7 +55,9 @@ collections {
 		style { name: "progressbar_layout_style";
 			base: "font=Tizen:style=Regular font_size=32 color=#F9F9F9FF align=center ellipsis=1.0 text_class=label";
 		}
-
+		style { name: "wps_progress_popup_layout";
+			base: "font=Tizen:style=Regular font_size=32 color=#F9F9F9FF align=center ellipsis=1.0 text_class=label";
+		}
 	}
 	group {
 		name: "ap_signal_image_layout";
@@ -317,23 +319,19 @@ collections {
 				}
 			}
 			part {
-				name: "elm.swallow.percent_label";
-				type: SWALLOW;
+				name: "elm.swallow.percent_text";
+				type: TEXTBLOCK;
 				scale: 1;
 				description {
 					state: "default" 0.0;
-					min: 0 32;
-					fixed: 0 1;
-					align: 0.5 0.0;
-					rel1 {
-						relative: 1.0 0.2;
-						to_x: "top_left_padding";
-						to_y: "top_padding";
-					}
-					rel2 {
-						relative: 0.0 1.0;
-						to_x: "top_right_padding";
-						to_y: "top_padding";
+					fixed: 1 1;
+					rel1.to: "base";
+					rel2.to: "elm.image";
+					rel1.relative: 0.5 0.0;
+					rel2.relative: 0.5 1.0;
+					text {
+						style: "wps_progress_popup_layout";
+						min: 1 1;
 					}
 				}
 			}
