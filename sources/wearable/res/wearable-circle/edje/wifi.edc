@@ -52,6 +52,10 @@ collections {
 		style { name: "check_text_in_password_layout";
 			base: "font=Tizen:style=Regular font_size=37 align=left color=#FFFFFF color_class=AT014 text_class=AT014";
 		}
+		style { name: "progressbar_layout_style";
+			base: "font=Tizen:style=Regular font_size=32 color=#F9F9F9FF align=center ellipsis=1.0 text_class=label";
+		}
+
 	}
 	group {
 		name: "ap_signal_image_layout";
@@ -539,24 +543,40 @@ collections {
 			}
 			part {
 				name: "elm.text.progressbar";
-				type: SWALLOW;
+				type: TEXTBLOCK;
 				scale: 1;
 				description {
 					state: "default" 0.0;
 					fixed: 1 1;
-					align: 0.5 0.0;
 					rel1 {
-						relative: -0.7 0.8;
-						to_x: "content_bg";
-						to_y: "content_bg";
+						relative: 0.0 1.0;
+						to_x: "base";
+						to_y: "middle_padding";
 					}
 					rel2 {
-						relative: 0.0 1.0;
-						to_x: "right_padding";
-						to_y: "middle_padding";
+						relative: 1.0 0.0;
+						to_x: "base";
+						to_y: "bottom_padding";
+					}
+					text {
+						style: "progressbar_layout_style";
+						min: 1 1;
 					}
 				}
 			}
+			part {
+				name: "bottom_padding";
+				type: SPACER;
+				scale: 1;
+				description {
+					state: "default" 0.0;
+					min: 0 88;
+					rel1.to: "base";
+					rel1.relative: 0.0 1.0;
+					align: 0.5 1.0;
+					fixed: 0 1;
+				}   
+			}   
 		}
 	}
 	group {

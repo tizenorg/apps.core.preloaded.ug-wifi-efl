@@ -66,18 +66,6 @@ static Evas_Object *_create_popup(popup_scanning_object *self, Evas_Object *pare
 	return popup;
 }
 
-static Evas_Object *_create_scanning_label(Evas_Object *parent)
-{
-	Evas_Object *label = elm_label_add(parent);
-	WIFI_RET_VAL_IF_FAIL(label, NULL);
-
-	elm_object_style_set(label, "popup/default");
-	elm_label_line_wrap_set(label, ELM_WRAP_MIXED);
-	elm_object_text_set(label, STR_SCANNING);
-
-	return label;
-}
-
 static Evas_Object *_create_scanning_progressbar(Evas_Object *parent)
 {
 	Evas_Object *progressbar = NULL;
@@ -87,7 +75,7 @@ static Evas_Object *_create_scanning_progressbar(Evas_Object *parent)
 		WIFI_LOG_ERR("progressbar create is failed.");
 		return NULL;
 	}
-	elm_object_style_set(progressbar, "process/small");
+	elm_object_style_set(progressbar, "process/popup/small");
 	evas_object_size_hint_align_set(progressbar, EVAS_HINT_FILL, 0.5);
 	evas_object_size_hint_weight_set(progressbar, EVAS_HINT_EXPAND, EVAS_HINT_EXPAND);
 	elm_progressbar_pulse(progressbar, EINA_TRUE);
@@ -98,7 +86,6 @@ static Evas_Object *_create_scanning_progressbar(Evas_Object *parent)
 static Evas_Object *_create_scanning(popup_scanning_object *self, Evas_Object *parent)
 {
 	Evas_Object *scanning;
-	Evas_Object *scanning_label;
 	Evas_Object *scanning_progressbar;
 
 	scanning = create_layout_use_edj_file(parent, CUSTOM_GROUP_SCANNING);
@@ -107,22 +94,14 @@ static Evas_Object *_create_scanning(popup_scanning_object *self, Evas_Object *p
 		return NULL;
 	}
 
-	scanning_label = _create_scanning_label(scanning);
-	if (!scanning_label) {
-		WIFI_LOG_ERR("_create_scanning_label is failed.");
-		evas_object_del(scanning);
-		return NULL;
-	}
-	elm_object_part_content_set(scanning, "elm.text.progressbar", scanning_label);
-
 	scanning_progressbar = _create_scanning_progressbar(scanning);
 	if (!scanning_progressbar) {
 		WIFI_LOG_ERR("_create_scanning_progressbar is failed.");
-		evas_object_del(scanning_label);
 		evas_object_del(scanning);
 		return NULL;
 	}
 	elm_object_part_content_set(scanning, "elm.swallow.content", scanning_progressbar);
+	elm_object_part_text_set(scanning, "elm.text.progressbar", STR_SCANNING);
 
 	return scanning;
 }
