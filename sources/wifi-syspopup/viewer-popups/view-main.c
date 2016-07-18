@@ -124,13 +124,16 @@ static void __popup_ok_cb(void *data, Evas_Object *obj, void *event_info)
 	default:
 		ERROR_LOG(SP_NAME_ERR, "Wrong security mode: %d", sec_type);
 		passwd_popup_free(devpkr_app_state->passpopup);
+		devpkr_app_state->passpopup = NULL;
 		break;
 	}
 
 	wlan_manager_connect_with_password(ap, password);
 
-	passwd_popup_free(devpkr_app_state->passpopup);
-	devpkr_app_state->passpopup = NULL;
+	if (devpkr_app_state->passpopup) {
+		passwd_popup_free(devpkr_app_state->passpopup);
+		devpkr_app_state->passpopup = NULL;
+	}
 
 popup_ok_exit:
 	g_free((gpointer)password);
