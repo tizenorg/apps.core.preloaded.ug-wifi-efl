@@ -3493,17 +3493,6 @@ static void __on_scan_pop_transition_finished_for_connect(void *data,
 
 	view_base_naviframe_del_transition_finished_cb(app_obj->base,
 						       __on_scan_pop_transition_finished_for_connect);
-
-	if (app_obj->scan) {
-		if (app_obj->connecting_wifi_ap) {
-			_wifi_reserve_connect_to_selected_ap(app_obj,
-							     __wifi_disconnected_for_connect_cb, app_obj);
-		} else {
-			_wifi_connect_to_selected_ap(app_obj);
-		}
-	} else {
-		WIFI_LOG_ERR("AP list closed.");
-	}
 }
 
 static void __ap_info_tap_connect_button_cb(void *data, Evas_Object *obj, void *event_info)
@@ -3515,6 +3504,18 @@ static void __ap_info_tap_connect_button_cb(void *data, Evas_Object *obj, void *
 
 	view_base_naviframe_add_transition_finished_cb(app_obj->base,
 						       __on_scan_pop_transition_finished_for_connect, app_obj);
+
+	if (app_obj->scan) {
+		if (app_obj->connecting_wifi_ap) {
+			_wifi_reserve_connect_to_selected_ap(app_obj,
+							     __wifi_disconnected_for_connect_cb, app_obj);
+		} else {
+			_wifi_connect_to_selected_ap(app_obj);
+		}
+	} else {
+		WIFI_LOG_ERR("AP list closed.");
+	}
+
 	layout_scan_pop_to(app_obj->scan);
 }
 
