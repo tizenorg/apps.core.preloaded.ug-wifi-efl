@@ -685,8 +685,8 @@ static Eina_Bool _homekey_press_cb(void *data, int type, void *event)
 	app_object *app_obj = data;
 	Evas_Event_Key_Down *ev = event;
 
-	WIFI_RET_IF_FAIL(app_obj != NULL);
-	WIFI_RET_IF_FAIL(ev != NULL);
+	WIFI_RET_VAL_IF_FAIL(app_obj != NULL, EINA_FALSE);
+	WIFI_RET_VAL_IF_FAIL(ev != NULL, EINA_FALSE);
 
 	if (app_obj->main && strcmp(ev->keyname, "XF86PowerOff") == 0) {
 		_release_popups(app_obj);
