@@ -1,7 +1,7 @@
 %define _unpackaged_files_terminate_build 0
 Name:		wifi-efl-ug
 Summary:	Wi-Fi UI Gadget for TIZEN
-Version:	1.0.197
+Version:	1.0.198
 Release:	1
 Group:		App/Network
 License:	Flora-1.1
@@ -109,7 +109,7 @@ mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 %{PREFIX}/ug/lib/*
 %attr(644,-,-) %{PREFIX}/ug/lib/*
 %attr(755,-,-) %{PREFIX}/ug/lib/
-%{PREFIX}/apps/wifi-efl-ug/res/edje/wifi-efl-UG/*.edj
+%{PREFIX}/apps/wifi-efl-ug/res/edje/*.edj
 %{_datadir}/license/wifi-efl-ug
 %{_datadir}/packages/wifi-efl-ug.xml
 %if "%{profile}" == "mobile"
@@ -125,7 +125,7 @@ mkdir -p /usr/apps/wifi-efl-ug/bin/ -m 777
 %{_bindir}/wifi-qs
 %{_datadir}/packages/net.wifi-qs.xml
 %{_datadir}/icons/*.png
-%{PREFIX}/apps/wifi-efl-ug/res/edje/wifi-qs/*.edj
+%{PREFIX}/apps/net.wifi-qs/res/edje/*.edj
 %{_datadir}/license/net.wifi-qs
 %endif
 
