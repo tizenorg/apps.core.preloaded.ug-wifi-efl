@@ -8,6 +8,8 @@ SET(LIBDIR "\${prefix}/lib")
 SET(INCLUDEDIR "\${prefix}/include")
 SET(VERSION 0.1.0)
 
+ADD_DEFINITIONS(-DTIZEN_WIFI_QS)
+
 # source files
 SET(SRCS
 	../libraries/i18nManager/i18nmanager.c
@@ -49,6 +51,15 @@ ADD_CUSTOM_TARGET(wifi-syspopup-custom.edj
 
 ADD_DEPENDENCIES(${PROJECT_NAME} wifi-syspopup-custom.edj)
 
+ADD_CUSTOM_TARGET(wifi-syspopup-custom-editfield.edj
+		COMMAND edje_cc -id ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images
+		${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom-editfield.edc
+		${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom-editfield.edj
+		DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom-editfield.edc
+)
+
+ADD_DEPENDENCIES(${PROJECT_NAME} wifi-syspopup-custom-editfield.edj)
+
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION /usr/bin)
 
 # install image files
@@ -57,5 +68,6 @@ INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images/A01-3_icon_capt
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images/noti_wifi_in_range.png DESTINATION /usr/share/icons)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images/noti_wifi_in_range_ongoing.png DESTINATION /usr/share/icons)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images/setting_wifi.png DESTINATION /usr/share/icons)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje/wifi-qs)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom.edj DESTINATION /usr/apps/net.wifi-qs/res/edje)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/wifi-syspopup-custom-editfield.edj DESTINATION /usr/apps/net.wifi-qs/res/edje)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/net.${PROJECT_NAME}.xml DESTINATION /usr/share/packages/)

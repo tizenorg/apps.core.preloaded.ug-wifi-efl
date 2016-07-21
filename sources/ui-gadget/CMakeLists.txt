@@ -74,8 +74,8 @@ ADD_DEPENDENCIES(${PROJECT_NAME} setup_wizard.edj)
 INSTALL(TARGETS ${PROJECT_NAME} DESTINATION /usr/ug/lib/)
 
 # install image files
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/custom_editfield.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje/wifi-efl-UG)
-INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/setup_wizard.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje/wifi-efl-UG)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/custom_editfield.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje)
+INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/edcs/setup_wizard.edj DESTINATION /usr/apps/wifi-efl-ug/res/edje)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../resources/images/setting_wifi.png DESTINATION /usr/apps/wifi-efl-ug/res/icons/)
 INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/../../wifi-efl-ug.xml DESTINATION /usr/share/packages/)
 INSTALL(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../../tables/ DESTINATION ${TABLEDIR} FILES_MATCHING PATTERN "*.xml")

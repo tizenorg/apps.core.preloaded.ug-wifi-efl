@@ -28,7 +28,7 @@
 #define VCONF_SORT_BY "file/private/wifi/sort_by"
 
 #define QS_POPUP_CONNECTION_STATE	"qs_popup_connection_state"
-#define WIFI_DEVPKR_EDJ "/usr/apps/wifi-efl-ug/res/edje/wifi-qs/wifi-syspopup-custom.edj"
+#define WIFI_DEVPKR_EDJ "/usr/apps/net.wifi-qs/res/edje/wifi-qs/wifi-syspopup-custom.edj"
 #define WIFI_SYSPOPUP_EMPTY_GRP "devpkr_no_wifi_networks"
 
 struct connecting_cancel_popup_data {
