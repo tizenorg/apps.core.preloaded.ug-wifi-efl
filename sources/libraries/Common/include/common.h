@@ -39,10 +39,15 @@ extern "C"
 #define SP_NAME_NORMAL		"wifi_sp"
 #define SP_NAME_ERR			"wifi_sp/err"
 
+#if defined TIZEN_WIFI_QS
 #define CUSTOM_EDITFIELD_PATH \
-			"/usr/apps/wifi-efl-ug/res/edje/wifi-efl-UG/custom_editfield.edj"
+			"/usr/apps/net.wifi-qs/res/edje/wifi-syspopup-custom-editfield.edj"
+#else
+#define CUSTOM_EDITFIELD_PATH \
+			"/usr/apps/wifi-efl-ug/res/edje/custom_editfield.edj"
+#endif
 #define SETUP_WIZARD_EDJ_PATH \
-			"/usr/apps/wifi-efl-ug/res/edje/wifi-efl-UG/setup_wizard.edj"
+			"/usr/apps/wifi-efl-ug/res/edje/setup_wizard.edj"
 
 /* Log Level */
 #define COMMON_LOG_DEBUG	LOG_DEBUG
