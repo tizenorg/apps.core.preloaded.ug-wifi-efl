@@ -991,8 +991,8 @@ static layout_detail_object *_detail_create(app_object *app_obj, wifi_ap_object 
 	layout_detail_set_menu_cb(detail_obj, DETAIL_MENU_IP,
 				  __detail_menu_ip_text_get_cb, NULL, NULL, NULL, app_obj);
 	/* Add empty item to avoid overlap */
-	layout_ap_info_set_menu_cb(detail_obj, DETAIL_MENU_EMPTY,
-				   NULL, NULL, NULL, NULL, NULL, NULL);
+	layout_detail_set_menu_cb(detail_obj, DETAIL_MENU_EMPTY,
+				   NULL, NULL, NULL, NULL, NULL);
 
 
 	if (is_removable_ap) {
