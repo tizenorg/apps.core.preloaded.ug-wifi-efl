@@ -117,7 +117,9 @@ static void _append_menu(layout_static_ip_object *self, static_ip_menu_type type
 	case STATIC_IP_ITEM_DNS2:
 		itc = create_genlist_itc("2text", self->menu_cb[type].text_get, NULL, NULL, NULL);
 		break;
-
+	case STATIC_IP_ITEM_EMPTY:
+		itc = create_genlist_itc("padding", NULL, NULL, NULL, NULL);
+		break;
 	default:
 		return;
 	}
@@ -125,6 +127,9 @@ static void _append_menu(layout_static_ip_object *self, static_ip_menu_type type
 	if (type == STATIC_IP_ITEM_TITLE) {
 		self->menu_item[type] = elm_genlist_item_append(self->menu_list, itc,
 								self->menu_cb[type].data, NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
+	} else if (type == STATIC_IP_ITEM_EMPTY) {
+		self->menu_item[type] = elm_genlist_item_append(self->menu_list, itc,
+								NULL, NULL, ELM_GENLIST_ITEM_NONE, NULL, NULL);
 	} else {
 		self->menu_item[type] = elm_genlist_item_append(self->menu_list, itc,
 								self->menu_cb[type].data, NULL, ELM_GENLIST_ITEM_NONE,
@@ -175,6 +180,7 @@ gboolean layout_static_ip_create(layout_static_ip_object *self)
 	_append_menu(self, STATIC_IP_ITEM_GATEWAY);
 	_append_menu(self, STATIC_IP_ITEM_DNS1);
 	_append_menu(self, STATIC_IP_ITEM_DNS2);
+	_append_menu(self, STATIC_IP_ITEM_EMPTY);
 	elm_object_part_content_set(self->layout,
 				    "elm.swallow.content", self->menu_list);
 

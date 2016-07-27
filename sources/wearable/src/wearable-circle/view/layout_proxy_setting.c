@@ -115,6 +115,10 @@ static void _append_menu(layout_proxy_setting_object *self, proxy_setting_menu_t
 		itc = create_genlist_itc("2text", self->menu_cb[type].text_get, NULL, NULL, NULL);
 		break;
 
+	case PROXY_SETTING_ITEM_EMPTY:
+		itc = create_genlist_itc("padding", NULL, NULL, NULL, NULL);
+		break;
+
 	default:
 		return;
 	}
@@ -170,6 +174,7 @@ gboolean layout_proxy_setting_create(layout_proxy_setting_object *self)
 	_append_menu(self, PROXY_SETTING_ITEM_TITLE);
 	_append_menu(self, PROXY_SETTING_ITEM_ADDRESS);
 	_append_menu(self, PROXY_SETTING_ITEM_PORT);
+	_append_menu(self, PROXY_SETTING_ITEM_EMPTY);
 	elm_object_part_content_set(self->layout,
 				    "elm.swallow.content", self->menu_list);
 

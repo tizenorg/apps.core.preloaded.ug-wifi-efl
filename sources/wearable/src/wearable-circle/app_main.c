@@ -2925,6 +2925,11 @@ static layout_static_ip_object *_static_ip_create(app_object *app_obj)
 	layout_static_ip_set_tap_menu_cb(static_ip, STATIC_IP_ITEM_DNS2,
 					 __static_ip_menu_tap_cb, app_obj);
 
+	layout_static_ip_set_menu_cb(static_ip, STATIC_IP_ITEM_EMPTY,
+				     NULL, NULL, NULL, NULL, NULL);
+	layout_static_ip_set_tap_menu_cb(static_ip, STATIC_IP_ITEM_EMPTY,
+					 NULL, NULL);
+
 	layout_static_ip_set_tap_save_button_cb(static_ip,
 						__static_ip_save_button_tap_cb, app_obj);
 
@@ -3349,6 +3354,12 @@ static layout_proxy_setting_object *_proxy_setting_create(app_object *app_obj)
 					 __proxy_setting_menu_port_text_get_cb, NULL, NULL, NULL, app_obj);
 	layout_proxy_setting_set_tap_menu_cb(proxy_setting, PROXY_SETTING_ITEM_PORT,
 					     __proxy_setting_menu_tap_cb, app_obj);
+
+	layout_proxy_setting_set_menu_cb(proxy_setting, PROXY_SETTING_ITEM_EMPTY,
+						 NULL, NULL, NULL, NULL, NULL);
+	layout_proxy_setting_set_tap_menu_cb(proxy_setting, PROXY_SETTING_ITEM_EMPTY,
+					     NULL, NULL);
+
 
 	layout_proxy_setting_set_tap_save_button_cb(proxy_setting,
 						    __proxy_setting_save_button_tap_cb, app_obj);
